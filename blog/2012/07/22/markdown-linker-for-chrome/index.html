@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>markdown形式でリンクをクリップボードにコピーするchrome-extension作った - fukayatsu.dev()</title>
+  <meta name="author" content="fukayatsu">
+
+  
+  <meta name="description" content="2012-07-23　21:14　画像とか追加 Chrome Web Store - Markdown Linker octopressでブログを書くようになって、markdownで文章を書く機会が増えた。
+しかしながら画像やリンクをmarkdown形式で挿入するのが若干面倒なので
+chrome &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://fukayatsu.github.com/blog/2012/07/22/markdown-linker-for-chrome/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="fukayatsu.dev()" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">fukayatsu.dev()</a></h1>
+  
+    <h2>やってみたこととか、いろいろ書いていきます</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:fukayatsu.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">markdown形式でリンクをクリップボードにコピーするchrome-extension作った</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-22T17:29:00+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>2012-07-23　21:14　画像とか追加</p>
+
+<p><img src="https://lh3.googleusercontent.com/sTxwGfbZ9VgiRTaNld2TWpS9p6KJGUzL2p9mvhr6GpoF0-t_JXEynxmsS8Ejx-gFdhHzZUir=s640-h400-e365" alt="sTxwGfbZ9VgiRTaNld2TWpS9p6KJGUzL2p9mvhr6GpoF0-t_JXEynxmsS8Ejx-gFdhHzZUir=s640-h400-e365 (640×400)" /></p>
+
+<blockquote><p><a href="https://chrome.google.com/webstore/detail/kgadgjmlofjccpefhdagbonmohjknlll">Chrome Web Store - Markdown Linker</a></p></blockquote>
+
+<p>octopressでブログを書くようになって、markdownで文章を書く機会が増えた。
+しかしながら画像やリンクをmarkdown形式で挿入するのが若干面倒なので
+chrome extensionを作ることにした。作りながら記事を書いてみる</p>
+
+<h2>やりたかったこと</h2>
+
+<p>とりあえずやりたいことは以下の3つ</p>
+
+<ol>
+<li>ページのタイトルとurlをコピー => <code>[ title ]( url )</code></li>
+<li>テキストリンクのtextとurlをコピー => <code>[ text ]( url )</code></li>
+<li>画像のaltとurlをコピー => <code>![ alt ]( url )</code></li>
+</ol>
+
+
+<p>このうち、1. はそういう拡張機能がすでにあるようだったが、2,3　は軽く探した限りでは見つからなかった。
+ちょっとモチベーションが上がる。</p>
+
+<h2>名前</h2>
+
+<p>まず名前を決めてリポジトリを作る。あまり考えずに、</p>
+
+<blockquote><p>chrome-markdown-linker</p></blockquote>
+
+<p>とした。likerがちょっとニュアンス違うと思うけど、まあいいか。
+chrome-markdown-link-copyだとちょっと長いし。</p>
+
+<h2>準備</h2>
+
+<p>extentionはchrome上でもビルドできるが、コンソールからビルドしたいので<a href="https://github.com/Constellation/crxmake">Constellation/crxmake</a>を入れる。</p>
+
+<pre><code>gem source -a http://gemcutter.org
+sudo gem install crxmake
+</code></pre>
+
+<p>githubで使い方を見てRakefileを書いておく</p>
+
+<h2>資料</h2>
+
+<blockquote><p><a href="http://code.google.com/chrome/extensions/index.html">Google Chrome Extensions - Google Code</a></p></blockquote>
+
+<p>ここのGetting Started tutorialとかSamplesとか見ながらやるのが早いと思う。</p>
+
+<h2>実装</h2>
+
+<p>以前<a href="https://chrome.google.com/webstore/detail/fnpppbhohekmekeomhfihapjadolpjjh">twitterのparmalinkをはてな記法でクリップボードにコピーする拡張</a>を作ったのでそれを参考にする。
+ポイントは一度リンクの情報をbackground pageのtextareaに渡して、文字列を選択してからクリップボードにコピーするところ。</p>
+
+<blockquote><p><a href="https://github.com/fukayatsu/chrome-markdown-linker">fukayatsu/chrome-markdown-linker</a></p></blockquote>
+
+<p>とりあえずこんな感じになった。</p>
+
+<h2>TODO</h2>
+
+<ul>
+<li>画像のalt textに対応する</li>
+<li>ショートカットキーに対応する</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">fukayatsu</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-22T17:29:00+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/chrome-extensions/'>chrome-extensions</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://fukayatsu.github.com/blog/2012/07/22/markdown-linker-for-chrome/" data-via="fukayatsu" data-counturl="http://fukayatsu.github.com/blog/2012/07/22/markdown-linker-for-chrome/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/07/21/scmbc-tokyo-3/" title="Previous Post: #scmbc tokyo 3 に行ってきました">&laquo; #scmbc tokyo 3 に行ってきました</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/07/24/get-image-alt-text-by-chrome-extension/" title="Next Post: コンテキストメニューで画像のalt-textを取得する">コンテキストメニューで画像のalt-textを取得する &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/31/kpt-of-august/">8月のKPT</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/05/air-to-rpro/">Air-to-rPro</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/03/getting-started-with-cakephp/">getting started with cakephp</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/08/01/career-move/">株式会社ピースオブケイクに転職しました</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/29/jenkins-user-conference-tokyo-2012/">Jenkins User Conference Tokyo 2012に行ってきた(途中下車)</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/fukayatsu">@fukayatsu</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'fukayatsu',
+            count: 4,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("fukayatsu", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/fukayatsu" class="twitter-follow-button" data-show-count="false">Follow @fukayatsu</a>
+  
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/107310933832095421631?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - fukayatsu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'fukayatsu';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://fukayatsu.github.com/blog/2012/07/22/markdown-linker-for-chrome/';
+        var disqus_url = 'http://fukayatsu.github.com/blog/2012/07/22/markdown-linker-for-chrome/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

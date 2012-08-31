@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: career | fukayatsu.dev()]]></title>
+  <link href="http://fukayatsu.github.com/blog/categories/career/atom.xml" rel="self"/>
+  <link href="http://fukayatsu.github.com/"/>
+  <updated>2012-08-31T21:15:55+09:00</updated>
+  <id>http://fukayatsu.github.com/</id>
+  <author>
+    <name><![CDATA[fukayatsu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[株式会社ピースオブケイクに転職しました]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/08/01/career-move/"/>
+    <updated>2012-08-01T01:10:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/08/01/career-move</id>
+    <content type="html"><![CDATA[<p>本日付けで<a href="http://www.pieceofcake.co.jp/">Piece of Cake, inc.</a>という会社に転職いたしました。</p>
+
+<p><a href="http://www.cyberagent.co.jp/">前職</a>ではAndroidアプリとかSNSプラットフォームとかを作っていましたが、
+今後は<a href="http://cakes.mu/">クリエイターと読者をつなぐコンテンツ配信プラットフォーム</a>を作っていきます。
+ざっくり言うと一週間150円の定額制で雑誌とか漫画とかのコンテンツが読めるというようなサービスです。コンテンツを消費する人だけではなく、コンテンツを作る人にもかなり配慮されています。</p>
+
+<p>転職といっても家も会社もまた渋谷なので、あまり変化した気がしません。
+というか外に出ると必ずと言っていいほど前職の人に出会いますｗ</p>
+
+<h2>経緯</h2>
+
+<p>アルバイトの4ヶ月を含めて1年半程いくつかのチームで仕事をさせていただきましたが、関係者が多すぎたり、自分がユーザとして使うことがないようなものを作るのは向いていないという思いを感じていました。</p>
+
+<p>もちろん尊敬するエンジニアはたくさんいて、そういう人達と同じチームで作業できたことは幸運でした。
+何事もだいたい前向きな社風は好きですが、<a href="http://www.cyberagent.co.jp/corporate/vision.html">ビジョン</a>は、うーん...</p>
+
+<p>そんなこんなでここ2ヶ月ほど、<a href="https://www.wantedly.com/">Social Recruiting Service : Wantedly</a>を活用して、いろいろな会社にお話を聞きに行ってました。
+キーワード的にはrubyとかgithubとかリーンとか自分が使う/使いそう/使いたいサービスとかそんな感じです。
+幸運にも受け入れていただけるという会社がいくつかあったので、迷ったのですが個人的に一番おもしろそうなところで仕事をすることにしました。</p>
+
+<h2>現状</h2>
+
+<p>契約上は明日からですが、もう何度かオフィスにお邪魔して開発環境を作ったり、打ち合わせに参加したりとかしてます。現在システムがcakephpとpythonで動いているのでその辺の予習とかも。</p>
+
+<p>以下、蛇足。</p>
+
+<h3>転職したことによるメリット</h3>
+
+<ul>
+<li>自分がユーザとして使うであろうサービスを開発できる</li>
+<li>小さいチームでほぼ完結している</li>
+<li>変な人(面白い人)の密度が高い</li>
+<li>自分のPCで開発できる</li>
+<li>将来どうなるかわからない</li>
+</ul>
+
+
+<h3>転職したことによるデメリット？</h3>
+
+<ul>
+<li>将来どうなるかわからない</li>
+<li>通勤時間が2倍に #=> 徒歩15分</li>
+<li>いろいろ手続きめんどくさい</li>
+</ul>
+
+
+<p>というわけでがんばりますので、<a href="https://cakes.mu/">cakes</a>をよろしくお願いしますm(_ _)m</p>
+]]></content>
+  </entry>
+  
+</feed>

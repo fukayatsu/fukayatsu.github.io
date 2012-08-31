@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: dev | fukayatsu.dev()]]></title>
+  <link href="http://fukayatsu.github.com/blog/categories/dev/atom.xml" rel="self"/>
+  <link href="http://fukayatsu.github.com/"/>
+  <updated>2012-08-31T21:15:55+09:00</updated>
+  <id>http://fukayatsu.github.com/</id>
+  <author>
+    <name><![CDATA[fukayatsu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Air-to-rPro]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/08/05/air-to-rpro/"/>
+    <updated>2012-08-05T23:21:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/08/05/air-to-rpro</id>
+    <content type="html"><![CDATA[<p>メインの開発環境を</p>
+
+<pre><code>Macbook Air 13" Mid 2011
+</code></pre>
+
+<p>から</p>
+
+<pre><code>MacBook Pro 15" Mid-2012 Retina
+</code></pre>
+
+<p>へ変更しました。環境移行のテストも兼ねて投稿。</p>
+
+<h2>感想など</h2>
+
+<ul>
+<li>薄い</li>
+<li>ちょっと重い</li>
+<li>画面でかい</li>
+<li>画面キレイ
+
+<ul>
+<li>retina対応してないアプリだとちょっとぼやけるのが気になる
+
+<ul>
+<li>google日本語入力とか</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Air 13" が微妙な立場に
+
+<ul>
+<li>どうせなら 11"がsubとして欲しい</li>
+</ul>
+</li>
+<li>Airとキーボード配列が全く同じで助かる</li>
+<li>Airより内蔵スピーカーの音がだいぶいい</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

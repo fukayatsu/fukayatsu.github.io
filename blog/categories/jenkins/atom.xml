@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: jenkins | fukayatsu.dev()]]></title>
+  <link href="http://fukayatsu.github.com/blog/categories/jenkins/atom.xml" rel="self"/>
+  <link href="http://fukayatsu.github.com/"/>
+  <updated>2012-08-31T21:15:55+09:00</updated>
+  <id>http://fukayatsu.github.com/</id>
+  <author>
+    <name><![CDATA[fukayatsu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Jenkins User Conference Tokyo 2012に行ってきた(途中下車)]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/07/29/jenkins-user-conference-tokyo-2012/"/>
+    <updated>2012-07-29T16:42:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/07/29/jenkins-user-conference-tokyo-2012</id>
+    <content type="html"><![CDATA[<p>暑さのせいかぼんやり聞いてしまったのと、家でいろいろ試したくなって途中で帰ってきた。</p>
+
+<h3>基調講演</h3>
+
+<ul>
+<li>おなじみ川口さん</li>
+<li>Jenkinsの歩み最近のアップデート内容など</li>
+<li>Jenkins NinjaとかBuild Hiveとか</li>
+</ul>
+
+
+<h3>jenkins.rbでプラグイン作成</h3>
+
+<ul>
+<li>rubyでプラグインを作るためには、的な話</li>
+<li>現状JenkinsはJavaの依存が多く、jRubyを使う必要がある。
+
+<ul>
+<li>なのでcRubyでしか使えないgemが使えない。</li>
+<li>これがcRubyでプラグイン作成できるようになれば面白くなりそう。</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>links</h3>
+
+<p><a href="http://d.hatena.ne.jp/absj31/20120729">Shinya’s Daily Report | [勉強会][Jenkins]Jenkins ユーザ・カンファレンス 2012 東京 に参加してきた(エントリを書くためのまとめエントリ) #juc2012</a></p>
+
+<p><a href="http://build-shokunin.org/juc2012/">» Jenkins ユーザ・カンファレンス 2012 東京 日本Jenkinsユーザ会</a></p>
+
+<p><a href="http://ch.nicovideo.jp/channel/jenkins">日本Jenkinsユーザ会 - ニコニコチャンネル</a></p>
+]]></content>
+  </entry>
+  
+</feed>

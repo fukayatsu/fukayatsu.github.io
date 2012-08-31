@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: getting-started | fukayatsu.dev()]]></title>
+  <link href="http://fukayatsu.github.com/blog/categories/getting-started/atom.xml" rel="self"/>
+  <link href="http://fukayatsu.github.com/"/>
+  <updated>2012-08-31T21:15:55+09:00</updated>
+  <id>http://fukayatsu.github.com/</id>
+  <author>
+    <name><![CDATA[fukayatsu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[getting started with cakephp]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/08/03/getting-started-with-cakephp/"/>
+    <updated>2012-08-03T14:00:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/08/03/getting-started-with-cakephp</id>
+    <content type="html"><![CDATA[<p>今週ぐらいからcakephpをさわり始めたのでどういう感じでアプローチしているかのメモ。</p>
+
+<h2>前提</h2>
+
+<ul>
+<li>phpの経験は<code>&lt;?php phpinfo() ?&gt;</code>だけ</li>
+<li>java, rubyは日常的に使ってた</li>
+<li>railsで簡単なサービスを作ったことはある</li>
+<li>xamppの経験はあんまりない</li>
+<li>開発環境はMac</li>
+</ul>
+
+
+<h2>開発環境</h2>
+
+<p>xampp for macを入れる</p>
+
+<p><a href="http://www.apachefriends.org/jp/xampp-macosx.html">apache friends - xampp for mac os x</a></p>
+
+<h2>php</h2>
+
+<p><a href="http://php.net/manual/ja/index.php">PHP: PHP マニュアル - Manual</a>
+をひと通り読む。</p>
+
+<ul>
+<li>orzってなったところ
+
+<ul>
+<li>セミコロン必須</li>
+<li>文字列結合が <code>.</code></li>
+<li>可変変数の書き方</li>
+<li>配列へのpushの書き方 <code>$array[] = $var;</code></li>
+<li><code>array( )</code>じゃなくて<code>[ ]</code>って書きたいけど5.4からかー</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>CakePHP</h2>
+
+<h3>公式</h3>
+
+<p><a href="http://cakephp.jp/">CakePHP: 高速開発 php フレームワーク。 Home</a></p>
+
+<p>TODO: チュートリアルをやってみる</p>
+
+<p><a href="http://book.cakephp.org/2.0/ja/contents.html">コンテンツ — CakePHP Cookbook v2.x documentation</a></p>
+
+<h3>コーディングスタイル</h3>
+
+<p><a href="http://book.cakephp.org/2.0/ja/contributing/cakephp-coding-conventions.html">コーディング規約 — CakePHP Cookbook v2.x documentation</a></p>
+
+<p>TODO: 自動化しましょー</p>
+
+<h3>CakePHP Advent Calendar</h3>
+
+<p>CakePHPに限らず、Advent Calendarは新しい技術を身につけようとするときに重宝している。</p>
+
+<p>TODO: これから読む</p>
+
+<p>TODO: CakePHP Advent Calendar 2012に参加する</p>
+
+<p><a href="http://cakephp.jp/modules/newbb/viewtopic.php?viewmode=flat&amp;topic_id=2510&amp;forum=16">"CakePHP Advent Calendar 2010を開催！" フォーラム - CakePHP Users in Japan</a></p>
+
+<p><a href="http://atnd.org/events/22721">CakePHP Advent Calendar 2011 : ATND</a></p>
+
+<h3>Mailing list</h3>
+
+<p>最新情報とか勉強会の情報とかが流れてきたりするので入っておく。</p>
+
+<p><a href="https://groups.google.com/forum/?hl=ja&amp;fromgroups#!forum/cake-php">CakePHP - Google グループ</a></p>
+
+<p><a href="https://groups.google.com/forum/?hl=ja&amp;fromgroups#!forum/fuelphp_jp">fuelphp.jp - Google グループ</a></p>
+
+<h3>勉強会</h3>
+
+<p>TODO: コミュニティの雰囲気を知りたいので一度参加したい。</p>
+
+<hr />
+
+<p>こんな感じで既存のコードを改修しつつ勉強しています。</p>
+
+<p>やっぱり動的言語の方が性に合っている気がする :)</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,106 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>fukayatsu.dev()</title>
-  <meta name="author" content="fukayatsu">
-
-  
-  <meta name="description" content="Keep リファクタリング
-Jenkins導入した
-Github導入した
-新しい職場に慣れた
-ステッカー作った
-Cucumber Problem テストあまり書けなかった
-AWSにまだ慣れない Try Rubyの比率を上げていく
-実家で1週間程度リモート作業 ">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://fukayatsu.github.com/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="fukayatsu.dev()" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">fukayatsu.dev()</a></h1>
-  
-    <h2>やってみたこととか、いろいろ書いていきます</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:fukayatsu.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[fukayatsu.dev()]]></title>
+  <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
+  <link href="http://fukayatsu.github.com/"/>
+  <updated>2012-08-31T21:15:55+09:00</updated>
+  <id>http://fukayatsu.github.com/</id>
+  <author>
+    <name><![CDATA[fukayatsu]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2012/08/31/kpt-of-august/">8月のKPT</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2012-08-31T20:47:00+09:00" pubdate data-updated="true">Aug 31<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Keep</h2>
+  <entry>
+    <title type="html"><![CDATA[8月のKPT]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/08/31/kpt-of-august/"/>
+    <updated>2012-08-31T20:47:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/08/31/kpt-of-august</id>
+    <content type="html"><![CDATA[<h2>Keep</h2>
 
 <ul>
 <li>リファクタリング</li>
@@ -127,42 +45,15 @@ AWSにまだ慣れない Try Rubyの比率を上げていく
 <li>実家で1週間程度リモート作業</li>
 </ul>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/05/air-to-rpro/">Air-to-rPro</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-05T23:21:00+09:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>メインの開発環境を</p>
+  <entry>
+    <title type="html"><![CDATA[Air-to-rPro]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/08/05/air-to-rpro/"/>
+    <updated>2012-08-05T23:21:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/08/05/air-to-rpro</id>
+    <content type="html"><![CDATA[<p>メインの開発環境を</p>
 
 <pre><code>Macbook Air 13" Mid 2011
 </code></pre>
@@ -201,42 +92,15 @@ AWSにまだ慣れない Try Rubyの比率を上げていく
 <li>Airより内蔵スピーカーの音がだいぶいい</li>
 </ul>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/03/getting-started-with-cakephp/">getting started with cakephp</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-03T14:00:00+09:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>今週ぐらいからcakephpをさわり始めたのでどういう感じでアプローチしているかのメモ。</p>
+  <entry>
+    <title type="html"><![CDATA[getting started with cakephp]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/08/03/getting-started-with-cakephp/"/>
+    <updated>2012-08-03T14:00:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/08/03/getting-started-with-cakephp</id>
+    <content type="html"><![CDATA[<p>今週ぐらいからcakephpをさわり始めたのでどういう感じでアプローチしているかのメモ。</p>
 
 <h2>前提</h2>
 
@@ -319,42 +183,15 @@ AWSにまだ慣れない Try Rubyの比率を上げていく
 <p>こんな感じで既存のコードを改修しつつ勉強しています。</p>
 
 <p>やっぱり動的言語の方が性に合っている気がする :)</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/08/01/career-move/">株式会社ピースオブケイクに転職しました</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-01T01:10:00+09:00" pubdate data-updated="true">Aug 1<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>本日付けで<a href="http://www.pieceofcake.co.jp/">Piece of Cake, inc.</a>という会社に転職いたしました。</p>
+  <entry>
+    <title type="html"><![CDATA[株式会社ピースオブケイクに転職しました]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/08/01/career-move/"/>
+    <updated>2012-08-01T01:10:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/08/01/career-move</id>
+    <content type="html"><![CDATA[<p>本日付けで<a href="http://www.pieceofcake.co.jp/">Piece of Cake, inc.</a>という会社に転職いたしました。</p>
 
 <p><a href="http://www.cyberagent.co.jp/">前職</a>ではAndroidアプリとかSNSプラットフォームとかを作っていましたが、
 今後は<a href="http://cakes.mu/">クリエイターと読者をつなぐコンテンツ配信プラットフォーム</a>を作っていきます。
@@ -401,42 +238,15 @@ AWSにまだ慣れない Try Rubyの比率を上げていく
 
 
 <p>というわけでがんばりますので、<a href="https://cakes.mu/">cakes</a>をよろしくお願いしますm(_ _)m</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/29/jenkins-user-conference-tokyo-2012/">Jenkins User Conference Tokyo 2012に行ってきた(途中下車)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-29T16:42:00+09:00" pubdate data-updated="true">Jul 29<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>暑さのせいかぼんやり聞いてしまったのと、家でいろいろ試したくなって途中で帰ってきた。</p>
+  <entry>
+    <title type="html"><![CDATA[Jenkins User Conference Tokyo 2012に行ってきた(途中下車)]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/07/29/jenkins-user-conference-tokyo-2012/"/>
+    <updated>2012-07-29T16:42:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/07/29/jenkins-user-conference-tokyo-2012</id>
+    <content type="html"><![CDATA[<p>暑さのせいかぼんやり聞いてしまったのと、家でいろいろ試したくなって途中で帰ってきた。</p>
 
 <h3>基調講演</h3>
 
@@ -468,82 +278,28 @@ AWSにまだ慣れない Try Rubyの比率を上げていく
 <p><a href="http://build-shokunin.org/juc2012/">» Jenkins ユーザ・カンファレンス 2012 東京 日本Jenkinsユーザ会</a></p>
 
 <p><a href="http://ch.nicovideo.jp/channel/jenkins">日本Jenkinsユーザ会 - ニコニコチャンネル</a></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/24/get-image-alt-text-by-chrome-extension/">コンテキストメニューで画像のalt-textを取得する</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-24T00:30:00+09:00" pubdate data-updated="true">Jul 24<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>前回の記事で宿題になっていたコンテキストメニューからimgタグのalt取得の件が解決した。
+  <entry>
+    <title type="html"><![CDATA[コンテキストメニューで画像のalt-textを取得する]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/07/24/get-image-alt-text-by-chrome-extension/"/>
+    <updated>2012-07-24T00:30:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/07/24/get-image-alt-text-by-chrome-extension</id>
+    <content type="html"><![CDATA[<p>前回の記事で宿題になっていたコンテキストメニューからimgタグのalt取得の件が解決した。
 content_script側でimgタグにイベントリスナを追加してやって、
 そこからaltタグの情報をメッセージとしてbackground_pageに送ってやればよかった。</p>
 
 <p><a href="https://github.com/fukayatsu/chrome-markdown-linker/blob/master/src/content_script.js">src/content_script.js</a></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/22/markdown-linker-for-chrome/">markdown形式でリンクをクリップボードにコピーするchrome-extension作った</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-22T17:29:00+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>2012-07-23　21:14　画像とか追加</p>
+  <entry>
+    <title type="html"><![CDATA[markdown形式でリンクをクリップボードにコピーするchrome-extension作った]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/07/22/markdown-linker-for-chrome/"/>
+    <updated>2012-07-22T17:29:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/07/22/markdown-linker-for-chrome</id>
+    <content type="html"><![CDATA[<p>2012-07-23　21:14　画像とか追加</p>
 
 <p><img src="https://lh3.googleusercontent.com/sTxwGfbZ9VgiRTaNld2TWpS9p6KJGUzL2p9mvhr6GpoF0-t_JXEynxmsS8Ejx-gFdhHzZUir=s640-h400-e365" alt="sTxwGfbZ9VgiRTaNld2TWpS9p6KJGUzL2p9mvhr6GpoF0-t_JXEynxmsS8Ejx-gFdhHzZUir=s640-h400-e365 (640×400)" /></p>
 
@@ -608,42 +364,15 @@ sudo gem install crxmake
 <li>ショートカットキーに対応する</li>
 </ul>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/21/scmbc-tokyo-3/">#scmbc tokyo 3 に行ってきました</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-21T23:08:00+09:00" pubdate data-updated="true">Jul 21<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://kokucheese.com/event/index/42642/">7月21日 SCMBootCamp in Tokyo 3 #scmbc(東京都)</a></p>
+  <entry>
+    <title type="html"><![CDATA[#scmbc tokyo 3 に行ってきました]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/07/21/scmbc-tokyo-3/"/>
+    <updated>2012-07-21T23:08:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/07/21/scmbc-tokyo-3</id>
+    <content type="html"><![CDATA[<p><a href="http://kokucheese.com/event/index/42642/">7月21日 SCMBootCamp in Tokyo 3 #scmbc(東京都)</a></p>
 
 <p><img src="https://lh4.googleusercontent.com/-HUE7jfc_yUk/UAq8jeG0K7I/AAAAAAAADbo/FJKWSiX5MtQ/w594-h497-k/SCMBootCampinTokyo3.png" alt="座席表" /></p>
 
@@ -747,42 +476,15 @@ pull request / mergeの練習をしたりという感じでした。</p>
 <p><a href="http://togetter.com/li/342324">SCMBootCamp in Tokyo3 #scmbc - Togetter</a></p>
 
 <p><a href="http://tomykaira.rackbox.net/lt/lt.html">git の一歩その先に</a></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/16/octopress-with-pow/">octopress with pow</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-16T00:13:00+09:00" pubdate data-updated="true">Jul 16<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><img src="http://dl.dropbox.com/u/85825/Screenshots/mv63g2j1-e4e.png" title="こんなかんじ" alt="screen shot" /></p>
+  <entry>
+    <title type="html"><![CDATA[octopress with pow]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/07/16/octopress-with-pow/"/>
+    <updated>2012-07-16T00:13:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/07/16/octopress-with-pow</id>
+    <content type="html"><![CDATA[<p><img src="http://dl.dropbox.com/u/85825/Screenshots/mv63g2j1-e4e.png" title="こんなかんじ" alt="screen shot" /></p>
 
 <blockquote><p><a href="http://marutanm.github.com/blog/2012/01/07/octopress-preview-pow/">OctopressのpreviewをPowでやると便利ですよという話 > marutanmlog</a></p></blockquote>
 
@@ -815,42 +517,15 @@ mv octopress hogehoge
 
 <p>screen shotを載せるために<a href="http://grabbox.devsoft.no/">GrabBox</a>というスクリーンキャプチャをつかってみた。これは<code>cmd+shift+4</code>などとした時に、
 デスクトップに生成された画像を自動的にDropboxへ移動して、public linkをクリップボードにコピーしてくれる。これはこれで便利。</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/15/a-way-to-learn-to-do-new-things/">エディタやツールの移行について</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-15T19:59:00+09:00" pubdate data-updated="true">Jul 15<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>※ 今回はあくまでローカルの開発環境の話ですm(_ _)m</p>
+  <entry>
+    <title type="html"><![CDATA[エディタやツールの移行について]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/07/15/a-way-to-learn-to-do-new-things/"/>
+    <updated>2012-07-15T19:59:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/07/15/a-way-to-learn-to-do-new-things</id>
+    <content type="html"><![CDATA[<p>※ 今回はあくまでローカルの開発環境の話ですm(_ _)m</p>
 
 <p>今までつかってきたテキストエディタやツールを何らかの理由で別のものに乗り換えるとき、
 有力な方法は今まで使っていたもの削除、もしくは簡単には使えないようにしてしまうことだと思う。</p>
@@ -867,171 +542,108 @@ mv octopress hogehoge
 
 
 <p>うーん、以前書いていたはてなブログはどうしようかなぁ。</p>
-</div>
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[todo of july]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/07/14/todo-of-july/"/>
+    <updated>2012-07-14T14:24:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/07/14/todo-of-july</id>
+    <content type="html"><![CDATA[<h2>TODO</h2>
+
+<ul>
+<li>メールアドレス統合
+
+<ul>
+<li>fukayatsuに</li>
+<li>appleIdとか移行</li>
+<li>パスワード強化</li>
+</ul>
+</li>
+<li>PC移行
+
+<ul>
+<li>defaultをMacに</li>
+</ul>
+</li>
+<li>shell移行
+
+<ul>
+<li>zshに</li>
+<li>dotfiles整理</li>
+</ul>
+</li>
+<li>ローカルサーバ
+
+<ul>
+<li>powに</li>
+</ul>
+</li>
+<li>rvm
+
+<ul>
+<li>rbenvに</li>
+</ul>
+</li>
+<li>エディタ
+
+<ul>
+<li>sublime text2 に？</li>
+</ul>
+</li>
+<li>ルーチンワーク
+
+<ul>
+<li>自動化する</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Done</h2>
+
+<ul>
+<li>ブログ移行
+
+<ul>
+<li>github + octpressに</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[posting test]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/07/14/posting-test/"/>
+    <updated>2012-07-14T13:21:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/07/14/posting-test</id>
+    <content type="html"><![CDATA[<p>今まではてなブログ、はてなダイアリーでブログを書いていたけれど、いい機会なので<code>github:pages</code>+<code>octopress</code>に移行してみる。</p>
+
+<p>いくつか理由を挙げると、</p>
+
+<ul>
+<li>markdownに慣れたい</li>
+<li>手元にソースを置いておきたい</li>
+<li>githubをもっと使いたい</li>
+<li>好きなエディタで記事を書きたい</li>
+</ul>
 
 
-    </article>
+<p>というかんじである。</p>
+
+<p>以下、TODO</p>
+
+<ul>
+<li>画像を簡単に挿入できるようにする(Dropbox?)</li>
+<li>テーマ変更</li>
+<li>良い記事を継続的に書く</li>
+<li>active reload的なことをしたい</li>
+</ul>
+
+]]></content>
+  </entry>
   
-  <div class="pagination">
-    
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2012/08/31/kpt-of-august/">8月のKPT</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/08/05/air-to-rpro/">Air-to-rPro</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/08/03/getting-started-with-cakephp/">getting started with cakephp</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/08/01/career-move/">株式会社ピースオブケイクに転職しました</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/07/29/jenkins-user-conference-tokyo-2012/">Jenkins User Conference Tokyo 2012に行ってきた(途中下車)</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <a href="https://github.com/fukayatsu">@fukayatsu</a> on GitHub
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'fukayatsu',
-            count: 4,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("fukayatsu", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/fukayatsu" class="twitter-follow-button" data-show-count="false">Follow @fukayatsu</a>
-  
-</section>
-
-
-
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/107310933832095421631?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - fukayatsu -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-<script type="text/javascript">
-      var disqus_shortname = 'fukayatsu';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: grabbox | fukayatsu.dev()]]></title>
+  <link href="http://fukayatsu.github.com/blog/categories/grabbox/atom.xml" rel="self"/>
+  <link href="http://fukayatsu.github.com/"/>
+  <updated>2012-08-31T21:15:55+09:00</updated>
+  <id>http://fukayatsu.github.com/</id>
+  <author>
+    <name><![CDATA[fukayatsu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[octopress with pow]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/07/16/octopress-with-pow/"/>
+    <updated>2012-07-16T00:13:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/07/16/octopress-with-pow</id>
+    <content type="html"><![CDATA[<p><img src="http://dl.dropbox.com/u/85825/Screenshots/mv63g2j1-e4e.png" title="こんなかんじ" alt="screen shot" /></p>
+
+<blockquote><p><a href="http://marutanm.github.com/blog/2012/01/07/octopress-preview-pow/">OctopressのpreviewをPowでやると便利ですよという話 > marutanmlog</a></p></blockquote>
+
+<p>でも言及されているように、octopress + powが良い感じ。</p>
+
+<p>また、powを便利に使うための<code>powder</code>というgemがあり、</p>
+
+<p>たとえば、</p>
+
+<pre><code>gem i powder
+cd path/to/octopress
+powder link
+</code></pre>
+
+<p>とすれば、<code>http://octopress.dev</code>でpreviewできる。</p>
+
+<p>また、<code>http://hogehoge.dev</code>でpreviewしたい場合は、</p>
+
+<pre><code>cd ~/.pow
+mv octopress hogehoge
+</code></pre>
+
+<p>のようにすればよい。</p>
+
+<p>あとは<code>rake watch</code>させておいて、いいかんじになったら<code>rake deploy</code>でok</p>
+
+<p>うーん、octopressといい、powといい、使っていて心地良い : )</p>
+
+<h4>余談:</h4>
+
+<p>screen shotを載せるために<a href="http://grabbox.devsoft.no/">GrabBox</a>というスクリーンキャプチャをつかってみた。これは<code>cmd+shift+4</code>などとした時に、
+デスクトップに生成された画像を自動的にDropboxへ移動して、public linkをクリップボードにコピーしてくれる。これはこれで便利。</p>
+]]></content>
+  </entry>
+  
+</feed>
