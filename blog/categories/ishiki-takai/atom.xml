@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ishiki-takai | fukayatsu.dev()]]></title>
+  <link href="http://fukayatsu.github.com/blog/categories/ishiki-takai/atom.xml" rel="self"/>
+  <link href="http://fukayatsu.github.com/"/>
+  <updated>2012-10-16T00:16:39+09:00</updated>
+  <id>http://fukayatsu.github.com/</id>
+  <author>
+    <name><![CDATA[fukayatsu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[「オブラブ 収穫祭 〜若手エンジニア、実りの秋〜 #oblove」に参加してきた]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/10/15/oblove-younger-engineer-harvest-festival/"/>
+    <updated>2012-10-15T23:39:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/10/15/oblove-younger-engineer-harvest-festival</id>
+    <content type="html"><![CDATA[<p>エライ人が「ブログに書くまでが勉強会です」といっていたので、<br/>
+そろそろ先週の土曜に参加してきたオブラブ収穫祭を終わらせたい。</p>
+
+<h2>オブラブ 収穫祭？</h2>
+
+<blockquote><p>オブラブ 収穫祭 〜若手エンジニア、実りの秋〜 - 永和システムマネジメント
+http://esminc.doorkeeper.jp/events/1746</p>
+
+<p>集え！若手エンジニア！
+オブラブは、ソフトウェアエンジニア同士の交流の場を提供するというポリシーを大切にし続け11年目に入りました。</p>
+
+<p>今回のイベントでは、各社の若手エンジニアと教育担当者の方々に、エンジニアの成長と教育についてお話ししていただきます。</p>
+
+<p>若手の皆さん、入社前から何が変わりましたか？入社1〜3年目の今、何をしていますか？
+先輩の皆さん、若手エンジニアに何を伝えていますか？教育担当者として大切にしていることは何ですか？
+若手エンジニアが社会人として過ごしている日々をふりかえり、この実りの秋に、みなで若手エンジニア達の成長を共に喜び合いましょう 。</p></blockquote>
+
+<p>というイベント。Twitterでフォローしてるあの人とかあの人とかがたくさんいた。<br/>
+参加するきっかけもTLの誰かが発表しますとか言ってたのだと思う。</p>
+
+<p>自分は新卒で8月に入社してからちょうど1年で転職したので、<br/>
+若手だけど新卒じゃないみたいな微妙な感じだけど興味があったので参加してみた。</p>
+
+<h2>Togetter</h2>
+
+<blockquote><p>オブラブ 収穫祭 #oblove (2012/10/13) - Togetter
+http://togetter.com/li/389160</p></blockquote>
+
+<p>ひさしぶりに自分でまとめた</p>
+
+<h2>分かりやすいまとめ記事</h2>
+
+<blockquote><p>オブラブ収穫祭に参加してきた #oblove - 僕の車輪の再発明
+http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
+
+<p>cakesシール貼ってもらった :)</p>
+
+<p>やっぱこういうのは当日に書かないとだめだよな、と思いつつ以下自分のまとめ。</p>
+
+<h2>何をしに行ったか</h2>
+
+<ul>
+<li>きちんとした研修とか受けたことが無かったので、各社の取り組みを知りたかった。</li>
+<li>同世代のエンジニアとなんか交流できたらいいなーとか思った</li>
+<li>githubやpull-reqベースの開発を初めて間もないので、他社ではどんな感じか知りたかった。</li>
+<li>自分の会社でエンジニアが増えた時の教育をどうするか、参考にしたかった。</li>
+</ul>
+
+
+<h2>何をしてきたか</h2>
+
+<ul>
+<li>cakesのシールをノベルティコーナーにおいてきた</li>
+<li>Togetterをまとめた
+
+<ul>
+<li>まとめ職人さんからツッコミが入った
+
+<ul>
+<li>やっぱあの人すげー</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>自分が目指しているところがあまりずれていないことを確認できた。
+
+<ul>
+<li>pull-reqのコードレビュー文化とか、OSSへの取り組みとか</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>何ができなかったか</h2>
+
+<ul>
+<li>懇親会でいろいろな人と話す
+
+<ul>
+<li>アルコール入ったらまた違ったかもしれないけど、意識高い人たちの発表を膝に受けてしまってちょっと気力が無かったので家に帰ってシチュー作って食べた。</li>
+</ul>
+</li>
+<li>エンジニアが2, 3人しかいない時のチームの文化とか、教育については、今回発表して下さったケースが直接当てはまらなかったように思う。
+
+<ul>
+<li>それこそ自由時間で色んな人に声かけるべきだった。</li>
+<li>COOKPADとかペパボとかみたいに、育てると言うよりは育つのを邪魔しない環境を目指すことになると思う。</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
