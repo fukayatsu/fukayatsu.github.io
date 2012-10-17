@@ -9,8 +9,9 @@
   <meta name="author" content="fukayatsu">
 
   
-  <meta name="description" content="7月21日 SCMBootCamp in Tokyo 3 #scmbc(東京都) ↑ 実際の座席表。GoogleDriveでリアルタイムに編集していくのが楽しかったです。 ハンズオン 実はこういう形式のイベントに参加するのは初めてで、
-どういうものかと若干不安だったけど、 &hellip;">
+  <meta name="description" content="2012-07-23　21:14　画像とか追加 Chrome Web Store - Markdown Linker octopressでブログを書くようになって、markdownで文章を書く機会が増えた。
+しかしながら画像やリンクをmarkdown形式で挿入するのが若干面倒なので
+chrome &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +66,106 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/22/markdown-linker-for-chrome/">markdown形式でリンクをクリップボードにコピーするchrome-extension作った</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-22T17:29:00+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>2012-07-23　21:14　画像とか追加</p>
+
+<p><img src="https://lh3.googleusercontent.com/sTxwGfbZ9VgiRTaNld2TWpS9p6KJGUzL2p9mvhr6GpoF0-t_JXEynxmsS8Ejx-gFdhHzZUir=s640-h400-e365" alt="sTxwGfbZ9VgiRTaNld2TWpS9p6KJGUzL2p9mvhr6GpoF0-t_JXEynxmsS8Ejx-gFdhHzZUir=s640-h400-e365 (640×400)" /></p>
+
+<blockquote><p><a href="https://chrome.google.com/webstore/detail/kgadgjmlofjccpefhdagbonmohjknlll">Chrome Web Store - Markdown Linker</a></p></blockquote>
+
+<p>octopressでブログを書くようになって、markdownで文章を書く機会が増えた。
+しかしながら画像やリンクをmarkdown形式で挿入するのが若干面倒なので
+chrome extensionを作ることにした。作りながら記事を書いてみる</p>
+
+<h2>やりたかったこと</h2>
+
+<p>とりあえずやりたいことは以下の3つ</p>
+
+<ol>
+<li>ページのタイトルとurlをコピー => <code>[ title ]( url )</code></li>
+<li>テキストリンクのtextとurlをコピー => <code>[ text ]( url )</code></li>
+<li>画像のaltとurlをコピー => <code>![ alt ]( url )</code></li>
+</ol>
+
+
+<p>このうち、1. はそういう拡張機能がすでにあるようだったが、2,3　は軽く探した限りでは見つからなかった。
+ちょっとモチベーションが上がる。</p>
+
+<h2>名前</h2>
+
+<p>まず名前を決めてリポジトリを作る。あまり考えずに、</p>
+
+<blockquote><p>chrome-markdown-linker</p></blockquote>
+
+<p>とした。likerがちょっとニュアンス違うと思うけど、まあいいか。
+chrome-markdown-link-copyだとちょっと長いし。</p>
+
+<h2>準備</h2>
+
+<p>extentionはchrome上でもビルドできるが、コンソールからビルドしたいので<a href="https://github.com/Constellation/crxmake">Constellation/crxmake</a>を入れる。</p>
+
+<pre><code>gem source -a http://gemcutter.org
+sudo gem install crxmake
+</code></pre>
+
+<p>githubで使い方を見てRakefileを書いておく</p>
+
+<h2>資料</h2>
+
+<blockquote><p><a href="http://code.google.com/chrome/extensions/index.html">Google Chrome Extensions - Google Code</a></p></blockquote>
+
+<p>ここのGetting Started tutorialとかSamplesとか見ながらやるのが早いと思う。</p>
+
+<h2>実装</h2>
+
+<p>以前<a href="https://chrome.google.com/webstore/detail/fnpppbhohekmekeomhfihapjadolpjjh">twitterのparmalinkをはてな記法でクリップボードにコピーする拡張</a>を作ったのでそれを参考にする。
+ポイントは一度リンクの情報をbackground pageのtextareaに渡して、文字列を選択してからクリップボードにコピーするところ。</p>
+
+<blockquote><p><a href="https://github.com/fukayatsu/chrome-markdown-linker">fukayatsu/chrome-markdown-linker</a></p></blockquote>
+
+<p>とりあえずこんな感じになった。</p>
+
+<h2>TODO</h2>
+
+<ul>
+<li>画像のalt textに対応する</li>
+<li>ショートカットキーに対応する</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -495,6 +596,10 @@ mv octopress hogehoge
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/10/18/shibuya-rb-20121017/">渋谷.rb[:20121017]に行ってきた</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/10/15/oblove-younger-engineer-harvest-festival/">「オブラブ 収穫祭 〜若手エンジニア、実りの秋〜 #oblove」に参加してきた</a>
       </li>
     
@@ -508,10 +613,6 @@ mv octopress hogehoge
     
       <li class="post">
         <a href="/blog/2012/08/31/kpt-of-august/">8月のKPT</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/08/05/air-to-rpro/">Air-to-rPro</a>
       </li>
     
   </ul>

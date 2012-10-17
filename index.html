@@ -9,9 +9,8 @@
   <meta name="author" content="fukayatsu">
 
   
-  <meta name="description" content="エライ人が「ブログに書くまでが勉強会です」といっていたので、
-そろそろ先週の土曜に参加してきたオブラブ収穫祭を終わらせたい。 オブラブ 収穫祭？ オブラブ 収穫祭 〜若手エンジニア、実りの秋〜 - 永和システムマネジメント
-http://esminc.doorkeeper.jp/events/ &hellip;">
+  <meta name="description" content="地域.rbなイベントに参加するのは初めてでした。
+終わった後数人で食べに行った肉がおいしかったです 今日の流れ: 19:40 開場。雨降ってた 19:50 ヒカリエ着いた。会場はDeNAの役員用(?)会議室だった。 20:05 一言ずつ自己紹介。他にもcakephpやってる人がいた。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,82 @@ http://esminc.doorkeeper.jp/events/ &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/18/shibuya-rb-20121017/">渋谷.rb[:20121017]に行ってきた</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-18T00:16:00+09:00" pubdate data-updated="true">Oct 18<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>地域.rbなイベントに参加するのは初めてでした。<br/>
+終わった後数人で食べに行った肉がおいしかったです</p>
+
+<hr />
+
+<p>今日の流れ:</p>
+
+<p>19:40 開場。雨降ってた</p>
+
+<p>19:50 ヒカリエ着いた。会場はDeNAの役員用(?)会議室だった。</p>
+
+<p>20:05 一言ずつ自己紹介。他にもcakephpやってる人がいた。cakesのこと知ってる人もいたみたい。うれしい</p>
+
+<p>20:10 padrino-edgeについてお話。こんなpull-requestが着てるとか、エラーログの処理どうしようとか</p>
+
+<p>20:20 github vs gerritなお話。某A社。patchSet便利だよーとか</p>
+
+<p>21:00 zeusのお話。goで書かれてるとか。はまりどころとか</p>
+
+<p>21:05 ↑の補足。コンソール凝り過ぎとか。zeus動いてる時にrebaseすると変になるとか</p>
+
+<p>21:10 jubatusについて。qiitaをjubatusで分析したらしい</p>
+
+<p>21:20 以降、各々好きな事をやる時間。padrinoのチュートリアルやってた。</p>
+
+<p>21:25 https://github.com/google/google-api-ruby-client/pull/13のお話</p>
+
+<p>22:10 ヒカリエから撤収</p>
+
+<p>22:20 肉を食べに行く</p>
+
+<p>23:20 解散</p>
+
+<hr />
+
+<p>あとで写真とか発表してくださった方のidとか書く。たぶん</p>
+
+<hr />
+
+<p>メモ:<br/>
+DCI, ラングリッチ, Oh My Glasses, oDesk, multi_json, yajl, Travis Pro</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -985,106 +1060,6 @@ content_script側でimgタグにイベントリスナを追加してやって、
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/07/22/markdown-linker-for-chrome/">markdown形式でリンクをクリップボードにコピーするchrome-extension作った</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-22T17:29:00+09:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>2012-07-23　21:14　画像とか追加</p>
-
-<p><img src="https://lh3.googleusercontent.com/sTxwGfbZ9VgiRTaNld2TWpS9p6KJGUzL2p9mvhr6GpoF0-t_JXEynxmsS8Ejx-gFdhHzZUir=s640-h400-e365" alt="sTxwGfbZ9VgiRTaNld2TWpS9p6KJGUzL2p9mvhr6GpoF0-t_JXEynxmsS8Ejx-gFdhHzZUir=s640-h400-e365 (640×400)" /></p>
-
-<blockquote><p><a href="https://chrome.google.com/webstore/detail/kgadgjmlofjccpefhdagbonmohjknlll">Chrome Web Store - Markdown Linker</a></p></blockquote>
-
-<p>octopressでブログを書くようになって、markdownで文章を書く機会が増えた。
-しかしながら画像やリンクをmarkdown形式で挿入するのが若干面倒なので
-chrome extensionを作ることにした。作りながら記事を書いてみる</p>
-
-<h2>やりたかったこと</h2>
-
-<p>とりあえずやりたいことは以下の3つ</p>
-
-<ol>
-<li>ページのタイトルとurlをコピー => <code>[ title ]( url )</code></li>
-<li>テキストリンクのtextとurlをコピー => <code>[ text ]( url )</code></li>
-<li>画像のaltとurlをコピー => <code>![ alt ]( url )</code></li>
-</ol>
-
-
-<p>このうち、1. はそういう拡張機能がすでにあるようだったが、2,3　は軽く探した限りでは見つからなかった。
-ちょっとモチベーションが上がる。</p>
-
-<h2>名前</h2>
-
-<p>まず名前を決めてリポジトリを作る。あまり考えずに、</p>
-
-<blockquote><p>chrome-markdown-linker</p></blockquote>
-
-<p>とした。likerがちょっとニュアンス違うと思うけど、まあいいか。
-chrome-markdown-link-copyだとちょっと長いし。</p>
-
-<h2>準備</h2>
-
-<p>extentionはchrome上でもビルドできるが、コンソールからビルドしたいので<a href="https://github.com/Constellation/crxmake">Constellation/crxmake</a>を入れる。</p>
-
-<pre><code>gem source -a http://gemcutter.org
-sudo gem install crxmake
-</code></pre>
-
-<p>githubで使い方を見てRakefileを書いておく</p>
-
-<h2>資料</h2>
-
-<blockquote><p><a href="http://code.google.com/chrome/extensions/index.html">Google Chrome Extensions - Google Code</a></p></blockquote>
-
-<p>ここのGetting Started tutorialとかSamplesとか見ながらやるのが早いと思う。</p>
-
-<h2>実装</h2>
-
-<p>以前<a href="https://chrome.google.com/webstore/detail/fnpppbhohekmekeomhfihapjadolpjjh">twitterのparmalinkをはてな記法でクリップボードにコピーする拡張</a>を作ったのでそれを参考にする。
-ポイントは一度リンクの情報をbackground pageのtextareaに渡して、文字列を選択してからクリップボードにコピーするところ。</p>
-
-<blockquote><p><a href="https://github.com/fukayatsu/chrome-markdown-linker">fukayatsu/chrome-markdown-linker</a></p></blockquote>
-
-<p>とりあえずこんな感じになった。</p>
-
-<h2>TODO</h2>
-
-<ul>
-<li>画像のalt textに対応する</li>
-<li>ショートカットキーに対応する</li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1100,6 +1075,10 @@ sudo gem install crxmake
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/10/18/shibuya-rb-20121017/">渋谷.rb[:20121017]に行ってきた</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/10/15/oblove-younger-engineer-harvest-festival/">「オブラブ 収穫祭 〜若手エンジニア、実りの秋〜 #oblove」に参加してきた</a>
       </li>
     
@@ -1113,10 +1092,6 @@ sudo gem install crxmake
     
       <li class="post">
         <a href="/blog/2012/08/31/kpt-of-august/">8月のKPT</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/08/05/air-to-rpro/">Air-to-rPro</a>
       </li>
     
   </ul>

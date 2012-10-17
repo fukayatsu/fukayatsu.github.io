@@ -4,7 +4,7 @@
   <title><![CDATA[fukayatsu.dev()]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2012-10-16T00:16:39+09:00</updated>
+  <updated>2012-10-18T00:42:23+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[渋谷.rb[:20121017]に行ってきた]]></title>
+    <link href="http://fukayatsu.github.com/blog/2012/10/18/shibuya-rb-20121017/"/>
+    <updated>2012-10-18T00:16:00+09:00</updated>
+    <id>http://fukayatsu.github.com/blog/2012/10/18/shibuya-rb-20121017</id>
+    <content type="html"><![CDATA[<p>地域.rbなイベントに参加するのは初めてでした。<br/>
+終わった後数人で食べに行った肉がおいしかったです</p>
+
+<hr />
+
+<p>今日の流れ:</p>
+
+<p>19:40 開場。雨降ってた</p>
+
+<p>19:50 ヒカリエ着いた。会場はDeNAの役員用(?)会議室だった。</p>
+
+<p>20:05 一言ずつ自己紹介。他にもcakephpやってる人がいた。cakesのこと知ってる人もいたみたい。うれしい</p>
+
+<p>20:10 padrino-edgeについてお話。こんなpull-requestが着てるとか、エラーログの処理どうしようとか</p>
+
+<p>20:20 github vs gerritなお話。某A社。patchSet便利だよーとか</p>
+
+<p>21:00 zeusのお話。goで書かれてるとか。はまりどころとか</p>
+
+<p>21:05 ↑の補足。コンソール凝り過ぎとか。zeus動いてる時にrebaseすると変になるとか</p>
+
+<p>21:10 jubatusについて。qiitaをjubatusで分析したらしい</p>
+
+<p>21:20 以降、各々好きな事をやる時間。padrinoのチュートリアルやってた。</p>
+
+<p>21:25 https://github.com/google/google-api-ruby-client/pull/13のお話</p>
+
+<p>22:10 ヒカリエから撤収</p>
+
+<p>22:20 肉を食べに行く</p>
+
+<p>23:20 解散</p>
+
+<hr />
+
+<p>あとで写真とか発表してくださった方のidとか書く。たぶん</p>
+
+<hr />
+
+<p>メモ:<br/>
+DCI, ラングリッチ, Oh My Glasses, oDesk, multi_json, yajl, Travis Pro</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[「オブラブ 収穫祭 〜若手エンジニア、実りの秋〜 #oblove」に参加してきた]]></title>
