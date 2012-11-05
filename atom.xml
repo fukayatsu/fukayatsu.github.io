@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
   <title><![CDATA[fukayatsu.dev()]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2012-11-05T20:08:00+09:00</updated>
+  <updated>2012-11-05T23:17:07+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -13,12 +12,18 @@
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
-  <entry>
-    <title type="html"><![CDATA[渋谷.rb[:20121017]に行ってきた]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/10/18/shibuya-rb-20121017/"/>
-    <updated>2012-10-18T00:16:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/10/18/shibuya-rb-20121017</id>
-    <content type="html"><![CDATA[<p>地域.rbなイベントに参加するのは初めてでした。<br/>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[渋谷.rb[:20121017]に行ってきた]]></title>
+<link href="http://fukayatsu.github.com/2012/10/18/shibuya-rb-20121017/"/>
+<updated>2012-10-18T00:16:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/10/18/shibuya-rb-20121017</id>
+
+      <content type="html"><![CDATA[<p>地域.rbなイベントに参加するのは初めてでした。<br/>
 終わった後数人で食べに行った肉がおいしかったです</p>
 
 <hr />
@@ -59,15 +64,21 @@
 
 <p>メモ:<br/>
 DCI, ラングリッチ, Oh My Glasses, oDesk, multi_json, yajl, Travis Pro</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/10/18/shibuya-rb-20121017/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[「オブラブ 収穫祭 〜若手エンジニア、実りの秋〜 #oblove」に参加してきた]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/10/15/oblove-younger-engineer-harvest-festival/"/>
-    <updated>2012-10-15T23:39:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/10/15/oblove-younger-engineer-harvest-festival</id>
-    <content type="html"><![CDATA[<p>エライ人が「ブログに書くまでが勉強会です」といっていたので、<br/>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[「オブラブ 収穫祭 〜若手エンジニア、実りの秋〜 #oblove」に参加してきた]]></title>
+<link href="http://fukayatsu.github.com/2012/10/15/oblove-younger-engineer-harvest-festival/"/>
+<updated>2012-10-15T23:39:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/10/15/oblove-younger-engineer-harvest-festival</id>
+
+      <content type="html"><![CDATA[<p>エライ人が「ブログに書くまでが勉強会です」といっていたので、<br/>
 そろそろ先週の土曜に参加してきたオブラブ収穫祭を終わらせたい。</p>
 
 <h2>オブラブ 収穫祭？</h2>
@@ -158,15 +169,21 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
 </li>
 </ul>
 
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/10/15/oblove-younger-engineer-harvest-festival/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[この2ヶ月を振り返って]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/10/06/looking-back-at-the-last-2-months/"/>
-    <updated>2012-10-06T12:14:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/10/06/looking-back-at-the-last-2-months</id>
-    <content type="html"><![CDATA[<p>サービス(<a href="https://cakes.mu">cakes</a>)リリース前後の忙しさにかまけて、久しぶりの更新になってしまった(´・ω・｀)</p>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[この2ヶ月を振り返って]]></title>
+<link href="http://fukayatsu.github.com/2012/10/06/looking-back-at-the-last-2-months/"/>
+<updated>2012-10-06T12:14:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/10/06/looking-back-at-the-last-2-months</id>
+
+      <content type="html"><![CDATA[<p>サービス(<a href="https://cakes.mu">cakes</a>)リリース前後の忙しさにかまけて、久しぶりの更新になってしまった(´・ω・｀)</p>
 
 <p>ようやく一段落したような気がするので、入社から現在までの2ヶ月ちょっとを振り返ってみたいと思う。</p>
 
@@ -251,15 +268,21 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
 <p>フィードバックフォームを作った。</p>
 
 <p>直近はスケールアウトしやすい構成にする作業中。</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/10/06/looking-back-at-the-last-2-months/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[TDDBC横浜 Second Seasonに参加しました]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/09/02/tddbc-yokohama-2nd/"/>
-    <updated>2012-09-02T20:47:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/09/02/tddbc-yokohama-2nd</id>
-    <content type="html"><![CDATA[<p>9/1に行われた
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[TDDBC横浜 Second Seasonに参加しました]]></title>
+<link href="http://fukayatsu.github.com/2012/09/02/tddbc-yokohama-2nd/"/>
+<updated>2012-09-02T20:47:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/09/02/tddbc-yokohama-2nd</id>
+
+      <content type="html"><![CDATA[<p>9/1に行われた
 <a href="http://devtesting.jp/tddbc/?TDDBC%E6%A8%AA%E6%B5%9C2nd">TDDBC横浜 Second Season</a>
 にRuby/RSpecで参加してきました。</p>
 
@@ -453,15 +476,21 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
 本当にありがとうございました！！</p>
 
 <p>引き続きTDDを自分のものにするのと、頂いた本をなんとかするのを頑張ります！</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/09/02/tddbc-yokohama-2nd/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[8月のKPT]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/08/31/kpt-of-august/"/>
-    <updated>2012-08-31T20:47:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/08/31/kpt-of-august</id>
-    <content type="html"><![CDATA[<h2>Keep</h2>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[8月のKPT]]></title>
+<link href="http://fukayatsu.github.com/2012/08/31/kpt-of-august/"/>
+<updated>2012-08-31T20:47:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/08/31/kpt-of-august</id>
+
+      <content type="html"><![CDATA[<h2>Keep</h2>
 
 <ul>
 <li>リファクタリング</li>
@@ -488,15 +517,21 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
 <li>実家で1週間程度リモート作業</li>
 </ul>
 
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/08/31/kpt-of-august/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[Air-to-rPro]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/08/05/air-to-rpro/"/>
-    <updated>2012-08-05T23:21:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/08/05/air-to-rpro</id>
-    <content type="html"><![CDATA[<p>メインの開発環境を</p>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Air-to-rPro]]></title>
+<link href="http://fukayatsu.github.com/2012/08/05/air-to-rpro/"/>
+<updated>2012-08-05T23:21:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/08/05/air-to-rpro</id>
+
+      <content type="html"><![CDATA[<p>メインの開発環境を</p>
 
 <pre><code>Macbook Air 13" Mid 2011
 </code></pre>
@@ -535,15 +570,21 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
 <li>Airより内蔵スピーカーの音がだいぶいい</li>
 </ul>
 
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/08/05/air-to-rpro/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[getting started with cakephp]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/08/03/getting-started-with-cakephp/"/>
-    <updated>2012-08-03T14:00:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/08/03/getting-started-with-cakephp</id>
-    <content type="html"><![CDATA[<p>今週ぐらいからcakephpをさわり始めたのでどういう感じでアプローチしているかのメモ。</p>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[getting started with cakephp]]></title>
+<link href="http://fukayatsu.github.com/2012/08/03/getting-started-with-cakephp/"/>
+<updated>2012-08-03T14:00:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/08/03/getting-started-with-cakephp</id>
+
+      <content type="html"><![CDATA[<p>今週ぐらいからcakephpをさわり始めたのでどういう感じでアプローチしているかのメモ。</p>
 
 <h2>前提</h2>
 
@@ -626,15 +667,21 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
 <p>こんな感じで既存のコードを改修しつつ勉強しています。</p>
 
 <p>やっぱり動的言語の方が性に合っている気がする :)</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/08/03/getting-started-with-cakephp/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[株式会社ピースオブケイクに転職しました]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/08/01/career-move/"/>
-    <updated>2012-08-01T01:10:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/08/01/career-move</id>
-    <content type="html"><![CDATA[<p>本日付けで<a href="http://www.pieceofcake.co.jp/">Piece of Cake, inc.</a>という会社に転職いたしました。</p>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[株式会社ピースオブケイクに転職しました]]></title>
+<link href="http://fukayatsu.github.com/2012/08/01/career-move/"/>
+<updated>2012-08-01T01:10:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/08/01/career-move</id>
+
+      <content type="html"><![CDATA[<p>本日付けで<a href="http://www.pieceofcake.co.jp/">Piece of Cake, inc.</a>という会社に転職いたしました。</p>
 
 <p><a href="http://www.cyberagent.co.jp/">前職</a>ではAndroidアプリとかSNSプラットフォームとかを作っていましたが、
 今後は<a href="http://cakes.mu/">クリエイターと読者をつなぐコンテンツ配信プラットフォーム</a>を作っていきます。
@@ -681,15 +728,21 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
 
 
 <p>というわけでがんばりますので、<a href="https://cakes.mu/">cakes</a>をよろしくお願いしますm(_ _)m</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/08/01/career-move/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[Jenkins User Conference Tokyo 2012に行ってきた(途中下車)]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/07/29/jenkins-user-conference-tokyo-2012/"/>
-    <updated>2012-07-29T16:42:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/07/29/jenkins-user-conference-tokyo-2012</id>
-    <content type="html"><![CDATA[<p>暑さのせいかぼんやり聞いてしまったのと、家でいろいろ試したくなって途中で帰ってきた。</p>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Jenkins User Conference Tokyo 2012に行ってきた(途中下車)]]></title>
+<link href="http://fukayatsu.github.com/2012/07/29/jenkins-user-conference-tokyo-2012/"/>
+<updated>2012-07-29T16:42:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/07/29/jenkins-user-conference-tokyo-2012</id>
+
+      <content type="html"><![CDATA[<p>暑さのせいかぼんやり聞いてしまったのと、家でいろいろ試したくなって途中で帰ってきた。</p>
 
 <h3>基調講演</h3>
 
@@ -721,28 +774,40 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
 <p><a href="http://build-shokunin.org/juc2012/">» Jenkins ユーザ・カンファレンス 2012 東京 日本Jenkinsユーザ会</a></p>
 
 <p><a href="http://ch.nicovideo.jp/channel/jenkins">日本Jenkinsユーザ会 - ニコニコチャンネル</a></p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/07/29/jenkins-user-conference-tokyo-2012/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[コンテキストメニューで画像のalt-textを取得する]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/07/24/get-image-alt-text-by-chrome-extension/"/>
-    <updated>2012-07-24T00:30:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/07/24/get-image-alt-text-by-chrome-extension</id>
-    <content type="html"><![CDATA[<p>前回の記事で宿題になっていたコンテキストメニューからimgタグのalt取得の件が解決した。
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[コンテキストメニューで画像のalt-textを取得する]]></title>
+<link href="http://fukayatsu.github.com/2012/07/24/get-image-alt-text-by-chrome-extension/"/>
+<updated>2012-07-24T00:30:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/07/24/get-image-alt-text-by-chrome-extension</id>
+
+      <content type="html"><![CDATA[<p>前回の記事で宿題になっていたコンテキストメニューからimgタグのalt取得の件が解決した。
 content_script側でimgタグにイベントリスナを追加してやって、
 そこからaltタグの情報をメッセージとしてbackground_pageに送ってやればよかった。</p>
 
 <p><a href="https://github.com/fukayatsu/chrome-markdown-linker/blob/master/src/content_script.js">src/content_script.js</a></p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/07/24/get-image-alt-text-by-chrome-extension/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[markdown形式でリンクをクリップボードにコピーするchrome-extension作った]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/07/22/markdown-linker-for-chrome/"/>
-    <updated>2012-07-22T17:29:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/07/22/markdown-linker-for-chrome</id>
-    <content type="html"><![CDATA[<p>2012-07-23　21:14　画像とか追加</p>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[markdown形式でリンクをクリップボードにコピーするchrome-extension作った]]></title>
+<link href="http://fukayatsu.github.com/2012/07/22/markdown-linker-for-chrome/"/>
+<updated>2012-07-22T17:29:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/07/22/markdown-linker-for-chrome</id>
+
+      <content type="html"><![CDATA[<p>2012-07-23　21:14　画像とか追加</p>
 
 <p><img src="https://lh3.googleusercontent.com/sTxwGfbZ9VgiRTaNld2TWpS9p6KJGUzL2p9mvhr6GpoF0-t_JXEynxmsS8Ejx-gFdhHzZUir=s640-h400-e365" alt="sTxwGfbZ9VgiRTaNld2TWpS9p6KJGUzL2p9mvhr6GpoF0-t_JXEynxmsS8Ejx-gFdhHzZUir=s640-h400-e365 (640×400)" /></p>
 
@@ -807,15 +872,21 @@ sudo gem install crxmake
 <li>ショートカットキーに対応する</li>
 </ul>
 
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/07/22/markdown-linker-for-chrome/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[#scmbc tokyo 3 に行ってきました]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/07/21/scmbc-tokyo-3/"/>
-    <updated>2012-07-21T23:08:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/07/21/scmbc-tokyo-3</id>
-    <content type="html"><![CDATA[<p><a href="http://kokucheese.com/event/index/42642/">7月21日 SCMBootCamp in Tokyo 3 #scmbc(東京都)</a></p>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[#scmbc tokyo 3 に行ってきました]]></title>
+<link href="http://fukayatsu.github.com/2012/07/21/scmbc-tokyo-3/"/>
+<updated>2012-07-21T23:08:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/07/21/scmbc-tokyo-3</id>
+
+      <content type="html"><![CDATA[<p><a href="http://kokucheese.com/event/index/42642/">7月21日 SCMBootCamp in Tokyo 3 #scmbc(東京都)</a></p>
 
 <p><img src="https://lh4.googleusercontent.com/-HUE7jfc_yUk/UAq8jeG0K7I/AAAAAAAADbo/FJKWSiX5MtQ/w594-h497-k/SCMBootCampinTokyo3.png" alt="座席表" /></p>
 
@@ -919,15 +990,21 @@ pull request / mergeの練習をしたりという感じでした。</p>
 <p><a href="http://togetter.com/li/342324">SCMBootCamp in Tokyo3 #scmbc - Togetter</a></p>
 
 <p><a href="http://tomykaira.rackbox.net/lt/lt.html">git の一歩その先に</a></p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/07/21/scmbc-tokyo-3/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[octopress with pow]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/07/16/octopress-with-pow/"/>
-    <updated>2012-07-16T00:13:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/07/16/octopress-with-pow</id>
-    <content type="html"><![CDATA[<p><img src="http://dl.dropbox.com/u/85825/Screenshots/mv63g2j1-e4e.png" title="こんなかんじ" alt="screen shot" /></p>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[octopress with pow]]></title>
+<link href="http://fukayatsu.github.com/2012/07/16/octopress-with-pow/"/>
+<updated>2012-07-16T00:13:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/07/16/octopress-with-pow</id>
+
+      <content type="html"><![CDATA[<p><img src="http://dl.dropbox.com/u/85825/Screenshots/mv63g2j1-e4e.png" title="こんなかんじ" alt="screen shot" /></p>
 
 <blockquote><p><a href="http://marutanm.github.com/blog/2012/01/07/octopress-preview-pow/">OctopressのpreviewをPowでやると便利ですよという話 > marutanmlog</a></p></blockquote>
 
@@ -960,15 +1037,21 @@ mv octopress hogehoge
 
 <p>screen shotを載せるために<a href="http://grabbox.devsoft.no/">GrabBox</a>というスクリーンキャプチャをつかってみた。これは<code>cmd+shift+4</code>などとした時に、
 デスクトップに生成された画像を自動的にDropboxへ移動して、public linkをクリップボードにコピーしてくれる。これはこれで便利。</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/07/16/octopress-with-pow/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[エディタやツールの移行について]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/07/15/a-way-to-learn-to-do-new-things/"/>
-    <updated>2012-07-15T19:59:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/07/15/a-way-to-learn-to-do-new-things</id>
-    <content type="html"><![CDATA[<p>※ 今回はあくまでローカルの開発環境の話ですm(_ _)m</p>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[エディタやツールの移行について]]></title>
+<link href="http://fukayatsu.github.com/2012/07/15/a-way-to-learn-to-do-new-things/"/>
+<updated>2012-07-15T19:59:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/07/15/a-way-to-learn-to-do-new-things</id>
+
+      <content type="html"><![CDATA[<p>※ 今回はあくまでローカルの開発環境の話ですm(_ _)m</p>
 
 <p>今までつかってきたテキストエディタやツールを何らかの理由で別のものに乗り換えるとき、
 有力な方法は今まで使っていたもの削除、もしくは簡単には使えないようにしてしまうことだと思う。</p>
@@ -985,15 +1068,21 @@ mv octopress hogehoge
 
 
 <p>うーん、以前書いていたはてなブログはどうしようかなぁ。</p>
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/07/15/a-way-to-learn-to-do-new-things/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[todo of july]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/07/14/todo-of-july/"/>
-    <updated>2012-07-14T14:24:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/07/14/todo-of-july</id>
-    <content type="html"><![CDATA[<h2>TODO</h2>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[todo of july]]></title>
+<link href="http://fukayatsu.github.com/2012/07/14/todo-of-july/"/>
+<updated>2012-07-14T14:24:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/07/14/todo-of-july</id>
+
+      <content type="html"><![CDATA[<h2>TODO</h2>
 
 <ul>
 <li>メールアドレス統合
@@ -1055,15 +1144,21 @@ mv octopress hogehoge
 </li>
 </ul>
 
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/07/14/todo-of-july/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
-  <entry>
-    <title type="html"><![CDATA[posting test]]></title>
-    <link href="http://fukayatsu.github.com/blog/2012/07/14/posting-test/"/>
-    <updated>2012-07-14T13:21:00+09:00</updated>
-    <id>http://fukayatsu.github.com/blog/2012/07/14/posting-test</id>
-    <content type="html"><![CDATA[<p>今まではてなブログ、はてなダイアリーでブログを書いていたけれど、いい機会なので<code>github:pages</code>+<code>octopress</code>に移行してみる。</p>
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[posting test]]></title>
+<link href="http://fukayatsu.github.com/2012/07/14/posting-test/"/>
+<updated>2012-07-14T13:21:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/07/14/posting-test</id>
+
+      <content type="html"><![CDATA[<p>今まではてなブログ、はてなダイアリーでブログを書いていたけれど、いい機会なので<code>github:pages</code>+<code>octopress</code>に移行してみる。</p>
 
 <p>いくつか理由を挙げると、</p>
 
@@ -1086,7 +1181,7 @@ mv octopress hogehoge
 <li>active reload的なことをしたい</li>
 </ul>
 
-]]></content>
-  </entry>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/07/14/posting-test/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
 </feed>
