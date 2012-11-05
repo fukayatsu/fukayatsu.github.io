@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>octopressのsidebarにgithub repoとかcoderwallとか表示する - fukayatsu.dev()</title>
+  <meta name="author" content="fukayatsu">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://fukayatsu.github.com/2012/11/05/sidebar/">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="fukayatsu.dev()" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+   
+  <link href="/octopress-favicon.png" rel="icon">
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">fukayatsu.dev()</a></h1>
+  
+    <h2>やってみたこととか、いろいろ書いていきます</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:fukayatsu.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+
+
+
+
+
+
+
+
+
+
+
+<article class="hentry " role="article">
+  
+  <header>
+    <h1 class="entry-title">
+
+octopressのsidebarにgithub repoとかcoderwallとか表示する
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-05T23:26:00+09:00" pubdate data-updated="true">Nov 5<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/11/05/sidebar/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>サイドバーの<code>GitHub Repos</code>がずっと<code>Status updating...</code>だったのを直した。<br/>
+github api v3じゃなくてv2を使ってたのが原因だったらしい。<br/>
+作業としてはoctopress 2.1をマージして<code>rake update</code>した。</p>
+
+<p>ついでにcoderwallのバッチを表示するようにした。<br/>
+アイコンだけだとよくわからないので<a href="https://github.com/jaz303/tipsy">github/jaz303/tipsy</a>を使ってバッジの説明を表示するようにした。</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'># 以下にtipsyを配置
+</span><span class='line'>source/javascripts/jquery.tipsy.js
+</span><span class='line'>source/stylesheets/tipsy.css</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>source/_includes/sidebars/sections/coderwall.html</span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>&#x7b;&#x25; if site.coderwall_user %}
+</span><span class='line'><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">&quot;well&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;nav-header&quot;</span><span class="nt">&gt;</span>Coderwall Badges<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;coderwall_badges&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://coderwall.com/&#x7b;&#x7b;site.coderwall_user}}&quot;</span><span class="nt">&gt;</span>@&#x7b;&#x7b;site.coderwall_user}}<span class="nt">&lt;/a&gt;</span> on coderwall
+</span><span class='line'>  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;/stylesheets/tipsy.css&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&#39;text/javascript&#39;</span> <span class="na">src=</span><span class="s">&#39;/javascripts/jquery.tipsy.js&#39;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>      <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s2">&quot;http://coderwall.com/&#x7b;&#x7b;site.coderwall_user}}.json?callback=?&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+</span><span class='line'>        <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">badges</span><span class="p">.</span><span class="nx">length</span> <span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">badge</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">badges</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+</span><span class='line'>          <span class="kd">var</span> <span class="nx">badge_tag</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;&lt;img /&gt;&quot;</span><span class="p">);</span>
+</span><span class='line'>          <span class="nx">badge_tag</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span> <span class="s2">&quot;25%&quot;</span><span class="p">);</span>
+</span><span class='line'>          <span class="nx">badge_tag</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;src&quot;</span><span class="p">,</span><span class="nx">badge</span><span class="p">.</span><span class="nx">badge</span><span class="p">);</span>
+</span><span class='line'>          <span class="nx">badge_tag</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;strong&gt;&quot;</span> <span class="o">+</span> <span class="nx">badge</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot;&lt;/strong&gt;&lt;br&gt;&quot;</span> <span class="o">+</span> <span class="nx">badge</span><span class="p">.</span><span class="nx">description</span><span class="p">);</span>
+</span><span class='line'>          <span class="nx">badge_tag</span><span class="p">.</span><span class="nx">tipsy</span><span class="p">({</span><span class="nx">gravity</span><span class="o">:</span> <span class="s1">&#39;se&#39;</span><span class="p">,</span> <span class="nx">html</span><span class="o">:</span> <span class="kc">true</span><span class="p">});</span>
+</span><span class='line'>          <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#coderwall_badges&quot;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">badge_tag</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'>  <span class="nt">&lt;/script&gt;</span>
+</span><span class='line'><span class="nt">&lt;/section&gt;</span>
+</span><span class='line'>&#x7b;&#x25; endif %}
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>source/_includes/sidebars/blog_index_default.html</span></figcaption><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!--以下を追記--&gt;</span>
+</span><span class='line'>&#x7b;&#x25; include sidebars/sections/coderwall.html %}
+</span><span class='line'>
+</span><span class='line'><span class="c">&lt;!--</span>
+</span><span class='line'><span class="c">  page, postのデフォルトサイドバーは以下のファイルへ</span>
+</span><span class='line'><span class="c">  source/_includes/sidebars/page_default.html</span>
+</span><span class='line'><span class="c">  source/_includes/sidebars/post_default.html</span>
+</span><span class='line'><span class="c">--&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>octopress 2.1から<code>source/_includes/aside</code>じゃなくて<code>source/_includes/sidebars</code>を使うようになってて、最初ちょっと混乱した。</p>
+
+<p>参考:</p>
+
+<blockquote><p>Octopress のサイドバーに Coderwall Badges を表示 - Yoshiori Blog
+http://yoshiori.github.com/blog/2012/07/12/coderwall-badges/</p></blockquote>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">fukayatsu</span></span>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-05T23:26:00+09:00" pubdate data-updated="true">Nov 5<span>th</span>, 2012</time>
+
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/coderwall/'>coderwall</a>, <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/sidebar/'>sidebar</a>
+  
+</span>
+
+
+
+      
+
+    </p>
+    
+      <div class="sharing">
+  
+    
+      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
+    
+  
+  
+    
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://fukayatsu.github.com/2012/11/05/sidebar/" target="_blank">+1</a>
+    
+  
+  
+    
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://fukayatsu.github.com/2012/11/05/sidebar/" target="_blank">Share</a>
+    
+  
+  
+
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2012/10/18/shibuya-rb-20121017/" title="Previous Post: 渋谷.rb[:20121017]に行ってきた">&laquo; 渋谷.rb[:20121017]に行ってきた</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+<section>
+  <h1>Comments</h1>
+  
+
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
+</section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/11/05/sidebar/">octopressのsidebarにgithub repoとかcoderwallとか表示する</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/10/18/shibuya-rb-20121017/">渋谷.rb[:20121017]に行ってきた</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/10/15/oblove-younger-engineer-harvest-festival/">「オブラブ 収穫祭 〜若手エンジニア、実りの秋〜 #oblove」に参加してきた</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/10/06/looking-back-at-the-last-2-months/">この2ヶ月を振り返って</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/09/02/tddbc-yokohama-2nd/">TDDBC横浜 Second Seasonに参加しました</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets" data-user="fukayatsu" data-count="4" data-replies="false">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+    <a href="//twitter.com/fukayatsu" class="twitter-follow-button" data-show-count="false">Follow @fukayatsu</a>
+  
+</section>
+
+
+
+<section>
+  <h1>On GitHub</h1>
+  <ul id="gh_repos" data-user="fukayatsu" data-count="5" data-skip="true">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a class="github-follow" href="https://github.com/fukayatsu">Follow @fukayatsu</a>
+  
+</section>
+
+
+
+<section class="well">
+  <ul class="nav">
+    <li class="nav-header">Coderwall Badges</li>
+  </ul>
+  <div id="coderwall_badges"></div>
+  <a href="http://coderwall.com/fukayatsu">@fukayatsu</a> on coderwall
+  <link rel="stylesheet" href="/stylesheets/tipsy.css" type="text/css" />
+  <script type='text/javascript' src='/javascripts/jquery.tipsy.js'></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $.getJSON("http://coderwall.com/fukayatsu.json?callback=?", function(data){
+        for(var i = 0; i < data.data.badges.length ; i++){
+          var badge = data.data.badges[i];
+          var badge_tag = $("<img />");
+          badge_tag.css("width", "25%");
+          badge_tag.attr("src",badge.badge);
+          badge_tag.attr("title", "<strong>" + badge.name + "</strong><br>" + badge.description);
+          badge_tag.tipsy({gravity: 'se', html: true});
+          $("#coderwall_badges").append(badge_tag);
+        }
+      });
+    });
+  </script>
+</section>
+
+
+
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - fukayatsu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'fukayatsu';
+			var disqus_developer = '0';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://fukayatsu.github.com/2012/11/05/sidebar/';
+        var disqus_url = 'http://fukayatsu.github.com/2012/11/05/sidebar/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+</body>
+</html>

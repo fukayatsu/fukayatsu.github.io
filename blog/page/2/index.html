@@ -79,6 +79,61 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/07/24/get-image-alt-text-by-chrome-extension/">コンテキストメニューで画像のalt-textを取得する</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-24T00:30:00+09:00" pubdate data-updated="true">Jul 24<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/07/24/get-image-alt-text-by-chrome-extension/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>前回の記事で宿題になっていたコンテキストメニューからimgタグのalt取得の件が解決した。
+content_script側でimgタグにイベントリスナを追加してやって、
+そこからaltタグの情報をメッセージとしてbackground_pageに送ってやればよかった。</p>
+
+<p><a href="https://github.com/fukayatsu/chrome-markdown-linker/blob/master/src/content_script.js">src/content_script.js</a></p>
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/07/22/markdown-linker-for-chrome/">markdown形式でリンクをクリップボードにコピーするchrome-extension作った</a>
 
 </h1>
@@ -683,6 +738,10 @@ mv octopress hogehoge
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/11/05/sidebar/">octopressのsidebarにgithub repoとかcoderwallとか表示する</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/10/18/shibuya-rb-20121017/">渋谷.rb[:20121017]に行ってきた</a>
       </li>
     
@@ -696,10 +755,6 @@ mv octopress hogehoge
     
       <li class="post">
         <a href="/2012/09/02/tddbc-yokohama-2nd/">TDDBC横浜 Second Seasonに参加しました</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/08/31/kpt-of-august/">8月のKPT</a>
       </li>
     
   </ul>
