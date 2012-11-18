@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev()]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2012-11-11T14:38:32+09:00</updated>
+  <updated>2012-11-18T12:58:16+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[move-my-old-pojects-to-github]]></title>
+<link href="http://fukayatsu.github.com/2012/11/18/move-my-old-pojects-to-github/"/>
+<updated>2012-11-18T12:23:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/11/18/move-my-old-pojects-to-github</id>
+
+      <content type="html"><![CDATA[<h3>githubあんまり使ってない人へ(*1)</h3>
+
+<p>大学生の時に作ってたC#のじゃんけん集計ソフト(*2)とか、Androidアプリとかのソースコードをgithubに移動した。</p>
+
+<p>当時はバージョン管理はフォルダに<code>hoge1</code>, <code>hoge2</code>と名前をつけて管理したり、Dropbox上で直接開発したりしていた。
+作ったものの一部は行方不明になっていて、「あーあのときバージョン管理の知識があればなー」と思うがもう遅い。</p>
+
+<p>そういうのを防ぐために、今回Dropboxの<code>creation</code>フォルダの中から一応形になっている物をgithubに移動した(もちろん形になっていないやりかけのプロジェクトの方が多い)
+。</p>
+
+<h3>projectをgithubで公開することは他にも意義があると思っている。</h3>
+
+<p>例えば、</p>
+
+<ul>
+<li>自分はこういう言語・プロジェクトに興味があると知ってもらえるかも</li>
+<li>同じようなことがしたい誰かの参考になるかも</li>
+<li>coderwallで新しくバッチがもらえるかも</li>
+<li>誰かがバグ報告とかアドバイスとかくれるかも</li>
+<li>自分がモチベーションを失ったプロジェクトを誰かがforkして引き継いでくれるかも</li>
+</ul>
+
+
+<p>とかとか。</p>
+
+<p>下2つは自分がpull-requestやissueを投げたことはあるが、<br/>
+仕事以外で逆パターンの経験は無いので、そういう価値のあるプロジェクトを公開したいなぁと思う今日この頃。</p>
+
+<hr />
+
+<p>*1 対象読者を想定して記事を書き始めれば文章がすっきりするかもと思ったのでこれからしばらく記事の一行目はこんな感じにしてみる。今回の場合は誰に向けて書けばいいのかよくわからなかった。</p>
+
+<p>*2 研究室メンバーで昼食後にじゃんけんして、負けたら全員に100円ぐらいデザートおごる慣習があった。それを記録してグラフ化したり、対戦成績出したりしてた。</p>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/11/18/move-my-old-pojects-to-github/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
