@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev()]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2012-11-18T12:58:16+09:00</updated>
+  <updated>2012-11-18T13:03:47+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -18,10 +18,10 @@
 
 
 
-<title type="html"><![CDATA[move-my-old-pojects-to-github]]></title>
-<link href="http://fukayatsu.github.com/2012/11/18/move-my-old-pojects-to-github/"/>
+<title type="html"><![CDATA[昔開発してたプロジェクトをgithubに移行した]]></title>
+<link href="http://fukayatsu.github.com/2012/11/18/move-my-old-projects-to-github/"/>
 <updated>2012-11-18T12:23:00+09:00</updated>
-<id>http://fukayatsu.github.com/2012/11/18/move-my-old-pojects-to-github</id>
+<id>http://fukayatsu.github.com/2012/11/18/move-my-old-projects-to-github</id>
 
       <content type="html"><![CDATA[<h3>githubあんまり使ってない人へ(*1)</h3>
 
@@ -33,7 +33,7 @@
 <p>そういうのを防ぐために、今回Dropboxの<code>creation</code>フォルダの中から一応形になっている物をgithubに移動した(もちろん形になっていないやりかけのプロジェクトの方が多い)
 。</p>
 
-<h3>projectをgithubで公開することは他にも意義があると思っている。</h3>
+<h3>projectをgithubで公開することは他にも意義がある</h3>
 
 <p>例えば、</p>
 
@@ -56,7 +56,7 @@
 <p>*1 対象読者を想定して記事を書き始めれば文章がすっきりするかもと思ったのでこれからしばらく記事の一行目はこんな感じにしてみる。今回の場合は誰に向けて書けばいいのかよくわからなかった。</p>
 
 <p>*2 研究室メンバーで昼食後にじゃんけんして、負けたら全員に100円ぐらいデザートおごる慣習があった。それを記録してグラフ化したり、対戦成績出したりしてた。</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/11/18/move-my-old-pojects-to-github/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/11/18/move-my-old-projects-to-github/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
