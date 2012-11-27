@@ -10,7 +10,7 @@ var github = (function(){
   return {
     showRepos: function(options){
       $.ajax({
-          url: "https://api.github.com/users/"+options.user+"/repos?callback=?"
+          url: "https://api.github.com/users/"+options.user+"/repos?per_page=100&callback=?"
         , type: 'jsonp'
         , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
         , success: function(data) {
