@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev()]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2012-12-02T18:06:54+09:00</updated>
+  <updated>2012-12-03T12:19:37+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,140 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[hubot jotei > 女帝 Advent Calendar 2012(3日目)]]></title>
+<link href="http://fukayatsu.github.com/2012/12/03/jotei-advent-calendar/"/>
+<updated>2012-12-03T00:00:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/12/03/jotei-advent-calendar</id>
+
+      <content type="html"><![CDATA[<p>この記事は<a href="http://atnd.org/events/34298">女帝 Advent Calendar 2012</a>の3日目の記事です。</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>・Advent Calendarとは
+</span><span class='line'>クリスマスまでの日数を数えるために、1日に1つ、穴が空けられるようになっているカレンダーです。
+</span><span class='line'>転じて、技術系コミュニティで、クリスマスまでの25日間にTipsを1つずつ公開するイベントをAdvent Calendarと呼ぶそうです。
+</span><span class='line'>
+</span><span class='line'>・ルール
+</span><span class='line'>女帝に関する話題を特定の日に自分のブログ等にアップロードしてもらうだけです。
+</span><span class='line'>執筆はこのイベントに参加した順です。最初の人が12月1日、2人目が12月2日…最後の人が12月25日です。
+</span><span class='line'>twitterへの投稿（140文字）でも構いません。複数にわたる場合は、去年のようにtogetterでまとめるという措置をとる予定です。（例 : 女帝advent calendar 22日目 – Togetter ）
+</span><span class='line'>アップロードしたら、 このイベントのコメント欄にタイトルとURLを貼り付ける＋twitterでハッシュタグ #joteadvent2012 をつけてつぶやいてください。
+</span><span class='line'>女帝に関するものならどんなことでも構いません。
+</span><span class='line'>参考 : 女帝 Advent Calendar 2011 : ATND</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p>去年の
+<a href="http://atnd.org/events/22939">女帝 Advent Calendar 2011</a>
+では
+<a href="http://d.hatena.ne.jp/fukayatsu/20111219/1324316844">Androidアプリ</a>
+をつくったりました。</p>
+
+<p>去年の今頃はAndroidクラスタ崩れみたいな感じだったのでアプリを作りましたが、<br/>
+今年は普段ギョームで使っている
+<a href="http://hubot.github.com/">HUBOT</a>
+で参加したいと思います。</p>
+
+<h2>hubotとは</h2>
+
+<p>githubが公開しているnode.jsによる実装のbotフレームワークです。<br/>
+irc, twitter, hipchatなど、いろいろなサービスのアダプターが開発されており、<br/>
+coffee-scriptで独自のコマンドを追加することができます。</p>
+
+<p>例えば、</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>fukayatsu | @hubot production deploy
+</span><span class='line'>hubot     | おｋ @all デプロイします
+</span><span class='line'>hubot     | cakes.mu にデプロイ完了しました(｀・ω・´)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>というやりとりを毎日行なっています(メッセージは時期によって異なります)。<br/>
+このあたりの事は、いずれまたどこかで詳しくまとめたいと思います。</p>
+
+<h2>hubot jotei</h2>
+
+<p>さて本題ですが、こんなコマンドを追加しました。</p>
+
+<div><script src='https://gist.github.com/4188057.js?file='></script>
+<noscript><pre><code># Description:
+#   jotei
+#
+# Commands:
+#   hubot jotei img   - Searches Google Images for the jotei
+#   hubot jotei tweet - Recent tweet of the jotei
+
+module.exports = (robot) -&gt;
+  robot.respond /jotei img/i, (msg) -&gt;
+    imageMe msg, &quot;yamashitam&quot;, (url) -&gt;
+      msg.send url
+
+  robot.respond /jotei status/i, (msg) -&gt;
+    tweetMe msg, &quot;yamashitam&quot;, (text) -&gt;
+      msg.send text
+
+
+tweetMe = (msg, name, cb) -&gt;
+  q = screen_name: name
+  msg.http(&quot;http://api.twitter.com/1/statuses/user_timeline.json&quot;)
+    .query(q)
+    .get() (err, res, body) -&gt;
+      statuses = JSON.parse(body)
+      if statuses.length &gt; 0
+        status = msg.random statuses
+        cb status.text
+
+imageMe = (msg, query, animated, cb) -&gt;
+  cb = animated if typeof animated == 'function'
+  q = v: '1.0', rsz: '8', q: query, safe: 'active'
+  q.as_filetype = 'gif' if typeof animated is 'boolean' and animated is true
+  msg.http('http://ajax.googleapis.com/ajax/services/search/images')
+    .query(q)
+    .get() (err, res, body) -&gt;
+      images = JSON.parse(body)
+      images = images.responseData.results
+      if images.length &gt; 0
+        image  = msg.random images
+        cb &quot;#{image.unescapedUrl}#.png&quot;
+</code></pre></noscript></div>
+
+
+<p>こんな感じになります。</p>
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/hubot-jotei-img.png" alt="" /></p>
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/hubot-jotei-status.png" alt="" /></p>
+
+<p>便利ですね(?)</p>
+
+<h2>その他</h2>
+
+<p>そういえば、自分がいろいろなサービスでできるだけ同じアカウント名を使うようになったきっかけは @yamashitam だったような気がする。</p>
+
+<hr />
+
+<p>明日は<a href="http://twitter.com/HomeiMiyashita">@HomeiMiyashita</a>さんです :)</p>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/03/jotei-advent-calendar/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1552,37 +1686,6 @@ mv octopress hogehoge
 <p>screen shotを載せるために<a href="http://grabbox.devsoft.no/">GrabBox</a>というスクリーンキャプチャをつかってみた。これは<code>cmd+shift+4</code>などとした時に、
 デスクトップに生成された画像を自動的にDropboxへ移動して、public linkをクリップボードにコピーしてくれる。これはこれで便利。</p>
 <p><a rel="bookmark" href="http://fukayatsu.github.com/2012/07/16/octopress-with-pow/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[エディタやツールの移行について]]></title>
-<link href="http://fukayatsu.github.com/2012/07/15/a-way-to-learn-to-do-new-things/"/>
-<updated>2012-07-15T19:59:00+09:00</updated>
-<id>http://fukayatsu.github.com/2012/07/15/a-way-to-learn-to-do-new-things</id>
-
-      <content type="html"><![CDATA[<p>※ 今回はあくまでローカルの開発環境の話ですm(_ _)m</p>
-
-<p>今までつかってきたテキストエディタやツールを何らかの理由で別のものに乗り換えるとき、
-有力な方法は今まで使っていたもの削除、もしくは簡単には使えないようにしてしまうことだと思う。</p>
-
-<p>そうでないと、何か新しいものを導入したとしても、ついつい慣れている以前のツールを使ってしまうことになりかねない。
-というか、自分がそうであるorz</p>
-
-<p>というわけで、手元のMacBookから以下を削除した。</p>
-
-<ul>
-<li>RVM</li>
-<li>MacVim</li>
-</ul>
-
-
-<p>うーん、以前書いていたはてなブログはどうしようかなぁ。</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/07/15/a-way-to-learn-to-do-new-things/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
