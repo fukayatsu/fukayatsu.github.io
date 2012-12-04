@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev()]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2012-12-03T12:19:37+09:00</updated>
+  <updated>2012-12-04T23:53:52+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -48,6 +48,11 @@
 </span><span class='line'>女帝に関するものならどんなことでも構いません。
 </span><span class='line'>参考 : 女帝 Advent Calendar 2011 : ATND</span></code></pre></td></tr></table></div></figure>
 
+
+<p>追記(12/4):<br/>
+一つ前の記事は<a href="http://d.hatena.ne.jp/arc680/20121202/1354374076">女帝 Advent Calendar 2012 2日目「女帝ってこんなんだった」 - へたれ日記</a><br/>
+一つ後の記事は<a href="http://togetter.com/li/417761">合わないだなんて言わないで - Togetter</a><br/>
+です</p>
 
 <hr />
 
@@ -165,6 +170,14 @@ imageMe = (msg, query, animated, cb) -&gt;
 <blockquote><p>TODO: CakePHP Advent Calendar 2012に参加する</p></blockquote>
 
 <p>と書いた通り参加することができました :)</p>
+
+<p>追記(12/04):<br/>
+一つ前の記事は<br/>
+<a href="http://tagamidaiki.com/cakephp2-facebook-connect-cakeadvent2012/">CakePHP2.2.3でFacebook連携して自分の友達の女の子の画像を一覧で見てみる - tagamidaiki.com</a></p>
+
+<p>一つ後の記事は<br/>
+<a href="http://d.hatena.ne.jp/cakephper/20121203/1354524441">CookBookの翻訳差分チェックサイト作りました - cakephperの日記</a><br/>
+です。</p>
 
 <hr />
 
