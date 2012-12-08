@@ -91,6 +91,89 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/07/16/octopress-with-pow/">octopress with pow</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-16T00:13:00+09:00" pubdate data-updated="true">Jul 16<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/07/16/octopress-with-pow/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p><img src="http://dl.dropbox.com/u/85825/Screenshots/mv63g2j1-e4e.png" title="こんなかんじ" alt="screen shot" /></p>
+
+<blockquote><p><a href="http://marutanm.github.com/blog/2012/01/07/octopress-preview-pow/">OctopressのpreviewをPowでやると便利ですよという話 > marutanmlog</a></p></blockquote>
+
+<p>でも言及されているように、octopress + powが良い感じ。</p>
+
+<p>また、powを便利に使うための<code>powder</code>というgemがあり、</p>
+
+<p>たとえば、</p>
+
+<pre><code>gem i powder
+cd path/to/octopress
+powder link
+</code></pre>
+
+<p>とすれば、<code>http://octopress.dev</code>でpreviewできる。</p>
+
+<p>また、<code>http://hogehoge.dev</code>でpreviewしたい場合は、</p>
+
+<pre><code>cd ~/.pow
+mv octopress hogehoge
+</code></pre>
+
+<p>のようにすればよい。</p>
+
+<p>あとは<code>rake watch</code>させておいて、いいかんじになったら<code>rake deploy</code>でok</p>
+
+<p>うーん、octopressといい、powといい、使っていて心地良い : )</p>
+
+<h4>余談:</h4>
+
+<p>screen shotを載せるために<a href="http://grabbox.devsoft.no/">GrabBox</a>というスクリーンキャプチャをつかってみた。これは<code>cmd+shift+4</code>などとした時に、
+デスクトップに生成された画像を自動的にDropboxへ移動して、public linkをクリップボードにコピーしてくれる。これはこれで便利。</p>
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/07/15/a-way-to-learn-to-do-new-things/">エディタやツールの移行について</a>
 
 </h1>
@@ -343,6 +426,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/12/08/t2study/">t2studyという勉強会を主催してみた</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/12/03/jotei-advent-calendar/">hubot jotei > 女帝 Advent Calendar 2012(3日目)</a>
       </li>
     
@@ -356,10 +443,6 @@
     
       <li class="post">
         <a href="/2012/11/28/open-a-issue/">issue投げよう</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/11/22/shibuya-rb-20121121/">11月の渋谷.rbに行ってきた</a>
       </li>
     
   </ul>
