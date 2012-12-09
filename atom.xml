@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev()]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2012-12-09T17:01:33+09:00</updated>
+  <updated>2012-12-09T20:26:27+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Ruby Advent Calendar 2012 &rarr;]]></title>
+<link href="http://qiita.com/items/19807642971ebcc92f52"/>
+<updated>2012-12-09T20:00:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/12/09/ruby-advent-calendar</id>
+
+      <content type="html"><![CDATA[<p><a href="http://qiita.com/items/19807642971ebcc92f52">CLIで手軽にカレーパンマンに喋らせたい #RubyGem #pebbles - Qiita</a></p>
+
+<p>Ruby Advent CalendarをQiitaに書くのは微妙な気がする。</p>
+
+<p>人のを読む分にはフォーマットが統一されていて見やすいかもしれないけど。</p>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/09/ruby-advent-calendar/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1686,25 +1705,6 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
 
 <p><a href="http://ch.nicovideo.jp/channel/jenkins">日本Jenkinsユーザ会 - ニコニコチャンネル</a></p>
 <p><a rel="bookmark" href="http://fukayatsu.github.com/2012/07/29/jenkins-user-conference-tokyo-2012/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[コンテキストメニューで画像のalt-textを取得する]]></title>
-<link href="http://fukayatsu.github.com/2012/07/24/get-image-alt-text-by-chrome-extension/"/>
-<updated>2012-07-24T00:30:00+09:00</updated>
-<id>http://fukayatsu.github.com/2012/07/24/get-image-alt-text-by-chrome-extension</id>
-
-      <content type="html"><![CDATA[<p>前回の記事で宿題になっていたコンテキストメニューからimgタグのalt取得の件が解決した。
-content_script側でimgタグにイベントリスナを追加してやって、
-そこからaltタグの情報をメッセージとしてbackground_pageに送ってやればよかった。</p>
-
-<p><a href="https://github.com/fukayatsu/chrome-markdown-linker/blob/master/src/content_script.js">src/content_script.js</a></p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/07/24/get-image-alt-text-by-chrome-extension/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
