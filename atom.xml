@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev()]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2012-12-16T20:24:20+09:00</updated>
+  <updated>2012-12-20T01:17:15+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,210 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[12月のShibuya.rbに行ってきた]]></title>
+<link href="http://fukayatsu.github.com/2012/12/20/shibuya-rb/"/>
+<updated>2012-12-20T00:04:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/12/20/shibuya-rb</id>
+
+      <content type="html"><![CDATA[<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121220/shibuya-rb.jpg" alt="" /></p>
+
+<p>アルコール類が無料な<a href="http://voyagegroup.com/business/office/office015/">AJITO</a>最高！<br/>
+酔ってたせいか、写真がひどい&#8230;orz</p>
+
+<p><a href="http://www.zusaar.com/event/447306">渋谷.rb[:20121219] on Zusaar</a></p>
+
+<p><a href="http://togetter.com/li/425625">#shibuyarb 渋谷.rb[:20121219] - Togetter</a></p>
+
+<p>今回はTokyoRubyKaigi10のLTの練習をさせてくださいと言っておきながら、スライドの内容チェックというか相談みたいな感じに落ち着いた。本番までにスライドをいい感じにして、楽しい発表ができたらいいな。</p>
+
+<p>Shibuya.rb、今回で3回目の参加なのだけどだんだん顔見知りが増えてきた。これから会社のプロダクトとか、自分の人生とかをRuby界隈に寄せていくので勝手に心強く思っていたりする。</p>
+
+<p>例によって内容メモ。</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>20:02 kyanny さんのRubyConf 台湾の話
+</span><span class='line'>    http://rubyconf.tw/2012/を見ながら
+</span><span class='line'>    ホテルと会場が同じで捗る
+</span><span class='line'>    MatzのKeyノート
+</span><span class='line'>        プログラミングはDSL作るようなものだから、皆さんも言語開発者ですよ的な
+</span><span class='line'>        名前が世界を変える
+</span><span class='line'>    笹田さん
+</span><span class='line'>        YARV
+</span><span class='line'>    松田さん
+</span><span class='line'>    Koan-Sin Tan
+</span><span class='line'>        smarl talkのオブジェクトモデルとRubyのオブジェクトモデルの人
+</span><span class='line'>    David Tian
+</span><span class='line'>        VMWare Mozy
+</span><span class='line'>        RailsとかRubyのバージョンアップの苦労話
+</span><span class='line'>    Eddie Kao
+</span><span class='line'>        CRubyのソースコードリーディング
+</span><span class='line'>    Lin Jen Shin(godfat)
+</span><span class='line'>        資料おすすめ
+</span><span class='line'>        並列プログラミングについて
+</span><span class='line'>            PumaとかThinとかUnicornとか
+</span><span class='line'>            zbatery
+</span><span class='line'>    Gosuke Miyashita
+</span><span class='line'>    hsbtさん
+</span><span class='line'>        tdiary
+</span><span class='line'>    Joseph Ku
+</span><span class='line'>        RubyMotionの紹介とデモ
+</span><span class='line'>        この人に限らずデモをやるひとが多かった
+</span><span class='line'>    Jim Huang
+</span><span class='line'>        mrubyの医療機器
+</span><span class='line'>    nomadcoder
+</span><span class='line'>        Ext JS and Netzke
+</span><span class='line'>        業務アプリやってる人は必見
+</span><span class='line'>    Richard Lee
+</span><span class='line'>        Dev ops
+</span><span class='line'>        モニタリング　God使ってるらしい
+</span><span class='line'>    thegiive
+</span><span class='line'>        yahoo 台湾
+</span><span class='line'>        puppet
+</span><span class='line'>    Wei Lu
+</span><span class='line'>        シンガポールの元pivotal labの話
+</span><span class='line'>            なんでもペアプロするらしい
+</span><span class='line'>    LT
+</span><span class='line'>        終わりのドラを結構無視するらしい
+</span><span class='line'>        自由な感じ
+</span><span class='line'>        中国語で話す人が多い
+</span><span class='line'>    スピーチの間のバッファ
+</span><span class='line'>        ランチとティータイムがある
+</span><span class='line'>    メイントーク
+</span><span class='line'>        英語で話すひとは日本より多かったみたい
+</span><span class='line'>    クロージング
+</span><span class='line'>        Matz大神
+</span><span class='line'>    台湾いいとこでした
+</span><span class='line'>        英語よりも日本語が通じたりする
+</span><span class='line'>20:35 tkrk10のLTの相談(@fukayatsu)
+</span><span class='line'>20:50 bossan kubo39さん
+</span><span class='line'>21:01 sanematさん Ruby 2.0の歩き方
+</span><span class='line'>    ruby/NEWSを見てると7割ぐらい踏んだバグを理解できる
+</span><span class='line'>    1人アドベントカレンダー
+</span><span class='line'>        25個プルリクを送ろう
+</span><span class='line'>        ちゃんとテストがあるプロダクトは直しやすい
+</span><span class='line'>        ruby2.0で遊ぶとお手頃なバグを踏める
+</span><span class='line'>21:10 iR3さんのturnipのお話
+</span><span class='line'>    cucumberの正規表現の罠を避けて、Rspecで
+</span><span class='line'>21:30 ちょうどよいお時間なのでお開き
+</span><span class='line'>
+</span><span class='line'>21:45 二次会〜</span></code></pre></td></tr></table></div></figure>
+
+
+<p>おまけ</p>
+
+<blockquote class="twitter-tweet" lang="ja"><p>飛露喜アイコンということはガチ勢な予感</p>&mdash; ふかやつさん (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/281412621360586752" data-datetime="2012-12-19T14:56:11+00:00">12月 19, 2012</a></blockquote>
+
+
+<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+<blockquote class="twitter-tweet" data-in-reply-to="281412621360586752" lang="ja"><p>@<a href="https://twitter.com/fukayatsu">fukayatsu</a> kwsk!</p>&mdash; TERAJIMA, Motoyukiさん (@trmmy) <a href="https://twitter.com/trmmy/status/281414772086435840" data-datetime="2012-12-19T15:04:44+00:00">12月 19, 2012</a></blockquote>
+
+
+<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+<blockquote class="twitter-tweet" data-in-reply-to="281416187596914688" lang="ja"><p>@<a href="https://twitter.com/fukayatsu">fukayatsu</a> @<a href="https://twitter.com/trmmy">trmmy</a> 今日はすぐに帰ってしまったので、来年shibuyarbで飲みいきましょう！</p>&mdash; つちかずさん (@tsuchikazu) <a href="https://twitter.com/tsuchikazu/status/281417431744929792" data-datetime="2012-12-19T15:15:18+00:00">12月 19, 2012</a></blockquote>
+
+
+<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+<blockquote class="twitter-tweet" data-in-reply-to="281417431744929792" lang="ja"><p>@<a href="https://twitter.com/tsuchikazu">tsuchikazu</a> @<a href="https://twitter.com/trmmy">trmmy</a> 是非是非！！</p>&mdash; ふかやつさん (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/281417629338587136" data-datetime="2012-12-19T15:16:05+00:00">12月 19, 2012</a></blockquote>
+
+
+<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+<blockquote class="twitter-tweet" data-in-reply-to="281417629338587136" lang="ja"><p>@<a href="https://twitter.com/fukayatsu">fukayatsu</a> @<a href="https://twitter.com/tsuchikazu">tsuchikazu</a> これは期待</p>&mdash; TERAJIMA, Motoyukiさん (@trmmy) <a href="https://twitter.com/trmmy/status/281421780411899906" data-datetime="2012-12-19T15:32:35+00:00">12月 19, 2012</a></blockquote>
+
+
+<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>これはほんとに実現したいです :)</p>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/20/shibuya-rb/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1725,67 +1929,6 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
 
 <p>やっぱり動的言語の方が性に合っている気がする :)</p>
 <p><a rel="bookmark" href="http://fukayatsu.github.com/2012/08/03/getting-started-with-cakephp/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[株式会社ピースオブケイクに転職しました]]></title>
-<link href="http://fukayatsu.github.com/2012/08/01/career-move/"/>
-<updated>2012-08-01T01:10:00+09:00</updated>
-<id>http://fukayatsu.github.com/2012/08/01/career-move</id>
-
-      <content type="html"><![CDATA[<p>本日付けで<a href="http://www.pieceofcake.co.jp/">Piece of Cake, inc.</a>という会社に転職いたしました。</p>
-
-<p><a href="http://www.cyberagent.co.jp/">前職</a>ではAndroidアプリとかSNSプラットフォームとかを作っていましたが、
-今後は<a href="http://cakes.mu/">クリエイターと読者をつなぐコンテンツ配信プラットフォーム</a>を作っていきます。
-ざっくり言うと一週間150円の定額制で雑誌とか漫画とかのコンテンツが読めるというようなサービスです。コンテンツを消費する人だけではなく、コンテンツを作る人にもかなり配慮されています。</p>
-
-<p>転職といっても家も会社もまた渋谷なので、あまり変化した気がしません。
-というか外に出ると必ずと言っていいほど前職の人に出会いますｗ</p>
-
-<h2>経緯</h2>
-
-<p>アルバイトの4ヶ月を含めて1年半程いくつかのチームで仕事をさせていただきましたが、関係者が多すぎたり、自分がユーザとして使うことがないようなものを作るのは向いていないという思いを感じていました。</p>
-
-<p>もちろん尊敬するエンジニアはたくさんいて、そういう人達と同じチームで作業できたことは幸運でした。
-何事もだいたい前向きな社風は好きですが、<a href="http://www.cyberagent.co.jp/corporate/vision.html">ビジョン</a>は、うーん&#8230;</p>
-
-<p>そんなこんなでここ2ヶ月ほど、<a href="https://www.wantedly.com/">Social Recruiting Service : Wantedly</a>を活用して、いろいろな会社にお話を聞きに行ってました。
-キーワード的にはrubyとかgithubとかリーンとか自分が使う/使いそう/使いたいサービスとかそんな感じです。
-幸運にも受け入れていただけるという会社がいくつかあったので、迷ったのですが個人的に一番おもしろそうなところで仕事をすることにしました。</p>
-
-<h2>現状</h2>
-
-<p>契約上は明日からですが、もう何度かオフィスにお邪魔して開発環境を作ったり、打ち合わせに参加したりとかしてます。現在システムがcakephpとpythonで動いているのでその辺の予習とかも。</p>
-
-<p>以下、蛇足。</p>
-
-<h3>転職したことによるメリット</h3>
-
-<ul>
-<li>自分がユーザとして使うであろうサービスを開発できる</li>
-<li>小さいチームでほぼ完結している</li>
-<li>変な人(面白い人)の密度が高い</li>
-<li>自分のPCで開発できる</li>
-<li>将来どうなるかわからない</li>
-</ul>
-
-
-<h3>転職したことによるデメリット？</h3>
-
-<ul>
-<li>将来どうなるかわからない</li>
-<li>通勤時間が2倍に #=> 徒歩15分</li>
-<li>いろいろ手続きめんどくさい</li>
-</ul>
-
-
-<p>というわけでがんばりますので、<a href="https://cakes.mu/">cakes</a>をよろしくお願いしますm(_ _)m</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/08/01/career-move/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
