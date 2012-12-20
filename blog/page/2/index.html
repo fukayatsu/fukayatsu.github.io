@@ -91,6 +91,158 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/11/28/open-a-issue/">issue投げよう</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-28T00:45:00+09:00" pubdate data-updated="true">Nov 28<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/11/28/open-a-issue/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>昨日の自分へ</p>
+
+<blockquote class="twitter-tweet"><p>action_argsとactive_adminが競合してる気がするのであとでちゃんと検証してフィードバックとかしたい</p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/273063544042450944" data-datetime="2012-11-26T13:59:56+00:00">November 26, 2012</a></blockquote>
+
+
+<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>発端はこれ。<br/>
+プライベートで作業してるときに、両方のgemを入れてるとactive_adminの管理画面にログインした後に</p>
+
+<pre><code>wrong number of arguments
+</code></pre>
+
+<p>とか表示されるのに気づいた。</p>
+
+<p>エラーを追うと、</p>
+
+<p><a href="https://github.com/gregbell/active_admin/blob/eea827a3cfd4c4bab3c3171efaa1d91bf6cb836b/lib/active_admin/page_controller.rb">active_admin/lib/active_admin/page_controller.rb at master · gregbell/active_admin · GitHub</a></p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">ActiveAdmin</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1"># All Pages controllers inherit from this controller.</span>
+</span><span class='line'>  <span class="k">class</span> <span class="nc">PageController</span> <span class="o">&lt;</span> <span class="no">BaseController</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1"># Pages::Page subclasses Page::Base which implements the layout code</span>
+</span><span class='line'>    <span class="n">layout</span> <span class="kp">false</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">actions</span> <span class="ss">:index</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">{},</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+</span><span class='line'>      <span class="n">render</span> <span class="s2">&quot;active_admin/page/index&quot;</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">clear_page_actions!</span>
+</span><span class='line'>      <span class="n">active_admin_config</span><span class="o">.</span><span class="n">clear_page_actions!</span>
+</span><span class='line'>    <span class="k">end</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>この11行目がaction_argsと競合しているらしかった。</p>
+
+<p><strong> というのを<a href="https://github.com/asakusarb/action_args">asakusarb/action_args</a>のissuesに書けよ俺！ </strong></p>
+
+<p><code>次からそうしますm(_ _)m</code></p>
+
+<p>今回はたまたま@a_matsudaさんが最初のtweetを捕捉して頂いたらしく、速攻で修正してくださいました。ありがとうございました!!</p>
+
+<blockquote class="twitter-tweet" data-in-reply-to="273063544042450944" lang="ja"><p>@<a href="https://twitter.com/fukayatsu">fukayatsu</a> 修正してみたので、よければ先っちょで試してみていただけますでしょうか？ <a href="https://t.co/PoleOzgR" title="https://github.com/asakusarb/action_args">github.com/asakusarb/acti…</a> (明日ぐらいにはgemにもすると思いますが)</p>&mdash; Akira Matsudaさん (@a_matsuda) <a href="https://twitter.com/a_matsuda/status/273106258373001217" data-datetime="2012-11-26T16:49:40+00:00">11月 26, 2012</a></blockquote>
+
+
+<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+<blockquote class="twitter-tweet" data-in-reply-to="273106258373001217" lang="ja"><p>@<a href="https://twitter.com/a_matsuda">a_matsuda</a> おおお、ありがとうございます！！修正箇所と正常に動作することを確認しました。ちゃんとフィードバックしなくてすみませんm(_ _)m</p>&mdash; ふかやつさん (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/273207043026976768" data-datetime="2012-11-26T23:30:09+00:00">11月 26, 2012</a></blockquote>
+
+
+<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+<blockquote class="twitter-tweet" data-in-reply-to="273207043026976768" lang="ja"><p>@<a href="https://twitter.com/fukayatsu">fukayatsu</a> よかったです :) こちらはこのバグにはまったく気づけてなかったところでたまたまさっきのツイートを拝見したので助かりました。ありがとうございました。</p>&mdash; Akira Matsudaさん (@a_matsuda) <a href="https://twitter.com/a_matsuda/status/273214068368744449" data-datetime="2012-11-26T23:58:04+00:00">11月 26, 2012</a></blockquote>
+
+
+<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>その後、他にも変更が入ってgemのバージョンが<code>v0.0.3</code> => <code>v1.0.0</code>になったみたいです。</p>
+
+<p><a href="http://rubygems.org/gems/action_args">action_args | RubyGems.org | your community gem host</a></p>
+
+<p>結論</p>
+
+<blockquote class="twitter-tweet"><p>みんなちゃんとissue投げるところからOSSへの貢献をしよう。 <a href="https://twitter.com/search/%23cwt2012">#cwt2012</a> <a href="http://t.co/j6j0dz59" title="http://twitpic.com/bazq7r">twitpic.com/bazq7r</a></p>&mdash; Aki (@nekoruri) <a href="https://twitter.com/nekoruri/status/266028240777388032" data-datetime="2012-11-07T04:04:09+00:00">November 7, 2012</a></blockquote>
+
+
+<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/11/22/shibuya-rb-20121121/">11月の渋谷.rbに行ってきた</a>
 
 </h1>
@@ -1215,139 +1367,6 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/08/03/getting-started-with-cakephp/">getting started with cakephp</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-03T14:00:00+09:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/08/03/getting-started-with-cakephp/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>今週ぐらいからcakephpをさわり始めたのでどういう感じでアプローチしているかのメモ。</p>
-
-<h2>前提</h2>
-
-<ul>
-<li>phpの経験は<code>&lt;?php phpinfo() ?&gt;</code>だけ</li>
-<li>java, rubyは日常的に使ってた</li>
-<li>railsで簡単なサービスを作ったことはある</li>
-<li>xamppの経験はあんまりない</li>
-<li>開発環境はMac</li>
-</ul>
-
-
-<h2>開発環境</h2>
-
-<p>xampp for macを入れる</p>
-
-<p><a href="http://www.apachefriends.org/jp/xampp-macosx.html">apache friends - xampp for mac os x</a></p>
-
-<h2>php</h2>
-
-<p><a href="http://php.net/manual/ja/index.php">PHP: PHP マニュアル - Manual</a>
-をひと通り読む。</p>
-
-<ul>
-<li>orzってなったところ
-
-<ul>
-<li>セミコロン必須</li>
-<li>文字列結合が <code>.</code></li>
-<li>可変変数の書き方</li>
-<li>配列へのpushの書き方 <code>$array[] = $var;</code></li>
-<li><code>array( )</code>じゃなくて<code>[ ]</code>って書きたいけど5.4からかー</li>
-</ul>
-</li>
-</ul>
-
-
-<h2>CakePHP</h2>
-
-<h3>公式</h3>
-
-<p><a href="http://cakephp.jp/">CakePHP: 高速開発 php フレームワーク。 Home</a></p>
-
-<p>TODO: チュートリアルをやってみる</p>
-
-<p><a href="http://book.cakephp.org/2.0/ja/contents.html">コンテンツ — CakePHP Cookbook v2.x documentation</a></p>
-
-<h3>コーディングスタイル</h3>
-
-<p><a href="http://book.cakephp.org/2.0/ja/contributing/cakephp-coding-conventions.html">コーディング規約 — CakePHP Cookbook v2.x documentation</a></p>
-
-<p>TODO: 自動化しましょー</p>
-
-<h3>CakePHP Advent Calendar</h3>
-
-<p>CakePHPに限らず、Advent Calendarは新しい技術を身につけようとするときに重宝している。</p>
-
-<p>TODO: これから読む</p>
-
-<p>TODO: CakePHP Advent Calendar 2012に参加する</p>
-
-<p><a href="http://cakephp.jp/modules/newbb/viewtopic.php?viewmode=flat&amp;topic_id=2510&amp;forum=16">&#8220;CakePHP Advent Calendar 2010を開催！&#8221; フォーラム - CakePHP Users in Japan</a></p>
-
-<p><a href="http://atnd.org/events/22721">CakePHP Advent Calendar 2011 : ATND</a></p>
-
-<h3>Mailing list</h3>
-
-<p>最新情報とか勉強会の情報とかが流れてきたりするので入っておく。</p>
-
-<p><a href="https://groups.google.com/forum/?hl=ja&amp;fromgroups#!forum/cake-php">CakePHP - Google グループ</a></p>
-
-<p><a href="https://groups.google.com/forum/?hl=ja&amp;fromgroups#!forum/fuelphp_jp">fuelphp.jp - Google グループ</a></p>
-
-<h3>勉強会</h3>
-
-<p>TODO: コミュニティの雰囲気を知りたいので一度参加したい。</p>
-
-<hr />
-
-<p>こんな感じで既存のコードを改修しつつ勉強しています。</p>
-
-<p>やっぱり動的言語の方が性に合っている気がする :)</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -1366,6 +1385,10 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/12/21/tdd-advent-calendar/">TDDを続けるために</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/12/20/shibuya-rb/">12月のShibuya.rbに行ってきた</a>
       </li>
     
@@ -1379,10 +1402,6 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
     
       <li class="post">
         <a href="/2012/12/09/sublime-text-2-advent-calendar/">ST2からTwitterに投稿するプラグイン作った</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/12/09/reject-tkrk10/">RejectTokyoRubyKaigi10でLTしてきた</a>
       </li>
     
   </ul>
