@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2012-12-30T23:47:31+09:00</updated>
+  <updated>2012-12-30T23:49:33+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -248,7 +248,7 @@ Ruby方面へ舵を切った。</p>
 <li><p>XFD</p>
 
 <ul>
-<li>Jenkinsの状態をusb経由でAndroidに表示される</li>
+<li>Jenkinsの状態をusb経由でAndroidに表示させる</li>
 <li>今のFacebookのプロフィールの背景がこれ</li>
 </ul>
 </li>
