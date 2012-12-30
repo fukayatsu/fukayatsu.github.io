@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[fukayatsu.dev()]]></title>
+  <title><![CDATA[fukayatsu.dev]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2012-12-22T20:19:11+09:00</updated>
+  <updated>2012-12-30T23:42:10+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,368 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[2012年の振り返り]]></title>
+<link href="http://fukayatsu.github.com/2012/12/31/me-and-2012/"/>
+<updated>2012-12-31T00:00:00+09:00</updated>
+<id>http://fukayatsu.github.com/2012/12/31/me-and-2012</id>
+
+      <content type="html"><![CDATA[<p>今年で25になりました。去年に引き続いて変化に富んだ1年で良かったと思う。</p>
+
+<h4>2012年のまとめ</h4>
+
+<p>小さい会社に転職した。<br/>
+Ruby方面へ舵を切った。</p>
+
+<h4>2011年のまとめ(参考)</h4>
+
+<p>東北でイオン加速器(ダイナミトロン)を用いた研究をしていた大学院生活を半ば強引に終わらせ、関東のAndroid/Web界隈で働き始めた。</p>
+
+<hr />
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121230/twilog.png" alt="twilog" /></p>
+
+<p><a href="http://twilog.org/fukayatsu/stats/2">月間tweet数の推移</a>から見ても、最近は調子良さげです。</p>
+
+<p>※ 個人的に月間のtweet数が500〜1000の範囲ならいい感じ</p>
+
+<h3>今年変えた/変わったもの</h3>
+
+<ul>
+<li><p>メインの開発環境</p>
+
+<ul>
+<li>Ubuntu    &#8211;> Mac</li>
+<li>MBA &#8216;13   &#8211;> MBP &#8216;15</li>
+<li>HHKB x 2  &#8211;> MacBook&#8217;s Keyboard
+
+<ul>
+<li>TrackPointをHHKBに移植したのは良い思い出</li>
+<li><code>:</code>と<code>;</code>を入れ変えたりもしていたが、できるだけデフォルトに</li>
+</ul>
+</li>
+<li>Vim       &#8211;> Sublime Text 2</li>
+<li>SVN       &#8211;> git/github</li>
+<li>自社サーバ  &#8211;> aws/heroku</li>
+</ul>
+</li>
+<li><p>勤務先</p>
+
+<ul>
+<li>道玄坂沿いの緑の会社  &#8211;> 黄色いケーキの会社</li>
+</ul>
+</li>
+<li><p>blog</p>
+
+<ul>
+<li>はてなダイアリー &#8211;> (はてなブログ) &#8211;> octopress</li>
+</ul>
+</li>
+<li><p>彼女</p>
+
+<ul>
+<li>いるよ &#8211;> いないよ</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>今年に入ってから触れたもの</h3>
+
+<ul>
+<li>PHP 5.3
+
+<ul>
+<li>CakePHP</li>
+</ul>
+</li>
+<li>MySQL
+
+<ul>
+<li>本格的に使うのは初めてだった</li>
+</ul>
+</li>
+<li>Google Analytics</li>
+</ul>
+
+
+<h3>仕事以外で今年作ったもの</h3>
+
+<ul>
+<li>ブログ
+
+<ul>
+<li>http://fukayatsu.hateblo.jp/</li>
+<li>ここ</li>
+</ul>
+</li>
+<li>chrome ext
+
+<ul>
+<li>md-linker
+
+<ul>
+<li>リンクをmarkdown形式でコピーするやつ</li>
+</ul>
+</li>
+<li>pivotal tracker easy copy ex
+
+<ul>
+<li>pivotalのstoryのtitleとかurlとかidをコピーするやつ</li>
+</ul>
+</li>
+<li>azlink-ssl
+
+<ul>
+<li>社内向け。特定のページ内のテキストを監視して、<code>s/http/https/g</code>するやつ</li>
+</ul>
+</li>
+<li>cybozu-notifier
+
+<ul>
+<li>もしかしたら去年かも。cybozuの予定を通知するやつ。もう使ってない。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>twitter-bot
+
+<ul>
+<li>nero-bot
+
+<ul>
+<li>夜につぶやくと<code>寝ろ！</code>とかmentionくれる</li>
+</ul>
+</li>
+<li>testing-code-bot
+
+<ul>
+<li>36時間テスト書いてないと、プロフィール画像を勝手に変える</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sublime plugin
+
+<ul>
+<li>tweetline
+
+<ul>
+<li>sublime text 2 から、現在の行や選択範囲をつぶやける</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>vim plugin
+
+<ul>
+<li>vim-dialy
+
+<ul>
+<li>vimで日報を書きやすくするかもしれない。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>rubygems
+
+<ul>
+<li>pebbles-soreyuke
+
+<ul>
+<li>初gem。カレーパンマン</li>
+</ul>
+</li>
+<li>bbs2ch
+
+<ul>
+<li>2chへのアクセス(read only)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>pull-request for public repo</p>
+
+<ul>
+<li>node.js
+
+<ul>
+<li>マージされた。重複した部分を削っただけ。練習以外では初pull-requestだった。</li>
+</ul>
+</li>
+<li>sublime-slim
+
+<ul>
+<li>マージされなかった。symbolのハイライトを向上させたつもりだったが、もっとよいやり方があったみたい。</li>
+</ul>
+</li>
+<li>package_control_channel
+
+<ul>
+<li>マージされた。tweetlineを追加してもらった。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>slide</p>
+
+<ul>
+<li>http://www.slideshare.net/atsuofukaya</li>
+<li>https://speakerdeck.com/fukayatsu</li>
+</ul>
+</li>
+<li><p>勉強会</p>
+
+<ul>
+<li>T2-Study
+
+<ul>
+<li>周辺の会社でビール飲みながらいろいろLTしたりする勉強会を始めた</li>
+<li>もうちょっと慣れたら外部からも参加できるようにしたい</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>HHKB with Trackpoint</p>
+
+<ul>
+<li>ハードいじるの楽しい</li>
+</ul>
+</li>
+<li><p>XFD</p>
+
+<ul>
+<li>Jenkinsの状態をusb経由でAndroidに表示される</li>
+<li>今のFacebookのプロフィールの背景がこれ</li>
+</ul>
+</li>
+</ul>
+
+
+<p>コードはだいたいgithubにあります。あとで作ったものリストのページを作ろうと思う。</p>
+
+<h3>今年参加したイベント</h3>
+
+<p>去年はAndroid中心</p>
+
+<p>今年はGit、TDD、Rubyな感じに。
+Toggetterもいくつかまとめてみた。</p>
+
+<ul>
+<li>Android
+
+<ul>
+<li>どうげん</li>
+<li>テスト祭り</li>
+</ul>
+</li>
+<li>Node.js
+
+<ul>
+<li>東京Node学園</li>
+</ul>
+</li>
+<li>Jenkins
+
+<ul>
+<li>Jenkins ユーザ・カンファレンス</li>
+</ul>
+</li>
+<li>TDD
+
+<ul>
+<li>TDDBC</li>
+</ul>
+</li>
+<li>Git
+
+<ul>
+<li>Git勉強会</li>
+<li>SCMBC</li>
+</ul>
+</li>
+<li>Ruby
+
+<ul>
+<li>Sibuya.rb</li>
+<li>RejectTokyoRubyKaigi10</li>
+</ul>
+</li>
+<li>T2-Study
+
+<ul>
+<li>2回開催</li>
+<li>次回は今後の方針とかを相談する場にしても良いかも</li>
+</ul>
+</li>
+</ul>
+
+
+<p>他にもいろいろ行ってるはずだけど、ログを追うのがしんどい。</p>
+
+<p>来年はRuby中心になるはず。</p>
+
+<h3>今年のアドベントカレンダー</h3>
+
+<p>今年は特に書くネタが無いと思っても、書きたいと思ったら登録するようにしてみた</p>
+
+<ul>
+<li>女帝</li>
+<li>Ruby</li>
+<li>Sublime Text 2</li>
+<li>TDD</li>
+<li>Vim (2013-01-02)</li>
+</ul>
+
+
+<p>来年はRails関係で書きたい。<br/>
+あと、ネタ記事に対して役に立つ記事の割合を上げたい。</p>
+
+<h3>2013年の抱負</h3>
+
+<ul>
+<li>コードを書く
+
+<ul>
+<li>テストを書く</li>
+</ul>
+</li>
+<li>自分が使うサービスを作る</li>
+<li>Ruby/Rails周辺にコントリビュートする
+
+<ul>
+<li>便利なGemを作る</li>
+<li>不具合報告をする</li>
+<li>pull-requestする</li>
+</ul>
+</li>
+<li>Shibuya.rb以外の地域.rbに参加する</li>
+<li>LTの場数を踏む</li>
+<li>日本酒好きなRubyistと日本酒を飲みたい</li>
+<li>vim アドベントカレンダー(2012の33日目)</li>
+</ul>
+
+
+<blockquote><p>「ぐだぐだ言ってないで(テスト)コードを書けよ、ハゲ」</p></blockquote>
+
+<h3>さいごに</h3>
+
+<p>実家のコタツで作業していて、リンク貼るのとかいろいろ面倒になってしまいました。<br/>
+まとまりがなく不便な記事になったことをお詫び申し上げます。</p>
+
+<p>今年もたくさんの人に迷惑を掛けてしまったり、助けられたりしました。</p>
+
+<p>あと、twitterとかで絡んでくれる人が増えてきて嬉しいです。来年もよろしくお願いします。</p>
+
+<p>2012年も残り少ないですが、皆さん良いお年を。</p>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/31/me-and-2012/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1823,47 +2185,6 @@ http://kazuph.hateblo.jp/entry/2012/10/13/215814</p></blockquote>
 
 <p>引き続きTDDを自分のものにするのと、頂いた本をなんとかするのを頑張ります！</p>
 <p><a rel="bookmark" href="http://fukayatsu.github.com/2012/09/02/tddbc-yokohama-2nd/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[8月のKPT]]></title>
-<link href="http://fukayatsu.github.com/2012/08/31/kpt-of-august/"/>
-<updated>2012-08-31T20:47:00+09:00</updated>
-<id>http://fukayatsu.github.com/2012/08/31/kpt-of-august</id>
-
-      <content type="html"><![CDATA[<h2>Keep</h2>
-
-<ul>
-<li>リファクタリング</li>
-<li>Jenkins導入した</li>
-<li>Github導入した</li>
-<li>新しい職場に慣れた</li>
-<li>ステッカー作った</li>
-<li>Cucumber</li>
-</ul>
-
-
-<h2>Problem</h2>
-
-<ul>
-<li>テストあまり書けなかった</li>
-<li>AWSにまだ慣れない</li>
-</ul>
-
-
-<h2>Try</h2>
-
-<ul>
-<li>Rubyの比率を上げていく</li>
-<li>実家で1週間程度リモート作業</li>
-</ul>
-
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/08/31/kpt-of-august/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
