@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2013-01-14T22:28:50+09:00</updated>
+  <updated>2013-01-17T00:27:00+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,116 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[新年最初のShibuya.rbに参加してきた]]></title>
+<link href="http://fukayatsu.github.com/2013/01/16/shibuya-rb/"/>
+<updated>2013-01-16T19:27:00+09:00</updated>
+<id>http://fukayatsu.github.com/2013/01/16/shibuya-rb</id>
+
+      <content type="html"><![CDATA[<p><img src="http://img.viame-cdn.com/photos/d3a1e780-41f4-0130-e17b-12313d24390e/r600x600.jpg" alt="" /></p>
+
+<p><a href="http://www.zusaar.com/event/489016">渋谷.rb[:20130116] on Zusaar</a></p>
+
+<p><a href="http://togetter.com/li/440335">渋谷.rb[:20130116] #shibuyarb - Togetter</a></p>
+
+<p>今回の会場ははロゴが新しくなった:DeNAさんのオフィスでした。<br/>
+ありがとうございました。</p>
+
+<h1>log</h1>
+
+<ul>
+<li>19:25 頃に到着</li>
+<li>19:34 自己紹介タイム
+
+<ul>
+<li>初参加者多め</li>
+<li>仕事でPHP書いてる人もちらほら</li>
+</ul>
+</li>
+<li>19:50 LTタイム
+
+<ul>
+<li>@sonotsさん 「gem: capistrano-colorized-stream」
+
+<ul>
+<li>便利で楽しそう!</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>20:03 もくもく
+
+<ul>
+<li>最初は1人でcapistranoをいじろうと思っていたけど、色んな人と会話できてよかった。
+
+<ul>
+<li>エンタープライズ系の話を聞いた。
+
+<ul>
+<li>知らない単語がいっぱい</li>
+</ul>
+</li>
+<li><a href="https://cakes.mu">cakes（ケイクス）</a>をちょっと紹介</li>
+<li>東京Ruby会議の運営側の話</li>
+<li>以前一緒にルームシェアしてた1人の <a href="http://www.zusaar.com/user/agxzfnp1c2Fhci1ocmRyFwsSBFVzZXIiDTEyNjE2NjgwNDlfZmIM">Nabeshima</a> さんと他の皆の近況についてとか</li>
+<li>Sublimeのプラグインとかキーマップの話
+
+<ul>
+<li>https://gist.github.com/4546876
+
+<ul>
+<li>ありがたし！</li>
+</ul>
+</li>
+<li><code>ctrl + 0</code>でサイドバーに移れるの知らなかったorz</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>21:45 頃に撤収
+
+<ul>
+<li>懇親会
+
+<ul>
+<li>東京Ruby会議10の話
+
+<ul>
+<li>黒Ruby会議の話</li>
+</ul>
+</li>
+<li>日本酒バーがちょっと気になっているという話</li>
+<li>渋谷周辺で済むなら三茶がいいのではという話</li>
+<li>などなど</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>23:00 頃？
+
+<ul>
+<li>解散</li>
+</ul>
+</li>
+</ul>
+
+
+<h1>雑感</h1>
+
+<p>毎度のことですが、とても楽しかったです。<br/>
+次は何でもいいのでLTしないとですね。</p>
+
+<p>それから、近いうちに他の地域.rbにも顔を出したいと思います。</p>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/01/16/shibuya-rb/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -2133,61 +2243,6 @@ github api v3じゃなくてv2を使ってたのが原因だったらしい。<b
 <blockquote><p>Octopress のサイドバーに Coderwall Badges を表示 - Yoshiori Blog
 http://yoshiori.github.com/blog/2012/07/12/coderwall-badges/</p></blockquote>
 <p><a rel="bookmark" href="http://fukayatsu.github.com/2012/11/05/sidebar/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[渋谷.rb[:20121017]に行ってきた]]></title>
-<link href="http://fukayatsu.github.com/2012/10/18/shibuya-rb-20121017/"/>
-<updated>2012-10-18T00:16:00+09:00</updated>
-<id>http://fukayatsu.github.com/2012/10/18/shibuya-rb-20121017</id>
-
-      <content type="html"><![CDATA[<p>地域.rbなイベントに参加するのは初めてでした。<br/>
-終わった後数人で食べに行った肉がおいしかったです</p>
-
-<hr />
-
-<p>今日の流れ:</p>
-
-<p>19:40 開場。雨降ってた</p>
-
-<p>19:50 ヒカリエ着いた。会場はDeNAの役員用(?)会議室だった。</p>
-
-<p>20:05 一言ずつ自己紹介。他にもcakephpやってる人がいた。cakesのこと知ってる人もいたみたい。うれしい</p>
-
-<p>20:10 padrino-edgeについてお話。こんなpull-requestが着てるとか、エラーログの処理どうしようとか</p>
-
-<p>20:20 github vs gerritなお話。某A社。patchSet便利だよーとか</p>
-
-<p>21:00 zeusのお話。goで書かれてるとか。はまりどころとか</p>
-
-<p>21:05 ↑の補足。コンソール凝り過ぎとか。zeus動いてる時にrebaseすると変になるとか</p>
-
-<p>21:10 jubatusについて。qiitaをjubatusで分析したらしい</p>
-
-<p>21:20 以降、各々好きな事をやる時間。padrinoのチュートリアルやってた。</p>
-
-<p>21:25 https://github.com/google/google-api-ruby-client/pull/13のお話</p>
-
-<p>22:10 ヒカリエから撤収</p>
-
-<p>22:20 肉を食べに行く</p>
-
-<p>23:20 解散</p>
-
-<hr />
-
-<p>あとで写真とか発表してくださった方のidとか書く。たぶん</p>
-
-<hr />
-
-<p>メモ:<br/>
-DCI, ラングリッチ, Oh My Glasses, oDesk, multi_json, yajl, Travis Pro</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/10/18/shibuya-rb-20121017/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
