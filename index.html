@@ -91,6 +91,172 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/01/23/hello-arduino-with-ruby-and-dino/">Arduino買ったのでRubyとDinoでLチカした</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-23T22:49:00+09:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/01/23/hello-arduino-with-ruby-and-dino/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>前回<a href="http://fukayatsu.github.com/2013/01/21/roomba-hack-01/">roomba-hack-01 準備編</a>で必要な部品を揃えるときに、<br/>
+ついでに注文していた<a href="http://www.switch-science.com/products/detail.php?product_id=1120">Arduino Micro</a>が先に届いたのでいじってみた。</p>
+
+<h1>Arduino Micro</h1>
+
+<p><img src="https://lh4.googleusercontent.com/-ICg8dyo-5eU/UP_oaT5a_-I/AAAAAAAAJxQ/K1MWoZt_u14/s865/IMG_20130123_223909.jpg" alt="Arduino Micro" /></p>
+
+<p>PCとの接続は名前の通り(?)micro USBケーブル。<br/>
+余ってるAndroidのケーブルとか使えて良い感じ。</p>
+
+<p>どうやら最初から<code>13 pin</code>にLEDが接続されているみたい。<br/>
+他のArduinoもだいたいそうらしい。</p>
+
+<h1>はじめてのArduino</h1>
+
+<blockquote><p><a href="http://9ensan.com/blog/diy/diy-arduino-setup-led-flash/">Arduinoをはじめようを購入してセットアップ〜LEDを点滅させるまで | 9ensanのLifeHack</a></p></blockquote>
+
+<p>このページを参考にさせてもらってLEDをチカチカさせました。</p>
+
+<h1>RubyからArduinoコントロールしたい</h1>
+
+<p>これからJenkinsのXFDとか作るにあたって、どうせならRubyでコントロールしたいと思っていくつかライブラリを調べた。</p>
+
+<h2>library: funnel</h2>
+
+<p>最初に見つけたのがこれ。</p>
+
+<blockquote><p><a href="http://funnel.cc/Software/Ruby">funnel.cc | Software / Ruby</a></p></blockquote>
+
+<p>一度Arduino側に書き込んでしまえば、あとはRubyでやりたい放題らしい。</p>
+
+<p>へー、と思って<code>gem i funnel</code>とかやったら<br/>
+&#8220;a realtime resource-centric application framework&#8221;な方の<a href="https://github.com/dansimpson/funnel">funnel</a><br/>
+がインストールされたorz</p>
+
+<blockquote><p><a href="http://code.google.com/p/funnel/downloads/list">Downloads - funnel - A toolkit to sketch your idea physically - Google Project Hosting</a></p></blockquote>
+
+<p>↑ ここからダウンロードするのが正解だったみたい。</p>
+
+<p>でもRequirementsに<code>Ruby 1.8.6</code>とあったのでやめた。</p>
+
+<h2>gem: serialport</h2>
+
+<p>次に考えたのがこれ。</p>
+
+<blockquote><p><a href="http://playground.arduino.cc/interfacing/ruby">Arduino Playground - Ruby</a></p></blockquote>
+
+<p>にも</p>
+
+<blockquote><p>The SerialPort gem seems to do the job.</p></blockquote>
+
+<p>と書いてある。</p>
+
+<p>そういえば以前友人もこのgemを使ってArduinoで遊んでた。</p>
+
+<blockquote><p><a href="http://hatone.hateblo.jp/entry/2012/02/12/160257">rubyとarduinoで、twitterのリプライをLED通知してみた - メモりメモる</a></p></blockquote>
+
+<p>でも結局Arduino側もプログラム書かないといけないのでもうちょっと他の方法を探した。</p>
+
+<h2>gem: Dino</h2>
+
+<p>最後に見つけたのがこれ。<br/>
+(というか最初から<a href="http://playground.arduino.cc/interfacing/ruby">Arduinoの公式のRubyのところ</a>を確認しておくべきだった。)</p>
+
+<p>2012年11月のRubyWorld Conference 2012で発表された、かなり新しいプロダクトらしい。<br/>
+funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、あとはRubyだけでいけるタイプ。</p>
+
+<p><a href="http://confreaks.com/videos/1294-rubyconf2012-arduino-the-ruby-way">Arduino the Ruby way - Austin Vance - Ruby Conference 2012</a></p>
+
+<script async class="speakerdeck-embed" data-id="5098572bc5f78d0002010edb" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
+
+
+
+
+<iframe width="640" height="360" src="http://www.youtube.com/embed/oUIor6GK-qA" frameborder="0" allowfullscreen></iframe>
+
+
+<br>
+
+
+<br>
+
+
+<h3>DinoでLチカ</h3>
+
+<p>うん、こういうのを探してた :)</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;dino&#39;</span>  <span class="c1"># gem install dino</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">board</span> <span class="o">=</span> <span class="no">Dino</span><span class="o">::</span><span class="no">Board</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Dino</span><span class="o">::</span><span class="no">TxRx</span><span class="o">.</span><span class="n">new</span><span class="p">)</span>
+</span><span class='line'><span class="n">led</span> <span class="o">=</span> <span class="no">Dino</span><span class="o">::</span><span class="no">Components</span><span class="o">::</span><span class="no">Led</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">pin</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="n">board</span><span class="p">:</span> <span class="n">board</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">[</span><span class="ss">:on</span><span class="p">,</span> <span class="ss">:off</span><span class="o">].</span><span class="n">cycle</span> <span class="k">do</span> <span class="o">|</span><span class="n">switch</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">led</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">switch</span><span class="p">)</span>
+</span><span class='line'>  <span class="nb">sleep</span> <span class="mi">0</span><span class="o">.</span><span class="mi">5</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>使ってみようと思った人は↓このチュートリアルが詳しくて良いかも。</p>
+
+<blockquote><p><a href="http://tutorials.jumpstartlab.com/projects/arduino/introducing_arduino.html">Introducing Arduino &amp; Dino - Jumpstart Lab Curriculum</a></p></blockquote>
+
+<h1>つづく</h1>
+
+<p>ブレッドボードが手元になかったので今日はここまで。<br/>
+早くセンサとかつないでいろいろ試したい</p>
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/01/21/roomba-hack-01/">roomba-hack-01 準備編</a>
 
 </h1>
@@ -1541,246 +1707,6 @@ Toggetterもいくつかまとめてみた。</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/12/20/shibuya-rb/">12月のShibuya.rbに行ってきた</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-20T00:04:00+09:00" pubdate data-updated="true">Dec 20<span>th</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/12/20/shibuya-rb/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p><img src="https://dl.dropbox.com/u/85825/blog/image/20121220/shibuya-rb.jpg" alt="" /></p>
-
-<p>アルコール類が無料な<a href="http://voyagegroup.com/business/office/office015/">AJITO</a>最高！<br/>
-酔ってたせいか、写真がひどい&#8230;orz</p>
-
-<p><a href="http://www.zusaar.com/event/447306">渋谷.rb[:20121219] on Zusaar</a></p>
-
-<p><a href="http://togetter.com/li/425625">#shibuyarb 渋谷.rb[:20121219] - Togetter</a></p>
-
-<p>今回はTokyoRubyKaigi10のLTの練習をさせてくださいと言っておきながら、スライドの内容チェックというか相談みたいな感じに落ち着いた。本番までにスライドをいい感じにして、楽しい発表ができたらいいな。</p>
-
-<p>Shibuya.rb、今回で3回目の参加なのだけどだんだん顔見知りが増えてきた。これから会社のプロダクトとか、自分の人生とかをRuby界隈に寄せていくので勝手に心強く思っていたりする。</p>
-
-<p>例によって内容メモ。</p>
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>20:02 kyanny さんのRubyConf 台湾の話
-</span><span class='line'>    http://rubyconf.tw/2012/を見ながら
-</span><span class='line'>    ホテルと会場が同じで捗る
-</span><span class='line'>    MatzのKeyノート
-</span><span class='line'>        プログラミングはDSL作るようなものだから、皆さんも言語開発者ですよ的な
-</span><span class='line'>        名前が世界を変える
-</span><span class='line'>    笹田さん
-</span><span class='line'>        YARV
-</span><span class='line'>    松田さん
-</span><span class='line'>    Koan-Sin Tan
-</span><span class='line'>        smarl talkのオブジェクトモデルとRubyのオブジェクトモデルの人
-</span><span class='line'>    David Tian
-</span><span class='line'>        VMWare Mozy
-</span><span class='line'>        RailsとかRubyのバージョンアップの苦労話
-</span><span class='line'>    Eddie Kao
-</span><span class='line'>        CRubyのソースコードリーディング
-</span><span class='line'>    Lin Jen Shin(godfat)
-</span><span class='line'>        資料おすすめ
-</span><span class='line'>        並列プログラミングについて
-</span><span class='line'>            PumaとかThinとかUnicornとか
-</span><span class='line'>            zbatery
-</span><span class='line'>    Gosuke Miyashita
-</span><span class='line'>    hsbtさん
-</span><span class='line'>        tdiary
-</span><span class='line'>    Joseph Ku
-</span><span class='line'>        RubyMotionの紹介とデモ
-</span><span class='line'>        この人に限らずデモをやるひとが多かった
-</span><span class='line'>    Jim Huang
-</span><span class='line'>        mrubyの医療機器
-</span><span class='line'>    nomadcoder
-</span><span class='line'>        Ext JS and Netzke
-</span><span class='line'>        業務アプリやってる人は必見
-</span><span class='line'>    Richard Lee
-</span><span class='line'>        Dev ops
-</span><span class='line'>        モニタリング　God使ってるらしい
-</span><span class='line'>    thegiive
-</span><span class='line'>        yahoo 台湾
-</span><span class='line'>        puppet
-</span><span class='line'>    Wei Lu
-</span><span class='line'>        シンガポールの元pivotal labの話
-</span><span class='line'>            なんでもペアプロするらしい
-</span><span class='line'>    LT
-</span><span class='line'>        終わりのドラを結構無視するらしい
-</span><span class='line'>        自由な感じ
-</span><span class='line'>        中国語で話す人が多い
-</span><span class='line'>    スピーチの間のバッファ
-</span><span class='line'>        ランチとティータイムがある
-</span><span class='line'>    メイントーク
-</span><span class='line'>        英語で話すひとは日本より多かったみたい
-</span><span class='line'>    クロージング
-</span><span class='line'>        Matz大神
-</span><span class='line'>    台湾いいとこでした
-</span><span class='line'>        英語よりも日本語が通じたりする
-</span><span class='line'>20:35 tkrk10のLTの相談(@fukayatsu)
-</span><span class='line'>20:50 bossan kubo39さん
-</span><span class='line'>21:01 sanematさん Ruby 2.0の歩き方
-</span><span class='line'>    ruby/NEWSを見てると7割ぐらい踏んだバグを理解できる
-</span><span class='line'>    1人アドベントカレンダー
-</span><span class='line'>        25個プルリクを送ろう
-</span><span class='line'>        ちゃんとテストがあるプロダクトは直しやすい
-</span><span class='line'>        ruby2.0で遊ぶとお手頃なバグを踏める
-</span><span class='line'>21:10 iR3さんのturnipのお話
-</span><span class='line'>    cucumberの正規表現の罠を避けて、Rspecで
-</span><span class='line'>21:30 ちょうどよいお時間なのでお開き
-</span><span class='line'>
-</span><span class='line'>21:45 二次会〜</span></code></pre></td></tr></table></div></figure>
-
-
-<p>おまけ</p>
-
-<blockquote class="twitter-tweet" lang="ja"><p>飛露喜アイコンということはガチ勢な予感</p>&mdash; ふかやつさん (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/281412621360586752" data-datetime="2012-12-19T14:56:11+00:00">12月 19, 2012</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-<blockquote class="twitter-tweet" data-in-reply-to="281412621360586752" lang="ja"><p>@<a href="https://twitter.com/fukayatsu">fukayatsu</a> kwsk!</p>&mdash; TERAJIMA, Motoyukiさん (@trmmy) <a href="https://twitter.com/trmmy/status/281414772086435840" data-datetime="2012-12-19T15:04:44+00:00">12月 19, 2012</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-<blockquote class="twitter-tweet" data-in-reply-to="281416187596914688" lang="ja"><p>@<a href="https://twitter.com/fukayatsu">fukayatsu</a> @<a href="https://twitter.com/trmmy">trmmy</a> 今日はすぐに帰ってしまったので、来年shibuyarbで飲みいきましょう！</p>&mdash; つちかずさん (@tsuchikazu) <a href="https://twitter.com/tsuchikazu/status/281417431744929792" data-datetime="2012-12-19T15:15:18+00:00">12月 19, 2012</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-<blockquote class="twitter-tweet" data-in-reply-to="281417431744929792" lang="ja"><p>@<a href="https://twitter.com/tsuchikazu">tsuchikazu</a> @<a href="https://twitter.com/trmmy">trmmy</a> 是非是非！！</p>&mdash; ふかやつさん (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/281417629338587136" data-datetime="2012-12-19T15:16:05+00:00">12月 19, 2012</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-<blockquote class="twitter-tweet" data-in-reply-to="281417629338587136" lang="ja"><p>@<a href="https://twitter.com/fukayatsu">fukayatsu</a> @<a href="https://twitter.com/tsuchikazu">tsuchikazu</a> これは期待</p>&mdash; TERAJIMA, Motoyukiさん (@trmmy) <a href="https://twitter.com/trmmy/status/281421780411899906" data-datetime="2012-12-19T15:32:35+00:00">12月 19, 2012</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<p>これはほんとに実現したいです :)</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1797,6 +1723,10 @@ Toggetterもいくつかまとめてみた。</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/01/23/hello-arduino-with-ruby-and-dino/">Arduino買ったのでRubyとDinoでLチカした</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/01/21/roomba-hack-01/">roomba-hack-01 準備編</a>
       </li>
     
@@ -1810,10 +1740,6 @@ Toggetterもいくつかまとめてみた。</p>
     
       <li class="post">
         <a href="/2013/01/14/tokyo-ruby-kaigi-10/">東京Ruby会議10に参加してきた</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/01/02/guess-my-2013/">今年はきっとこんな感じの1年になる</a>
       </li>
     
   </ul>
