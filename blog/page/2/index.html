@@ -91,6 +91,98 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/12/21/tdd-advent-calendar/">TDDを続けるために</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-21T00:00:00+09:00" pubdate data-updated="true">Dec 21<span>st</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/12/21/tdd-advent-calendar/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>この記事は<a href="http://atnd.org/events/33846">TDD Advent Calendar jp: 2012</a>
+の21日目の記事です。</p>
+
+<p>前日の記事は<a href="http://poohsunny.hatenablog.com/about">id:swimming_pooh</a>
+さんの
+<a href="http://poohsunny.hatenablog.com/entry/2012/12/20/110958">ひのきの棒を駆使してレガシーコードに立ち向かう</a>
+でした。</p>
+
+<p>追記(2012-12-22):<br/>
+次の記事は<a href="https://twitter.com/YasuOza">@YasuOza</a>
+さんの
+<a href="https://gist.github.com/4358171">TDDを取り入れたい誰かのために</a>
+です。</p>
+
+<hr />
+
+<p>今年の9月に<a href="http://fukayatsu.github.com/2012/09/02/tddbc-yokohama-2nd/">TDDBC横浜 Second Seasonに参加した</a>
+ものの、<br/>
+その後テストを書かない日の方が多かったので、<br/>
+これはまずいと思ってテストを書き続けられるようなツールを作りました。</p>
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121221/tdd-xfd.png" alt="" /></p>
+
+<p><a href="https://github.com/fukayatsu/testing-code-bot">fukayatsu/testing-code-bot · GitHub</a></p>
+
+<p>(Readmeとかまだ無いです。ごめんなさい)</p>
+
+<p>「テスト書いた #testingcode」などとつぶやくと、<br/>
+プロフィール写真を<code>green</code>な感じに変えてくれます。</p>
+
+<p>逆に、<code>green</code>の状態のままなにもしないで一定時間(とりあえず36時間)経過すると、<br/>
+プロフィールアイコンを<code>red</code>な感じに変えてくれます。</p>
+
+<p><code>red</code>な感じになっていたら恥ずかしいのできっとテストを書き続けられるはずです。</p>
+
+<p>来年はずっとグリーンでいられるように頑張りたいと思います！</p>
+
+<hr />
+
+<p>マヤ文明的には今日で人類滅亡らしいですが、明日は
+<a href="https://twitter.com/YasuOza">@YasuOza</a>
+さんです！</p>
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/12/20/shibuya-rb/">12月のShibuya.rbに行ってきた</a>
 
 </h1>
@@ -1291,158 +1383,6 @@ cakesはrailsへの移行を計画中です。</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/11/28/open-a-issue/">issue投げよう</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-28T00:45:00+09:00" pubdate data-updated="true">Nov 28<span>th</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/11/28/open-a-issue/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>昨日の自分へ</p>
-
-<blockquote class="twitter-tweet"><p>action_argsとactive_adminが競合してる気がするのであとでちゃんと検証してフィードバックとかしたい</p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/273063544042450944" data-datetime="2012-11-26T13:59:56+00:00">November 26, 2012</a></blockquote>
-
-
-<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<p>発端はこれ。<br/>
-プライベートで作業してるときに、両方のgemを入れてるとactive_adminの管理画面にログインした後に</p>
-
-<pre><code>wrong number of arguments
-</code></pre>
-
-<p>とか表示されるのに気づいた。</p>
-
-<p>エラーを追うと、</p>
-
-<p><a href="https://github.com/gregbell/active_admin/blob/eea827a3cfd4c4bab3c3171efaa1d91bf6cb836b/lib/active_admin/page_controller.rb">active_admin/lib/active_admin/page_controller.rb at master · gregbell/active_admin · GitHub</a></p>
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">ActiveAdmin</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="c1"># All Pages controllers inherit from this controller.</span>
-</span><span class='line'>  <span class="k">class</span> <span class="nc">PageController</span> <span class="o">&lt;</span> <span class="no">BaseController</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c1"># Pages::Page subclasses Page::Base which implements the layout code</span>
-</span><span class='line'>    <span class="n">layout</span> <span class="kp">false</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">actions</span> <span class="ss">:index</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">{},</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
-</span><span class='line'>      <span class="n">render</span> <span class="s2">&quot;active_admin/page/index&quot;</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">clear_page_actions!</span>
-</span><span class='line'>      <span class="n">active_admin_config</span><span class="o">.</span><span class="n">clear_page_actions!</span>
-</span><span class='line'>    <span class="k">end</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>この11行目がaction_argsと競合しているらしかった。</p>
-
-<p><strong> というのを<a href="https://github.com/asakusarb/action_args">asakusarb/action_args</a>のissuesに書けよ俺！ </strong></p>
-
-<p><code>次からそうしますm(_ _)m</code></p>
-
-<p>今回はたまたま@a_matsudaさんが最初のtweetを捕捉して頂いたらしく、速攻で修正してくださいました。ありがとうございました!!</p>
-
-<blockquote class="twitter-tweet" data-in-reply-to="273063544042450944" lang="ja"><p>@<a href="https://twitter.com/fukayatsu">fukayatsu</a> 修正してみたので、よければ先っちょで試してみていただけますでしょうか？ <a href="https://t.co/PoleOzgR" title="https://github.com/asakusarb/action_args">github.com/asakusarb/acti…</a> (明日ぐらいにはgemにもすると思いますが)</p>&mdash; Akira Matsudaさん (@a_matsuda) <a href="https://twitter.com/a_matsuda/status/273106258373001217" data-datetime="2012-11-26T16:49:40+00:00">11月 26, 2012</a></blockquote>
-
-
-<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-<blockquote class="twitter-tweet" data-in-reply-to="273106258373001217" lang="ja"><p>@<a href="https://twitter.com/a_matsuda">a_matsuda</a> おおお、ありがとうございます！！修正箇所と正常に動作することを確認しました。ちゃんとフィードバックしなくてすみませんm(_ _)m</p>&mdash; ふかやつさん (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/273207043026976768" data-datetime="2012-11-26T23:30:09+00:00">11月 26, 2012</a></blockquote>
-
-
-<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-
-<blockquote class="twitter-tweet" data-in-reply-to="273207043026976768" lang="ja"><p>@<a href="https://twitter.com/fukayatsu">fukayatsu</a> よかったです :) こちらはこのバグにはまったく気づけてなかったところでたまたまさっきのツイートを拝見したので助かりました。ありがとうございました。</p>&mdash; Akira Matsudaさん (@a_matsuda) <a href="https://twitter.com/a_matsuda/status/273214068368744449" data-datetime="2012-11-26T23:58:04+00:00">11月 26, 2012</a></blockquote>
-
-
-<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<p>その後、他にも変更が入ってgemのバージョンが<code>v0.0.3</code> => <code>v1.0.0</code>になったみたいです。</p>
-
-<p><a href="http://rubygems.org/gems/action_args">action_args | RubyGems.org | your community gem host</a></p>
-
-<p>結論</p>
-
-<blockquote class="twitter-tweet"><p>みんなちゃんとissue投げるところからOSSへの貢献をしよう。 <a href="https://twitter.com/search/%23cwt2012">#cwt2012</a> <a href="http://t.co/j6j0dz59" title="http://twitpic.com/bazq7r">twitpic.com/bazq7r</a></p>&mdash; Aki (@nekoruri) <a href="https://twitter.com/nekoruri/status/266028240777388032" data-datetime="2012-11-07T04:04:09+00:00">November 7, 2012</a></blockquote>
-
-
-<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -1461,6 +1401,10 @@ cakesはrailsへの移行を計画中です。</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/01/26/roomba-hack-02/">roomba-hack-02 はんだ付け&動作テスト編</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/01/23/hello-arduino-with-ruby-and-dino/">Arduino買ったのでRubyとDinoでLチカした</a>
       </li>
     
@@ -1474,10 +1418,6 @@ cakesはrailsへの移行を計画中です。</p>
     
       <li class="post">
         <a href="/2013/01/16/shibuya-rb/">新年最初のShibuya.rbに参加してきた</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/01/14/tokyo-ruby-kaigi-10/">東京Ruby会議10に参加してきた</a>
       </li>
     
   </ul>

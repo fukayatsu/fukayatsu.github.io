@@ -91,6 +91,169 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/01/26/roomba-hack-02/">roomba-hack-02 はんだ付け&動作テスト編</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-26T21:19:00+09:00" pubdate data-updated="true">Jan 26<span>th</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/01/26/roomba-hack-02/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>↓ MacBookとBluetoothで接続したRoomba</p>
+
+<p><img src="https://lh4.googleusercontent.com/-_ikpMnQiunk/UQPL94eDwbI/AAAAAAAAKRI/xxWbqYDC4o4/s536/photo.jpg" alt="" /></p>
+
+<p>MacbookPro上でRubyからbluetooth経由でRoombaにコマンドを送って、掃除を開始させるところまでできました。</p>
+
+<p>手順とかちょっとハマったところとかを書いていきます。</p>
+
+<p>パーツに関しては<a href="http://fukayatsu.github.com/2013/01/21/roomba-hack-01/">前回の記事</a>をご参照下さい</p>
+
+<h2>BlueSMiRFにコネクタを取り付ける</h2>
+
+<p><img src="https://lh3.googleusercontent.com/-aMETeVkId8A/UQEsOt8eENI/AAAAAAAAJ2Y/PfwIMT9sH1c/s715/IMG_20130124_214029.jpg" alt="" /></p>
+
+<p>BlueSMiRFは1つ7000円ぐらいするので、取り外ししやすいようにコネクタをつけておきます。</p>
+
+<p>今回はXHコネクタというものを使ってみました。手元に圧着ペンチがなかったので、ラジオペンチで無理やり圧着させましたが、専用の工具を買ったほうが良さそうです。</p>
+
+<p><img src="https://lh5.googleusercontent.com/-PXJSo9Du9rY/UQEtqFM0_cI/AAAAAAAAJ50/KmObgoXQLVQ/s715/IMG_20130124_214755.jpg" alt="" /></p>
+
+<h2>3端子レギュレータにコンデンサを付ける</h2>
+
+<p><img src="https://lh4.googleusercontent.com/-rlAFOr_6sEo/UQEzVNeNfuI/AAAAAAAAJ8Y/qD-oHa4bVC4/s715/IMG_20130124_221213.jpg" alt="" /></p>
+
+<p>Roombaから取れる電源は16Vなので、そのままではBlueSMiRF(5V)につなげません。<br/>
+間に3端子レギュレータを接続します。</p>
+
+<p>(回路図は秋月のパーツセットに入っています。)</p>
+
+<h2>コネクタに3端子レギュレータを(無理やり)付ける</h2>
+
+<p><img src="https://lh5.googleusercontent.com/-iLczJynhha4/UQE1wzwRriI/AAAAAAAAJ_4/JOHefyb_-aE/s715/IMG_20130124_222217.jpg" alt="" /></p>
+
+<p>写真だとちょっとわかりにくいのですが、コネクタのVCCの配線を切って3端子レギュレータの<code>in</code>と<code>out</code>をつないでいます。</p>
+
+<p>GNDの接続も忘れずに。</p>
+
+<h2>Roombaに接続</h2>
+
+<p><img src="https://lh4.googleusercontent.com/-cQGNFrgIBXo/UQFIO3Y61aI/AAAAAAAAKBc/lEUb7lSsj0k/s715/IMG_20130124_234043.jpg" alt="" /></p>
+
+<p>XHコネクタと単線をつないで、単線の反対側をroombaにつないでみます。</p>
+
+<p>ちなみに1番目のピンと6番目のピンは白い線でつないであります。</p>
+
+<p>どこに何をつなぐかは、<a href="http://media.wiley.com/product_ancillary/17/04700727/DOWNLOAD/iRobot%20Roomba%20Open%20Interface%20Specification.pdf">公式のリファレンス</a>を参照しましょう。</p>
+
+<p>とりあえずVCCとGNDが合っていればLEDが赤く点滅します。</p>
+
+<p>それから、RxとTxのつなぎ方に注意です。</p>
+
+<pre><code>BlueSMiRFのRx ---&gt; RoombaのTx
+BlueSMiRFのTx ---&gt; RoombaのRx
+</code></pre>
+
+<p>という感じにつなぎます。じゃないと僕みたいに小一時間なんで動かないんだろうと悩むことになりかねません。</p>
+
+<h2>MacとBlueSMiRFのペアリング</h2>
+
+<p>これはBluetoothマウスとかと同じような流れで行います。<br/>
+確かパスコードは無しに設定した気がします。</p>
+
+<h2>シリアルポートの設定</h2>
+
+<p><img src="https://lh5.googleusercontent.com/-lWJ3AnXfTCo/UQPTthLkqhI/AAAAAAAAKSk/_hnBeL9CWI0/s713/Screen+Shot+2013-01-26+at+21.11.42.png" alt="" /></p>
+
+<p>ペアリングに成功したら、シリアルポートの設定をします。</p>
+
+<p>Bluetooth設定の画面で、デバイス(FireFly-&#8230;)を選択して歯車ボタンから<code>Edit serial ports...</code>を選ぶと↑この画像のような画面になります。</p>
+
+<p>この時の<code>Path: /dev/tty.FireFly...</code>は次で使うのでメモっておきましょう。</p>
+
+<h2>RubyからRoombaを操作するテスト</h2>
+
+<p>まずターミナルを開いて、必要なgemをinstallしておきます。</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>$ gem install serialport</span></code></pre></td></tr></table></div></figure>
+
+
+<p>次にirb(もしくはpry)から対話環境でシリアル通信してみます。</p>
+
+<p><strong>※Roombaの電源は入れておきましょう</strong></p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>$ irb
+</span><span class='line'>
+</span><span class='line'>irb(main):001:0> require 'serialport'
+</span><span class='line'>irb(main):002:0> sp = SerialPort.new('/dev/tty.FireFly-86A2-SPP', 115200, 8, 1, 0)
+</span><span class='line'># '/dev/tty.FireFly-86A2-SPP'はさっきメモしたもの
+</span><span class='line'># この時点でBlueSMiRFのLEDが緑に点灯するはず
+</span><span class='line'>
+</span><span class='line'>irb(main):003:0> sp.write 128.chr
+</span><span class='line'>irb(main):004:0> sp.write 130.chr
+</span><span class='line'>irb(main):005:0> sp.write 135.chr
+</span><span class='line'># roombaが掃除を始めるはず</span></code></pre></td></tr></table></div></figure>
+
+
+<p>128とか130とかが気になる人は<a href="http://media.wiley.com/product_ancillary/17/04700727/DOWNLOAD/iRobot%20Roomba%20Open%20Interface%20Specification.pdf">公式のリファレンス</a>を読みましょう。</p>
+
+<h1>つづく</h1>
+
+<p>次はいよいよTwitter連携とかをしていきたいと思います。</p>
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/01/23/hello-arduino-with-ruby-and-dino/">Arduino買ったのでRubyとDinoでLチカした</a>
 
 </h1>
@@ -383,6 +546,10 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 <hr />
 
 <p>とりあえず、こんなものだろうか。材料が揃ったら組立編を書きます。</p>
+
+<p>追記:</p>
+
+<p><a href="http://fukayatsu.github.com/2013/01/26/roomba-hack-02/">roomba-hack-02 はんだ付け&amp;動作テスト編</a></p>
 </div>
 
   <footer>
@@ -1615,98 +1782,6 @@ Toggetterもいくつかまとめてみた。</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/12/21/tdd-advent-calendar/">TDDを続けるために</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-21T00:00:00+09:00" pubdate data-updated="true">Dec 21<span>st</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/12/21/tdd-advent-calendar/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>この記事は<a href="http://atnd.org/events/33846">TDD Advent Calendar jp: 2012</a>
-の21日目の記事です。</p>
-
-<p>前日の記事は<a href="http://poohsunny.hatenablog.com/about">id:swimming_pooh</a>
-さんの
-<a href="http://poohsunny.hatenablog.com/entry/2012/12/20/110958">ひのきの棒を駆使してレガシーコードに立ち向かう</a>
-でした。</p>
-
-<p>追記(2012-12-22):<br/>
-次の記事は<a href="https://twitter.com/YasuOza">@YasuOza</a>
-さんの
-<a href="https://gist.github.com/4358171">TDDを取り入れたい誰かのために</a>
-です。</p>
-
-<hr />
-
-<p>今年の9月に<a href="http://fukayatsu.github.com/2012/09/02/tddbc-yokohama-2nd/">TDDBC横浜 Second Seasonに参加した</a>
-ものの、<br/>
-その後テストを書かない日の方が多かったので、<br/>
-これはまずいと思ってテストを書き続けられるようなツールを作りました。</p>
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121221/tdd-xfd.png" alt="" /></p>
-
-<p><a href="https://github.com/fukayatsu/testing-code-bot">fukayatsu/testing-code-bot · GitHub</a></p>
-
-<p>(Readmeとかまだ無いです。ごめんなさい)</p>
-
-<p>「テスト書いた #testingcode」などとつぶやくと、<br/>
-プロフィール写真を<code>green</code>な感じに変えてくれます。</p>
-
-<p>逆に、<code>green</code>の状態のままなにもしないで一定時間(とりあえず36時間)経過すると、<br/>
-プロフィールアイコンを<code>red</code>な感じに変えてくれます。</p>
-
-<p><code>red</code>な感じになっていたら恥ずかしいのできっとテストを書き続けられるはずです。</p>
-
-<p>来年はずっとグリーンでいられるように頑張りたいと思います！</p>
-
-<hr />
-
-<p>マヤ文明的には今日で人類滅亡らしいですが、明日は
-<a href="https://twitter.com/YasuOza">@YasuOza</a>
-さんです！</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1723,6 +1798,10 @@ Toggetterもいくつかまとめてみた。</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/01/26/roomba-hack-02/">roomba-hack-02 はんだ付け&動作テスト編</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/01/23/hello-arduino-with-ruby-and-dino/">Arduino買ったのでRubyとDinoでLチカした</a>
       </li>
     
@@ -1736,10 +1815,6 @@ Toggetterもいくつかまとめてみた。</p>
     
       <li class="post">
         <a href="/2013/01/16/shibuya-rb/">新年最初のShibuya.rbに参加してきた</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/01/14/tokyo-ruby-kaigi-10/">東京Ruby会議10に参加してきた</a>
       </li>
     
   </ul>
