@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2013-01-26T22:39:20+09:00</updated>
+  <updated>2013-02-11T00:05:10+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,95 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[東京Ruby会議3日目&大和田Ruby会議に参加してました]]></title>
+<link href="http://fukayatsu.github.com/2013/02/10/tkrk10-3rd/"/>
+<updated>2013-02-10T23:16:00+09:00</updated>
+<id>http://fukayatsu.github.com/2013/02/10/tkrk10-3rd</id>
+
+      <content type="html"><![CDATA[<ul>
+<li><a href="http://tokyorubykaigi.doorkeeper.jp/events/2603">シン・東京Ruby会議10 劇場版 ||= - Tokyo Ruby Kaigi 10</a></li>
+<li><a href="http://rubykaigi.tdiary.net/20130203.html">「大和田Ruby会議」開催のお知らせ #tkrk10 - RubyKaigi Nikki(2013-02-03)</a></li>
+<li><a href="http://atnd.org/events/36852">東京Ruby会議10 3日目 準公式懇親会 : ATND</a></li>
+<li><a href="http://twilog.org/fukayatsu/date-130210">ふかやつ(@fukayatsu)/2013年02月10日 - Twilog</a></li>
+</ul>
+
+
+<p><img src="https://lh4.googleusercontent.com/-EgGCmMNxOl8/UReSd4n04vI/AAAAAAAAKt8/Ama5rgneav8/s807/IMG_20130210_211130.jpg" alt="" /></p>
+
+<h1>会場</h1>
+
+<blockquote><p><a href="http://www.shibu-cul.jp/">渋谷区文化総合センター大和田</a></p></blockquote>
+
+<p>家から10分ちょっとぐらいでとても行きやすくてよかった</p>
+
+<h1>セッション</h1>
+
+<p>家に返ってから若干テンション下がることがあったので箇条書きですみません。</p>
+
+<ul>
+<li>atcs_as_rubyistリストバンド
+
+<ul>
+<li>(欲しいなー)</li>
+</ul>
+</li>
+<li>Ruby関連書籍を紹介
+
+<ul>
+<li>たのしいRuby</li>
+<li>初めてのRuby</li>
+<li>メタプログラミングRuby</li>
+<li>(上2つは持ってないのであとで買おうかな)</li>
+</ul>
+</li>
+<li>Enumerableとyieldを理解したタイミングで成長を実感した
+
+<ul>
+<li>(yieldをもっと理解したい)</li>
+</ul>
+</li>
+<li>「this is 何」 #javascript</li>
+<li>&#8220;記述量で選ぶ？&#8221; #tkrk10 > Smell in Rails Apps (in Sapporo RubyKaigi03) - http://slidesha.re/YjiqrA</li>
+<li>「Rubyによるデザインパターン」「継続的デリバリー」
+
+<ul>
+<li>(これも持っていないのであとで買おう)</li>
+</ul>
+</li>
+<li>screenx.tvすげー</li>
+<li>ギークハウス沖縄楽しそう</li>
+<li>&#8220;(あえて)ドキュメントを読まない&#8221;
+
+<ul>
+<li>自動生成以外のドキュメントはいまいち信用出来ないというお話</li>
+</ul>
+</li>
+<li>JOJO大切</li>
+</ul>
+
+
+<h1>懇親会</h1>
+
+<p>行きたかったのですが、次の日がデブサミの振替出勤のため自重しましたorz</p>
+
+<h1>その他</h1>
+
+<p>やっぱり、こういう場で発表する側になりたい。</p>
+
+<p>あと、お腹がすいたので帰宅してから肉じゃが作ったりしてました。</p>
+
+<p><img src="https://lh3.googleusercontent.com/--Sd5VIB4GW8/UReaVwCDNlI/AAAAAAAAKw4/c-KS-0nJNME/s807/IMG_20130210_220130.jpg" alt="" /></p>
+
+<p><img src="https://lh3.googleusercontent.com/-6Q-cEyEQBYQ/URedQmIi_GI/AAAAAAAAKyg/rmVGAUcSI3w/s807/IMG_20130210_221401.jpg" alt="" /></p>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/02/10/tkrk10-3rd/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -2250,59 +2339,6 @@ cakesはrailsへの移行を計画中です。</p>
 
 <p>明日はTLでもよくお見かけする<a href="https://twitter.com/cakephper">@cakephper</a>さんです！</p>
 <p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/02/cakephp-advent-calendar/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[これから2ヶ月の予定とか]]></title>
-<link href="http://fukayatsu.github.com/2012/11/30/plans-for-upcoming-2-months/"/>
-<updated>2012-11-30T08:39:00+09:00</updated>
-<id>http://fukayatsu.github.com/2012/11/30/plans-for-upcoming-2-months</id>
-
-      <content type="html"><![CDATA[<p>一旦整理してみた</p>
-
-<h2>advent calendar</h2>
-
-<ul>
-<li>12/02(日) <a href="http://www.adventar.org/calendars/40">CakePHP</a></li>
-<li>12/03(月) <a href="http://atnd.org/events/34298">女帝</a></li>
-<li>12/09(日) <a href="http://www.adventar.org/calendars/20">Sublime Text 2</a></li>
-<li>12/09(日) <a href="http://qiita.com/advent-calendar/2012/ruby">Ruby</a></li>
-<li>12/21(金) <a href="http://atnd.org/events/33846">TDD</a></li>
-<li>01/02(水) <a href="http://atnd.org/events/33746">Vim</a></li>
-</ul>
-
-
-<h2>コミュニティ</h2>
-
-<ul>
-<li>12/07(金) <a href="http://connpass.com/series/231/">t2study</a>#1 > LT(hubotについて) 10分</li>
-<li>12/08(土) <a href="http://reject-tkrk10.doorkeeper.jp/events/1974">RejectTokyoRubyKaigi10</a> > LT(「コードの世界」を読んで[仮]) 多分3分ぐらい</li>
-<li>12/15(土) <a href="http://devlove2012.devlove.org/">DevLOVE 2012</a> > LT(転職について) 3分</li>
-<li>12/19(水) <a href="http://www.zusaar.com/user/agxzfnp1c2Fhci1ocmRyFQsSBFVzZXIiCzE4ODkzNjY1X3R3DA">渋谷.rb</a> > LT(コミュニティ紹介 :練習) 5分</li>
-<li>12/21(金) <a href="http://connpass.com/series/231/">t2study</a>#2 > LT(未定) 10分</li>
-<li>01/10(木) <a href="http://tokyorubykaigi.doorkeeper.jp/events/2088">東京Ruby会議10 事前懇親会: 序 - Tokyo Ruby Kaigi 10</a></li>
-<li>01/14(月) <a href="http://tokyo10.rubykaigi.info/">東京Ruby会議10</a> > LT(コミュニティ紹介) 5分</li>
-<li>01/18(金) <a href="http://connpass.com/series/231/">t2study</a>#3 > LT(未定) 10分</li>
-</ul>
-
-
-<h2>OFF</h2>
-
-<ul>
-<li>12/29(土) ~ 01/06(日)
-
-<ul>
-<li>多分だいたい秋田にいるはず</li>
-</ul>
-</li>
-</ul>
-
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/11/30/plans-for-upcoming-2-months/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
