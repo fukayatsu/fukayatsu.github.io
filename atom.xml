@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2013-02-11T00:05:10+09:00</updated>
+  <updated>2013-02-16T00:02:27+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,93 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[デブサミ2013に行ってきた]]></title>
+<link href="http://fukayatsu.github.com/2013/02/15/devsumi2013/"/>
+<updated>2013-02-15T23:32:00+09:00</updated>
+<id>http://fukayatsu.github.com/2013/02/15/devsumi2013</id>
+
+      <content type="html"><![CDATA[<p><a href="http://event.shoeisha.jp/detail/1/gaiyo">開催概要：Developers Summit 2013</a></p>
+
+<p><img src="https://lh3.googleusercontent.com/-mVkcuqHTS4I/UR1l-qWkKOI/AAAAAAAAK58/ZYwcIvnpcKc/s612/IMG_20130214_123955.jpg" alt="" /></p>
+
+<h1>初めてのデブサミ</h1>
+
+<p>去年は申し込んだものの、結局行けなかったので今年はなんとしても行こうと思っていた。<br/>
+2日間参加できて嬉しい。</p>
+
+<h1>参加の様子</h1>
+
+<p>基本的に参加したセッションでは多めにつぶやいたのでこちらをご覧頂ください</p>
+
+<ul>
+<li><a href="http://twilog.org/fukayatsu/date-130214">ふかやつ(@fukayatsu)/2013年02月14日 - Twilog</a></li>
+<li><a href="http://twilog.org/fukayatsu/date-130215">ふかやつ(@fukayatsu)/2013年02月15日 - Twilog</a></li>
+</ul>
+
+
+<h1>印象に残った場面</h1>
+
+<h3>受付混みすぎ</h3>
+
+<p>初日に会場に着いたのが10時ちょうどぐらいだったが、受付で10分ぐらい並んでた気がする</p>
+
+<h3>3Dプリンタとかの話(14-E-1)</h3>
+
+<ul>
+<li>ハードウェア好きなので数年以内に3Dプリンタ買っちゃいそう。</li>
+</ul>
+
+
+<h3>wifi tetheringからusb tetheringに切り替えた</h3>
+
+<ul>
+<li>Wifiの方は混雑してたので若干快適に</li>
+</ul>
+
+
+<h3>セッション中にpull-request送るなど(14-A-5)</h3>
+
+<p><a href="https://github.com/mobiruby/mobiruby.github.com/pull/1">Fix section id by fukayatsu · Pull Request #1 · mobiruby/mobiruby.github.com</a></p>
+
+<ul>
+<li>htmlをちょっと直しただけ</li>
+</ul>
+
+
+<h3>ニコニコ静画（電子書籍）開発チームの話(14-A-6)</h3>
+
+<ul>
+<li>リポジトリ名に自分の嫁の名前をつけるらしい</li>
+<li>割れ窓を作らないようにするところを自分も頑張りたい</li>
+</ul>
+
+
+<h3>これは買わざるを得ない(15-B-5)</h3>
+
+<ul>
+<li><a href="http://www.oreilly.co.jp/books/9784873115894/">O&#8217;Reilly Japan - SQLアンチパターン</a></li>
+<li>絶対に自分にとってプラスになると思った。あとプレゼンすごく面白かった</li>
+</ul>
+
+
+<h1>その他</h1>
+
+<ul>
+<li>雅叙園が異世界だった</li>
+<li>スーツの人もそれなりにいた。あと、手帳でメモとってる人が結構多かった。</li>
+<li>かなりハードだったので2日目は参加するセッション減らした</li>
+<li>次も絶対参加する(多分)</li>
+</ul>
+
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/02/15/devsumi2013/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -2241,104 +2328,6 @@ imageMe = (msg, query, animated, cb) -&gt;
 
 <p>明日は<a href="http://twitter.com/HomeiMiyashita">@HomeiMiyashita</a>さんです :)</p>
 <p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/03/jotei-advent-calendar/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[CakePHPと僕とcakes (CakePHP Advent Calender2012 2日目)]]></title>
-<link href="http://fukayatsu.github.com/2012/12/02/cakephp-advent-calendar/"/>
-<updated>2012-12-02T00:00:00+09:00</updated>
-<id>http://fukayatsu.github.com/2012/12/02/cakephp-advent-calendar</id>
-
-      <content type="html"><![CDATA[<p>この記事は<a href="http://www.adventar.org/calendars/40">CakePHP Advent Calendar 2012</a>の2日目の記事です。</p>
-
-<p><a href="http://fukayatsu.github.com/2012/08/03/getting-started-with-cakephp/">4ヶ月前の記事</a>
-に</p>
-
-<blockquote><p>TODO: CakePHP Advent Calendar 2012に参加する</p></blockquote>
-
-<p>と書いた通り参加することができました :)</p>
-
-<p>追記(12/04):<br/>
-一つ前の記事は<br/>
-<a href="http://tagamidaiki.com/cakephp2-facebook-connect-cakeadvent2012/">CakePHP2.2.3でFacebook連携して自分の友達の女の子の画像を一覧で見てみる - tagamidaiki.com</a></p>
-
-<p>一つ後の記事は<br/>
-<a href="http://d.hatena.ne.jp/cakephper/20121203/1354524441">CookBookの翻訳差分チェックサイト作りました - cakephperの日記</a><br/>
-です。</p>
-
-<hr />
-
-<h2>株式会社ピースオブケイクという会社でcakesというサービスをCakePHPでつくっています</h2>
-
-<ul>
-<li><a href="http://www.pieceofcake.co.jp/">- Piece of Cake, inc.</a></li>
-<li><a href="https://cakes.mu">cakes.mu</a></li>
-</ul>
-
-
-<p><img class="" src="https://dl.dropbox.com/u/85825/blog/image/cakes_top.png" title="cakes" ></p>
-
-<p>cakesは月額150円で雑誌読み放題というようなサービスです。<br/>
-今のところはサブカル系な記事が多いみたいです。<br/>
-(どこからどこまでがサブカル系なのかは未だよくわかっていません)</p>
-
-<p>無料記事もあるので良かったら<a href="https://cakes.mu">覗いてみてください</a></p>
-
-<h2>CakePHP/PHPについて</h2>
-
-<p>CakePHPもPHPも触り始めてから4ヶ月程度ですが、思ったことを書いてみます。<br/>
-ちなみにcakesはCakePHP2.2.3で動いています。</p>
-
-<ul>
-<li>いろいろRailsっぽかったり、そうじゃなかったり
-
-<ul>
-<li>bakeとかroutesとか</li>
-<li>え、Modelがオブジェクトじゃなくて配列返すの？
-
-<ul>
-<li>3.0以降はオブジェクト返すようになるらしい</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>いろいろハマった
-
-<ul>
-<li><a href="http://tomstay.hatenablog.jp/entry/20110329/1301419761">CakePHPで独自の共通コントローラを継承させて使用する - tomstay&#8217;s memo</a></li>
-<li><a href="http://pplace.jp/2011/06/158/">CakePHPのモデルのキャッシュではまった －新しく追加したカラムに値が入らない－ - PPl@ce</a></li>
-<li>などなど</li>
-</ul>
-</li>
-<li>PHPいじれる人が多い
-
-<ul>
-<li>デザイナーさんでもある程度いじれるし、PHP経験したことがあるエンジニアは多い</li>
-</ul>
-</li>
-</ul>
-
-
-<h2>cakesではエンジニアを募集中です</h2>
-
-<p>開発環境とかは<a href="https://github.com/pocake/readme">github.com/pocake/readme</a>のあたりに書いています :)</p>
-
-<p>CakePHPのアドベントカレンダーを書いておいてアレなのですが、<br/>
-cakesはrailsへの移行を計画中です。</p>
-
-<p>なのでCakePHP/PHPを経験したことがあって(なくてもいい)Ruby界隈の文化が好きな人いないかなー</p>
-
-<hr />
-
-<p>半分以上宣伝になってしまいましたが、この4ヶ月の僕とCakePHPの関わりはこんな感じでした。</p>
-
-<p>明日はTLでもよくお見かけする<a href="https://twitter.com/cakephper">@cakephper</a>さんです！</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/02/cakephp-advent-calendar/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
