@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2013-02-16T00:02:27+09:00</updated>
+  <updated>2013-02-16T00:23:03+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[最近のコントリビュート]]></title>
+<link href="http://fukayatsu.github.com/2013/02/16/recent-contributions/"/>
+<updated>2013-02-16T00:08:00+09:00</updated>
+<id>http://fukayatsu.github.com/2013/02/16/recent-contributions</id>
+
+      <content type="html"><![CDATA[<h3><a href="https://github.com/austinbv/dino/pull/24">Add some colors to Components::RgbLed by fukayatsu · Pull Request #24 · austinbv/dino</a></h3>
+
+<p><a href="http://fk82.dev:88/2013/01/23/hello-arduino-with-ruby-and-dino/">Arduino買ったのでRubyとDinoでLチカした</a>ときに使ったDinoには、デフォルトでRgbLedというコンポーネントが用意されているのだけど、メソッドが#red, #blue, #greenとかしか無かったので、#cyanとか#offとかを追加。</p>
+
+<h3><a href="https://github.com/mroth/lolcommits/pull/89">Enable to change font by fukayatsu · Pull Request #89 · mroth/lolcommits</a></h3>
+
+<blockquote><p><a href="http://docs.komagata.org/5031">lolcommitsを使い出して２週間 - komagata</a></p></blockquote>
+
+<p>この記事を読んで自分も試してみたのだけど、日本語でコミットメッセージを書くと<code>?????</code>みたいな感じになってしまったので、フォントを指定できるようにした。</p>
+
+<p>次のバージョンに含まれるらしい。</p>
+
+<h3><a href="https://github.com/mobiruby/mobiruby.github.com/pull/1">Fix section id by fukayatsu · Pull Request #1 · mobiruby/mobiruby.github.com</a></h3>
+
+<p>デブサミでmobirubyのセッションを聞いている時に発見。<br/>
+その場でpull-requestしたらすぐに取り込まれた。</p>
+
+<h1>雑感</h1>
+
+<p>結構pull-requestするまでのフットワークが軽くなってきた気がする。<br/>
+マージされると嬉しいので、できることからコツコツ続けて行きたい。</p>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/02/16/recent-contributions/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -2189,145 +2224,6 @@ input barからテキストを入力しても日本語変換確定時のEnterで
 </ul>
 
 <p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/08/t2study/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[hubot jotei > 女帝 Advent Calendar 2012(3日目)]]></title>
-<link href="http://fukayatsu.github.com/2012/12/03/jotei-advent-calendar/"/>
-<updated>2012-12-03T00:00:00+09:00</updated>
-<id>http://fukayatsu.github.com/2012/12/03/jotei-advent-calendar</id>
-
-      <content type="html"><![CDATA[<p>この記事は<a href="http://atnd.org/events/34298">女帝 Advent Calendar 2012</a>の3日目の記事です。</p>
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>・Advent Calendarとは
-</span><span class='line'>クリスマスまでの日数を数えるために、1日に1つ、穴が空けられるようになっているカレンダーです。
-</span><span class='line'>転じて、技術系コミュニティで、クリスマスまでの25日間にTipsを1つずつ公開するイベントをAdvent Calendarと呼ぶそうです。
-</span><span class='line'>
-</span><span class='line'>・ルール
-</span><span class='line'>女帝に関する話題を特定の日に自分のブログ等にアップロードしてもらうだけです。
-</span><span class='line'>執筆はこのイベントに参加した順です。最初の人が12月1日、2人目が12月2日…最後の人が12月25日です。
-</span><span class='line'>twitterへの投稿（140文字）でも構いません。複数にわたる場合は、去年のようにtogetterでまとめるという措置をとる予定です。（例 : 女帝advent calendar 22日目 – Togetter ）
-</span><span class='line'>アップロードしたら、 このイベントのコメント欄にタイトルとURLを貼り付ける＋twitterでハッシュタグ #joteadvent2012 をつけてつぶやいてください。
-</span><span class='line'>女帝に関するものならどんなことでも構いません。
-</span><span class='line'>参考 : 女帝 Advent Calendar 2011 : ATND</span></code></pre></td></tr></table></div></figure>
-
-
-<p>追記(12/4):<br/>
-一つ前の記事は<a href="http://d.hatena.ne.jp/arc680/20121202/1354374076">女帝 Advent Calendar 2012 2日目「女帝ってこんなんだった」 - へたれ日記</a><br/>
-一つ後の記事は<a href="http://togetter.com/li/417761">合わないだなんて言わないで - Togetter</a><br/>
-です</p>
-
-<hr />
-
-<p>去年の
-<a href="http://atnd.org/events/22939">女帝 Advent Calendar 2011</a>
-では
-<a href="http://d.hatena.ne.jp/fukayatsu/20111219/1324316844">Androidアプリ</a>
-をつくったりました。</p>
-
-<p>去年の今頃はAndroidクラスタ崩れみたいな感じだったのでアプリを作りましたが、<br/>
-今年は普段ギョームで使っている
-<a href="http://hubot.github.com/">HUBOT</a>
-で参加したいと思います。</p>
-
-<h2>hubotとは</h2>
-
-<p>githubが公開しているnode.jsによる実装のbotフレームワークです。<br/>
-irc, twitter, hipchatなど、いろいろなサービスのアダプターが開発されており、<br/>
-coffee-scriptで独自のコマンドを追加することができます。</p>
-
-<p>例えば、</p>
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>fukayatsu | @hubot production deploy
-</span><span class='line'>hubot     | おｋ @all デプロイします
-</span><span class='line'>hubot     | cakes.mu にデプロイ完了しました(｀・ω・´)</span></code></pre></td></tr></table></div></figure>
-
-
-<p>というやりとりを毎日行なっています(メッセージは時期によって異なります)。<br/>
-このあたりの事は、いずれまたどこかで詳しくまとめたいと思います。</p>
-
-<h2>hubot jotei</h2>
-
-<p>さて本題ですが、こんなコマンドを追加しました。</p>
-
-<div><script src='https://gist.github.com/4188057.js?file='></script>
-<noscript><pre><code># Description:
-#   jotei
-#
-# Commands:
-#   hubot jotei img   - Searches Google Images for the jotei
-#   hubot jotei tweet - Recent tweet of the jotei
-
-module.exports = (robot) -&gt;
-  robot.respond /jotei img/i, (msg) -&gt;
-    imageMe msg, &quot;yamashitam&quot;, (url) -&gt;
-      msg.send url
-
-  robot.respond /jotei status/i, (msg) -&gt;
-    tweetMe msg, &quot;yamashitam&quot;, (text) -&gt;
-      msg.send text
-
-
-tweetMe = (msg, name, cb) -&gt;
-  q = screen_name: name
-  msg.http(&quot;http://api.twitter.com/1/statuses/user_timeline.json&quot;)
-    .query(q)
-    .get() (err, res, body) -&gt;
-      statuses = JSON.parse(body)
-      if statuses.length &gt; 0
-        status = msg.random statuses
-        cb status.text
-
-imageMe = (msg, query, animated, cb) -&gt;
-  cb = animated if typeof animated == 'function'
-  q = v: '1.0', rsz: '8', q: query, safe: 'active'
-  q.as_filetype = 'gif' if typeof animated is 'boolean' and animated is true
-  msg.http('http://ajax.googleapis.com/ajax/services/search/images')
-    .query(q)
-    .get() (err, res, body) -&gt;
-      images = JSON.parse(body)
-      images = images.responseData.results
-      if images.length &gt; 0
-        image  = msg.random images
-        cb &quot;#{image.unescapedUrl}#.png&quot;
-</code></pre></noscript></div>
-
-
-<p>こんな感じになります。</p>
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/hubot-jotei-img.png" alt="" /></p>
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/hubot-jotei-status.png" alt="" /></p>
-
-<p>便利ですね(?)</p>
-
-<h2>その他</h2>
-
-<p>そういえば、自分がいろいろなサービスでできるだけ同じアカウント名を使うようになったきっかけは @yamashitam だったような気がする。</p>
-
-<hr />
-
-<p>明日は<a href="http://twitter.com/HomeiMiyashita">@HomeiMiyashita</a>さんです :)</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/03/jotei-advent-calendar/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
