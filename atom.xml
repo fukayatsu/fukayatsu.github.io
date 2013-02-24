@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2013-02-16T00:23:03+09:00</updated>
+  <updated>2013-02-24T20:05:26+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[github上の時刻表示をちょっと見やすくするchrome extension]]></title>
+<link href="http://fukayatsu.github.com/2013/02/24/timezone-on-github/"/>
+<updated>2013-02-24T19:46:00+09:00</updated>
+<id>http://fukayatsu.github.com/2013/02/24/timezone-on-github</id>
+
+      <content type="html"><![CDATA[<p>github上でコミット時刻が<code>3 month ago</code>とか表示されているとき、カーソルを重ねてtooltipを見ても<code>-08:00</code>なタイムゾーンで表示されるのでわかりにくい。</p>
+
+<p>ちょっと探した範囲ではそれを解決するような拡張機能は見つからなかったので、試しに作ってみた。</p>
+
+<p>しばらく使ってみようと思う。</p>
+
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/github-localtime/nnicjaooimionienobllhkaohdjohfhm">Chrome ウェブストア - github-localtime</a></li>
+<li><a href="https://github.com/fukayatsu/github-localtime-crx">fukayatsu/github-localtime-crx · GitHub</a></li>
+</ul>
+
+
+<h2>screen shots</h2>
+
+<ul>
+<li><p>before
+<img src="https://raw.github.com/fukayatsu/github-localtime-crx/master/screen_shots/before.png" alt="before" /></p></li>
+<li><p>after
+<img src="https://raw.github.com/fukayatsu/github-localtime-crx/master/screen_shots/after.png" alt="after" /></p></li>
+</ul>
+
+
+<h2>既知の不具合</h2>
+
+<ul>
+<li>一定時間経つと表示が元に戻る
+
+<ul>
+<li>とりあえずリロードで対処&#8230;</li>
+</ul>
+</li>
+</ul>
+
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/02/24/timezone-on-github/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -2111,119 +2158,6 @@ input barからテキストを入力しても日本語変換確定時のEnterで
 
 <p>Tokyu.rbも似たような感じらしいのでそのうち参加したいです。</p>
 <p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/09/reject-tkrk10/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[t2studyという勉強会を主催してみた]]></title>
-<link href="http://fukayatsu.github.com/2012/12/08/t2study/"/>
-<updated>2012-12-08T11:15:00+09:00</updated>
-<id>http://fukayatsu.github.com/2012/12/08/t2study</id>
-
-      <content type="html"><![CDATA[<blockquote><p>毎月第1, 第3金曜にビールでも飲みながら緩く勉強会しましょう。</p></blockquote>
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121207.jpg" alt="" />
-(photo by @fnta)</p>
-
-<p>ということでなんとか第一回が終わった。<br/>
-今回は、知り合いベースで8人ぐらい集まった。</p>
-
-<p><a href="http://connpass.com/event/1422/?disp_content=presentation#tabs">第1回 T2-Study #t2study - connpass</a></p>
-
-<h4>流れ</h4>
-
-<ul>
-<li>19:30 コンビニへお酒と食べ物買いに行く</li>
-<li>19:45 各自自己紹介</li>
-<li>20:00 <a href="https://speakerdeck.com/fukayatsu/development-of-cakes">Development of cakes</a></li>
-<li>20:45 fakerとfactory_girlについて</li>
-<li>21:10 ruby motionのデモ</li>
-<li>22:00 解散</li>
-</ul>
-
-
-<script async class="speakerdeck-embed" data-id="e07a4560230b0130684b22000a1c46b2" data-ratio="1.2994923857868" src="http://fukayatsu.github.com//speakerdeck.com/assets/embed.js"></script>
-
-
-<p>自分は開発に使っているツールとか開発フローの話をした。<br/>
-途中でツッコミが入ったり、デモを見せたりしながら、気づいたら30~40分ぐらい話してた。<br/>
-もっと練習してスムーズに話したい。</p>
-
-<h4>発表の振り返り</h4>
-
-<ul>
-<li>ブランチ名の付け方
-
-<ul>
-<li>story idを含めるかどうか迷う
-
-<ul>
-<li>githubのコメントにstoryへのリンクを貼ったりもしている</li>
-</ul>
-</li>
-<li>bug-hoge-1111とかtodo-piyo-2222にしてるチームもあるらしい</li>
-</ul>
-</li>
-<li>人を追加で雇うよりも有償の便利なツールを使うほうがコストを抑えられる場合があるよね</li>
-<li>次回もまた発表したい
-
-<ul>
-<li>ネタ考えないと</li>
-</ul>
-</li>
-</ul>
-
-
-<h4>全体の振り返り</h4>
-
-<ul>
-<li>19:30開始にしときながら、お酒買ったりしてて始まるのが19:45ぐらいだった。
-
-<ul>
-<li>19:30 開場、20:00 開始にすればよいかも</li>
-</ul>
-</li>
-<li>ピザとか忘れてた
-
-<ul>
-<li>勉強会といえばピザだよね</li>
-</ul>
-</li>
-<li>俺得の勉強会を主催するのはすごく楽しい
-
-<ul>
-<li>定期的に発表の機会を持てる</li>
-<li>気を張らなくていい</li>
-<li>発表すると何かしら意見をもらえてよい</li>
-</ul>
-</li>
-<li>アンケートとか取ればよかったかも</li>
-<li>部屋の広さ的に8人ぐらいがちょうどいい
-
-<ul>
-<li>人数が増えたら外部の開場も検討</li>
-</ul>
-</li>
-<li>次か、次の次ぐらいから、外部の人も参加できるようにしようと思う
-
-<ul>
-<li>需要があるかわからないけど</li>
-</ul>
-</li>
-<li>飲み過ぎた
-
-<ul>
-<li>頭痛い</li>
-<li>お酒弱くなってる気がする</li>
-</ul>
-</li>
-</ul>
-
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/08/t2study/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

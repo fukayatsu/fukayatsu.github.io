@@ -91,6 +91,141 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2012/10/06/looking-back-at-the-last-2-months/">この2ヶ月を振り返って</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-06T12:14:00+09:00" pubdate data-updated="true">Oct 6<span>th</span>, 2012</time>
+         &bull; <a rel="bookmark" href="/2012/10/06/looking-back-at-the-last-2-months/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>サービス(<a href="https://cakes.mu">cakes</a>)リリース前後の忙しさにかまけて、久しぶりの更新になってしまった(´・ω・｀)</p>
+
+<p>ようやく一段落したような気がするので、入社から現在までの2ヶ月ちょっとを振り返ってみたいと思う。</p>
+
+<h3>8/1 入社</h3>
+
+<p>phpは初めてだったので、PHPのリファレンスとCakePHPのマニュアルにひと通り目を通した。</p>
+
+<p>当時、さくらVPS上のgitリポジトリとRedmineで開発を行なっていたが、testディレクトリの内部が空だったり、Viewテンプレートの中で</p>
+
+<pre><code># file A
+&lt;div&gt;&lt;div&gt;
+
+# file B
+&lt;/div&gt;&lt;/div&gt;
+</code></pre>
+
+<p>みたいなのがあって気が遠くなったりした。</p>
+
+<p>そういうのを見かけたら直しつつ、最初に継続課金処理の部分を直した。</p>
+
+<h3>8/7 github organizations契約</h3>
+
+<p>入社前からgithubでやりたいと言ってたのですんなりOKもらった。</p>
+
+<h3>8/11 githubに完全移行</h3>
+
+<p><code>/app</code>以下だけをバージョン管理する感じになってたので、プロジェクトの<code>/</code>から管理するように変更し、
+ついでにcakephpの本体をsubmoduleで管理するように変更した。</p>
+
+<h3>8月中旬</h3>
+
+<p>ひたすらRedmineのバグ潰し</p>
+
+<p>Topページをpjax化したり、Jenkinsを導入してgithubにコミットしたらテスト環境に自動的にデプロイされるようにしたりした。</p>
+
+<h3>8月下旬</h3>
+
+<p>awsにインスタンス作ったりテストしたり</p>
+
+<p>CakePHPのまま、テストを充実させたり大規模にリファクタリング <strong>しない</strong> ことを決意する
+(Railsで作りなおしたほうが幸せになれそう)</p>
+
+<h3>9月上旬</h3>
+
+<p>roomba買った</p>
+
+<h3>9/11 cakesのリリース</h3>
+
+<p>参照できない画像があったりしてCakePHPがエラーを吐いてたり、Yahoo砲とかがあったりして
+ロードアベレージが200超えたりして青くなったけどなんとか持ちこたえた。</p>
+
+<h3>9/12 pivotal tracker導入</h3>
+
+<p>これによってチームの優先順位、今誰が何をやっているかが明確になった。pivotal trackerを強制することで、チームが知らず知らずのうちにスクラム的なやり方に慣れるという狙いもあったりする。</p>
+
+<h3>9/14 実家勤務</h3>
+
+<p>結局たった1日しかできなかったけど、
+規則正しく起きて、ちゃんとご飯食べて、とても快適に作業できた。</p>
+
+<p>また年末とかにやりたい。</p>
+
+<p>今度はSkypeをつけっぱなしにして、ちゃんとオフィスの空気も感じられるようにするつもり。</p>
+
+<h3>9/18 github-flowを導入</h3>
+
+<p>この時まではスピードを優先して(?)全員がmasterに直接コミットするという状況だった。</p>
+
+<p>github-flowを導入して、必ずpull-request上でコードレビューしてからマージされるようにした。
+(現状レビューするのは自分だけなので、誰かもう一人フルタイムでコードレビューできる人が欲しい&#8230;)</p>
+
+<p>いずれにせよ、これはとてもうまく機能していると思う。</p>
+
+<h3>9月末</h3>
+
+<p>久しぶりに風邪引く。その日は早退した。</p>
+
+<p>週末に温泉に行ったりした。</p>
+
+<h3>10月初旬</h3>
+
+<p>フィードバックフォームを作った。</p>
+
+<p>直近はスケールアウトしやすい構成にする作業中。</p>
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/09/02/tddbc-yokohama-2nd/">TDDBC横浜 Second Seasonに参加しました</a>
 
 </h1>
@@ -1121,89 +1256,6 @@ pull request / mergeの練習をしたりという感じでした。</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/07/16/octopress-with-pow/">octopress with pow</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-16T00:13:00+09:00" pubdate data-updated="true">Jul 16<span>th</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/07/16/octopress-with-pow/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p><img src="http://dl.dropbox.com/u/85825/Screenshots/mv63g2j1-e4e.png" title="こんなかんじ" alt="screen shot" /></p>
-
-<blockquote><p><a href="http://marutanm.github.com/blog/2012/01/07/octopress-preview-pow/">OctopressのpreviewをPowでやると便利ですよという話 > marutanmlog</a></p></blockquote>
-
-<p>でも言及されているように、octopress + powが良い感じ。</p>
-
-<p>また、powを便利に使うための<code>powder</code>というgemがあり、</p>
-
-<p>たとえば、</p>
-
-<pre><code>gem i powder
-cd path/to/octopress
-powder link
-</code></pre>
-
-<p>とすれば、<code>http://octopress.dev</code>でpreviewできる。</p>
-
-<p>また、<code>http://hogehoge.dev</code>でpreviewしたい場合は、</p>
-
-<pre><code>cd ~/.pow
-mv octopress hogehoge
-</code></pre>
-
-<p>のようにすればよい。</p>
-
-<p>あとは<code>rake watch</code>させておいて、いいかんじになったら<code>rake deploy</code>でok</p>
-
-<p>うーん、octopressといい、powといい、使っていて心地良い : )</p>
-
-<h4>余談:</h4>
-
-<p>screen shotを載せるために<a href="http://grabbox.devsoft.no/">GrabBox</a>というスクリーンキャプチャをつかってみた。これは<code>cmd+shift+4</code>などとした時に、
-デスクトップに生成された画像を自動的にDropboxへ移動して、public linkをクリップボードにコピーしてくれる。これはこれで便利。</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -1222,6 +1274,10 @@ mv octopress hogehoge
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/02/24/timezone-on-github/">github上の時刻表示をちょっと見やすくするchrome extension</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/02/16/recent-contributions/">最近のコントリビュート</a>
       </li>
     
@@ -1235,10 +1291,6 @@ mv octopress hogehoge
     
       <li class="post">
         <a href="/2013/01/26/roomba-hack-02/">roomba-hack-02 はんだ付け&動作テスト編</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/01/23/hello-arduino-with-ruby-and-dino/">Arduino買ったのでRubyとDinoでLチカした</a>
       </li>
     
   </ul>
