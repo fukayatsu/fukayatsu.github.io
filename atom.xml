@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2013-03-03T17:48:54+09:00</updated>
+  <updated>2013-03-19T23:19:16+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,146 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[大江戸Ruby会議03に参加してきた #odrk03]]></title>
+<link href="http://fukayatsu.github.com/2013/03/19/oedo-ruby-kaigi-03/"/>
+<updated>2013-03-19T21:56:00+09:00</updated>
+<id>http://fukayatsu.github.com/2013/03/19/oedo-ruby-kaigi-03</id>
+
+      <content type="html"><![CDATA[<p>以前から気になっていたAsakusa.rbの雰囲気を感じられる良い機会かなと思って参加して来ました。</p>
+
+<ul>
+<li><a href="http://regional.rubykaigi.org/oedo03">Oedo Rubykaigi 03 - Mar 16, 2013</a></li>
+<li><a href="http://togetter.com/li/472551">大江戸Ruby会議03 - Togetter</a></li>
+<li><a href="http://twilog.org/fukayatsu/date-130316">ふかやつ(@fukayatsu)/2013年03月16日 - Twilog</a></li>
+</ul>
+
+
+<p><img src="https://lh3.googleusercontent.com/-lXnCdlUNDRs/UURvLSePrbI/AAAAAAAALdw/IZ08d-XT39Q/s848/IMG_20130316_093846.jpg" alt="" />
+レクホールの催し物が若干気になる&#8230;</p>
+
+<p><img src="https://lh4.googleusercontent.com/--gRJ-hReS6Y/UUhihs3_vtI/AAAAAAAALfQ/4XluTapjcrc/s718/photo.jpg" alt="" />
+engine yardのステッカーは早速PCに貼りました</p>
+
+<h2>セッションについて</h2>
+
+<p><a href="http://regional.rubykaigi.org/oedo03/schedule">セッション一覧(+資料)はこちら</a></p>
+
+<p>特に印象に残っているセッションを書きたいと思います</p>
+
+<ul>
+<li>GC
+
+<ul>
+<li>ほとんど知識なくて悔しい</li>
+</ul>
+</li>
+<li>mikutter
+
+<ul>
+<li>壇上でしゃべっている人からfavられる人続出</li>
+</ul>
+</li>
+<li>某レシピ共有サイトの Ruby 1.9 対応で大変苦労しました
+
+<ul>
+<li>どこの会社も多かれ少なかれそういうことあるんだなと妙に安心した</li>
+</ul>
+</li>
+<li>最後のセッション</li>
+</ul>
+
+
+<iframe src="http://www.slideshare.net/slideshow/embed_code/17269278" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe>
+
+
+<p> <div style="margin-bottom:5px"> <strong> <a href="http://www.slideshare.net/authorNari/ruby-17269278" title="桐島、Rubyやめるってよ" target="_blank">桐島、Rubyやめるってよ</a> </strong> from <strong><a href="http://www.slideshare.net/authorNari" target="_blank">Narihiro Nakamura</a></strong> </div></p>
+
+<p>涙がでるぐらい笑ったセッションだったけど、あとで@nari3さんのブログ見たら、</p>
+
+<blockquote><p>それでも彼は深夜残業（素振り）を続けているのです。<br/>
+傍目から見ると意味のないようにも見えると思いますが、リリースを続けるわけです。<br/>
+その原動力はまさにGC研究部（映画部）と同じだと考えています。<br/>
+だから実は全然、笑えないのです。でも笑っちゃいましたよね。<br/>
+<a href="http://d.hatena.ne.jp/authorNari/20130317/1363476355">http://d.hatena.ne.jp/authorNari/20130317/1363476355</a></p></blockquote>
+
+<p>と書いてあったので、一度映画を見てからスライドを見返す必要がありそう。</p>
+
+<h2>今回twitterアイコンとリアルを一致させた人</h2>
+
+<ul>
+<li><a href="https://twitter.com/katsyoshi">katsyoshi (katsyoshi)さん</a></li>
+<li><a href="https://twitter.com/komagata">Masaki Komagata (komagata)さん</a></li>
+<li><a href="https://twitter.com/hrysd">豆乳 (hrysd)さん</a></li>
+<li><a href="https://twitter.com/shishi4tw">shishi (shishi4tw)さん</a></li>
+<li><a href="https://twitter.com/hsbt">SHIBATA Hiroshi (hsbt)さん</a></li>
+<li><a href="https://twitter.com/nari3">nari3 (nari3)さん</a></li>
+<li><a href="https://twitter.com/mrkn">Kenta Murata (mrkn)さん</a></li>
+</ul>
+
+
+<p>直接話した人もそうでない人も。以前からフォローしている人でも、直接見たり話したりしたことがあるとよりTL上の存在感が増す気がします。</p>
+
+<h2>あとで試そうと思ったやつとか</h2>
+
+<ul>
+<li>いつもと違う地域.rbに参加する</li>
+<li>全文検索</li>
+<li>真鵺道</li>
+<li>OSSのバグを修正してコントリビュートする
+
+<ul>
+<li><a href="https://twitter.com/yuki24">Yuki Nishijima (yuki24) さん</a>の発表聞いて思った</li>
+</ul>
+</li>
+<li><a href="https://rubygems.org/gems/what_methods">gem: what_methods</a>
+
+<ul>
+<li>AをBにするメソッドを探してくれるやつ</li>
+<li><code>"a".what? "A"</code>とか</li>
+</ul>
+</li>
+<li><a href="http://atcoder.jp/">AtCoder (アットコーダー)</a>
+
+<ul>
+<li>日本語によるプログラミングコンテスト</li>
+<li>Rubyだと<code>1.9.2</code>が使用できるっぽい</li>
+</ul>
+</li>
+<li><a href="http://www.amazon.co.jp/dp/B00ANFT8R8">桐島、部活やめるってよ</a>
+
+<ul>
+<li>小説から読むべき？</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>反省</h2>
+
+<ul>
+<li>もっといろんな人と話す</li>
+<li>もっと早くblogを書く</li>
+</ul>
+
+
+<h2>おまけ</h2>
+
+<blockquote class="twitter-tweet"><p>この辺修学旅行で来たことあるような無いような</p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/312751519168606208">March 16, 2013</a></blockquote>
+
+
+<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>中学の修学旅行かな</p>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/03/19/oedo-ruby-kaigi-03/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -2188,113 +2328,6 @@ Toggetterもいくつかまとめてみた。</p>
 
 <p>人のを読む分にはフォーマットが統一されていて見やすいかもしれないけど。</p>
 <p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/09/ruby-advent-calendar/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[ST2からTwitterに投稿するプラグイン作った]]></title>
-<link href="http://fukayatsu.github.com/2012/12/09/sublime-text-2-advent-calendar/"/>
-<updated>2012-12-09T16:55:00+09:00</updated>
-<id>http://fukayatsu.github.com/2012/12/09/sublime-text-2-advent-calendar</id>
-
-      <content type="html"><![CDATA[<p>この記事は
-<a href="http://www.adventar.org/calendars/20">Sublime Text 2 Advent Calendar 2012</a>の9日目の記事です。</p>
-
-<h2>Sublime Text 2と僕</h2>
-
-<p>メインのエディタをVimからST2にしてからだいたい4ヶ月ぐらい経ちました。</p>
-
-<p>VimのキーバインドでPHPやRuby、markdownなどを書くのに使っています。</p>
-
-<p>使っているプラグインは<a href="https://github.com/fukayatsu/dotfiles/blob/master/sublime/User/Package%20Control.sublime-settings">このへん</a>
-で見れます。</p>
-
-<h2>プラグイン作ってみた</h2>
-
-<p><a href="https://github.com/fukayatsu/SublimeTweetLine">TweetLine</a>というSublime Text 2のTwitter投稿専用プラグインを作ったので紹介します。</p>
-
-<p>すでに高機能な<a href="https://github.com/rozboris/Sublime-Tweet">Sublime Tweet</a>というのがありますが、<br/>
-input barからテキストを入力しても日本語変換確定時のEnterでTweetされてしまうなど<br/>
-微妙に使いにくいという問題がありました。</p>
-
-<p>この問題はプラグインの問題というよりはSublime Text 2自体の問題のようなので、<br/>
-新規にプラグインを作ってエディタからのTweetを快適にしようと考えました。</p>
-
-<h2>使いかた</h2>
-
-<ul>
-<li><code>super + shift + p</code> > Install Package</li>
-</ul>
-
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/install_package.png" alt="" /></p>
-
-<ul>
-<li>TweetLineを選択</li>
-</ul>
-
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/install_tweetline.png" alt="" /></p>
-
-<ul>
-<li>key設定</li>
-</ul>
-
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/menu.png" alt="" /><br/>
-↓<br/>
-<img src="https://dl.dropbox.com/u/85825/blog/image/20121209/keymap.png" alt="" /></p>
-
-<ul>
-<li><code>super + ctrl + t</code> (初回のみ)</li>
-</ul>
-
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/authorize_web.png" alt="" /><br/>
-↓<br/>
-<img src="https://dl.dropbox.com/u/85825/blog/image/20121209/authorized.png" alt="" /><br/>
-↓<br/>
-<img src="https://dl.dropbox.com/u/85825/blog/image/20121209/input_pincode.png" alt="" /></p>
-
-<ul>
-<li>選択範囲無しで<code>super + ctrl + t</code> : 現在の行をつぶやく</li>
-</ul>
-
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/current_line.png" alt="" /><br/>
-↓<br/>
-<img src="https://dl.dropbox.com/u/85825/blog/image/20121209/tweet_current_line.png" alt="" /></p>
-
-<ul>
-<li>選択範囲ありで<code>super + ctrl + t</code> : 選択範囲をつぶやく</li>
-</ul>
-
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/selected_area.png" alt="" /><br/>
-↓<br/>
-<img src="https://dl.dropbox.com/u/85825/blog/image/20121209/tweet_selected_area.png" alt="" /></p>
-
-<ul>
-<li><code>super + shift + p</code> > logout</li>
-</ul>
-
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/logout.png" alt="" /></p>
-
-<ul>
-<li>おわり</li>
-</ul>
-
-
-<p>いかがでしたでしょうか。<br/>
-エラー処理とかは未だちゃんと実装していないのですが、よかったら使ってみてください</p>
-
-<p>明日は<a href="https://twitter.com/yumu19">@yumu19</a>さんです :)</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/09/sublime-text-2-advent-calendar/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
