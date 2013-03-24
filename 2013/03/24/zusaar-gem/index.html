@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: grabbox - fukayatsu.dev</title>
+  <title>zusaarのrubygem作った - fukayatsu.dev</title>
   <meta name="author" content="fukayatsu">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://fukayatsu.github.comblog/categories/grabbox/">
+  <link rel="canonical" href="http://fukayatsu.github.com/2013/03/24/zusaar-gem/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="fukayatsu.dev" type="application/atom+xml">
@@ -44,7 +44,7 @@
   <link href="/octopress-favicon.png" rel="icon">
 </head>
 
-<body  id="archive"   >
+<body   >
   <header role="banner"><hgroup>
   <h1><a href="/">fukayatsu.dev</a></h1>
   
@@ -75,56 +75,166 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+
+
+
+
+
+
+
+
+
+
+
+<article class="hentry " role="article">
   
   <header>
-    <h1 class="entry-title">Category: grabbox</h1>
-    
-  </header>
-  
-  <div id="blog-archives" class="category">
+    <h1 class="entry-title">
 
-
-
-  
-  <h2>2012</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-<article >
-  
-<h1 class="entry-title">
-
-<a href="/2012/07/16/octopress-with-pow/">octopress with pow</a>
+zusaarのrubygem作った
 
 </h1>
 
-<time datetime="2012-07-16T00:13:00+09:00" pubdate><span class='month'>Jul</span> <span class='day'>16</span> <span class='year'>2012</span></time>
-<footer>
-  
-  
-  
-  <span class="categories">posted in <a class='category' href='/blog/categories/grabbox/'>grabbox</a>, <a class='category' href='/blog/categories/mac/'>mac</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/pow/'>pow</a>, <a class='category' href='/blog/categories/powder/'>powder</a></span>
-  
-</footer>
+    
+      <p class="meta">
+        
 
-</article>
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-24T20:48:00+09:00" pubdate data-updated="true">Mar 24<span>th</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/03/24/zusaar-gem/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><blockquote class="twitter-tweet"><p>いままでずっとZusaarのことZussarだと勘違いしてた</p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/315701285150158848">March 24, 2013</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>gemをpublishする直前に気付いてリネーム祭りをした。<br/>
+そしてこれからもちょくちょく間違える気がする。</p>
+
+<ul>
+<li><a href="https://rubygems.org/gems/zusaar">zusaar | RubyGems.org | your community gem host</a></li>
+<li><a href="https://github.com/fukayatsu/zusaar">fukayatsu/zusaar · GitHub</a></li>
+<li><a href="http://www.zusaar.com/doc/api.html">APIリファレンス｜参加費の決済もできるイベント開催支援サービス「Zusaar」</a></li>
+</ul>
+
+
+<p>そもそも検索系のAPIしかないので、自動でイベント参加とかはできないのが残念。</p>
+
+<h1>使用例</h1>
+
+<script src="https://gist.github.com/fukayatsu/5231578.js"></script>
+
+
+<h1>その他</h1>
+
+<h3>APIのバグ？</h3>
+
+<p>APIを叩いた時に、<code>profile_url</code>が<code>http//twitter.com/foobar</code>みたいな感じで<code>:</code>が抜けて返ってきたので、お問い合せフォームから報告しておいた。</p>
+
+<p>今のことろはgemの側で正しいurlに直している。</p>
+
+<h3>followのrate limit</h3>
+
+<blockquote><p><a href="https://dev.twitter.com/docs/api/1.1/post/friendships/create">POST friendships/create | Twitter Developers</a></p></blockquote>
+
+<p>には<code>Rate Limited? No</code>って書いてあるけど、どうも15分に15回に制限されてるような挙動をする。</p>
+
+<p>それで制限に引っかかると、環境によって<code>Twitter::Error::ClientError</code>が発生してハマった。</p>
+
+<h3>参考にしたgem</h3>
+
+<blockquote><p><a href="https://github.com/sferik/twitter">sferik/twitter · GitHub</a></p></blockquote>
+
+<p>attr_reader上書きしてるとことか、faraday gemつかってるとことかいろいろ真似してみた</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">fukayatsu</span></span>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-24T20:48:00+09:00" pubdate data-updated="true">Mar 24<span>th</span>, 2013</time>
+
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/rubygem/'>rubygem</a>, <a class='category' href='/blog/categories/zusaar/'>zusaar</a>
+  
+</span>
+
+
+
+      
+
+    </p>
+    
+      <div class="sharing">
+  
+    
+      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
+    
+  
+  
+    
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://fukayatsu.github.com/2013/03/24/zusaar-gem/" target="_blank">+1</a>
+    
+  
+  
+    
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://fukayatsu.github.com/2013/03/24/zusaar-gem/" target="_blank">Share</a>
+    
+  
+  
 
 </div>
 
-  
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/03/21/shibuyarb-20130320/" title="Previous Post: 渋谷.rb[:20130320](拡大版)に参加してきた">&laquo; 渋谷.rb[:20130320](拡大版)に参加してきた</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
+<section>
+  <h1>Comments</h1>
+  
 
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
+</section>
 
 </div>
 
@@ -245,7 +355,10 @@
 			var disqus_developer = '0';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://fukayatsu.github.com/2013/03/24/zusaar-gem/';
+        var disqus_url = 'http://fukayatsu.github.com/2013/03/24/zusaar-gem/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
