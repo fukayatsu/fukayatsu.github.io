@@ -92,6 +92,103 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/04/17/shibuyarb-2013-04-17/">4月のShibuya.rbの集まりに行ってきた箇条書き</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-17T23:59:00+09:00" pubdate data-updated="true">Apr 17<span>th</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/04/17/shibuyarb-2013-04-17/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><ul>
+<li><a href="http://www.zusaar.com/event/640004">渋谷.rb[:20130417] on Zusaar</a></li>
+<li><a href="http://togetter.com/li/489435">渋谷.rb[:20130417]のまとめ #shibuyarb - Togetter</a></li>
+</ul>
+
+
+<h1>memo</h1>
+
+<ul>
+<li>そろそろデプロイツールとかちゃんと使って行きたい
+
+<ul>
+<li>chefはboxen的にMacの環境構築するのに使い始めた</li>
+</ul>
+</li>
+<li>渋谷でJavaで研修中の人たちがいて、勝手に懐かしい感じになってた
+
+<ul>
+<li>今度話聞いてみたい
+
+<ul>
+<li>社内.rbとは</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>最近ブログもLTもおろそかになっていて、後ろめたし
+
+<ul>
+<li>近いうちにデプロイとかテスト環境構築について書く</li>
+</ul>
+</li>
+<li>もくもくタイムに<a href="https://chrome.google.com/webstore/detail/tag-visibler/gglgkdbiphkgeiljmlfdgbaoefhjmcmo">chrome extension</a>作った
+
+<ul>
+<li>16個目。上限まであと4つ。</li>
+<li>せっかくなので会話したほうが良かったと反省</li>
+</ul>
+</li>
+<li><a href="https://gist.github.com/fukayatsu/5231578">zusaarの特定のイベントの参加者を一括.rb</a>で参加した人をフォローしてみた
+
+<ul>
+<li>herokuとかで月1回発動するようにしておくと捗るかもしれない</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/03/24/zusaar-gem/">zusaarのgem作った</a>
 
 </h1>
@@ -1222,172 +1319,6 @@ BlueSMiRFのTx ---&gt; RoombaのRx
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2013/01/23/hello-arduino-with-ruby-and-dino/">Arduino買ったのでRubyとDinoでLチカした</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-23T22:49:00+09:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2013</time>
-         &bull; <a rel="bookmark" href="/2013/01/23/hello-arduino-with-ruby-and-dino/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>前回<a href="http://fukayatsu.github.com/2013/01/21/roomba-hack-01/">roomba-hack-01 準備編</a>で必要な部品を揃えるときに、<br/>
-ついでに注文していた<a href="http://www.switch-science.com/products/detail.php?product_id=1120">Arduino Micro</a>が先に届いたのでいじってみた。</p>
-
-<h1>Arduino Micro</h1>
-
-<p><img src="https://lh4.googleusercontent.com/-ICg8dyo-5eU/UP_oaT5a_-I/AAAAAAAAJxQ/K1MWoZt_u14/s865/IMG_20130123_223909.jpg" alt="Arduino Micro" /></p>
-
-<p>PCとの接続は名前の通り(?)micro USBケーブル。<br/>
-余ってるAndroidのケーブルとか使えて良い感じ。</p>
-
-<p>どうやら最初から<code>13 pin</code>にLEDが接続されているみたい。<br/>
-他のArduinoもだいたいそうらしい。</p>
-
-<h1>はじめてのArduino</h1>
-
-<blockquote><p><a href="http://9ensan.com/blog/diy/diy-arduino-setup-led-flash/">Arduinoをはじめようを購入してセットアップ〜LEDを点滅させるまで | 9ensanのLifeHack</a></p></blockquote>
-
-<p>このページを参考にさせてもらってLEDをチカチカさせました。</p>
-
-<h1>RubyからArduinoコントロールしたい</h1>
-
-<p>これからJenkinsのXFDとか作るにあたって、どうせならRubyでコントロールしたいと思っていくつかライブラリを調べた。</p>
-
-<h2>library: funnel</h2>
-
-<p>最初に見つけたのがこれ。</p>
-
-<blockquote><p><a href="http://funnel.cc/Software/Ruby">funnel.cc | Software / Ruby</a></p></blockquote>
-
-<p>一度Arduino側に書き込んでしまえば、あとはRubyでやりたい放題らしい。</p>
-
-<p>へー、と思って<code>gem i funnel</code>とかやったら<br/>
-&#8220;a realtime resource-centric application framework&#8221;な方の<a href="https://github.com/dansimpson/funnel">funnel</a><br/>
-がインストールされたorz</p>
-
-<blockquote><p><a href="http://code.google.com/p/funnel/downloads/list">Downloads - funnel - A toolkit to sketch your idea physically - Google Project Hosting</a></p></blockquote>
-
-<p>↑ ここからダウンロードするのが正解だったみたい。</p>
-
-<p>でもRequirementsに<code>Ruby 1.8.6</code>とあったのでやめた。</p>
-
-<h2>gem: serialport</h2>
-
-<p>次に考えたのがこれ。</p>
-
-<blockquote><p><a href="http://playground.arduino.cc/interfacing/ruby">Arduino Playground - Ruby</a></p></blockquote>
-
-<p>にも</p>
-
-<blockquote><p>The SerialPort gem seems to do the job.</p></blockquote>
-
-<p>と書いてある。</p>
-
-<p>そういえば以前友人もこのgemを使ってArduinoで遊んでた。</p>
-
-<blockquote><p><a href="http://hatone.hateblo.jp/entry/2012/02/12/160257">rubyとarduinoで、twitterのリプライをLED通知してみた - メモりメモる</a></p></blockquote>
-
-<p>でも結局Arduino側もプログラム書かないといけないのでもうちょっと他の方法を探した。</p>
-
-<h2>gem: Dino</h2>
-
-<p>最後に見つけたのがこれ。<br/>
-(というか最初から<a href="http://playground.arduino.cc/interfacing/ruby">Arduinoの公式のRubyのところ</a>を確認しておくべきだった。)</p>
-
-<p>2012年11月のRubyWorld Conference 2012で発表された、かなり新しいプロダクトらしい。<br/>
-funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、あとはRubyだけでいけるタイプ。</p>
-
-<p><a href="http://confreaks.com/videos/1294-rubyconf2012-arduino-the-ruby-way">Arduino the Ruby way - Austin Vance - Ruby Conference 2012</a></p>
-
-<script async class="speakerdeck-embed" data-id="5098572bc5f78d0002010edb" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
-
-
-
-
-<iframe width="640" height="360" src="http://www.youtube.com/embed/oUIor6GK-qA" frameborder="0" allowfullscreen></iframe>
-
-
-<br>
-
-
-<br>
-
-
-<h3>DinoでLチカ</h3>
-
-<p>うん、こういうのを探してた :)</p>
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;dino&#39;</span>  <span class="c1"># gem install dino</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">board</span> <span class="o">=</span> <span class="no">Dino</span><span class="o">::</span><span class="no">Board</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Dino</span><span class="o">::</span><span class="no">TxRx</span><span class="o">.</span><span class="n">new</span><span class="p">)</span>
-</span><span class='line'><span class="n">led</span> <span class="o">=</span> <span class="no">Dino</span><span class="o">::</span><span class="no">Components</span><span class="o">::</span><span class="no">Led</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">pin</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="n">board</span><span class="p">:</span> <span class="n">board</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">[</span><span class="ss">:on</span><span class="p">,</span> <span class="ss">:off</span><span class="o">].</span><span class="n">cycle</span> <span class="k">do</span> <span class="o">|</span><span class="n">switch</span><span class="o">|</span>
-</span><span class='line'>  <span class="n">led</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">switch</span><span class="p">)</span>
-</span><span class='line'>  <span class="nb">sleep</span> <span class="mi">0</span><span class="o">.</span><span class="mi">5</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>使ってみようと思った人は↓このチュートリアルが詳しくて良いかも。</p>
-
-<blockquote><p><a href="http://tutorials.jumpstartlab.com/projects/arduino/introducing_arduino.html">Introducing Arduino &amp; Dino - Jumpstart Lab Curriculum</a></p></blockquote>
-
-<h1>つづく</h1>
-
-<p>ブレッドボードが手元になかったので今日はここまで。<br/>
-早くセンサとかつないでいろいろ試したい</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1404,6 +1335,10 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/04/17/shibuyarb-2013-04-17/">4月のShibuya.rbの集まりに行ってきた箇条書き</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/03/24/zusaar-gem/">zusaarのgem作った</a>
       </li>
     
@@ -1417,10 +1352,6 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
     
       <li class="post">
         <a href="/2013/03/03/mitsuworu-rails4-and-ruby2/">Rails4とRuby2で簡単なWebサービスを作ってみた</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/02/24/timezone-on-github/">github上の時刻表示をちょっと見やすくするchrome extension</a>
       </li>
     
   </ul>
