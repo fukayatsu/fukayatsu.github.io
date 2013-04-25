@@ -92,6 +92,67 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/04/25/standing-desk/">standing-desk</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-25T19:52:00+09:00" pubdate data-updated="true">Apr 25<span>th</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/04/25/standing-desk/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>前から気になっていたスタンディングデスクを導入してみた。</p>
+
+<p>とりあえずversion 1は積み本デスク。</p>
+
+<p><img src="https://lh3.googleusercontent.com/-dvXBbyYPvRI/UXi75w_0OqI/AAAAAAAAMvs/HFPZOC_-CRs/w487-h649/IMG_20130425_141257.jpg" alt="" /></p>
+
+<p>午後から4時間半ぐらい立って仕事してみたけど、足が疲れるのでたまに5分ぐらい椅子に座って休憩したり、ストレッチしながら作業してた。1日だけだとあんまり効能がわからないので、しばらく続けてみるつもり。</p>
+
+<p>オフィスの引っ越しが終わったら、<a href="http://lifehacking.jp/2013/01/ikea-standing-desk/">IKEAの家具で自作するスタンディングデスク</a>みたいなちゃんとした奴を作りたい。</p>
+
+<p>自分の場合、大体100cm(キーボード用)と130cm(ディスプレイ用)の棚があればよさそうだった。</p>
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/04/17/shibuyarb-2013-04-17/">4月のShibuya.rbの集まりに行ってきた箇条書き</a>
 
 </h1>
@@ -1156,169 +1217,6 @@ engine yardのステッカーは早速PCに貼りました</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2013/01/26/roomba-hack-02/">roomba-hack-02 はんだ付け&動作テスト編</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-26T21:19:00+09:00" pubdate data-updated="true">Jan 26<span>th</span>, 2013</time>
-         &bull; <a rel="bookmark" href="/2013/01/26/roomba-hack-02/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>↓ MacBookとBluetoothで接続したRoomba</p>
-
-<p><img src="https://lh4.googleusercontent.com/-_ikpMnQiunk/UQPL94eDwbI/AAAAAAAAKRI/xxWbqYDC4o4/s536/photo.jpg" alt="" /></p>
-
-<p>MacbookPro上でRubyからbluetooth経由でRoombaにコマンドを送って、掃除を開始させるところまでできました。</p>
-
-<p>手順とかちょっとハマったところとかを書いていきます。</p>
-
-<p>パーツに関しては<a href="http://fukayatsu.github.com/2013/01/21/roomba-hack-01/">前回の記事</a>をご参照下さい</p>
-
-<h2>BlueSMiRFにコネクタを取り付ける</h2>
-
-<p><img src="https://lh3.googleusercontent.com/-aMETeVkId8A/UQEsOt8eENI/AAAAAAAAJ2Y/PfwIMT9sH1c/s715/IMG_20130124_214029.jpg" alt="" /></p>
-
-<p>BlueSMiRFは1つ7000円ぐらいするので、取り外ししやすいようにコネクタをつけておきます。</p>
-
-<p>今回はXHコネクタというものを使ってみました。手元に圧着ペンチがなかったので、ラジオペンチで無理やり圧着させましたが、専用の工具を買ったほうが良さそうです。</p>
-
-<p><img src="https://lh5.googleusercontent.com/-PXJSo9Du9rY/UQEtqFM0_cI/AAAAAAAAJ50/KmObgoXQLVQ/s715/IMG_20130124_214755.jpg" alt="" /></p>
-
-<h2>3端子レギュレータにコンデンサを付ける</h2>
-
-<p><img src="https://lh4.googleusercontent.com/-rlAFOr_6sEo/UQEzVNeNfuI/AAAAAAAAJ8Y/qD-oHa4bVC4/s715/IMG_20130124_221213.jpg" alt="" /></p>
-
-<p>Roombaから取れる電源は16Vなので、そのままではBlueSMiRF(5V)につなげません。<br/>
-間に3端子レギュレータを接続します。</p>
-
-<p>(回路図は秋月のパーツセットに入っています。)</p>
-
-<h2>コネクタに3端子レギュレータを(無理やり)付ける</h2>
-
-<p><img src="https://lh5.googleusercontent.com/-iLczJynhha4/UQE1wzwRriI/AAAAAAAAJ_4/JOHefyb_-aE/s715/IMG_20130124_222217.jpg" alt="" /></p>
-
-<p>写真だとちょっとわかりにくいのですが、コネクタのVCCの配線を切って3端子レギュレータの<code>in</code>と<code>out</code>をつないでいます。</p>
-
-<p>GNDの接続も忘れずに。</p>
-
-<h2>Roombaに接続</h2>
-
-<p><img src="https://lh4.googleusercontent.com/-cQGNFrgIBXo/UQFIO3Y61aI/AAAAAAAAKBc/lEUb7lSsj0k/s715/IMG_20130124_234043.jpg" alt="" /></p>
-
-<p>XHコネクタと単線をつないで、単線の反対側をroombaにつないでみます。</p>
-
-<p>ちなみに1番目のピンと6番目のピンは白い線でつないであります。</p>
-
-<p>どこに何をつなぐかは、<a href="http://media.wiley.com/product_ancillary/17/04700727/DOWNLOAD/iRobot%20Roomba%20Open%20Interface%20Specification.pdf">公式のリファレンス</a>を参照しましょう。</p>
-
-<p>とりあえずVCCとGNDが合っていればLEDが赤く点滅します。</p>
-
-<p>それから、RxとTxのつなぎ方に注意です。</p>
-
-<pre><code>BlueSMiRFのRx ---&gt; RoombaのTx
-BlueSMiRFのTx ---&gt; RoombaのRx
-</code></pre>
-
-<p>という感じにつなぎます。じゃないと僕みたいに小一時間なんで動かないんだろうと悩むことになりかねません。</p>
-
-<h2>MacとBlueSMiRFのペアリング</h2>
-
-<p>これはBluetoothマウスとかと同じような流れで行います。<br/>
-確かパスコードは無しに設定した気がします。</p>
-
-<h2>シリアルポートの設定</h2>
-
-<p><img src="https://lh5.googleusercontent.com/-lWJ3AnXfTCo/UQPTthLkqhI/AAAAAAAAKSk/_hnBeL9CWI0/s713/Screen+Shot+2013-01-26+at+21.11.42.png" alt="" /></p>
-
-<p>ペアリングに成功したら、シリアルポートの設定をします。</p>
-
-<p>Bluetooth設定の画面で、デバイス(FireFly-&#8230;)を選択して歯車ボタンから<code>Edit serial ports...</code>を選ぶと↑この画像のような画面になります。</p>
-
-<p>この時の<code>Path: /dev/tty.FireFly...</code>は次で使うのでメモっておきましょう。</p>
-
-<h2>RubyからRoombaを操作するテスト</h2>
-
-<p>まずターミナルを開いて、必要なgemをinstallしておきます。</p>
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>$ gem install serialport</span></code></pre></td></tr></table></div></figure>
-
-
-<p>次にirb(もしくはpry)から対話環境でシリアル通信してみます。</p>
-
-<p><strong>※Roombaの電源は入れておきましょう</strong></p>
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>$ irb
-</span><span class='line'>
-</span><span class='line'>irb(main):001:0> require 'serialport'
-</span><span class='line'>irb(main):002:0> sp = SerialPort.new('/dev/tty.FireFly-86A2-SPP', 115200, 8, 1, 0)
-</span><span class='line'># '/dev/tty.FireFly-86A2-SPP'はさっきメモしたもの
-</span><span class='line'># この時点でBlueSMiRFのLEDが緑に点灯するはず
-</span><span class='line'>
-</span><span class='line'>irb(main):003:0> sp.write 128.chr
-</span><span class='line'>irb(main):004:0> sp.write 130.chr
-</span><span class='line'>irb(main):005:0> sp.write 135.chr
-</span><span class='line'># roombaが掃除を始めるはず</span></code></pre></td></tr></table></div></figure>
-
-
-<p>128とか130とかが気になる人は<a href="http://media.wiley.com/product_ancillary/17/04700727/DOWNLOAD/iRobot%20Roomba%20Open%20Interface%20Specification.pdf">公式のリファレンス</a>を読みましょう。</p>
-
-<h1>つづく</h1>
-
-<p>次はいよいよTwitter連携とかをしていきたいと思います。</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1335,6 +1233,10 @@ BlueSMiRFのTx ---&gt; RoombaのRx
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/04/25/standing-desk/">standing-desk</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/04/17/shibuyarb-2013-04-17/">4月のShibuya.rbの集まりに行ってきた箇条書き</a>
       </li>
     
@@ -1348,10 +1250,6 @@ BlueSMiRFのTx ---&gt; RoombaのRx
     
       <li class="post">
         <a href="/2013/03/19/oedo-ruby-kaigi-03/">大江戸Ruby会議03に参加してきた #odrk03</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/03/03/mitsuworu-rails4-and-ruby2/">Rails4とRuby2で簡単なWebサービスを作ってみた</a>
       </li>
     
   </ul>

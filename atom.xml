@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev]]></title>
   <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
   <link href="http://fukayatsu.github.com/"/>
-  <updated>2013-04-18T00:29:23+09:00</updated>
+  <updated>2013-04-25T20:06:06+09:00</updated>
   <id>http://fukayatsu.github.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[standing-desk]]></title>
+<link href="http://fukayatsu.github.com/2013/04/25/standing-desk/"/>
+<updated>2013-04-25T19:52:00+09:00</updated>
+<id>http://fukayatsu.github.com/2013/04/25/standing-desk</id>
+
+      <content type="html"><![CDATA[<p>前から気になっていたスタンディングデスクを導入してみた。</p>
+
+<p>とりあえずversion 1は積み本デスク。</p>
+
+<p><img src="https://lh3.googleusercontent.com/-dvXBbyYPvRI/UXi75w_0OqI/AAAAAAAAMvs/HFPZOC_-CRs/w487-h649/IMG_20130425_141257.jpg" alt="" /></p>
+
+<p>午後から4時間半ぐらい立って仕事してみたけど、足が疲れるのでたまに5分ぐらい椅子に座って休憩したり、ストレッチしながら作業してた。1日だけだとあんまり効能がわからないので、しばらく続けてみるつもり。</p>
+
+<p>オフィスの引っ越しが終わったら、<a href="http://lifehacking.jp/2013/01/ikea-standing-desk/">IKEAの家具で自作するスタンディングデスク</a>みたいなちゃんとした奴を作りたい。</p>
+
+<p>自分の場合、大体100cm(キーボード用)と130cm(ディスプレイ用)の棚があればよさそうだった。</p>
+<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/04/25/standing-desk/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -2113,62 +2138,6 @@ Toggetterもいくつかまとめてみた。</p>
 <p>勉強会もブログもLTもTDDもそうだけど、<br/>
 量をこなして質に転化するまで続けたいと思う今日この頃。</p>
 <p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/21/t2study/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[TDDを続けるために]]></title>
-<link href="http://fukayatsu.github.com/2012/12/21/tdd-advent-calendar/"/>
-<updated>2012-12-21T00:00:00+09:00</updated>
-<id>http://fukayatsu.github.com/2012/12/21/tdd-advent-calendar</id>
-
-      <content type="html"><![CDATA[<p>この記事は<a href="http://atnd.org/events/33846">TDD Advent Calendar jp: 2012</a>
-の21日目の記事です。</p>
-
-<p>前日の記事は<a href="http://poohsunny.hatenablog.com/about">id:swimming_pooh</a>
-さんの
-<a href="http://poohsunny.hatenablog.com/entry/2012/12/20/110958">ひのきの棒を駆使してレガシーコードに立ち向かう</a>
-でした。</p>
-
-<p>追記(2012-12-22):<br/>
-次の記事は<a href="https://twitter.com/YasuOza">@YasuOza</a>
-さんの
-<a href="https://gist.github.com/4358171">TDDを取り入れたい誰かのために</a>
-です。</p>
-
-<hr />
-
-<p>今年の9月に<a href="http://fukayatsu.github.com/2012/09/02/tddbc-yokohama-2nd/">TDDBC横浜 Second Seasonに参加した</a>
-ものの、<br/>
-その後テストを書かない日の方が多かったので、<br/>
-これはまずいと思ってテストを書き続けられるようなツールを作りました。</p>
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121221/tdd-xfd.png" alt="" /></p>
-
-<p><a href="https://github.com/fukayatsu/testing-code-bot">fukayatsu/testing-code-bot · GitHub</a></p>
-
-<p>(Readmeとかまだ無いです。ごめんなさい)</p>
-
-<p>「テスト書いた #testingcode」などとつぶやくと、<br/>
-プロフィール写真を<code>green</code>な感じに変えてくれます。</p>
-
-<p>逆に、<code>green</code>の状態のままなにもしないで一定時間(とりあえず36時間)経過すると、<br/>
-プロフィールアイコンを<code>red</code>な感じに変えてくれます。</p>
-
-<p><code>red</code>な感じになっていたら恥ずかしいのできっとテストを書き続けられるはずです。</p>
-
-<p>来年はずっとグリーンでいられるように頑張りたいと思います！</p>
-
-<hr />
-
-<p>マヤ文明的には今日で人類滅亡らしいですが、明日は
-<a href="https://twitter.com/YasuOza">@YasuOza</a>
-さんです！</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/21/tdd-advent-calendar/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
