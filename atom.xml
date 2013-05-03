@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[fukayatsu.dev]]></title>
-  <link href="http://fukayatsu.github.com/atom.xml" rel="self"/>
-  <link href="http://fukayatsu.github.com/"/>
-  <updated>2013-05-03T23:50:48+09:00</updated>
-  <id>http://fukayatsu.github.com/</id>
+  <link href="http://blog.fukayatsu.com/atom.xml" rel="self"/>
+  <link href="http://blog.fukayatsu.com/"/>
+  <updated>2013-05-04T00:09:41+09:00</updated>
+  <id>http://blog.fukayatsu.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
     
@@ -19,9 +19,9 @@
 
 
 <title type="html"><![CDATA[引越しの目論見]]></title>
-<link href="http://fukayatsu.github.com/2013/05/03/plan-to-move/"/>
+<link href="http://blog.fukayatsu.com/2013/05/03/plan-to-move/"/>
 <updated>2013-05-03T22:45:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/05/03/plan-to-move</id>
+<id>http://blog.fukayatsu.com/2013/05/03/plan-to-move</id>
 
       <content type="html"><![CDATA[<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.jp/maps?f=d&amp;source=s_d&amp;saddr=T%C5%8Dky%C5%8D-to,+Shibuya-ku,+Shibuya,+%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%97&amp;daddr=&amp;hl=en&amp;geocode=FWYUIAId4rdTCClf4m19WYsYYDE9pVl9Vutemg&amp;sll=39.692337,140.34416&amp;sspn=2.88688,4.559326&amp;gl=jp&amp;brcurrent=3,0x60188b5bc0620bf5:0xaa0e3a1086a3617,0&amp;ttype=now&amp;noexp=0&amp;noal=0&amp;sort=def&amp;mra=ls&amp;ie=UTF8&amp;t=m&amp;start=0&amp;ll=35.657104,139.704423&amp;spn=0.006102,0.00912&amp;z=16&amp;output=embed"></iframe>
 
@@ -40,7 +40,7 @@
 
 <p>あとは今住んでるところより静かだといいな。<br/>
 夜中に酔っぱらいの叫びとかが聞こえてこないところ。</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/05/03/plan-to-move/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/05/03/plan-to-move/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -50,9 +50,9 @@
 
 
 <title type="html"><![CDATA[スタンディングデスク]]></title>
-<link href="http://fukayatsu.github.com/2013/04/25/standing-desk/"/>
+<link href="http://blog.fukayatsu.com/2013/04/25/standing-desk/"/>
 <updated>2013-04-25T19:52:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/04/25/standing-desk</id>
+<id>http://blog.fukayatsu.com/2013/04/25/standing-desk</id>
 
       <content type="html"><![CDATA[<p>前から気になっていたスタンディングデスクを導入してみた。</p>
 
@@ -65,7 +65,7 @@
 <p>オフィスの引っ越しが終わったら、<a href="http://lifehacking.jp/2013/01/ikea-standing-desk/">IKEAの家具で自作するスタンディングデスク</a>みたいなちゃんとした奴を作りたい。</p>
 
 <p>自分の場合、大体100cm(キーボード用)と130cm(ディスプレイ用)の棚があればよさそうだった。</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/04/25/standing-desk/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/04/25/standing-desk/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -75,9 +75,9 @@
 
 
 <title type="html"><![CDATA[4月のShibuya.rbの集まりに行ってきた箇条書き]]></title>
-<link href="http://fukayatsu.github.com/2013/04/17/shibuyarb-2013-04-17/"/>
+<link href="http://blog.fukayatsu.com/2013/04/17/shibuyarb-2013-04-17/"/>
 <updated>2013-04-17T23:59:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/04/17/shibuyarb-2013-04-17</id>
+<id>http://blog.fukayatsu.com/2013/04/17/shibuyarb-2013-04-17</id>
 
       <content type="html"><![CDATA[<ul>
 <li><a href="http://www.zusaar.com/event/640004">渋谷.rb[:20130417] on Zusaar</a></li>
@@ -126,7 +126,7 @@
 </li>
 </ul>
 
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/04/17/shibuyarb-2013-04-17/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/04/17/shibuyarb-2013-04-17/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -136,14 +136,14 @@
 
 
 <title type="html"><![CDATA[zusaarのgem作った]]></title>
-<link href="http://fukayatsu.github.com/2013/03/24/zusaar-gem/"/>
+<link href="http://blog.fukayatsu.com/2013/03/24/zusaar-gem/"/>
 <updated>2013-03-24T20:48:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/03/24/zusaar-gem</id>
+<id>http://blog.fukayatsu.com/2013/03/24/zusaar-gem</id>
 
       <content type="html"><![CDATA[<blockquote class="twitter-tweet"><p>いままでずっとZusaarのことZussarだと勘違いしてた</p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/315701285150158848">March 24, 2013</a></blockquote>
 
 
-<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="http://blog.fukayatsu.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 <p>gemをpublishする直前に気付いてリネーム祭りをした。<br/>
@@ -184,7 +184,7 @@
 <blockquote><p><a href="https://github.com/sferik/twitter">sferik/twitter · GitHub</a></p></blockquote>
 
 <p>attr_reader上書きしてるとことか、faraday gemつかってるとことかいろいろ真似してみた</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/03/24/zusaar-gem/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/03/24/zusaar-gem/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -194,9 +194,9 @@
 
 
 <title type="html"><![CDATA[渋谷.rb[:20130320](拡大版)に参加してきた]]></title>
-<link href="http://fukayatsu.github.com/2013/03/21/shibuyarb-20130320/"/>
+<link href="http://blog.fukayatsu.com/2013/03/21/shibuyarb-20130320/"/>
 <updated>2013-03-21T12:45:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/03/21/shibuyarb-20130320</id>
+<id>http://blog.fukayatsu.com/2013/03/21/shibuyarb-20130320</id>
 
       <content type="html"><![CDATA[<ul>
 <li><a href="http://www.zusaar.com/event/545003">渋谷.rb[:20130320](拡大版) on Zusaar</a></li>
@@ -230,7 +230,7 @@
 
 <p>自分は最近作ってるChrome Extensionについて発表した。</p>
 
-<script async class="speakerdeck-embed" data-id="b158aec0740b01306b5122000a1c8083" data-ratio="1.2994923857868" src="http://fukayatsu.github.com//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="b158aec0740b01306b5122000a1c8083" data-ratio="1.2994923857868" src="http://blog.fukayatsu.com//speakerdeck.com/assets/embed.js"></script>
 
 
 <p>会場ではChrome Extensionを作ったことがあるのが数人ぐらいだったので、発表する意義はあったのではないかと思う。</p>
@@ -256,7 +256,7 @@
 <p><img src="https://lh4.googleusercontent.com/-s7Swgycv_wQ/UUnSvohQp_I/AAAAAAAALhQ/Ij-SctFLoIs/w249-h187/IMG_20130321_000748.jpg" alt="" /></p>
 
 <p>帰り際に桜が咲いてるのに気付く</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/03/21/shibuyarb-20130320/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/03/21/shibuyarb-20130320/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -266,9 +266,9 @@
 
 
 <title type="html"><![CDATA[大江戸Ruby会議03に参加してきた #odrk03]]></title>
-<link href="http://fukayatsu.github.com/2013/03/19/oedo-ruby-kaigi-03/"/>
+<link href="http://blog.fukayatsu.com/2013/03/19/oedo-ruby-kaigi-03/"/>
 <updated>2013-03-19T21:56:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/03/19/oedo-ruby-kaigi-03</id>
+<id>http://blog.fukayatsu.com/2013/03/19/oedo-ruby-kaigi-03</id>
 
       <content type="html"><![CDATA[<p>以前から気になっていたAsakusa.rbの雰囲気を感じられる良い機会かなと思って参加して来ました。</p>
 
@@ -392,11 +392,11 @@ engine yardのステッカーは早速PCに貼りました</p>
 <blockquote class="twitter-tweet"><p>この辺修学旅行で来たことあるような無いような</p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/312751519168606208">March 16, 2013</a></blockquote>
 
 
-<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="http://blog.fukayatsu.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 <p>中学の修学旅行かな</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/03/19/oedo-ruby-kaigi-03/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/03/19/oedo-ruby-kaigi-03/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -406,9 +406,9 @@ engine yardのステッカーは早速PCに貼りました</p>
 
 
 <title type="html"><![CDATA[Rails4とRuby2で簡単なWebサービスを作ってみた]]></title>
-<link href="http://fukayatsu.github.com/2013/03/03/mitsuworu-rails4-and-ruby2/"/>
+<link href="http://blog.fukayatsu.com/2013/03/03/mitsuworu-rails4-and-ruby2/"/>
 <updated>2013-03-03T16:20:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/03/03/mitsuworu-rails4-and-ruby2</id>
+<id>http://blog.fukayatsu.com/2013/03/03/mitsuworu-rails4-and-ruby2</id>
 
       <content type="html"><![CDATA[<p>作ったのはこれ > <a href="http://mitsuwo.net/">みつをる</a></p>
 
@@ -563,7 +563,7 @@ engine yardのステッカーは早速PCに貼りました</p>
 <p>nginx・unicorn・RMagickは初めて使ったので、良い経験になった。</p>
 
 <p>自分が必要とするものを作るのはやはり楽しい。</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/03/03/mitsuworu-rails4-and-ruby2/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/03/03/mitsuworu-rails4-and-ruby2/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -573,9 +573,9 @@ engine yardのステッカーは早速PCに貼りました</p>
 
 
 <title type="html"><![CDATA[github上の時刻表示をちょっと見やすくするchrome extension]]></title>
-<link href="http://fukayatsu.github.com/2013/02/24/timezone-on-github/"/>
+<link href="http://blog.fukayatsu.com/2013/02/24/timezone-on-github/"/>
 <updated>2013-02-24T19:46:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/02/24/timezone-on-github</id>
+<id>http://blog.fukayatsu.com/2013/02/24/timezone-on-github</id>
 
       <content type="html"><![CDATA[<p>github上でコミット時刻が<code>3 month ago</code>とか表示されているとき、カーソルを重ねてtooltipを見ても<code>-08:00</code>なタイムゾーンで表示されるのでわかりにくい。</p>
 
@@ -610,7 +610,7 @@ engine yardのステッカーは早速PCに貼りました</p>
 </li>
 </ul>
 
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/02/24/timezone-on-github/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/02/24/timezone-on-github/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -620,9 +620,9 @@ engine yardのステッカーは早速PCに貼りました</p>
 
 
 <title type="html"><![CDATA[最近のコントリビュート]]></title>
-<link href="http://fukayatsu.github.com/2013/02/16/recent-contributions/"/>
+<link href="http://blog.fukayatsu.com/2013/02/16/recent-contributions/"/>
 <updated>2013-02-16T00:08:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/02/16/recent-contributions</id>
+<id>http://blog.fukayatsu.com/2013/02/16/recent-contributions</id>
 
       <content type="html"><![CDATA[<h3><a href="https://github.com/austinbv/dino/pull/24">Add some colors to Components::RgbLed by fukayatsu · Pull Request #24 · austinbv/dino</a></h3>
 
@@ -645,7 +645,7 @@ engine yardのステッカーは早速PCに貼りました</p>
 
 <p>結構pull-requestするまでのフットワークが軽くなってきた気がする。<br/>
 マージされると嬉しいので、できることからコツコツ続けて行きたい。</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/02/16/recent-contributions/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/02/16/recent-contributions/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -655,9 +655,9 @@ engine yardのステッカーは早速PCに貼りました</p>
 
 
 <title type="html"><![CDATA[デブサミ2013に行ってきた]]></title>
-<link href="http://fukayatsu.github.com/2013/02/15/devsumi2013/"/>
+<link href="http://blog.fukayatsu.com/2013/02/15/devsumi2013/"/>
 <updated>2013-02-15T23:32:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/02/15/devsumi2013</id>
+<id>http://blog.fukayatsu.com/2013/02/15/devsumi2013</id>
 
       <content type="html"><![CDATA[<p><a href="http://event.shoeisha.jp/detail/1/gaiyo">開催概要：Developers Summit 2013</a></p>
 
@@ -732,7 +732,7 @@ engine yardのステッカーは早速PCに貼りました</p>
 <li>次も絶対参加する(多分)</li>
 </ul>
 
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/02/15/devsumi2013/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/02/15/devsumi2013/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -742,9 +742,9 @@ engine yardのステッカーは早速PCに貼りました</p>
 
 
 <title type="html"><![CDATA[東京Ruby会議3日目&大和田Ruby会議に参加してました]]></title>
-<link href="http://fukayatsu.github.com/2013/02/10/tkrk10-3rd/"/>
+<link href="http://blog.fukayatsu.com/2013/02/10/tkrk10-3rd/"/>
 <updated>2013-02-10T23:16:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/02/10/tkrk10-3rd</id>
+<id>http://blog.fukayatsu.com/2013/02/10/tkrk10-3rd</id>
 
       <content type="html"><![CDATA[<ul>
 <li><a href="http://tokyorubykaigi.doorkeeper.jp/events/2603">シン・東京Ruby会議10 劇場版 ||= - Tokyo Ruby Kaigi 10</a></li>
@@ -821,7 +821,7 @@ engine yardのステッカーは早速PCに貼りました</p>
 <p><img src="https://lh3.googleusercontent.com/--Sd5VIB4GW8/UReaVwCDNlI/AAAAAAAAKw4/c-KS-0nJNME/s807/IMG_20130210_220130.jpg" alt="" /></p>
 
 <p><img src="https://lh3.googleusercontent.com/-6Q-cEyEQBYQ/URedQmIi_GI/AAAAAAAAKyg/rmVGAUcSI3w/s807/IMG_20130210_221401.jpg" alt="" /></p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/02/10/tkrk10-3rd/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/02/10/tkrk10-3rd/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -831,9 +831,9 @@ engine yardのステッカーは早速PCに貼りました</p>
 
 
 <title type="html"><![CDATA[roomba-hack-02 はんだ付け&動作テスト編]]></title>
-<link href="http://fukayatsu.github.com/2013/01/26/roomba-hack-02/"/>
+<link href="http://blog.fukayatsu.com/2013/01/26/roomba-hack-02/"/>
 <updated>2013-01-26T21:19:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/01/26/roomba-hack-02</id>
+<id>http://blog.fukayatsu.com/2013/01/26/roomba-hack-02</id>
 
       <content type="html"><![CDATA[<p>↓ MacBookとBluetoothで接続したRoomba</p>
 
@@ -948,7 +948,7 @@ BlueSMiRFのTx ---&gt; RoombaのRx
 <h1>つづく</h1>
 
 <p>次はいよいよTwitter連携とかをしていきたいと思います。</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/01/26/roomba-hack-02/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/26/roomba-hack-02/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -958,9 +958,9 @@ BlueSMiRFのTx ---&gt; RoombaのRx
 
 
 <title type="html"><![CDATA[Arduino買ったのでRubyとDinoでLチカした]]></title>
-<link href="http://fukayatsu.github.com/2013/01/23/hello-arduino-with-ruby-and-dino/"/>
+<link href="http://blog.fukayatsu.com/2013/01/23/hello-arduino-with-ruby-and-dino/"/>
 <updated>2013-01-23T22:49:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/01/23/hello-arduino-with-ruby-and-dino</id>
+<id>http://blog.fukayatsu.com/2013/01/23/hello-arduino-with-ruby-and-dino</id>
 
       <content type="html"><![CDATA[<p>前回<a href="http://fukayatsu.github.com/2013/01/21/roomba-hack-01/">roomba-hack-01 準備編</a>で必要な部品を揃えるときに、<br/>
 ついでに注文していた<a href="http://www.switch-science.com/products/detail.php?product_id=1120">Arduino Micro</a>が先に届いたのでいじってみた。</p>
@@ -1031,7 +1031,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 
 <p><a href="http://confreaks.com/videos/1294-rubyconf2012-arduino-the-ruby-way">Arduino the Ruby way - Austin Vance - Ruby Conference 2012</a></p>
 
-<script async class="speakerdeck-embed" data-id="5098572bc5f78d0002010edb" data-ratio="1.2994923857868" src="http://fukayatsu.github.com//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="5098572bc5f78d0002010edb" data-ratio="1.2994923857868" src="http://blog.fukayatsu.com//speakerdeck.com/assets/embed.js"></script>
 
 
 
@@ -1078,7 +1078,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 
 <p>ブレッドボードが手元になかったので今日はここまで。<br/>
 早くセンサとかつないでいろいろ試したい</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/01/23/hello-arduino-with-ruby-and-dino/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/23/hello-arduino-with-ruby-and-dino/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -1088,9 +1088,9 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 
 
 <title type="html"><![CDATA[roomba-hack-01 準備編]]></title>
-<link href="http://fukayatsu.github.com/2013/01/21/roomba-hack-01/"/>
+<link href="http://blog.fukayatsu.com/2013/01/21/roomba-hack-01/"/>
 <updated>2013-01-21T20:00:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/01/21/roomba-hack-01</id>
+<id>http://blog.fukayatsu.com/2013/01/21/roomba-hack-01</id>
 
       <content type="html"><![CDATA[<p>↓脱走直前のiRobot Roomba780<br/>
 <img src="https://lh5.googleusercontent.com/-V17Kbzqn_2Y/UP0ki9BulHI/AAAAAAAAJo4/KPZB-Slzgvw/s897/photo.jpg" alt="" /></p>
@@ -1098,7 +1098,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 <blockquote class="twitter-tweet"><p>やっぱそろそろroomba改造しないとだめだ</p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/293311694443253760" data-datetime="2013-01-21T10:58:52+00:00">January 21, 2013</a></blockquote>
 
 
-<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="http://blog.fukayatsu.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 <p>なにがダメなのイマイチ分からないが、工作したい欲が良い感じに高まって来たので行動に移すことにする。</p>
@@ -1198,7 +1198,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 <p>追記:</p>
 
 <p><a href="http://fukayatsu.github.com/2013/01/26/roomba-hack-02/">roomba-hack-02 はんだ付け&amp;動作テスト編</a></p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/01/21/roomba-hack-01/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/21/roomba-hack-01/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -1208,9 +1208,9 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 
 
 <title type="html"><![CDATA[T2-Study#3を開催しました]]></title>
-<link href="http://fukayatsu.github.com/2013/01/18/t2-study-3/"/>
+<link href="http://blog.fukayatsu.com/2013/01/18/t2-study-3/"/>
 <updated>2013-01-18T23:27:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/01/18/t2-study-3</id>
+<id>http://blog.fukayatsu.com/2013/01/18/t2-study-3</id>
 
       <content type="html"><![CDATA[<p>通算3回目、今年最初のT2-Studyを開催しました。<br/>
 (別名: 第1、第3金曜にビールでも飲みながら緩く勉強会やろうぜの会)</p>
@@ -1227,12 +1227,12 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 
 <h2>コミュニティアピール</h2>
 
-<script async class="speakerdeck-embed" data-id="516cc26043a90130f33f1231381d4ca8" data-ratio="1.2994923857868" src="http://fukayatsu.github.com//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="516cc26043a90130f33f1231381d4ca8" data-ratio="1.2994923857868" src="http://blog.fukayatsu.com//speakerdeck.com/assets/embed.js"></script>
 
 
 <h2>地元Ruby会議</h2>
 
-<script async class="speakerdeck-embed" data-id="bb7612d043a90130d05b22000a1c46b4" data-ratio="1.2994923857868" src="http://fukayatsu.github.com//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="bb7612d043a90130d05b22000a1c46b4" data-ratio="1.2994923857868" src="http://blog.fukayatsu.com//speakerdeck.com/assets/embed.js"></script>
 
 
 <h1>今後、勉強会をどうするか</h1>
@@ -1252,7 +1252,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 <li>次は早めに告知しよう</li>
 </ul>
 
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/01/18/t2-study-3/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/18/t2-study-3/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -1262,9 +1262,9 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 
 
 <title type="html"><![CDATA[新年最初のShibuya.rbに参加してきた]]></title>
-<link href="http://fukayatsu.github.com/2013/01/16/shibuya-rb/"/>
+<link href="http://blog.fukayatsu.com/2013/01/16/shibuya-rb/"/>
 <updated>2013-01-16T19:27:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/01/16/shibuya-rb</id>
+<id>http://blog.fukayatsu.com/2013/01/16/shibuya-rb</id>
 
       <content type="html"><![CDATA[<p><img src="http://img.viame-cdn.com/photos/d3a1e780-41f4-0130-e17b-12313d24390e/r600x600.jpg" alt="" /></p>
 
@@ -1362,7 +1362,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 次は何でもいいのでLTしないとですね。</p>
 
 <p>それから、近いうちに他の地域.rbにも顔を出したいと思います。</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/01/16/shibuya-rb/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/16/shibuya-rb/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -1372,9 +1372,9 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 
 
 <title type="html"><![CDATA[東京Ruby会議10に参加してきた]]></title>
-<link href="http://fukayatsu.github.com/2013/01/14/tokyo-ruby-kaigi-10/"/>
+<link href="http://blog.fukayatsu.com/2013/01/14/tokyo-ruby-kaigi-10/"/>
 <updated>2013-01-14T22:00:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/01/14/tokyo-ruby-kaigi-10</id>
+<id>http://blog.fukayatsu.com/2013/01/14/tokyo-ruby-kaigi-10</id>
 
       <content type="html"><![CDATA[<ul>
 <li><a href="http://tokyo10.rubykaigi.info/">東京Ruby会議10 #tkrk10 - Regional RubyKaigi 会期：2013/01/13(日)〜14(祝・月)</a></li>
@@ -1392,7 +1392,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 <blockquote class="twitter-tweet" lang="ja"><p><a href="http://t.co/2qvuWAfj" title="http://via.me/-8qp4puc">via.me/-8qp4puc</a> コンプリートした <a href="https://twitter.com/search/%23tkrk10">#tkrk10</a></p>&mdash; ふかやつさん (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/290313195359436800" data-datetime="2013-01-13T04:23:54+00:00">1月 13, 2013</a></blockquote>
 
 
-<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="http://blog.fukayatsu.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 <h2>アンチぼっちランチ</h2>
@@ -1404,7 +1404,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 
 <h2>The Everything Machine by @r7kamura</h2>
 
-<script async class="speakerdeck-embed" data-id="910dc1b03f850130e97412313b100342" data-ratio="1.33333333333333" src="http://fukayatsu.github.com//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="910dc1b03f850130e97412313b100342" data-ratio="1.33333333333333" src="http://blog.fukayatsu.com//speakerdeck.com/assets/embed.js"></script>
 
 
 <p>こういうプレゼンができるように、日々を過ごしたいなと思います。</p>
@@ -1412,7 +1412,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 <blockquote class="twitter-tweet"><p>あんな感じになりたい <a href="https://twitter.com/search/%23tkrk10">#tkrk10</a></p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/290332443590942720" data-datetime="2013-01-13T05:40:23+00:00">January 13, 2013</a></blockquote>
 
 
-<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="http://blog.fukayatsu.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 <h2>黒Ruby会議</h2>
@@ -1420,7 +1420,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 <blockquote class="twitter-tweet"><p><a href="https://twitter.com/search/%23tkrk10">#tkrk10</a> 黒Ruby会議で死ぬほど笑った</p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/290445955768143872" data-datetime="2013-01-13T13:11:26+00:00">January 13, 2013</a></blockquote>
 
 
-<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="http://blog.fukayatsu.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 <p>いろいろ黒かったので、何があったかは残念ながらここには書けませんｗ<br/>
@@ -1431,7 +1431,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 <blockquote class="twitter-tweet"><p>昨日の黒Ruby会議が黒すぎてそれを浄化するために大雪が降っています。黒すぎて天候にまで影響を与えてしまってすみません＞＜ <a href="https://twitter.com/search/%23tkrk10">#tkrk10</a> <a href="https://twitter.com/search/%23黒Ruby会議">#黒Ruby会議</a></p>&mdash; ささたつ(Tatsuya Sasaki) (@sasata299) <a href="https://twitter.com/sasata299/status/290680801576759297" data-datetime="2013-01-14T04:44:38+00:00">January 14, 2013</a></blockquote>
 
 
-<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="http://blog.fukayatsu.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 <p>コミュニティアピールの時間にShibuya.rbについて紹介したり、地元Ruby会議で秋田について紹介するつもりでしたが、雪の為安全な開催が危ぶまれるということで発表前にイベント終了となりました。</p>
@@ -1443,7 +1443,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 <p>移動で結構体力を消耗して、tweetしてない時間帯があったりしました。</p>
 
 <p>また参加して、今度こそ何か発表したいです。</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/01/14/tokyo-ruby-kaigi-10/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/14/tokyo-ruby-kaigi-10/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -1453,9 +1453,9 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 
 
 <title type="html"><![CDATA[今年はきっとこんな感じの1年になる]]></title>
-<link href="http://fukayatsu.github.com/2013/01/02/guess-my-2013/"/>
+<link href="http://blog.fukayatsu.com/2013/01/02/guess-my-2013/"/>
 <updated>2013-01-02T10:55:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/01/02/guess-my-2013</id>
+<id>http://blog.fukayatsu.com/2013/01/02/guess-my-2013</id>
 
       <content type="html"><![CDATA[<p>目標とかじゃなくて、漠然とそんな気がするリスト</p>
 
@@ -1572,7 +1572,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 <p>※ これらはコミットメントではなく見積りです。</p>
 
 <blockquote><p><a href="http://www.ryuzee.com/contents/blog/3102">[Agile]見積もりとコミットメントは分けよう | Ryuzee.com</a></p></blockquote>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/01/02/guess-my-2013/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/02/guess-my-2013/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -1582,9 +1582,9 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 
 
 <title type="html"><![CDATA[Vimと僕とSublime]]></title>
-<link href="http://fukayatsu.github.com/2013/01/02/vim-advent-calendar/"/>
+<link href="http://blog.fukayatsu.com/2013/01/02/vim-advent-calendar/"/>
 <updated>2013-01-02T00:00:00+09:00</updated>
-<id>http://fukayatsu.github.com/2013/01/02/vim-advent-calendar</id>
+<id>http://blog.fukayatsu.com/2013/01/02/vim-advent-calendar</id>
 
       <content type="html"><![CDATA[<p>あけましておめでとうございます。</p>
 
@@ -1638,7 +1638,7 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 <blockquote class="twitter-tweet" lang="ja"><p>vimをつかいこなしてる人はかっこいいなー</p>&mdash; ふかやつさん (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/91837702483345408" data-datetime="2011-07-15T11:53:09+00:00">7月 15, 2011</a></blockquote>
 
 
-<script async src="http://fukayatsu.github.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="http://blog.fukayatsu.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 <p>twilogでさかのぼってみたら、ちゃんと使い始めたのは1年半ぐらい前のようでした。<br/>
@@ -1777,7 +1777,7 @@ Shougoさんやthincaさんのプラグインには大変お世話になって�
 
 <p><a href="http://www.kaoriya.net/blog/2012/09/01">スパルタンVim 2.0のPDF公開 — KaoriYa</a><br/>
 これ読んでニンジャスレイヤーを読み始めました！</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2013/01/02/vim-advent-calendar/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/02/vim-advent-calendar/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
     <entry>
@@ -1787,9 +1787,9 @@ Shougoさんやthincaさんのプラグインには大変お世話になって�
 
 
 <title type="html"><![CDATA[2012年の振り返り]]></title>
-<link href="http://fukayatsu.github.com/2012/12/31/me-and-2012/"/>
+<link href="http://blog.fukayatsu.com/2012/12/31/me-and-2012/"/>
 <updated>2012-12-31T00:00:00+09:00</updated>
-<id>http://fukayatsu.github.com/2012/12/31/me-and-2012</id>
+<id>http://blog.fukayatsu.com/2012/12/31/me-and-2012</id>
 
       <content type="html"><![CDATA[<p>今年で25になりました。去年に引き続いて変化に富んだ1年で良かったと思う。</p>
 
@@ -2139,7 +2139,7 @@ Toggetterもいくつかまとめてみた。</p>
 <p>あと、twitterとかで絡んでくれる人が増えてきて嬉しいです。来年もよろしくお願いします。</p>
 
 <p>2012年も残り少ないですが、皆さん良いお年を。</p>
-<p><a rel="bookmark" href="http://fukayatsu.github.com/2012/12/31/me-and-2012/">&#9875; Permalink</a></p>]]></content>
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2012/12/31/me-and-2012/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
