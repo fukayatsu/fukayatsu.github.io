@@ -92,6 +92,131 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/05/05/git-about-dot-me/">git-about.meをリリースしました</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-05T12:00:00+09:00" pubdate data-updated="true">May 5<span>th</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/05/05/git-about-dot-me/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p><a href="http://git-about.me/">GitAboutMe  -  &#8220;ABOUT ME&#8221; for Git users</a></p>
+
+<h2>使いかた</h2>
+
+<ul>
+<li><a href="http://git-about.me/">git-about.me</a> でユーザ名と公開鍵を登録</li>
+<li>git clone, edit file, git push</li>
+</ul>
+
+
+<p>例: <a href="http://git-about.me/fukayatsu">git-about.me/fukayatsu</a></p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>$ git clone git@git-about.me:fukayatsu about-fukayatsu
+</span><span class='line'>$ cd about-fukayatsu
+</span><span class='line'>(edit README.md)
+</span><span class='line'>$ git commit -am 'Update README.md'
+</span><span class='line'>$ git push origin master</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Git版のabout.meです
+
+<ul>
+<li>(劣化版github pagesともいう)</li>
+</ul>
+</li>
+<li>他のユーザのプロフィールをgit cloneできます</li>
+<li>デザインとか、細かい調整がまだ終わっていない</li>
+</ul>
+
+
+<h2>作った理由</h2>
+
+<ul>
+<li>PHP疲れ</li>
+<li>プログラマブルにリポジトリを操作するの面白そう
+
+<ul>
+<li>実際面白かった</li>
+</ul>
+</li>
+<li>rails周りの開発、運用の経験値を上げたい
+
+<ul>
+<li>capstranoを初めてまともに使った</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>使った技術要素</h2>
+
+<ul>
+<li>aws-ec2-micro</li>
+<li>nginx</li>
+<li>unicorn</li>
+<li>ruby 2.0.0-p0</li>
+<li>rails 4.0.0.rc1</li>
+<li>capstrano</li>
+<li>gitolite</li>
+<li>grit</li>
+<li>ムームードメイン</li>
+</ul>
+
+
+<h2>その他</h2>
+
+<blockquote><p><a href="http://naoty.hatenablog.com/entry/2012/07/17/221530">cui-about.meをリリースしました - naoty.to_s</a></p></blockquote>
+
+<p>にインスパイアされました。 thanks! :)</p>
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/05/03/plan-to-move/">引越しの目論見</a>
 
 </h1>
@@ -1036,129 +1161,6 @@ engine yardのステッカーは早速PCに貼りました</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2013/02/15/devsumi2013/">デブサミ2013に行ってきた</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-15T23:32:00+09:00" pubdate data-updated="true">Feb 15<span>th</span>, 2013</time>
-         &bull; <a rel="bookmark" href="/2013/02/15/devsumi2013/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p><a href="http://event.shoeisha.jp/detail/1/gaiyo">開催概要：Developers Summit 2013</a></p>
-
-<p><img src="https://lh3.googleusercontent.com/-mVkcuqHTS4I/UR1l-qWkKOI/AAAAAAAAK58/ZYwcIvnpcKc/s612/IMG_20130214_123955.jpg" alt="" /></p>
-
-<h1>初めてのデブサミ</h1>
-
-<p>去年は申し込んだものの、結局行けなかったので今年はなんとしても行こうと思っていた。<br/>
-2日間参加できて嬉しい。</p>
-
-<h1>参加の様子</h1>
-
-<p>基本的に参加したセッションでは多めにつぶやいたのでこちらをご覧頂ください</p>
-
-<ul>
-<li><a href="http://twilog.org/fukayatsu/date-130214">ふかやつ(@fukayatsu)/2013年02月14日 - Twilog</a></li>
-<li><a href="http://twilog.org/fukayatsu/date-130215">ふかやつ(@fukayatsu)/2013年02月15日 - Twilog</a></li>
-</ul>
-
-
-<h1>印象に残った場面</h1>
-
-<h3>受付混みすぎ</h3>
-
-<p>初日に会場に着いたのが10時ちょうどぐらいだったが、受付で10分ぐらい並んでた気がする</p>
-
-<h3>3Dプリンタとかの話(14-E-1)</h3>
-
-<ul>
-<li>ハードウェア好きなので数年以内に3Dプリンタ買っちゃいそう。</li>
-</ul>
-
-
-<h3>wifi tetheringからusb tetheringに切り替えた</h3>
-
-<ul>
-<li>Wifiの方は混雑してたので若干快適に</li>
-</ul>
-
-
-<h3>セッション中にpull-request送るなど(14-A-5)</h3>
-
-<p><a href="https://github.com/mobiruby/mobiruby.github.com/pull/1">Fix section id by fukayatsu · Pull Request #1 · mobiruby/mobiruby.github.com</a></p>
-
-<ul>
-<li>htmlをちょっと直しただけ</li>
-</ul>
-
-
-<h3>ニコニコ静画（電子書籍）開発チームの話(14-A-6)</h3>
-
-<ul>
-<li>リポジトリ名に自分の嫁の名前をつけるらしい</li>
-<li>割れ窓を作らないようにするところを自分も頑張りたい</li>
-</ul>
-
-
-<h3>これは買わざるを得ない(15-B-5)</h3>
-
-<ul>
-<li><a href="http://www.oreilly.co.jp/books/9784873115894/">O&#8217;Reilly Japan - SQLアンチパターン</a></li>
-<li>絶対に自分にとってプラスになると思った。あとプレゼンすごく面白かった</li>
-</ul>
-
-
-<h1>その他</h1>
-
-<ul>
-<li>雅叙園が異世界だった</li>
-<li>スーツの人もそれなりにいた。あと、手帳でメモとってる人が結構多かった。</li>
-<li>かなりハードだったので2日目は参加するセッション減らした</li>
-<li>次も絶対参加する(多分)</li>
-</ul>
-
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1175,6 +1177,10 @@ engine yardのステッカーは早速PCに貼りました</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/05/05/git-about-dot-me/">git-about.meをリリースしました</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/05/03/plan-to-move/">引越しの目論見</a>
       </li>
     
@@ -1188,10 +1194,6 @@ engine yardのステッカーは早速PCに貼りました</p>
     
       <li class="post">
         <a href="/2013/03/24/zusaar-gem/">zusaarのgem作った</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/03/21/shibuyarb-20130320/">渋谷.rb[:20130320](拡大版)に参加してきた</a>
       </li>
     
   </ul>
