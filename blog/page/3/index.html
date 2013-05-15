@@ -92,6 +92,247 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/01/02/vim-advent-calendar/">Vimと僕とSublime</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-02T00:00:00+09:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/01/02/vim-advent-calendar/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>あけましておめでとうございます。</p>
+
+<p>この記事は
+<a href="http://atnd.org/events/33746">Vim Advent Calendar 2012 : ATND</a>
+の33日目の記事です。</p>
+
+<p>前日は、<a href="https://twitter.com/tavi4444">@tavi4444</a>
+さんの<a href="http://blog.tavi-travelog.net/viewEntry?id=20130101021510">なんでもhjkl for Windows</a>でした。</p>
+
+<hr />
+
+<p>勢いで参加したもののネタが思いつかなかったので、これまでに使ってきたテキストエディタとかについて書こうと思います。</p>
+
+<h2>Vim以前</h2>
+
+<h4>メモ帳時代</h4>
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/20130102/notepad.png" alt="" /></p>
+
+<p>初めての<code>hello, world</code>は中学生の時にJavaAppletで行った記憶があります。<br/>
+このころは他のテキストエディタとか知りませんでした。</p>
+
+<h4>個人的エディタ戦国時代</h4>
+
+<p>高校でプログラミング熱が再燃して、C言語でCUIのテトリスとか作ったりしてました。</p>
+
+<p>シンタックスハイライトの便利さに気付き、さくらエディタやTeraPad、EmEditorなどを使っていました。</p>
+
+<h4>Ginnieとの出会い</h4>
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/20130102/ginnie.png" alt="" /></p>
+
+<p><a href="http://ginnie.kntware.net/">Ginnie - Windows用タブ式MDIテキストエディタ - KNTWARE.NET</a></p>
+
+<p>しばらくメインのエディタが定まらなかったのですが、最終的にはGinnieというエディタに落ち着きました。</p>
+
+<p>GUI部分も含めてRubyやJavaScriptでプラグインを書けるところが特に気に入っていて、VimでいうQuick-runみたいなプラグインを作ったりしていました。</p>
+
+<p>※ この辺でVimに出会っていれば、また違った人生を送っていたような気がしなくもないです。</p>
+
+<h4>強制Emacs事件</h4>
+
+<p>大学(工学部)でFortranやC言語の授業があり、それがなぜかSolaris + Emacs縛りでした。<br/>
+別に他のエディタを使っても怒られはしなかったとは思うのですが、選択肢を与えてくれなかったのはひどいです :-|</p>
+
+<p>今思えば、授業の効率化とかそういう理由なのかもしれませんが。</p>
+
+<h2>Vimとの出会い</h2>
+
+<blockquote class="twitter-tweet" lang="ja"><p>vimをつかいこなしてる人はかっこいいなー</p>&mdash; ふかやつさん (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/91837702483345408" data-datetime="2011-07-15T11:53:09+00:00">7月 15, 2011</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>twilogでさかのぼってみたら、ちゃんと使い始めたのは1年半ぐらい前のようでした。<br/>
+WindowsだけではなくMacとLinuxも触り始めたので、</p>
+
+<pre><code>すべての環境で使えるオーソドックスなエディタ → Emacsはなんかやだ → Vimだな
+</code></pre>
+
+<p>という感じでした。</p>
+
+<p>このころからGVimとMacVim使い始めて、同時にdotfilesをgithubで管理するようになって、
+直後にアルバイトから社会人になったりしたので<strong>Vimって素晴らしい</strong></p>
+
+<h4>vimrcどれよ</h4>
+
+<p><a href="https://github.com/fukayatsu/dotfiles/blob/af/mbp/vimrc">dotfiles/vimrc at af/mbp · fukayatsu/dotfiles · GitHub</a></p>
+
+<p>このへんです。このブランチはもう使っていないのですが、<br/>
+Shougoさんやthincaさんのプラグインには大変お世話になっております。</p>
+
+<h4>vim-pluginつくったりした</h4>
+
+<p><a href="https://github.com/fukayatsu/vim-diary">fukayatsu/vim-diary · GitHub</a></p>
+
+<p>日記を書くときに、前の日のTODOを当日のDONEとかにコピペすることが多かったので、<br/>
+特定の部分は残して新しい日記を書き始められるようなプラグインです。</p>
+
+<p>このころはmarkdownとかよくわかってなかったので、<code>#</code>とかをマークとして使ってしまっています。</p>
+
+<h4>いろいろVimっぽく操作したくなる</h4>
+
+<p>使ってる・使ってたのを軽く紹介します。</p>
+
+<ul>
+<li>Chrome
+
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb">Chrome ウェブストア - Vimium</a>
+
+<ul>
+<li>hjklでの移動やhit a hint、タブの操作など</li>
+</ul>
+</li>
+<li><a href="https://chrome.google.com/webstore/detail/edit-with-emacs/ljobjlafonikaiipfkggjbhkghgicgoh?hl=en-US">Chrome Web Store - Edit with Emacs</a>
+
+<ul>
+<li>任意のエディタでtextareaを編集できる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Eclipse
+
+<ul>
+<li><a href="http://marketplace.eclipse.org/content/viable-vim-eclipse#.UOLSTIlevKw">Viable - Vim for Eclipse | Eclipse Plugins, Bundles and Products - Eclipse Marketplace</a>
+
+<ul>
+<li>Vimっぽいkey操作ができる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Thunderbird
+
+<ul>
+<li><a href="http://globs.org/articles.php?pg=2&amp;lng=en">Globs site - External Editor - Usage</a>
+
+<ul>
+<li>任意のエディタでメールを編集できる</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Sublime Text 2に浮気</h2>
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/20130102/sublime.png" alt="" /></p>
+
+<p>サーバ上では相変わらずVimを使いますが、今年の6月ぐらいからローカル環境ではSublimeを使うようになりました。</p>
+
+<p>デフォルトに近い環境でも結構使えるので、ペアプロとかする時にとても良かったです。</p>
+
+<p>あとはプラグインをpythonで変えるのが大きいです。</p>
+
+<p>日本語入力とちょっとだけ相性がわるいですが、もうしばらくは使って行きたいと思います。</p>
+
+<h3>vimユーザ向けの設定</h3>
+
+<p>VimユーザがSublime Text 2を快適に使うためには多少設定が必要です。</p>
+
+<p>メニューから</p>
+
+<pre><code>Preferences &gt; Settings-User(⌘,)
+</code></pre>
+
+<p>を選択して、以下の様に追加します(Mac向け)。</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>  "ignored_packages": [""],
+</span><span class='line'>  "vintage_ctrl_keys": true,
+</span><span class='line'>  "vintage_start_in_command_mode": true</span></code></pre></td></tr></table></div></figure>
+
+
+<blockquote><p><a href="http://www.sublimetext.com/docs/2/vintage.html">Vintage Mode - Sublime Text 2 Documentation</a></p></blockquote>
+
+<p>あとは、<a href="http://wbond.net/sublime_packages/package_control">Sublime Package Control</a>
+を導入して、<code>VintageEx</code>を導入するとさらにVimっぽくなります。</p>
+
+<p>あとはコマンドラインからも使いたいので、</p>
+
+<pre><code>$ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+</code></pre>
+
+<p>みたいにやっとくとよいです。</p>
+
+<blockquote><p><a href="http://www.sublimetext.com/docs/2/osx_command_line.html">OS X Command Line - Sublime Text 2 Documentation</a></p></blockquote>
+
+<h2>おわりに</h2>
+
+<p>サーバ上では変わらずVimを使っておりますし、たとえVimがメインのエディタじゃなくなっても、これからもVim的なエディタでVim的な操作をしていく事に変わりはありません。</p>
+
+<p>ということでVimユーザの皆様、今年もよろしくお願いします。</p>
+
+<p>明日は<a href="https://twitter.com/masudaK">@masudaK</a>さんです :)</p>
+
+<hr />
+
+<h4>おまけ</h4>
+
+<p><a href="http://pc.watch.impress.co.jp/docs/article/990928/sotec.htm">e-one、銀パソになって再登場</a><br/>
+初めてプログラミングした時のPC。とてもなつかしい。</p>
+
+<p><a href="http://www.kaoriya.net/blog/2012/09/01">スパルタンVim 2.0のPDF公開 — KaoriYa</a><br/>
+これ読んでニンジャスレイヤーを読み始めました！</p>
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2012/12/31/me-and-2012/">2012年の振り返り</a>
 
 </h1>
@@ -1449,181 +1690,6 @@ input barからテキストを入力しても日本語変換確定時のEnterで
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2012/12/03/jotei-advent-calendar/">hubot jotei > 女帝 Advent Calendar 2012(3日目)</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-03T00:00:00+09:00" pubdate data-updated="true">Dec 3<span>rd</span>, 2012</time>
-         &bull; <a rel="bookmark" href="/2012/12/03/jotei-advent-calendar/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>この記事は<a href="http://atnd.org/events/34298">女帝 Advent Calendar 2012</a>の3日目の記事です。</p>
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>・Advent Calendarとは
-</span><span class='line'>クリスマスまでの日数を数えるために、1日に1つ、穴が空けられるようになっているカレンダーです。
-</span><span class='line'>転じて、技術系コミュニティで、クリスマスまでの25日間にTipsを1つずつ公開するイベントをAdvent Calendarと呼ぶそうです。
-</span><span class='line'>
-</span><span class='line'>・ルール
-</span><span class='line'>女帝に関する話題を特定の日に自分のブログ等にアップロードしてもらうだけです。
-</span><span class='line'>執筆はこのイベントに参加した順です。最初の人が12月1日、2人目が12月2日…最後の人が12月25日です。
-</span><span class='line'>twitterへの投稿（140文字）でも構いません。複数にわたる場合は、去年のようにtogetterでまとめるという措置をとる予定です。（例 : 女帝advent calendar 22日目 – Togetter ）
-</span><span class='line'>アップロードしたら、 このイベントのコメント欄にタイトルとURLを貼り付ける＋twitterでハッシュタグ #joteadvent2012 をつけてつぶやいてください。
-</span><span class='line'>女帝に関するものならどんなことでも構いません。
-</span><span class='line'>参考 : 女帝 Advent Calendar 2011 : ATND</span></code></pre></td></tr></table></div></figure>
-
-
-<p>追記(12/4):<br/>
-一つ前の記事は<a href="http://d.hatena.ne.jp/arc680/20121202/1354374076">女帝 Advent Calendar 2012 2日目「女帝ってこんなんだった」 - へたれ日記</a><br/>
-一つ後の記事は<a href="http://togetter.com/li/417761">合わないだなんて言わないで - Togetter</a><br/>
-です</p>
-
-<hr />
-
-<p>去年の
-<a href="http://atnd.org/events/22939">女帝 Advent Calendar 2011</a>
-では
-<a href="http://d.hatena.ne.jp/fukayatsu/20111219/1324316844">Androidアプリ</a>
-をつくったりました。</p>
-
-<p>去年の今頃はAndroidクラスタ崩れみたいな感じだったのでアプリを作りましたが、<br/>
-今年は普段ギョームで使っている
-<a href="http://hubot.github.com/">HUBOT</a>
-で参加したいと思います。</p>
-
-<h2>hubotとは</h2>
-
-<p>githubが公開しているnode.jsによる実装のbotフレームワークです。<br/>
-irc, twitter, hipchatなど、いろいろなサービスのアダプターが開発されており、<br/>
-coffee-scriptで独自のコマンドを追加することができます。</p>
-
-<p>例えば、</p>
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>fukayatsu | @hubot production deploy
-</span><span class='line'>hubot     | おｋ @all デプロイします
-</span><span class='line'>hubot     | cakes.mu にデプロイ完了しました(｀・ω・´)</span></code></pre></td></tr></table></div></figure>
-
-
-<p>というやりとりを毎日行なっています(メッセージは時期によって異なります)。<br/>
-このあたりの事は、いずれまたどこかで詳しくまとめたいと思います。</p>
-
-<h2>hubot jotei</h2>
-
-<p>さて本題ですが、こんなコマンドを追加しました。</p>
-
-<div><script src='https://gist.github.com/4188057.js?file='></script>
-<noscript><pre><code># Description:
-#   jotei
-#
-# Commands:
-#   hubot jotei img   - Searches Google Images for the jotei
-#   hubot jotei tweet - Recent tweet of the jotei
-
-module.exports = (robot) -&gt;
-  robot.respond /jotei img/i, (msg) -&gt;
-    imageMe msg, &quot;yamashitam&quot;, (url) -&gt;
-      msg.send url
-
-  robot.respond /jotei status/i, (msg) -&gt;
-    tweetMe msg, &quot;yamashitam&quot;, (text) -&gt;
-      msg.send text
-
-
-tweetMe = (msg, name, cb) -&gt;
-  q = screen_name: name
-  msg.http(&quot;http://api.twitter.com/1/statuses/user_timeline.json&quot;)
-    .query(q)
-    .get() (err, res, body) -&gt;
-      statuses = JSON.parse(body)
-      if statuses.length &gt; 0
-        status = msg.random statuses
-        cb status.text
-
-imageMe = (msg, query, animated, cb) -&gt;
-  cb = animated if typeof animated == 'function'
-  q = v: '1.0', rsz: '8', q: query, safe: 'active'
-  q.as_filetype = 'gif' if typeof animated is 'boolean' and animated is true
-  msg.http('http://ajax.googleapis.com/ajax/services/search/images')
-    .query(q)
-    .get() (err, res, body) -&gt;
-      images = JSON.parse(body)
-      images = images.responseData.results
-      if images.length &gt; 0
-        image  = msg.random images
-        cb &quot;#{image.unescapedUrl}#.png&quot;
-</code></pre></noscript></div>
-
-
-<p>こんな感じになります。</p>
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/hubot-jotei-img.png" alt="" /></p>
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/hubot-jotei-status.png" alt="" /></p>
-
-<p>便利ですね(?)</p>
-
-<h2>その他</h2>
-
-<p>そういえば、自分がいろいろなサービスでできるだけ同じアカウント名を使うようになったきっかけは @yamashitam だったような気がする。</p>
-
-<hr />
-
-<p>明日は<a href="http://twitter.com/HomeiMiyashita">@HomeiMiyashita</a>さんです :)</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -1642,6 +1708,10 @@ imageMe = (msg, query, animated, cb) -&gt;
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/05/15/shibuya-rb/">5月の渋谷.rbに行ってきた</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/05/05/git-about-dot-me/">git-about.meをリリースしました</a>
       </li>
     
@@ -1655,10 +1725,6 @@ imageMe = (msg, query, animated, cb) -&gt;
     
       <li class="post">
         <a href="/2013/04/17/shibuyarb-2013-04-17/">4月のShibuya.rbの集まりに行ってきた箇条書き</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/03/24/zusaar-gem/">zusaarのgem作った</a>
       </li>
     
   </ul>

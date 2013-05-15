@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev]]></title>
   <link href="http://blog.fukayatsu.com/atom.xml" rel="self"/>
   <link href="http://blog.fukayatsu.com/"/>
-  <updated>2013-05-05T13:46:45+09:00</updated>
+  <updated>2013-05-15T23:56:29+09:00</updated>
   <id>http://blog.fukayatsu.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[5月の渋谷.rbに行ってきた]]></title>
+<link href="http://blog.fukayatsu.com/2013/05/15/shibuya-rb/"/>
+<updated>2013-05-15T23:33:00+09:00</updated>
+<id>http://blog.fukayatsu.com/2013/05/15/shibuya-rb</id>
+
+      <content type="html"><![CDATA[<p><img src="https://lh6.googleusercontent.com/-FFX9CCTABXk/UZOF9giDK2I/AAAAAAAANp0/lH4aFxkcLbE/w865-h649-no/IMG_20130515_195243.jpg" alt="" /></p>
+
+<ul>
+<li><a href="http://www.zusaar.com/event/720005">渋谷.rb[:20130515] on Zusaar</a></li>
+<li><a href="http://togetter.com/li/503459">渋谷.rb[:20130515]のまとめ #shibuyarb - Togetter</a></li>
+</ul>
+
+
+<p>&#8211;</p>
+
+<ul>
+<li>今回の会場はDeNAさん(ヒカリエ)のスゴイ会議室</li>
+<li>&#8220;じょーかじゃさん！&#8221;</li>
+<li>さくらのクラウドのクーポンもらった
+
+<ul>
+<li>何に使おうかな</li>
+</ul>
+</li>
+<li>twilioとgem: wangiryを試した
+
+<ul>
+<li>面白くて自分にワン切りしまくった</li>
+<li>モーニングコールとか自動化できそう</li>
+</ul>
+</li>
+<li>次回はなにかLTする</li>
+</ul>
+
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/05/15/shibuya-rb/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1662,211 +1705,6 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 
 <blockquote><p><a href="http://www.ryuzee.com/contents/blog/3102">[Agile]見積もりとコミットメントは分けよう | Ryuzee.com</a></p></blockquote>
 <p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/02/guess-my-2013/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Vimと僕とSublime]]></title>
-<link href="http://blog.fukayatsu.com/2013/01/02/vim-advent-calendar/"/>
-<updated>2013-01-02T00:00:00+09:00</updated>
-<id>http://blog.fukayatsu.com/2013/01/02/vim-advent-calendar</id>
-
-      <content type="html"><![CDATA[<p>あけましておめでとうございます。</p>
-
-<p>この記事は
-<a href="http://atnd.org/events/33746">Vim Advent Calendar 2012 : ATND</a>
-の33日目の記事です。</p>
-
-<p>前日は、<a href="https://twitter.com/tavi4444">@tavi4444</a>
-さんの<a href="http://blog.tavi-travelog.net/viewEntry?id=20130101021510">なんでもhjkl for Windows</a>でした。</p>
-
-<hr />
-
-<p>勢いで参加したもののネタが思いつかなかったので、これまでに使ってきたテキストエディタとかについて書こうと思います。</p>
-
-<h2>Vim以前</h2>
-
-<h4>メモ帳時代</h4>
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/20130102/notepad.png" alt="" /></p>
-
-<p>初めての<code>hello, world</code>は中学生の時にJavaAppletで行った記憶があります。<br/>
-このころは他のテキストエディタとか知りませんでした。</p>
-
-<h4>個人的エディタ戦国時代</h4>
-
-<p>高校でプログラミング熱が再燃して、C言語でCUIのテトリスとか作ったりしてました。</p>
-
-<p>シンタックスハイライトの便利さに気付き、さくらエディタやTeraPad、EmEditorなどを使っていました。</p>
-
-<h4>Ginnieとの出会い</h4>
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/20130102/ginnie.png" alt="" /></p>
-
-<p><a href="http://ginnie.kntware.net/">Ginnie - Windows用タブ式MDIテキストエディタ - KNTWARE.NET</a></p>
-
-<p>しばらくメインのエディタが定まらなかったのですが、最終的にはGinnieというエディタに落ち着きました。</p>
-
-<p>GUI部分も含めてRubyやJavaScriptでプラグインを書けるところが特に気に入っていて、VimでいうQuick-runみたいなプラグインを作ったりしていました。</p>
-
-<p>※ この辺でVimに出会っていれば、また違った人生を送っていたような気がしなくもないです。</p>
-
-<h4>強制Emacs事件</h4>
-
-<p>大学(工学部)でFortranやC言語の授業があり、それがなぜかSolaris + Emacs縛りでした。<br/>
-別に他のエディタを使っても怒られはしなかったとは思うのですが、選択肢を与えてくれなかったのはひどいです :-|</p>
-
-<p>今思えば、授業の効率化とかそういう理由なのかもしれませんが。</p>
-
-<h2>Vimとの出会い</h2>
-
-<blockquote class="twitter-tweet" lang="ja"><p>vimをつかいこなしてる人はかっこいいなー</p>&mdash; ふかやつさん (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/91837702483345408" data-datetime="2011-07-15T11:53:09+00:00">7月 15, 2011</a></blockquote>
-
-
-<script async src="http://blog.fukayatsu.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<p>twilogでさかのぼってみたら、ちゃんと使い始めたのは1年半ぐらい前のようでした。<br/>
-WindowsだけではなくMacとLinuxも触り始めたので、</p>
-
-<pre><code>すべての環境で使えるオーソドックスなエディタ → Emacsはなんかやだ → Vimだな
-</code></pre>
-
-<p>という感じでした。</p>
-
-<p>このころからGVimとMacVim使い始めて、同時にdotfilesをgithubで管理するようになって、
-直後にアルバイトから社会人になったりしたので<strong>Vimって素晴らしい</strong></p>
-
-<h4>vimrcどれよ</h4>
-
-<p><a href="https://github.com/fukayatsu/dotfiles/blob/af/mbp/vimrc">dotfiles/vimrc at af/mbp · fukayatsu/dotfiles · GitHub</a></p>
-
-<p>このへんです。このブランチはもう使っていないのですが、<br/>
-Shougoさんやthincaさんのプラグインには大変お世話になっております。</p>
-
-<h4>vim-pluginつくったりした</h4>
-
-<p><a href="https://github.com/fukayatsu/vim-diary">fukayatsu/vim-diary · GitHub</a></p>
-
-<p>日記を書くときに、前の日のTODOを当日のDONEとかにコピペすることが多かったので、<br/>
-特定の部分は残して新しい日記を書き始められるようなプラグインです。</p>
-
-<p>このころはmarkdownとかよくわかってなかったので、<code>#</code>とかをマークとして使ってしまっています。</p>
-
-<h4>いろいろVimっぽく操作したくなる</h4>
-
-<p>使ってる・使ってたのを軽く紹介します。</p>
-
-<ul>
-<li>Chrome
-
-<ul>
-<li><a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb">Chrome ウェブストア - Vimium</a>
-
-<ul>
-<li>hjklでの移動やhit a hint、タブの操作など</li>
-</ul>
-</li>
-<li><a href="https://chrome.google.com/webstore/detail/edit-with-emacs/ljobjlafonikaiipfkggjbhkghgicgoh?hl=en-US">Chrome Web Store - Edit with Emacs</a>
-
-<ul>
-<li>任意のエディタでtextareaを編集できる</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Eclipse
-
-<ul>
-<li><a href="http://marketplace.eclipse.org/content/viable-vim-eclipse#.UOLSTIlevKw">Viable - Vim for Eclipse | Eclipse Plugins, Bundles and Products - Eclipse Marketplace</a>
-
-<ul>
-<li>Vimっぽいkey操作ができる</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Thunderbird
-
-<ul>
-<li><a href="http://globs.org/articles.php?pg=2&amp;lng=en">Globs site - External Editor - Usage</a>
-
-<ul>
-<li>任意のエディタでメールを編集できる</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<h2>Sublime Text 2に浮気</h2>
-
-<p><img src="https://dl.dropbox.com/u/85825/blog/image/20130102/sublime.png" alt="" /></p>
-
-<p>サーバ上では相変わらずVimを使いますが、今年の6月ぐらいからローカル環境ではSublimeを使うようになりました。</p>
-
-<p>デフォルトに近い環境でも結構使えるので、ペアプロとかする時にとても良かったです。</p>
-
-<p>あとはプラグインをpythonで変えるのが大きいです。</p>
-
-<p>日本語入力とちょっとだけ相性がわるいですが、もうしばらくは使って行きたいと思います。</p>
-
-<h3>vimユーザ向けの設定</h3>
-
-<p>VimユーザがSublime Text 2を快適に使うためには多少設定が必要です。</p>
-
-<p>メニューから</p>
-
-<pre><code>Preferences &gt; Settings-User(⌘,)
-</code></pre>
-
-<p>を選択して、以下の様に追加します(Mac向け)。</p>
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='plain'><span class='line'>  "ignored_packages": [""],
-</span><span class='line'>  "vintage_ctrl_keys": true,
-</span><span class='line'>  "vintage_start_in_command_mode": true</span></code></pre></td></tr></table></div></figure>
-
-
-<blockquote><p><a href="http://www.sublimetext.com/docs/2/vintage.html">Vintage Mode - Sublime Text 2 Documentation</a></p></blockquote>
-
-<p>あとは、<a href="http://wbond.net/sublime_packages/package_control">Sublime Package Control</a>
-を導入して、<code>VintageEx</code>を導入するとさらにVimっぽくなります。</p>
-
-<p>あとはコマンドラインからも使いたいので、</p>
-
-<pre><code>$ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-</code></pre>
-
-<p>みたいにやっとくとよいです。</p>
-
-<blockquote><p><a href="http://www.sublimetext.com/docs/2/osx_command_line.html">OS X Command Line - Sublime Text 2 Documentation</a></p></blockquote>
-
-<h2>おわりに</h2>
-
-<p>サーバ上では変わらずVimを使っておりますし、たとえVimがメインのエディタじゃなくなっても、これからもVim的なエディタでVim的な操作をしていく事に変わりはありません。</p>
-
-<p>ということでVimユーザの皆様、今年もよろしくお願いします。</p>
-
-<p>明日は<a href="https://twitter.com/masudaK">@masudaK</a>さんです :)</p>
-
-<hr />
-
-<h4>おまけ</h4>
-
-<p><a href="http://pc.watch.impress.co.jp/docs/article/990928/sotec.htm">e-one、銀パソになって再登場</a><br/>
-初めてプログラミングした時のPC。とてもなつかしい。</p>
-
-<p><a href="http://www.kaoriya.net/blog/2012/09/01">スパルタンVim 2.0のPDF公開 — KaoriYa</a><br/>
-これ読んでニンジャスレイヤーを読み始めました！</p>
-<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/02/vim-advent-calendar/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>
