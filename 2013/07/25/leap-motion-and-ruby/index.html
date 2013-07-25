@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>[WIP]Leap MotionとRubyで遊ぶ - fukayatsu.dev</title>
+  <meta name="author" content="fukayatsu">
+  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
+
+  
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.fukayatsu.com/2013/07/25/leap-motion-and-ruby/">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="fukayatsu.dev" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36253613-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+   
+  <link href="/octopress-favicon.png" rel="icon">
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">fukayatsu.dev</a></h1>
+  
+    <h2>やってみたこととか、いろいろ書いていきます</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.fukayatsu.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/archives">Archives</a></li>
+  <li><a href="/works">Works</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+
+
+
+
+
+
+
+
+
+
+
+<article class="hentry " role="article">
+  
+  <header>
+    <h1 class="entry-title">
+
+[WIP]Leap MotionとRubyで遊ぶ
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-25T20:23:00+09:00" pubdate data-updated="true">Jul 25<span>th</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/07/25/leap-motion-and-ruby/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p><img src="https://lh6.googleusercontent.com/-r7Cit35PdGs/Ue1PUJS9T3I/AAAAAAAAOrU/15GcUYE-Gc4/w739-h555-no/IMG_20130723_001953-MOTION.gif" alt="" /></p>
+
+<p>↑ leap motionのデモアプリで遊んでいる図</p>
+
+<hr />
+
+<p>今年の2月にorderした<a href="https://www.leapmotion.com/">Leap Motion</a>が先日(7/21)届いたので、<br/>
+ここ数日<a href="https://airspace.leapmotion.com/">アプリをダウンロード</a>したりして遊んでいる。<br/>
+(長時間姿勢を維持する必要があるアプリは結構疲れる)</p>
+
+<p>せっかくなので自分でも何か作ろうと思って<a href="https://developer.leapmotion.com/docs">Developerページ</a>を見ると、
+今のところ公式にSDKが存在するのは</p>
+
+<ul>
+<li>C++</li>
+<li>Java</li>
+<li>Python</li>
+<li>C# and Unity</li>
+<li>JavaScript</li>
+</ul>
+
+
+<p>の5つ(6つ？)で、残念ながらRubyのSDKは無かった。</p>
+
+<p>ということで、以下Leap MotionをRubyで使うためにやったことの雑記</p>
+
+<h2>gemを探す</h2>
+
+<p>ちょっと探したところ、</p>
+
+<blockquote><p><a href="https://github.com/glejeune/ruby-leap-motion">glejeune/ruby-leap-motion</a> &#8220;Ruby interface to the Leap Motion Controller&#8221;</p></blockquote>
+
+<p>というのを見つけた。最終更新が2ヶ月前なので最新のSDKには対応していないのかもしれないけど、とりあえずこれを使ってみた</p>
+
+<h3>SWIG?</h3>
+
+<p>この<code>ruby-leap-motion</code>は<code>SWIG</code>というのを使っているらしかった。</p>
+
+<blockquote><p><a href="http://ja.wikipedia.org/wiki/SWIG">SWIG - Wikipedia</a><br/>
+  SWIG (Simplified Wrapper and Interface Generator) は、 C/C++ で書かれたプログラムやライブラリを、Tcl/Tk、Perl、Python、Ruby、PHP、Lua などのスクリプト言語や、Java、C#、Scheme、Ocaml などの言語に接続するためのオープンソースのツールである。</p>
+
+<p><a href="https://github.com/glejeune/ruby-leap-motion/blob/master/ext/swig/Leap.i">ruby-leap-motion/ext/swig/Leap.i at master · glejeune/ruby-leap-motion</a></p></blockquote>
+
+<p>にはRuby用の設定が含まれているけど、最新のSDKの中の<code>Leap.i</code>には無かった。glejeuneさんが自分で追加したのだろうか。とりあえず今は保留。</p>
+
+<h3>座標を取得</h3>
+
+<p>とりあえず何らかの座標が取得できないと始まらないので(ジェスチャー認識もあるけど)、</p>
+
+<blockquote><p><a href="https://github.com/glejeune/ruby-leap-motion/blob/master/ext/swig/Leap.i">ruby-leap-motion/ext/swig/Leap.i at master · glejeune/ruby-leap-motion</a></p></blockquote>
+
+<p>これを見て試行錯誤して、指先の座標を取得することができた。</p>
+
+<h3>テルミンつくろう</h3>
+
+<p>画面を描写するのは大変そうだし、音だけ出ればいいやと思ってテルミン作ることにした。<br/>
+先人↓</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/SE6XV3nLDUk" frameborder="0" allowfullscreen></iframe>
+
+
+<h3>テルミンの演奏法を調べる</h3>
+
+<blockquote><p><a href="http://www.prhymx.com/theremin/text2.html">テルミン演奏法の説明</a></p></blockquote>
+
+<p>右手を右に移動させると音が高くなって、左手を上に移動させると音が大きくなるらしい</p>
+
+<blockquote class="twitter-tweet"><p><a href="https://twitter.com/fukayatsu">@fukayatsu</a> 青山テルミン！&#8230; 何でもありません。</p>&mdash; dopin (@dopingoo) <a href="https://twitter.com/dopingoo/statuses/360042327479287808">July 24, 2013</a></blockquote>
+
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<h2>どうやって音鳴らそう?</h2>
+
+<p>Windowsならbeepとか使えた気がするけど、Macで音を出すプログラム書いた事なかったので困った。</p>
+
+<blockquote><p><a href="https://github.com/nagachika/ruby-coreaudio">nagachika/ruby-coreaudio</a></p></blockquote>
+
+<p>ちょっと調べて↑これを使わせてもらうことにした。</p>
+
+<h2>とりあえず動くようにした</h2>
+
+<blockquote><p><a href="https://github.com/fukayatsu/leap-motion-sandbox">fukayatsu/leap-motion-sandbox</a></p></blockquote>
+
+<p><a href="https://dl.dropboxusercontent.com/u/85825/blog/sound/2013-07-25/leap-t.mp3">↑録音してみた</a></p>
+
+<p>SDKを<code>~/Development/LeapSDK</code>に置いた場合はこんな感じで実行できるかもしれない(※後述)↓</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>$ git clone git@github.com:fukayatsu/leap-motion-sandbox.git
+</span><span class='line'>$ cd leap-motion-sandbox
+</span><span class='line'>$ bundle config build.leap-motion --with-leap-lib=~/Development/LeapSDK/lib --with-leap-include=~/Development/LeapSDK/include
+</span><span class='line'>$ bundle
+</span><span class='line'>$ bundle exec ruby theremin.rb</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>既知の問題</h3>
+
+<ul>
+<li>音程が変わるときに音がブツブツ切れる
+
+<ul>
+<li><a href="http://nagano.monalisa-au.org/archives/204">この辺</a> の処理が必要かも</li>
+</ul>
+</li>
+<li>しばらく動かすと、<code>[FATAL] failed to allocate memory</code>で落ちる</li>
+<li>なぜか <code>ruby 2.0.0p195 (2013-05-14 revision 40734) [x86_64-darwin12.3.0]</code>でしか<code>bundle</code>が成功しない
+
+<ul>
+<li>むしろなぜp195で成功したのか&#8230;</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>今後について</h2>
+
+<ul>
+<li><code>[FATAL] failed to allocate memory</code>の原因を探る</li>
+<li>bundleの検証</li>
+<li>Core Audioをもう少し深堀りする</li>
+<li>PythonのSDKを試してみる</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">fukayatsu</span></span>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-25T20:23:00+09:00" pubdate data-updated="true">Jul 25<span>th</span>, 2013</time>
+
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/leap-motion/'>leap-motion</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/wip/'>wip</a>
+  
+</span>
+
+
+
+      
+
+    </p>
+    
+      <div class="sharing">
+  
+    
+      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
+    
+  
+  
+    
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://blog.fukayatsu.com/2013/07/25/leap-motion-and-ruby/" target="_blank">+1</a>
+    
+  
+  
+    
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://blog.fukayatsu.com/2013/07/25/leap-motion-and-ruby/" target="_blank">Share</a>
+    
+  
+  
+
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/05/15/shibuya-rb/" title="Previous Post: 5月の渋谷.rbに行ってきた">&laquo; 5月の渋谷.rbに行ってきた</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+<section>
+  <h1>Comments</h1>
+  
+
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
+</section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2013/07/25/leap-motion-and-ruby/">[WIP]Leap MotionとRubyで遊ぶ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/15/shibuya-rb/">5月の渋谷.rbに行ってきた</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/05/git-about-dot-me/">git-about.meをリリースしました</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/05/03/plan-to-move/">引越しの目論見</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/04/25/standing-desk/">スタンディングデスク</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets" data-user="fukayatsu" data-count="4" data-replies="false">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+    <a href="//twitter.com/fukayatsu" class="twitter-follow-button" data-show-count="false">Follow @fukayatsu</a>
+  
+</section>
+
+
+
+<section>
+  <h1>On GitHub</h1>
+  <ul id="gh_repos" data-user="fukayatsu" data-count="5" data-skip="true">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a class="github-follow" href="https://github.com/fukayatsu">Follow @fukayatsu</a>
+  
+</section>
+
+
+
+<section class="well">
+  <ul class="nav">
+    <li class="nav-header">Coderwall Badges</li>
+  </ul>
+  <div id="coderwall_badges"></div>
+  <a href="http://coderwall.com/fukayatsu">@fukayatsu</a> on coderwall
+  <link rel="stylesheet" href="/stylesheets/tipsy.css" type="text/css" />
+  <script type='text/javascript' src='/javascripts/jquery.tipsy.js'></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $.getJSON("http://coderwall.com/fukayatsu.json?callback=?", function(data){
+        for(var i = 0; i < data.data.badges.length ; i++){
+          var badge = data.data.badges[i];
+          var badge_tag = $("<img />");
+          badge_tag.css("width", "25%");
+          badge_tag.attr("src",badge.badge);
+          badge_tag.attr("title", "<strong>" + badge.name + "</strong><br>" + badge.description);
+          badge_tag.tipsy({gravity: 'se', html: true});
+          $("#coderwall_badges").append(badge_tag);
+        }
+      });
+    });
+  </script>
+</section>
+
+
+
+
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - fukayatsu -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'fukayatsu';
+			var disqus_developer = '0';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.fukayatsu.com/2013/07/25/leap-motion-and-ruby/';
+        var disqus_url = 'http://blog.fukayatsu.com/2013/07/25/leap-motion-and-ruby/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+</body>
+</html>
