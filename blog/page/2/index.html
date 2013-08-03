@@ -92,6 +92,209 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/03/03/mitsuworu-rails4-and-ruby2/">Rails4とRuby2で簡単なWebサービスを作ってみた</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-03T16:20:00+09:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/03/03/mitsuworu-rails4-and-ruby2/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>作ったのはこれ > <a href="http://mitsuwo.net/">みつをる</a></p>
+
+<p><a href="http://mitsuwo.net/cards/1"><img src="https://s3-ap-northeast-1.amazonaws.com/mitsuwo/images/cards/1362077672.png" alt="1362077672" /></a></p>
+
+<p>いわゆる縦書ジェネレータ的なやつ。</p>
+
+<h1>経緯</h1>
+
+<p>先週の火曜日に社内chat(hipchat)で<a href="http://tegaki-maker.com/">手書きメーカー</a>で作成された画像(「えんじにあだもの　あつを」)が流れていて、いまいちそれっぽくなかったので自分で作ることにした。</p>
+
+<p>ちょうどRails 4.0.0.beta1のgemが公開されたタイミングだったので、今後の為に試してみることにした。</p>
+
+<h1>開発ログ</h1>
+
+<p>平日の帰宅後を使って3日程度掛かったのでコミットログを振り返りながら何をしたか書く</p>
+
+<h2>火曜夜</h2>
+
+<p>ドメインの確保と任意のフォントで縦書画像を生成する部分の検証。</p>
+
+<ul>
+<li>下準備
+
+<ul>
+<li>mitsuwo.netのドメインを取得</li>
+<li>s3のバケットを確保</li>
+</ul>
+</li>
+<li>Initial commit</li>
+<li>rails g scaffold card author:string body:text image:string
+
+<ul>
+<li>モデル名はとりあえず<code>card</code>にした。</li>
+<li>add mini_magick</li>
+<li>この時はmini_magickで画像に文字を埋め込めると勘違いしていた</li>
+</ul>
+</li>
+<li>add RMagick
+
+<ul>
+<li>mini_magickと入れ替え</li>
+</ul>
+</li>
+<li>draw.annotateのテスト
+
+<ul>
+<li>画像に文字列描写できた</li>
+</ul>
+</li>
+<li>縦書き対応
+
+<ul>
+<li>一文字ずつ描写してむりやり縦書き対応</li>
+<li><code>ー</code>を<code>｜</code>に置き換えたり</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>水曜夜</h2>
+
+<p>プロトタイプ完成まで</p>
+
+<ul>
+<li>プレビューボタンとダミー画像を追加</li>
+<li>rails g model TmpImage author:string body:text data:binary
+
+<ul>
+<li>この時は、プレビュー用の一時的な画像をDBに保存しようとしていた</li>
+</ul>
+</li>
+<li>delete tmp image model
+
+<ul>
+<li>やっぱり別方式でやることにした</li>
+</ul>
+</li>
+<li>プレビューの実装
+
+<ul>
+<li>base64エンコードでjson中に含めてしまうことにした。</li>
+<li>シンプル</li>
+</ul>
+</li>
+<li>add aws-sdk gem
+
+<ul>
+<li>公開時にS3にアップロードする</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>木曜夜</h2>
+
+<p>本番公開のための準備とデプロイ</p>
+
+<ul>
+<li>twitter facebookボタンの追加</li>
+<li>meta tagの追加</li>
+<li>add favicon追加</li>
+<li><p>本番環境構築</p>
+
+<ul>
+<li>AWS
+
+<ul>
+<li>EC2 micro</li>
+<li>S3</li>
+<li>Route 53</li>
+</ul>
+</li>
+<li>nginx</li>
+<li>unicorn</li>
+</ul>
+</li>
+<li><p>本番デプロイ</p></li>
+</ul>
+
+
+<h2>金曜夜(T2-Study#5)</h2>
+
+<p>おまけ</p>
+
+<ul>
+<li>ビール飲みながら</li>
+<li>hubot scriptを作成
+
+<ul>
+<li>最初jsonでPOSTしようとしたが日本語が含まれているとうまくいかなかった</li>
+</ul>
+</li>
+</ul>
+
+
+<div><script src='https://gist.github.com/5065136.js?file='></script>
+<noscript><pre><code></code></pre></noscript></div>
+
+
+<p>例えば<code>hubot mitsuwo 寿司が&lt;br&gt;食べたいのです,名無し</code>とコマンドを打つと、
+結果をhipchatに貼ってくれる。便利。</p>
+
+<p><a href="http://mitsuwo.net/cards/52"><img src="https://s3-ap-northeast-1.amazonaws.com/mitsuwo/images/cards/1362299581.png" alt="1362299581" /></a></p>
+
+<h1>まとめ</h1>
+
+<p>あんまり複雑なことはしていないので、Rails 4とかRuby 2とかはあまり意識しなかった。</p>
+
+<p>思ったよりも時間が掛かった。半分ぐらいの時間で作れるようになりたい。</p>
+
+<p>nginx・unicorn・RMagickは初めて使ったので、良い経験になった。</p>
+
+<p>自分が必要とするものを作るのはやはり楽しい。</p>
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/02/24/timezone-on-github/">github上の時刻表示をちょっと見やすくするchrome extension</a>
 
 </h1>
@@ -1199,123 +1402,6 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2013/01/14/tokyo-ruby-kaigi-10/">東京Ruby会議10に参加してきた</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-14T22:00:00+09:00" pubdate data-updated="true">Jan 14<span>th</span>, 2013</time>
-         &bull; <a rel="bookmark" href="/2013/01/14/tokyo-ruby-kaigi-10/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><ul>
-<li><a href="http://tokyo10.rubykaigi.info/">東京Ruby会議10 #tkrk10 - Regional RubyKaigi 会期：2013/01/13(日)〜14(祝・月)</a></li>
-<li><a href="http://togetter.com/li/438736">東京Ruby会議10の初日ツイートまとめ - Togetter</a></li>
-<li><a href="http://togetter.com/li/439086">東京Ruby会議10 2日目のまとめ - Togetter</a></li>
-</ul>
-
-
-<p>幾つか印象に残った場面を書きたいと思います。</p>
-
-<h2>ノベルティ</h2>
-
-<p>もらったバッグの中に同種のバッジが4つ入っていて、他の人と交換して全種種類集めると5つ目のバッジを貰えるというものでした。これはGDD2011だったかでもやりましたが楽しいですね。運良くかなり早いタイミングでコンプリートしました。</p>
-
-<blockquote class="twitter-tweet" lang="ja"><p><a href="http://t.co/2qvuWAfj" title="http://via.me/-8qp4puc">via.me/-8qp4puc</a> コンプリートした <a href="https://twitter.com/search/%23tkrk10">#tkrk10</a></p>&mdash; ふかやつさん (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/290313195359436800" data-datetime="2013-01-13T04:23:54+00:00">1月 13, 2013</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<h2>アンチぼっちランチ</h2>
-
-<p>名前があれですが、即席ソーシャルランチみたいな感じでした。<br/>
-今回のイベントでは顔見知りもそれなりにいましたが、せっかくなので色んな人と話そうと思って2日ともアンチぼっちランチを利用しました。</p>
-
-<p>昼からビール飲んで楽しかった。</p>
-
-<h2>The Everything Machine by @r7kamura</h2>
-
-<script async class="speakerdeck-embed" data-id="910dc1b03f850130e97412313b100342" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
-
-
-<p>こういうプレゼンができるように、日々を過ごしたいなと思います。</p>
-
-<blockquote class="twitter-tweet"><p>あんな感じになりたい <a href="https://twitter.com/search/%23tkrk10">#tkrk10</a></p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/290332443590942720" data-datetime="2013-01-13T05:40:23+00:00">January 13, 2013</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<h2>黒Ruby会議</h2>
-
-<blockquote class="twitter-tweet"><p><a href="https://twitter.com/search/%23tkrk10">#tkrk10</a> 黒Ruby会議で死ぬほど笑った</p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/290445955768143872" data-datetime="2013-01-13T13:11:26+00:00">January 13, 2013</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<p>いろいろ黒かったので、何があったかは残念ながらここには書けませんｗ<br/>
-これだけでも来た甲斐があるなと思わせる完成度でした。</p>
-
-<h2>白Ruby会議</h2>
-
-<blockquote class="twitter-tweet"><p>昨日の黒Ruby会議が黒すぎてそれを浄化するために大雪が降っています。黒すぎて天候にまで影響を与えてしまってすみません＞＜ <a href="https://twitter.com/search/%23tkrk10">#tkrk10</a> <a href="https://twitter.com/search/%23黒Ruby会議">#黒Ruby会議</a></p>&mdash; ささたつ(Tatsuya Sasaki) (@sasata299) <a href="https://twitter.com/sasata299/status/290680801576759297" data-datetime="2013-01-14T04:44:38+00:00">January 14, 2013</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<p>コミュニティアピールの時間にShibuya.rbについて紹介したり、地元Ruby会議で秋田について紹介するつもりでしたが、雪の為安全な開催が危ぶまれるということで発表前にイベント終了となりました。</p>
-
-<p>発表できなくてちょっと残念でしたが、運営スタッフの皆さんも苦渋の選択(英断)だったと思います。</p>
-
-<h2>まとめ</h2>
-
-<p>移動で結構体力を消耗して、tweetしてない時間帯があったりしました。</p>
-
-<p>また参加して、今度こそ何か発表したいです。</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -1334,6 +1420,10 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/08/03/10lisp-00/">#10LISP &#8216;00に参加しました</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/07/25/leap-motion-and-ruby/">[WIP]Leap MotionとRubyで遊ぶ</a>
       </li>
     
@@ -1347,10 +1437,6 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
     
       <li class="post">
         <a href="/2013/05/03/plan-to-move/">引越しの目論見</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/04/25/standing-desk/">スタンディングデスク</a>
       </li>
     
   </ul>
