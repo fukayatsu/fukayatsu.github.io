@@ -92,6 +92,294 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/08/09/yet-another-scheme-abc-01/">「もうひとつの Scheme 入門」をやってみる#01</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-09T21:40:00+09:00" pubdate data-updated="true">Aug 9<span>th</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/08/09/yet-another-scheme-abc-01/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>この前<a href="http://connpass.com/event/2933/">10LISP &#8216;00</a>で話題に挙がった<a href="http://www.shido.info/lisp/idx_scm.html">もうひとつの Scheme 入門</a>をやっていこうと思います。</p>
+
+<h1>1. Scheme 処理系のインストール</h1>
+
+<blockquote><p><a href="http://nomnel.net/blog/st2-gauche/">Sublime Text 2でGaucheコードを書くために - 飲んだり寝たり</a></p></blockquote>
+
+<p>↑ これを参考にしました</p>
+
+<h1>2. Scheme を電卓代わりに使う</h1>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>gosh> (+ 1 2)
+</span><span class='line'>3
+</span><span class='line'>gosh> +
+</span><span class='line'>#&lt;subr +></span></code></pre></td></tr></table></div></figure>
+
+
+<p>MzSchemeだと<code>+</code>が評価されると<code>#&lt;procedure:+&gt;</code>となるらしいけど、gaucheだと<code>#&lt;subr +&gt;</code>となった</p>
+
+<h2>2.3. 四則演算</h2>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>gosh> (* 2 3 4)
+</span><span class='line'>24
+</span><span class='line'>gosh> (/ 29 3)
+</span><span class='line'>29/3
+</span><span class='line'>gosh> (/ 29 3 7)
+</span><span class='line'>29/21
+</span><span class='line'>gosh> (/ 9 6)
+</span><span class='line'>3/2
+</span><span class='line'>gosh> (exact->inexact (/ 29 3 7))
+</span><span class='line'>1.380952380952381</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>この<code>-&gt;</code>ってなんだろ</li>
+</ul>
+
+
+<h3>練習問題 1</h3>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>gosh> (* (+ 1 39) (- 53 45))
+</span><span class='line'>320
+</span><span class='line'>
+</span><span class='line'>gosh> (+ (/ 1020 39) (* 45 2))
+</span><span class='line'>1510/13
+</span><span class='line'>
+</span><span class='line'>gosh> (+ 39 48 72 23 91)
+</span><span class='line'>273
+</span><span class='line'>
+</span><span class='line'>gosh> (exact->inexact (/ (+ 39 48 72 23 91) 5))
+</span><span class='line'>54.6</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>2.4 その他の算術関数</h2>
+
+<blockquote><p>商を求めるにはquotient, 余りを求めるには remainder または modulo, 平方根を求めるには sqrt を使います。</p></blockquote>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>gosh> (quotient 7 3)
+</span><span class='line'>2
+</span><span class='line'>
+</span><span class='line'>gosh> (modulo 7 3)
+</span><span class='line'>1
+</span><span class='line'>
+</span><span class='line'>gosh> (sqrt 8)
+</span><span class='line'>2.8284271247461903
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>練習問題 2</h3>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>gosh> (* 4 (atan 1))
+</span><span class='line'>3.141592653589793
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>gosh> (exp (/ 2 3))
+</span><span class='line'>1.9477340410546757
+</span><span class='line'>
+</span><span class='line'>gosh> (expt 3 4)
+</span><span class='line'>81
+</span><span class='line'>
+</span><span class='line'>gosh> (log 1000)
+</span><span class='line'>6.907755278982137</span></code></pre></td></tr></table></div></figure>
+
+
+<p>あ、解答ちゃんと載ってた&#8230;</p>
+
+<h1>3. リストを作ろう</h1>
+
+<h3>練習問題 1</h3>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>gosh> (cons "hi" "everybody")
+</span><span class='line'>("hi" . "everybody")
+</span><span class='line'>
+</span><span class='line'>gosh> (cons 0 '())
+</span><span class='line'>(0)
+</span><span class='line'>
+</span><span class='line'>gosh> (cons 1 (cons 10 100))
+</span><span class='line'>(1 10 . 100)
+</span><span class='line'>
+</span><span class='line'>gosh> (cons 1 (cons 10 (cons 100 '())))
+</span><span class='line'>(1 10 100)
+</span><span class='line'>
+</span><span class='line'>gosh> (cons #\I  (cons "saw" (cons 3 (cons "girls" '()))))
+</span><span class='line'>(#\I "saw" 3 "girls")
+</span><span class='line'>
+</span><span class='line'>#\ってなんだ？
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>gosh> (cons "Sum of" (cons (cons 1 (cons 2 (cons 3 (cons 4 '())))) (cons "is" (cons 10 '()))))
+</span><span class='line'>("Sum of" (1 2 3 4) "is" 10)</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>3.3. quote</h2>
+
+<blockquote><p>&#8230;シンボルやリストなど、評価されると自分自身にならないデータそのものをプログラムに与えるときは quote という命令を使います。</p>
+
+<p>例えば、(+ 2 3) は評価されると 5 になりますが、(quote (+ 2 3)) とすれば (+ 2 3) そのものを プログラムに与えることができます。</p></blockquote>
+
+<p>10lispで言ってた評価の抑制ってこれか。確かに評価されても自分自身になるのであればquote要らないな</p>
+
+<h3>3.3.1. 特殊形式</h3>
+
+<p>括弧の中身を全て評価して括弧の外に値を返す関数以外は<code>特殊形式</code>というらしい。<br/>
+quoteとかifとかdefineとか</p>
+
+<p>10lispでやったとこだ!</p>
+
+<h2>3.4 関数 car と cdr</h2>
+
+<h3>練習問題 2</h3>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>gosh> (car '(0))
+</span><span class='line'>0
+</span><span class='line'>gosh> (cdr '(0))
+</span><span class='line'>()
+</span><span class='line'>gosh> (car '((1 2 3) (4 5 6)))
+</span><span class='line'>(1 2 3)
+</span><span class='line'>gosh> (cdr '(1 2 3 . 4))
+</span><span class='line'>(2 3 . 4)
+</span><span class='line'>gosh> (cdr (cons 3 (cons 2 (cons 1 '()))))
+</span><span class='line'>(2 1)</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>3.5. 関数 list</h3>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>gosh> (list)
+</span><span class='line'>()
+</span><span class='line'>gosh> (list 2)
+</span><span class='line'>(2)
+</span><span class='line'>gosh> (car '(1 2 3))
+</span><span class='line'>1
+</span><span class='line'>gosh> (car (list 1 2 3))
+</span><span class='line'>1</span></code></pre></td></tr></table></div></figure>
+
+
+<p>とりあえず今日はここまで</p>
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/08/03/10lisp-00/">#10LISP &#8216;00に参加しました</a>
 
 </h1>
@@ -996,182 +1284,6 @@
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2013/03/19/oedo-ruby-kaigi-03/">大江戸Ruby会議03に参加してきた #odrk03</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-19T21:56:00+09:00" pubdate data-updated="true">Mar 19<span>th</span>, 2013</time>
-         &bull; <a rel="bookmark" href="/2013/03/19/oedo-ruby-kaigi-03/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><p>以前から気になっていたAsakusa.rbの雰囲気を感じられる良い機会かなと思って参加して来ました。</p>
-
-<ul>
-<li><a href="http://regional.rubykaigi.org/oedo03">Oedo Rubykaigi 03 - Mar 16, 2013</a></li>
-<li><a href="http://togetter.com/li/472551">大江戸Ruby会議03 - Togetter</a></li>
-<li><a href="http://twilog.org/fukayatsu/date-130316">ふかやつ(@fukayatsu)/2013年03月16日 - Twilog</a></li>
-</ul>
-
-
-<p><img src="https://lh3.googleusercontent.com/-lXnCdlUNDRs/UURvLSePrbI/AAAAAAAALdw/IZ08d-XT39Q/s848/IMG_20130316_093846.jpg" alt="" />
-レクホールの催し物が若干気になる&#8230;</p>
-
-<p><img src="https://lh4.googleusercontent.com/--gRJ-hReS6Y/UUhihs3_vtI/AAAAAAAALfQ/4XluTapjcrc/s718/photo.jpg" alt="" />
-engine yardのステッカーは早速PCに貼りました</p>
-
-<h2>セッションについて</h2>
-
-<p><a href="http://regional.rubykaigi.org/oedo03/schedule">セッション一覧(+資料)はこちら</a></p>
-
-<p>特に印象に残っているセッションを書きたいと思います</p>
-
-<ul>
-<li>GC
-
-<ul>
-<li>ほとんど知識なくて悔しい</li>
-</ul>
-</li>
-<li>mikutter
-
-<ul>
-<li>壇上でしゃべっている人からfavられる人続出</li>
-</ul>
-</li>
-<li>某レシピ共有サイトの Ruby 1.9 対応で大変苦労しました
-
-<ul>
-<li>どこの会社も多かれ少なかれそういうことあるんだなと妙に安心した</li>
-</ul>
-</li>
-<li>最後のセッション</li>
-</ul>
-
-
-<iframe src="http://www.slideshare.net/slideshow/embed_code/17269278" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe>
-
-
-<p> <div style="margin-bottom:5px"> <strong> <a href="http://www.slideshare.net/authorNari/ruby-17269278" title="桐島、Rubyやめるってよ" target="_blank">桐島、Rubyやめるってよ</a> </strong> from <strong><a href="http://www.slideshare.net/authorNari" target="_blank">Narihiro Nakamura</a></strong> </div></p>
-
-<p>涙がでるぐらい笑ったセッションだったけど、あとで@nari3さんのブログ見たら、</p>
-
-<blockquote><p>それでも彼は深夜残業（素振り）を続けているのです。<br/>
-傍目から見ると意味のないようにも見えると思いますが、リリースを続けるわけです。<br/>
-その原動力はまさにGC研究部（映画部）と同じだと考えています。<br/>
-だから実は全然、笑えないのです。でも笑っちゃいましたよね。<br/>
-<a href="http://d.hatena.ne.jp/authorNari/20130317/1363476355">http://d.hatena.ne.jp/authorNari/20130317/1363476355</a></p></blockquote>
-
-<p>と書いてあったので、一度映画を見てからスライドを見返す必要がありそう。</p>
-
-<h2>今回twitterアイコンとリアルを一致させた人</h2>
-
-<ul>
-<li><a href="https://twitter.com/katsyoshi">katsyoshi (katsyoshi)さん</a></li>
-<li><a href="https://twitter.com/komagata">Masaki Komagata (komagata)さん</a></li>
-<li><a href="https://twitter.com/hrysd">豆乳 (hrysd)さん</a></li>
-<li><a href="https://twitter.com/shishi4tw">shishi (shishi4tw)さん</a></li>
-<li><a href="https://twitter.com/hsbt">SHIBATA Hiroshi (hsbt)さん</a></li>
-<li><a href="https://twitter.com/nari3">nari3 (nari3)さん</a></li>
-<li><a href="https://twitter.com/mrkn">Kenta Murata (mrkn)さん</a></li>
-</ul>
-
-
-<p>直接話した人もそうでない人も。以前からフォローしている人でも、直接見たり話したりしたことがあるとよりTL上の存在感が増す気がします。</p>
-
-<h2>あとで試そうと思ったやつとか</h2>
-
-<ul>
-<li>いつもと違う地域.rbに参加する</li>
-<li>全文検索</li>
-<li>真鵺道</li>
-<li>OSSのバグを修正してコントリビュートする
-
-<ul>
-<li><a href="https://twitter.com/yuki24">Yuki Nishijima (yuki24) さん</a>の発表聞いて思った</li>
-</ul>
-</li>
-<li><a href="https://rubygems.org/gems/what_methods">gem: what_methods</a>
-
-<ul>
-<li>AをBにするメソッドを探してくれるやつ</li>
-<li><code>"a".what? "A"</code>とか</li>
-</ul>
-</li>
-<li><a href="http://atcoder.jp/">AtCoder (アットコーダー)</a>
-
-<ul>
-<li>日本語によるプログラミングコンテスト</li>
-<li>Rubyだと<code>1.9.2</code>が使用できるっぽい</li>
-</ul>
-</li>
-<li><a href="http://www.amazon.co.jp/dp/B00ANFT8R8">桐島、部活やめるってよ</a>
-
-<ul>
-<li>小説から読むべき？</li>
-</ul>
-</li>
-</ul>
-
-
-<h2>反省</h2>
-
-<ul>
-<li>もっといろんな人と話す</li>
-<li>もっと早くblogを書く</li>
-</ul>
-
-
-<h2>おまけ</h2>
-
-<blockquote class="twitter-tweet"><p>この辺修学旅行で来たことあるような無いような</p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/312751519168606208">March 16, 2013</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<p>中学の修学旅行かな</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1188,6 +1300,10 @@ engine yardのステッカーは早速PCに貼りました</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/08/09/yet-another-scheme-abc-01/">「もうひとつの Scheme 入門」をやってみる#01</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/08/03/10lisp-00/">#10LISP &#8216;00に参加しました</a>
       </li>
     
@@ -1201,10 +1317,6 @@ engine yardのステッカーは早速PCに貼りました</p>
     
       <li class="post">
         <a href="/2013/05/05/git-about-dot-me/">git-about.meをリリースしました</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/05/03/plan-to-move/">引越しの目論見</a>
       </li>
     
   </ul>
