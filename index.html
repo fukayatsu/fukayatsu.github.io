@@ -92,6 +92,189 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/08/11/iremocon-and-lita/">RubyとLita(chat bot)で自宅のエアコンを操作する</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-11T22:16:00+09:00" pubdate data-updated="true">Aug 11<span>th</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/08/11/iremocon-and-lita/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>以前は<a href="https://github.com/fukayatsu/room_bot/blob/master/julius/roombot.rb">音声認識で家電操作</a>をしてたけど、<br/>
+引越しの時に環境が変わったのでちょっとやりかたを変えてみた。</p>
+
+<p><img src="https://lh6.googleusercontent.com/-kIVBmVmPATk/UgOX0He2ECI/AAAAAAAAPFs/QtRvi0Pc464/w701-h526-no/IMG_20130808_220558.jpg" alt="ArduinoとiRemocon" />
+ポスター用の剥がせる両面テープで壁に貼ってみた</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/85825/blog/image/20130811/home-lita.png" alt="home-lita" />
+hipchatのAndroidアプリ</p>
+
+<h1>できること</h1>
+
+<ul>
+<li>30分おきに温度、湿度、明るさを報告</li>
+<li>Hipchatからエアコンと照明のON/OFF
+
+<ul>
+<li>最近暑いので、会社を出る前にクーラー入れたりする</li>
+</ul>
+</li>
+<li>毎日8:00に照明ON, 25:00に照明OFF
+
+<ul>
+<li>寝起きが良くなった気がする</li>
+</ul>
+</li>
+</ul>
+
+
+<h1>下準備</h1>
+
+<ul>
+<li>天井の照明をリモコン式のものに変更
+
+<ul>
+<li>制御が楽なのでONとOFFのボタンが付いているものがよい</li>
+</ul>
+</li>
+<li>hipchatアカウント取得
+
+<ul>
+<li>今なら5人まで無料なので、自分の分とbotの分を作る</li>
+<li>よく考えたらチャットルームに自分とbotしかいないのって&#8230;</li>
+</ul>
+</li>
+</ul>
+
+
+<h1>ハードウェア</h1>
+
+<ul>
+<li>MacBook Air(サーバ)</li>
+<li>赤外線送信
+
+<ul>
+<li>iRemocon
+
+<ul>
+<li>以前音声認識で家電を操作してた時のを流用</li>
+<li>無操作だと5分で接続が切れるので、keep aliveが必要ということを今回はじめて知った</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>温度、湿度、明るさセンサー
+
+<ul>
+<li>Arduino + 秋月電子で買ったパーツ</li>
+<li>これも以前使っていたものを流用</li>
+</ul>
+</li>
+</ul>
+
+
+<h1>ソフトウェア</h1>
+
+<ul>
+<li><a href="https://github.com/fukayatsu/home-lita">fukayatsu/home-lita</a>
+
+<ul>
+<li>本体</li>
+</ul>
+</li>
+<li><a href="https://github.com/jimmycuadra/lita">jimmycuadra/lita</a>
+
+<ul>
+<li>ざっくり言うとhubotのRuby版。userの権限管理とかもできる</li>
+<li>ちょっと前に会社のhipchat上のbotをhubotからlitaに置き換えたら結構良かったので、今回採用</li>
+</ul>
+</li>
+<li><a href="https://github.com/jimmycuadra/lita-hipchat">jimmycuadra/lita-hipchat</a>
+
+<ul>
+<li>litaのhipchat adapter</li>
+</ul>
+</li>
+<li><a href="https://github.com/fukayatsu/lita-schedule">fukayatsu/lita-schedule</a>
+
+<ul>
+<li>lita上でcron的なことをするやつ。とりあえず動くぐらいの完成度</li>
+</ul>
+</li>
+<li><a href="https://github.com/r7kamura/iremocon">r7kamura/iremocon</a>
+
+<ul>
+<li>iremoconのrubyインタフェース</li>
+</ul>
+</li>
+</ul>
+
+
+<h1>これからやりたいこと</h1>
+
+<ul>
+<li>音声認識、音声再生を復活させたい
+
+<ul>
+<li>「今何時？」とか「今日の天気は？」とか「電気消して」とかが地味に便利だった</li>
+</ul>
+</li>
+<li>Androidとかと組み合わせて、自宅から出たら電気が消えるようにしたい
+
+<ul>
+<li>端末の自宅wifiへの接続の有無で制御できそう？</li>
+</ul>
+</li>
+<li>Lita本体にschedule機能を入れたい
+
+<ul>
+<li>テスト書く</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/08/11/run-gauche-with-sublime-text-2/">Sublime Text 2でGaucheを実行する</a>
 
 </h1>
@@ -1211,100 +1394,6 @@ quoteとかifとかdefineとか</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2013/03/24/zusaar-gem/">zusaarのgem作った</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-24T20:48:00+09:00" pubdate data-updated="true">Mar 24<span>th</span>, 2013</time>
-         &bull; <a rel="bookmark" href="/2013/03/24/zusaar-gem/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><blockquote class="twitter-tweet"><p>いままでずっとZusaarのことZussarだと勘違いしてた</p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/315701285150158848">March 24, 2013</a></blockquote>
-
-
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-<p>gemをpublishする直前に気付いてリネーム祭りをした。<br/>
-そしてこれからもちょくちょく間違える気がする。</p>
-
-<ul>
-<li><a href="https://rubygems.org/gems/zusaar">zusaar | RubyGems.org | your community gem host</a></li>
-<li><a href="https://github.com/fukayatsu/zusaar">fukayatsu/zusaar · GitHub</a></li>
-<li><a href="http://www.zusaar.com/doc/api.html">APIリファレンス｜参加費の決済もできるイベント開催支援サービス「Zusaar」</a></li>
-</ul>
-
-
-<p>そもそも検索系のAPIしかないので、自動でイベント参加とかはできないのが残念。</p>
-
-<h1>使用例</h1>
-
-<script src="https://gist.github.com/fukayatsu/5231578.js"></script>
-
-
-<h1>その他</h1>
-
-<h3>APIのバグ？</h3>
-
-<p>APIを叩いた時に、<code>profile_url</code>が<code>http//twitter.com/foobar</code>みたいな感じで<code>:</code>が抜けて返ってきたので、お問い合せフォームから報告しておいた。</p>
-
-<p>今のことろはgemの側で正しいurlに直している。</p>
-
-<h3>followのrate limit</h3>
-
-<blockquote><p><a href="https://dev.twitter.com/docs/api/1.1/post/friendships/create">POST friendships/create | Twitter Developers</a></p></blockquote>
-
-<p>には<code>Rate Limited? No</code>って書いてあるけど、どうも15分に15回に制限されてるような挙動をする。</p>
-
-<p>それで制限に引っかかると、環境によって<code>Twitter::Error::ClientError</code>が発生してハマった。</p>
-
-<h3>参考にしたgem</h3>
-
-<blockquote><p><a href="https://github.com/sferik/twitter">sferik/twitter · GitHub</a></p></blockquote>
-
-<p>attr_reader上書きしてるとことか、faraday gemつかってるとことかいろいろ真似してみた</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1321,6 +1410,10 @@ quoteとかifとかdefineとか</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/08/11/iremocon-and-lita/">RubyとLita(chat bot)で自宅のエアコンを操作する</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/08/11/run-gauche-with-sublime-text-2/">Sublime Text 2でGaucheを実行する</a>
       </li>
     
@@ -1334,10 +1427,6 @@ quoteとかifとかdefineとか</p>
     
       <li class="post">
         <a href="/2013/07/25/leap-motion-and-ruby/">[WIP]Leap MotionとRubyで遊ぶ</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/05/15/shibuya-rb/">5月の渋谷.rbに行ってきた</a>
       </li>
     
   </ul>
