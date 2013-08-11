@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev]]></title>
   <link href="http://blog.fukayatsu.com/atom.xml" rel="self"/>
   <link href="http://blog.fukayatsu.com/"/>
-  <updated>2013-08-09T22:43:48+09:00</updated>
+  <updated>2013-08-11T19:38:53+09:00</updated>
   <id>http://blog.fukayatsu.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,99 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[Sublime Text 2でGaucheを実行する]]></title>
+<link href="http://blog.fukayatsu.com/2013/08/11/run-gauche-with-sublime-text-2/"/>
+<updated>2013-08-11T18:57:00+09:00</updated>
+<id>http://blog.fukayatsu.com/2013/08/11/run-gauche-with-sublime-text-2</id>
+
+      <content type="html"><![CDATA[<p><img src="https://dl.dropboxusercontent.com/u/85825/blog/image/20130811/sublime-scm.png" alt="" /></p>
+
+<h2>設定方法</h2>
+
+<p>[Tools] > [Build System] > [New Build System&#8230;]を選び、<br/>
+以下を<code>Gauche.sublime-build</code>のファイル名で保存(ディレクトリは<code>Packages/User/</code>)</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>{
+</span><span class='line'>  "cmd": ["gosh", "$file"],
+</span><span class='line'>  "selector": "source.lisp",
+</span><span class='line'>  "osx": {
+</span><span class='line'>    "path": "/usr/local/bin:/opt/local/bin"
+</span><span class='line'>  },
+</span><span class='line'>  "linux": {
+</span><span class='line'>    "path": "/usr/local/bin:/usr/bin"
+</span><span class='line'>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>試しに実行してみる</h3>
+
+<p>hello.scm</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>(print "hello, world")
+</span><span class='line'>
+</span><span class='line'>(print (+ 3 3))
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>こんな感じに書いて、</p>
+
+<ul>
+<li><code>Cmd(Ctrl) + B</code>で実行してみる</li>
+</ul>
+
+
+<p>うまくいくとこんな感じに表示される</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>hello, world
+</span><span class='line'>6
+</span><span class='line'>[Finished in 0.1s]</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>実行しても何も表示されない場合</h3>
+
+<ul>
+<li><p>[Tools] > [Build System]が<code>Automatic</code>もしくは<code>Gauche</code>になっているかどうか調べる</p></li>
+<li><p><code>Ctrl + `</code>で実行時にエラーが発生してないか調べる</p></li>
+</ul>
+
+
+<p><code>UnicodeDecodeError: 'ascii' codec can't decode</code>というエラーの場合は
+<a href="https://github.com/maltize/sublime-text-2-ruby-tests/issues/116#issuecomment-11103810">Packages/Default/exec.pyを変更する</a>ことで回避できた</p>
+
+<h3>参考</h3>
+
+<p>以下のページを参考にさせて頂きました</p>
+
+<ul>
+<li><p><a href="http://y-anz-m.blogspot.jp/2012/11/sublime-text-2-typescript.html">Y.A.M の 雑記帳: Sublime Text 2 で TypeScript をビルドする</a></p></li>
+<li><p><a href="https://github.com/maltize/sublime-text-2-ruby-tests/issues/116">UnicodeDecodeError: &#8216;ascii&#8217; codec can&#8217;t decode · Issue #116 · maltize/sublime-text-2-ruby-tests</a></p></li>
+</ul>
+
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/08/11/run-gauche-with-sublime-text-2/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1800,60 +1893,6 @@ funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、�
 
 <p><a href="http://fukayatsu.github.com/2013/01/26/roomba-hack-02/">roomba-hack-02 はんだ付け&amp;動作テスト編</a></p>
 <p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/21/roomba-hack-01/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[T2-Study#3を開催しました]]></title>
-<link href="http://blog.fukayatsu.com/2013/01/18/t2-study-3/"/>
-<updated>2013-01-18T23:27:00+09:00</updated>
-<id>http://blog.fukayatsu.com/2013/01/18/t2-study-3</id>
-
-      <content type="html"><![CDATA[<p>通算3回目、今年最初のT2-Studyを開催しました。<br/>
-(別名: 第1、第3金曜にビールでも飲みながら緩く勉強会やろうぜの会)</p>
-
-<p><a href="http://togetter.com/li/441329">T2-Study#3 2013-01-18 #t2study - Togetter</a></p>
-
-<p>今回は告知が遅れたのと、新年会シーズンな事もあってか、自分も含めて5人での開催となりました。</p>
-
-<p>2人新しく来てくれた方がいて嬉しかったです。</p>
-
-<h1>LT</h1>
-
-<p>先日、大雪のため惜しくも途中で中止となった東京Ruby会議でやる予定だったLTをしました。</p>
-
-<h2>コミュニティアピール</h2>
-
-<script async class="speakerdeck-embed" data-id="516cc26043a90130f33f1231381d4ca8" data-ratio="1.2994923857868" src="http://blog.fukayatsu.com//speakerdeck.com/assets/embed.js"></script>
-
-
-<h2>地元Ruby会議</h2>
-
-<script async class="speakerdeck-embed" data-id="bb7612d043a90130d05b22000a1c46b4" data-ratio="1.2994923857868" src="http://blog.fukayatsu.com//speakerdeck.com/assets/embed.js"></script>
-
-
-<h1>今後、勉強会をどうするか</h1>
-
-<ul>
-<li>できれば、色んな人にLTしてほしい</li>
-<li>前半LTで、後半はテーマ決めてもくもくとかいいかも</li>
-<li>現状だと、まったくの初心者の人はつらいかも</li>
-</ul>
-
-
-<h1>振り返り</h1>
-
-<ul>
-<li>5人でピザ3枚は結構ちょうど良い感じだった</li>
-<li>Lチカ(LEDチカチカ)とかSublimeの話が出て胸熱だった</li>
-<li>次は早めに告知しよう</li>
-</ul>
-
-<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/18/t2-study-3/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

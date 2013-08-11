@@ -92,6 +92,135 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/08/11/run-gauche-with-sublime-text-2/">Sublime Text 2でGaucheを実行する</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-11T18:57:00+09:00" pubdate data-updated="true">Aug 11<span>th</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/08/11/run-gauche-with-sublime-text-2/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p><img src="https://dl.dropboxusercontent.com/u/85825/blog/image/20130811/sublime-scm.png" alt="" /></p>
+
+<h2>設定方法</h2>
+
+<p>[Tools] > [Build System] > [New Build System&#8230;]を選び、<br/>
+以下を<code>Gauche.sublime-build</code>のファイル名で保存(ディレクトリは<code>Packages/User/</code>)</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>{
+</span><span class='line'>  "cmd": ["gosh", "$file"],
+</span><span class='line'>  "selector": "source.lisp",
+</span><span class='line'>  "osx": {
+</span><span class='line'>    "path": "/usr/local/bin:/opt/local/bin"
+</span><span class='line'>  },
+</span><span class='line'>  "linux": {
+</span><span class='line'>    "path": "/usr/local/bin:/usr/bin"
+</span><span class='line'>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>試しに実行してみる</h3>
+
+<p>hello.scm</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>(print "hello, world")
+</span><span class='line'>
+</span><span class='line'>(print (+ 3 3))
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>こんな感じに書いて、</p>
+
+<ul>
+<li><code>Cmd(Ctrl) + B</code>で実行してみる</li>
+</ul>
+
+
+<p>うまくいくとこんな感じに表示される</p>
+
+<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='plain'><span class='line'>hello, world
+</span><span class='line'>6
+</span><span class='line'>[Finished in 0.1s]</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>実行しても何も表示されない場合</h3>
+
+<ul>
+<li><p>[Tools] > [Build System]が<code>Automatic</code>もしくは<code>Gauche</code>になっているかどうか調べる</p></li>
+<li><p><code>Ctrl + `</code>で実行時にエラーが発生してないか調べる</p></li>
+</ul>
+
+
+<p><code>UnicodeDecodeError: 'ascii' codec can't decode</code>というエラーの場合は
+<a href="https://github.com/maltize/sublime-text-2-ruby-tests/issues/116#issuecomment-11103810">Packages/Default/exec.pyを変更する</a>ことで回避できた</p>
+
+<h3>参考</h3>
+
+<p>以下のページを参考にさせて頂きました</p>
+
+<ul>
+<li><p><a href="http://y-anz-m.blogspot.jp/2012/11/sublime-text-2-typescript.html">Y.A.M の 雑記帳: Sublime Text 2 で TypeScript をビルドする</a></p></li>
+<li><p><a href="https://github.com/maltize/sublime-text-2-ruby-tests/issues/116">UnicodeDecodeError: &#8216;ascii&#8217; codec can&#8217;t decode · Issue #116 · maltize/sublime-text-2-ruby-tests</a></p></li>
+</ul>
+
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/08/09/yet-another-scheme-abc-01/">「もうひとつの Scheme 入門」をやってみる#01</a>
 
 </h1>
@@ -1176,114 +1305,6 @@ quoteとかifとかdefineとか</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2013/03/21/shibuyarb-20130320/">渋谷.rb[:20130320](拡大版)に参加してきた</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-21T12:45:00+09:00" pubdate data-updated="true">Mar 21<span>st</span>, 2013</time>
-         &bull; <a rel="bookmark" href="/2013/03/21/shibuyarb-20130320/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><ul>
-<li><a href="http://www.zusaar.com/event/545003">渋谷.rb[:20130320](拡大版) on Zusaar</a></li>
-<li><a href="http://togetter.com/li/475115">渋谷.rb[:20130320](拡大版) #shibuyarb - Togetter</a></li>
-</ul>
-
-
-<hr />
-
-<p><img src="https://lh5.googleusercontent.com/-eolSfZRxNjU/UUnSI7c8n_I/AAAAAAAALfw/nNEqGd6v5tg/w249-h187/IMG_20130320_125424.jpg" alt="" /></p>
-
-<p><a href="http://shibuyarblunch.heroku.com/">#shibuyarblunch</a>に初参加。</p>
-
-<p><a href="http://tabelog.com/tokyo/A1303/A130301/13028533/">龍盛菜館 渋谷店</a>で麻婆茄子定食を食べた。相変わらず量が多い。</p>
-
-<hr />
-
-<p><img src="https://lh6.googleusercontent.com/-tBOaOlf1REU/UUnSMT8HFuI/AAAAAAAALf8/ov2-4TqUAdo/w249-h187/IMG_20130320_184322.jpg" alt="" /></p>
-
-<p><img src="https://lh4.googleusercontent.com/-1KgepSumN-I/UUnSPZXl_EI/AAAAAAAALgI/WGsshSf3zhA/w249-h187/IMG_20130320_184332.jpg" alt="" /></p>
-
-<p><img src="https://lh5.googleusercontent.com/-9GzfYww5uQg/UUnSTEFbEXI/AAAAAAAALgU/3XAQbGi7654/w249-h187/IMG_20130320_184335.jpg" alt="" /></p>
-
-<p>セッション1と2は興味のあるテーマ毎に小グループを作って議論したりもくもくしたりという感じだった。</p>
-
-<p>自分は大江戸Ruby会議03で言及されてた<a href="http://atcoder.jp/">AtCoder</a>を<a href="https://twitter.com/Shindo200">Shindo200</a>さんとペアプロみたいな感じで解いたりした。</p>
-
-<hr />
-
-<p>セッション3はLTやりたい人がLTする形式。</p>
-
-<p>自分は最近作ってるChrome Extensionについて発表した。</p>
-
-<script async class="speakerdeck-embed" data-id="b158aec0740b01306b5122000a1c8083" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
-
-
-<p>会場ではChrome Extensionを作ったことがあるのが数人ぐらいだったので、発表する意義はあったのではないかと思う。</p>
-
-<p><a href="http://developer.chrome.com/extensions/getstarted.html">Getting Started: Building a Chrome Extension</a>をその場でやって、<a href="https://chrome.google.com/webstore/detail/one-click-matz/becmpkhmoakfcmfggogachmemiceahda">Chrome ウェブストアに公開</a>してみた。</p>
-
-<p>あとは、<a href="https://developer.chrome.com/extensions/samples.html">Sample Extensions</a>をいくつか動かしてみると理解が深まると思う</p>
-
-<hr />
-
-<p><img src="https://lh5.googleusercontent.com/-KP0kruBlLeo/UUnSZmCtFWI/AAAAAAAALgg/F4f4_0z0Fy8/w249-h187/IMG_20130320_194519.jpg" alt="" /></p>
-
-<p>懇親会 at <a href="http://voyagegroup.com/business/office/office015/">AJITO</a></p>
-
-<p><img src="https://lh5.googleusercontent.com/-dzADzxb4ICA/UUnSmrEpcCI/AAAAAAAALg4/HAns47EGVOU/w249-h187/IMG_20130320_210448.jpg" alt="" /></p>
-
-<p>マミった&#8230;</p>
-
-<p><img src="https://lh6.googleusercontent.com/-WGsnYaiTy4k/UUnSpyNN7dI/AAAAAAAALhE/KfpmvNUIF6E/w249-h187/IMG_20130320_233453.jpg" alt="" /></p>
-
-<p><a href="http://tabelog.com/tokyo/A1303/A130301/13113820/">俺流塩らーめん</a>であさりラーメンを食べた</p>
-
-<p><img src="https://lh4.googleusercontent.com/-s7Swgycv_wQ/UUnSvohQp_I/AAAAAAAALhQ/Ij-SctFLoIs/w249-h187/IMG_20130321_000748.jpg" alt="" /></p>
-
-<p>帰り際に桜が咲いてるのに気付く</p>
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1300,6 +1321,10 @@ quoteとかifとかdefineとか</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/08/11/run-gauche-with-sublime-text-2/">Sublime Text 2でGaucheを実行する</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/08/09/yet-another-scheme-abc-01/">「もうひとつの Scheme 入門」をやってみる#01</a>
       </li>
     
@@ -1313,10 +1338,6 @@ quoteとかifとかdefineとか</p>
     
       <li class="post">
         <a href="/2013/05/15/shibuya-rb/">5月の渋谷.rbに行ってきた</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/05/05/git-about-dot-me/">git-about.meをリリースしました</a>
       </li>
     
   </ul>
