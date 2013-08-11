@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev]]></title>
   <link href="http://blog.fukayatsu.com/atom.xml" rel="self"/>
   <link href="http://blog.fukayatsu.com/"/>
-  <updated>2013-08-11T23:14:52+09:00</updated>
+  <updated>2013-08-11T23:20:44+09:00</updated>
   <id>http://blog.fukayatsu.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -108,7 +108,7 @@ hipchatのAndroidアプリ</p>
 <li><a href="https://github.com/jimmycuadra/lita">jimmycuadra/lita</a>
 
 <ul>
-<li>ざっくり言うとhubotのRuby版。userの権限管理とかもできる</li>
+<li>ざっくり言うとhubot(github製bot framework)のRuby版。userの権限管理とかもできる</li>
 <li>ちょっと前に会社のhipchat上のbotをhubotからlitaに置き換えたら結構良かったので、今回採用</li>
 </ul>
 </li>
@@ -128,6 +128,12 @@ hipchatのAndroidアプリ</p>
 
 <ul>
 <li>iremoconのrubyインタフェース</li>
+</ul>
+</li>
+<li><a href="https://github.com/austinbv/dino">austinbv/dino</a>
+
+<ul>
+<li><a href="http://blog.fukayatsu.com/2013/01/23/hello-arduino-with-ruby-and-dino/">Arduino買ったのでRubyとDinoでLチカした - fukayatsu.dev</a>を参照</li>
 </ul>
 </li>
 </ul>
