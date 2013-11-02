@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: scheme - fukayatsu.dev</title>
+  <title>半角:全角==1:2な等幅フォントを作る - fukayatsu.dev</title>
   <meta name="author" content="fukayatsu">
   <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.fukayatsu.comblog/categories/scheme/">
+  <link rel="canonical" href="http://blog.fukayatsu.com/2013/11/03/merge-fonts/">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/octopress.min.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="fukayatsu.dev" type="application/atom+xml">
@@ -44,7 +44,7 @@
   <link href="/octopress-favicon.png" rel="icon">
 </head>
 
-<body  id="archive"   >
+<body   >
   <header role="banner"><hgroup>
   <h1><a href="/">fukayatsu.dev</a></h1>
   
@@ -75,88 +75,163 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+
+
+
+
+
+
+
+
+
+
+
+<article class="hentry " role="article">
   
   <header>
-    <h1 class="entry-title">Category: scheme</h1>
+    <h1 class="entry-title">
+
+半角:全角==1:2な等幅フォントを作る
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-03T02:13:00+09:00" pubdate data-updated="true">Nov 3<span>rd</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/11/03/merge-fonts/">Permalink</a>
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
+
+<div class="entry-content"><p>普段プログラミングする時は<a href="http://www.sublimetext.com/3">Sublime Text 3</a>と<a href="http://sourceforge.jp/projects/sfnet_sourcecodepro.adobe/">Source Code Pro</a>を使っているのだけれど、半角:全角の文字幅が1:2じゃなくて気になる時があった。</p>
+
+<p>ちょっと無理矢理な例だけど、こんな感じ:
+<img src="https://photos-3.dropbox.com/t/0/AADiNZK_LiJD2_M0TXMRxVv5mlPtTQX2qMbvch8txpwN9A/12/85825/png/2048x1536/3/1383418800/0/2/Screenshot%202013-11-03%2002.07.56.png/1WBSByeieM1FF0IeVHVnxf1LBxkd71dBIeM7uDKfvIA" alt="" /></p>
+
+<ul>
+<li>半角スペースが全角文字の半分の幅じゃないので<code>=&gt;</code>が揃わない。もやっとする</li>
+</ul>
 
 
+<h2><a href="http://sourceforge.jp/projects/sfnet_sourcecodepro.adobe/">Source Code Pro</a> と <a href="http://mix-mplus-ipa.sourceforge.jp/migmix/#diff_migmix1p_migmix2p">MigMix 1M</a>の合成</h2>
 
-  
-  <h2>2013</h2>
+<p>ベース: <a href="https://github.com/MasayukiFukada/CodeMFont">MasayukiFukada/CodeMFont</a></p>
 
+<h4>ベースからの変更点</h4>
 
-
-
-
-
-
-
-
+<ul>
+<li>Source Code Proの中間フォントに<code>Scale(70)</code>を適用</li>
+<li>記号をあまり改変しないように変更。全角スペースの可視化は残した</li>
+</ul>
 
 
+<p><img src="https://photos-4.dropbox.com/t/0/AAD0Ce1z2kn40M8UpH01nkwP-ysqc1hCKeqXUfEk4CmuHg/12/85825/png/1024x768/3/1383418800/0/2/Screenshot%202013-11-03%2002.08.37.png/qto5DmwG8lwZPzjXJOtcBJLThC4eMaWKH1lKXBnWnaM" alt="" /></p>
 
-<article >
-  
-<h1 class="entry-title">
-
-<a href="/2013/08/09/yet-another-scheme-abc-01/">「もうひとつの Scheme 入門」をやってみる#01</a>
-
-</h1>
-
-<time datetime="2013-08-09T21:40:00+09:00" pubdate><span class='month'>Aug</span> <span class='day'>09</span> <span class='year'>2013</span></time>
-<footer>
-  
-  
-  
-  <span class="categories">posted in <a class='category' href='/blog/categories/gauche/'>gauche</a>, <a class='category' href='/blog/categories/scheme/'>scheme</a></span>
-  
-</footer>
-
-</article>
+<ul>
+<li>Hashのkeyに日本語が入っていても、もやっとしなくなった。</li>
+<li>半角文字が思ったより横に圧縮されたけど、ちょっと使ってたら慣れた</li>
+</ul>
 
 
+<h2>Tips</h2>
 
+<p>Macではフォントを削除→再生成→再インストールしてもキャッシュを消さないと反映されなかった。</p>
 
+<p>キャッシュ削除コマンド: <code>$ atsutil databases -removeUser</code></p>
 
+<h2>TODO</h2>
 
+<ul>
+<li>generator公開
 
-
-
-
-
-
-
-
-<article >
-  
-<h1 class="entry-title">
-
-<a href="/2013/08/03/10lisp-00/">#10LISP '00に参加しました</a>
-
-</h1>
-
-<time datetime="2013-08-03T19:08:00+09:00" pubdate><span class='month'>Aug</span> <span class='day'>03</span> <span class='year'>2013</span></time>
-<footer>
-  
-  
-  
-  <span class="categories">posted in <a class='category' href='/blog/categories/10lisp/'>10lisp</a>, <a class='category' href='/blog/categories/gauche/'>gauche</a>, <a class='category' href='/blog/categories/lisp/'>lisp</a>, <a class='category' href='/blog/categories/scheme/'>scheme</a></span>
-  
-</footer>
-
-</article>
+<ul>
+<li>素材用のフォントを自動的にダウンロードしてフォント生成するやつを作りたい</li>
+</ul>
+</li>
+</ul>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">fukayatsu</span></span>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-03T02:13:00+09:00" pubdate data-updated="true">Nov 3<span>rd</span>, 2013</time>
+
+
+
+
+      
+
+    </p>
+    
+      <div class="sharing">
+  
+    
+      <a href="http://twitter.com/share" title="Tweet this" class="twitter-share" target="_blank">Tweet</a>
+    
+  
+  
+    
+      <a title="+1 on Google Plus" class="googleplus-share" href="https://plusone.google.com/_/+1/confirm?hl=en&url=http://blog.fukayatsu.com/2013/11/03/merge-fonts/" target="_blank">+1</a>
+    
+  
+  
+    
+    <a title="Share on Facebook" class="facebook-share" href="http://www.facebook.com/sharer.php?u=http://blog.fukayatsu.com/2013/11/03/merge-fonts/" target="_blank">Share</a>
+    
+  
+  
+
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2013/08/11/iremocon-and-lita/" title="Previous Post: RubyとLita(chat bot)で自宅のエアコンを操作する">&laquo; RubyとLita(chat bot)で自宅のエアコンを操作する</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
+<section>
+  <h1>Comments</h1>
+  
 
+  
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  
+</section>
 
 </div>
 
@@ -266,7 +341,10 @@
 			var disqus_developer = '0';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.fukayatsu.com/2013/11/03/merge-fonts/';
+        var disqus_url = 'http://blog.fukayatsu.com/2013/11/03/merge-fonts/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

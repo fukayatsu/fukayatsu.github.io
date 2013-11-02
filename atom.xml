@@ -3,7 +3,7 @@
   <title><![CDATA[fukayatsu.dev]]></title>
   <link href="http://blog.fukayatsu.com/atom.xml" rel="self"/>
   <link href="http://blog.fukayatsu.com/"/>
-  <updated>2013-08-11T23:20:44+09:00</updated>
+  <updated>2013-11-03T03:16:27+09:00</updated>
   <id>http://blog.fukayatsu.com/</id>
   <author>
     <name><![CDATA[fukayatsu]]></name>
@@ -11,6 +11,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+    <entry>
+      
+
+
+
+
+<title type="html"><![CDATA[半角:全角==1:2な等幅フォントを作る]]></title>
+<link href="http://blog.fukayatsu.com/2013/11/03/merge-fonts/"/>
+<updated>2013-11-03T02:13:00+09:00</updated>
+<id>http://blog.fukayatsu.com/2013/11/03/merge-fonts</id>
+
+      <content type="html"><![CDATA[<p>普段プログラミングする時は<a href="http://www.sublimetext.com/3">Sublime Text 3</a>と<a href="http://sourceforge.jp/projects/sfnet_sourcecodepro.adobe/">Source Code Pro</a>を使っているのだけれど、半角:全角の文字幅が1:2じゃなくて気になる時があった。</p>
+
+<p>ちょっと無理矢理な例だけど、こんな感じ:
+<img src="https://photos-3.dropbox.com/t/0/AADiNZK_LiJD2_M0TXMRxVv5mlPtTQX2qMbvch8txpwN9A/12/85825/png/2048x1536/3/1383418800/0/2/Screenshot%202013-11-03%2002.07.56.png/1WBSByeieM1FF0IeVHVnxf1LBxkd71dBIeM7uDKfvIA" alt="" /></p>
+
+<ul>
+<li>半角スペースが全角文字の半分の幅じゃないので<code>=&gt;</code>が揃わない。もやっとする</li>
+</ul>
+
+
+<h2><a href="http://sourceforge.jp/projects/sfnet_sourcecodepro.adobe/">Source Code Pro</a> と <a href="http://mix-mplus-ipa.sourceforge.jp/migmix/#diff_migmix1p_migmix2p">MigMix 1M</a>の合成</h2>
+
+<p>ベース: <a href="https://github.com/MasayukiFukada/CodeMFont">MasayukiFukada/CodeMFont</a></p>
+
+<h4>ベースからの変更点</h4>
+
+<ul>
+<li>Source Code Proの中間フォントに<code>Scale(70)</code>を適用</li>
+<li>記号をあまり改変しないように変更。全角スペースの可視化は残した</li>
+</ul>
+
+
+<p><img src="https://photos-4.dropbox.com/t/0/AAD0Ce1z2kn40M8UpH01nkwP-ysqc1hCKeqXUfEk4CmuHg/12/85825/png/1024x768/3/1383418800/0/2/Screenshot%202013-11-03%2002.08.37.png/qto5DmwG8lwZPzjXJOtcBJLThC4eMaWKH1lKXBnWnaM" alt="" /></p>
+
+<ul>
+<li>Hashのkeyに日本語が入っていても、もやっとしなくなった。</li>
+<li>半角文字が思ったより横に圧縮されたけど、ちょっと使ってたら慣れた</li>
+</ul>
+
+
+<h2>Tips</h2>
+
+<p>Macではフォントを削除→再生成→再インストールしてもキャッシュを消さないと反映されなかった。</p>
+
+<p>キャッシュ削除コマンド: <code>$ atsutil databases -removeUser</code></p>
+
+<h2>TODO</h2>
+
+<ul>
+<li>generator公開
+
+<ul>
+<li>素材用のフォントを自動的にダウンロードしてフォント生成するやつを作りたい</li>
+</ul>
+</li>
+</ul>
+
+<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/11/03/merge-fonts/">&#9875; Permalink</a></p>]]></content>
+    </entry>
   
     <entry>
       
@@ -1796,136 +1857,6 @@ BlueSMiRFのTx ---&gt; RoombaのRx
 
 <p>次はいよいよTwitter連携とかをしていきたいと思います。</p>
 <p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/26/roomba-hack-02/">&#9875; Permalink</a></p>]]></content>
-    </entry>
-  
-    <entry>
-      
-
-
-
-
-<title type="html"><![CDATA[Arduino買ったのでRubyとDinoでLチカした]]></title>
-<link href="http://blog.fukayatsu.com/2013/01/23/hello-arduino-with-ruby-and-dino/"/>
-<updated>2013-01-23T22:49:00+09:00</updated>
-<id>http://blog.fukayatsu.com/2013/01/23/hello-arduino-with-ruby-and-dino</id>
-
-      <content type="html"><![CDATA[<p>前回<a href="http://fukayatsu.github.com/2013/01/21/roomba-hack-01/">roomba-hack-01 準備編</a>で必要な部品を揃えるときに、<br/>
-ついでに注文していた<a href="http://www.switch-science.com/products/detail.php?product_id=1120">Arduino Micro</a>が先に届いたのでいじってみた。</p>
-
-<h1>Arduino Micro</h1>
-
-<p><img src="https://lh4.googleusercontent.com/-ICg8dyo-5eU/UP_oaT5a_-I/AAAAAAAAJxQ/K1MWoZt_u14/s865/IMG_20130123_223909.jpg" alt="Arduino Micro" /></p>
-
-<p>PCとの接続は名前の通り(?)micro USBケーブル。<br/>
-余ってるAndroidのケーブルとか使えて良い感じ。</p>
-
-<p>どうやら最初から<code>13 pin</code>にLEDが接続されているみたい。<br/>
-他のArduinoもだいたいそうらしい。</p>
-
-<h1>はじめてのArduino</h1>
-
-<blockquote><p><a href="http://9ensan.com/blog/diy/diy-arduino-setup-led-flash/">Arduinoをはじめようを購入してセットアップ〜LEDを点滅させるまで | 9ensanのLifeHack</a></p></blockquote>
-
-<p>このページを参考にさせてもらってLEDをチカチカさせました。</p>
-
-<h1>RubyからArduinoコントロールしたい</h1>
-
-<p>これからJenkinsのXFDとか作るにあたって、どうせならRubyでコントロールしたいと思っていくつかライブラリを調べた。</p>
-
-<h2>library: funnel</h2>
-
-<p>最初に見つけたのがこれ。</p>
-
-<blockquote><p><a href="http://funnel.cc/Software/Ruby">funnel.cc | Software / Ruby</a></p></blockquote>
-
-<p>一度Arduino側に書き込んでしまえば、あとはRubyでやりたい放題らしい。</p>
-
-<p>へー、と思って<code>gem i funnel</code>とかやったら<br/>
-&#8220;a realtime resource-centric application framework&#8221;な方の<a href="https://github.com/dansimpson/funnel">funnel</a><br/>
-がインストールされたorz</p>
-
-<blockquote><p><a href="http://code.google.com/p/funnel/downloads/list">Downloads - funnel - A toolkit to sketch your idea physically - Google Project Hosting</a></p></blockquote>
-
-<p>↑ ここからダウンロードするのが正解だったみたい。</p>
-
-<p>でもRequirementsに<code>Ruby 1.8.6</code>とあったのでやめた。</p>
-
-<h2>gem: serialport</h2>
-
-<p>次に考えたのがこれ。</p>
-
-<blockquote><p><a href="http://playground.arduino.cc/interfacing/ruby">Arduino Playground - Ruby</a></p></blockquote>
-
-<p>にも</p>
-
-<blockquote><p>The SerialPort gem seems to do the job.</p></blockquote>
-
-<p>と書いてある。</p>
-
-<p>そういえば以前友人もこのgemを使ってArduinoで遊んでた。</p>
-
-<blockquote><p><a href="http://hatone.hateblo.jp/entry/2012/02/12/160257">rubyとarduinoで、twitterのリプライをLED通知してみた - メモりメモる</a></p></blockquote>
-
-<p>でも結局Arduino側もプログラム書かないといけないのでもうちょっと他の方法を探した。</p>
-
-<h2>gem: Dino</h2>
-
-<p>最後に見つけたのがこれ。<br/>
-(というか最初から<a href="http://playground.arduino.cc/interfacing/ruby">Arduinoの公式のRubyのところ</a>を確認しておくべきだった。)</p>
-
-<p>2012年11月のRubyWorld Conference 2012で発表された、かなり新しいプロダクトらしい。<br/>
-funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、あとはRubyだけでいけるタイプ。</p>
-
-<p><a href="http://confreaks.com/videos/1294-rubyconf2012-arduino-the-ruby-way">Arduino the Ruby way - Austin Vance - Ruby Conference 2012</a></p>
-
-<script async class="speakerdeck-embed" data-id="5098572bc5f78d0002010edb" data-ratio="1.2994923857868" src="http://blog.fukayatsu.com//speakerdeck.com/assets/embed.js"></script>
-
-
-
-
-<iframe width="640" height="360" src="http://www.youtube.com/embed/oUIor6GK-qA" frameborder="0" allowfullscreen></iframe>
-
-
-<br>
-
-
-<br>
-
-
-<h3>DinoでLチカ</h3>
-
-<p>うん、こういうのを探してた :)</p>
-
-<figure class='code'><div class='highlight'><table><td class='gutter'><pre class='line-numbers'><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;dino&#39;</span>  <span class="c1"># gem install dino</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">board</span> <span class="o">=</span> <span class="no">Dino</span><span class="o">::</span><span class="no">Board</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">Dino</span><span class="o">::</span><span class="no">TxRx</span><span class="o">.</span><span class="n">new</span><span class="p">)</span>
-</span><span class='line'><span class="n">led</span> <span class="o">=</span> <span class="no">Dino</span><span class="o">::</span><span class="no">Components</span><span class="o">::</span><span class="no">Led</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">pin</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="n">board</span><span class="p">:</span> <span class="n">board</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">[</span><span class="ss">:on</span><span class="p">,</span> <span class="ss">:off</span><span class="o">].</span><span class="n">cycle</span> <span class="k">do</span> <span class="o">|</span><span class="n">switch</span><span class="o">|</span>
-</span><span class='line'>  <span class="n">led</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">switch</span><span class="p">)</span>
-</span><span class='line'>  <span class="nb">sleep</span> <span class="mi">0</span><span class="o">.</span><span class="mi">5</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>使ってみようと思った人は↓このチュートリアルが詳しくて良いかも。</p>
-
-<blockquote><p><a href="http://tutorials.jumpstartlab.com/projects/arduino/introducing_arduino.html">Introducing Arduino &amp; Dino - Jumpstart Lab Curriculum</a></p></blockquote>
-
-<h1>つづく</h1>
-
-<p>ブレッドボードが手元になかったので今日はここまで。<br/>
-早くセンサとかつないでいろいろ試したい</p>
-<p><a rel="bookmark" href="http://blog.fukayatsu.com/2013/01/23/hello-arduino-with-ruby-and-dino/">&#9875; Permalink</a></p>]]></content>
     </entry>
   
 </feed>

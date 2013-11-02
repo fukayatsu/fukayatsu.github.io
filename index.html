@@ -92,6 +92,103 @@
   <header>
     <h1 class="entry-title">
 
+<a href="/2013/11/03/merge-fonts/">半角:全角==1:2な等幅フォントを作る</a>
+
+</h1>
+
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-03T02:13:00+09:00" pubdate data-updated="true">Nov 3<span>rd</span>, 2013</time>
+         &bull; <a rel="bookmark" href="/2013/11/03/merge-fonts/">Permalink</a>
+      </p>
+    
+  </header>
+
+<div class="entry-content"><p>普段プログラミングする時は<a href="http://www.sublimetext.com/3">Sublime Text 3</a>と<a href="http://sourceforge.jp/projects/sfnet_sourcecodepro.adobe/">Source Code Pro</a>を使っているのだけれど、半角:全角の文字幅が1:2じゃなくて気になる時があった。</p>
+
+<p>ちょっと無理矢理な例だけど、こんな感じ:
+<img src="https://photos-3.dropbox.com/t/0/AADiNZK_LiJD2_M0TXMRxVv5mlPtTQX2qMbvch8txpwN9A/12/85825/png/2048x1536/3/1383418800/0/2/Screenshot%202013-11-03%2002.07.56.png/1WBSByeieM1FF0IeVHVnxf1LBxkd71dBIeM7uDKfvIA" alt="" /></p>
+
+<ul>
+<li>半角スペースが全角文字の半分の幅じゃないので<code>=&gt;</code>が揃わない。もやっとする</li>
+</ul>
+
+
+<h2><a href="http://sourceforge.jp/projects/sfnet_sourcecodepro.adobe/">Source Code Pro</a> と <a href="http://mix-mplus-ipa.sourceforge.jp/migmix/#diff_migmix1p_migmix2p">MigMix 1M</a>の合成</h2>
+
+<p>ベース: <a href="https://github.com/MasayukiFukada/CodeMFont">MasayukiFukada/CodeMFont</a></p>
+
+<h4>ベースからの変更点</h4>
+
+<ul>
+<li>Source Code Proの中間フォントに<code>Scale(70)</code>を適用</li>
+<li>記号をあまり改変しないように変更。全角スペースの可視化は残した</li>
+</ul>
+
+
+<p><img src="https://photos-4.dropbox.com/t/0/AAD0Ce1z2kn40M8UpH01nkwP-ysqc1hCKeqXUfEk4CmuHg/12/85825/png/1024x768/3/1383418800/0/2/Screenshot%202013-11-03%2002.08.37.png/qto5DmwG8lwZPzjXJOtcBJLThC4eMaWKH1lKXBnWnaM" alt="" /></p>
+
+<ul>
+<li>Hashのkeyに日本語が入っていても、もやっとしなくなった。</li>
+<li>半角文字が思ったより横に圧縮されたけど、ちょっと使ってたら慣れた</li>
+</ul>
+
+
+<h2>Tips</h2>
+
+<p>Macではフォントを削除→再生成→再インストールしてもキャッシュを消さないと反映されなかった。</p>
+
+<p>キャッシュ削除コマンド: <code>$ atsutil databases -removeUser</code></p>
+
+<h2>TODO</h2>
+
+<ul>
+<li>generator公開
+
+<ul>
+<li>素材用のフォントを自動的にダウンロードしてフォント生成するやつを作りたい</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+  <footer>
+    
+    
+  </footer>
+
+
+    </article>
+  
+    
+
+
+
+
+
+
+
+
+
+
+    <article >
+      
+  <header>
+    <h1 class="entry-title">
+
 <a href="/2013/08/11/iremocon-and-lita/">RubyとLita(chat bot)で自宅のエアコンを操作する</a>
 
 </h1>
@@ -1303,103 +1400,6 @@ quoteとかifとかdefineとか</p>
 
     </article>
   
-    
-
-
-
-
-
-
-
-
-
-
-    <article >
-      
-  <header>
-    <h1 class="entry-title">
-
-<a href="/2013/04/17/shibuyarb-2013-04-17/">4月のShibuya.rbの集まりに行ってきた箇条書き</a>
-
-</h1>
-
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-17T23:59:00+09:00" pubdate data-updated="true">Apr 17<span>th</span>, 2013</time>
-         &bull; <a rel="bookmark" href="/2013/04/17/shibuyarb-2013-04-17/">Permalink</a>
-      </p>
-    
-  </header>
-
-<div class="entry-content"><ul>
-<li><a href="http://www.zusaar.com/event/640004">渋谷.rb[:20130417] on Zusaar</a></li>
-<li><a href="http://togetter.com/li/489435">渋谷.rb[:20130417]のまとめ #shibuyarb - Togetter</a></li>
-</ul>
-
-
-<h1>memo</h1>
-
-<ul>
-<li>そろそろデプロイツールとかちゃんと使って行きたい
-
-<ul>
-<li>chefはboxen的にMacの環境構築するのに使い始めた</li>
-</ul>
-</li>
-<li>渋谷でJavaで研修中の人たちがいて、勝手に懐かしい感じになってた
-
-<ul>
-<li>今度話聞いてみたい
-
-<ul>
-<li>社内.rbとは</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>最近ブログもLTもおろそかになっていて、後ろめたし
-
-<ul>
-<li>近いうちにデプロイとかテスト環境構築について書く</li>
-</ul>
-</li>
-<li>もくもくタイムに<a href="https://chrome.google.com/webstore/detail/tag-visibler/gglgkdbiphkgeiljmlfdgbaoefhjmcmo">chrome extension</a>作った
-
-<ul>
-<li>16個目。上限まであと4つ。</li>
-<li>せっかくなので会話したほうが良かったと反省</li>
-</ul>
-</li>
-<li><a href="https://gist.github.com/fukayatsu/5231578">zusaarの特定のイベントの参加者を一括.rb</a>で参加した人をフォローしてみた
-
-<ul>
-<li>herokuとかで月1回発動するようにしておくと捗るかもしれない</li>
-</ul>
-</li>
-</ul>
-
-</div>
-
-  <footer>
-    
-    
-  </footer>
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1416,6 +1416,10 @@ quoteとかifとかdefineとか</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/11/03/merge-fonts/">半角:全角==1:2な等幅フォントを作る</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/08/11/iremocon-and-lita/">RubyとLita(chat bot)で自宅のエアコンを操作する</a>
       </li>
     
@@ -1429,10 +1433,6 @@ quoteとかifとかdefineとか</p>
     
       <li class="post">
         <a href="/2013/08/03/10lisp-00/">#10LISP &#8216;00に参加しました</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/07/25/leap-motion-and-ruby/">[WIP]Leap MotionとRubyで遊ぶ</a>
       </li>
     
   </ul>
