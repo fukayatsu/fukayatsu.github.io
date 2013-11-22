@@ -1,0 +1,37 @@
+!!!
+%html
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "IE=edge;chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %link{href: "/stylesheets/all.css?1384954982", media: "all", rel: "stylesheet", type:"text/css"}
+    %title
+      - if current_article.try(:title)
+        #{current_article.title} - fukayatsu.dev
+      - else
+        fukayatsu.dev
+  %body
+    .content
+      %header
+        .header-inner
+          .header-image
+            = link_to '/' do
+              %img{ src: '/images/fukayatsu.jpg' }
+          = link_to '/' do
+            .header-text
+              %h1.header-title
+                fukayatsu.dev
+              %p.header-description
+                a blog about technology
+      #main{role: "main"}
+        - if current_article.try(:date)
+          .publish-date
+            = link_to current_article.date, current_article
+        - if current_article.try(:title)
+          %h1.title= current_article.try(:title)
+        = yield
+      %footer
+        .footer-inner
+          %p.copyright
+            = link_to '© fukayatsu', 'https:/twitter.com/fukayatsu'
+          %p.powerd
+            Powered by GitHub & Middleman
