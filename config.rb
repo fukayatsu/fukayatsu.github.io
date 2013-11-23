@@ -123,3 +123,10 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+
+activate :deploy do |deploy|
+  deploy.build_before = true # default: false
+  deploy.method = :git
+  deploy.remote = 'origin'
+  deploy.branch = 'master'
+end
