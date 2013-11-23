@@ -1,7 +1,7 @@
 ---
 title: "#scmbc tokyo 3 に行ってきました"
 date: 2012-07-21 23:08
-tags: git,github,workshop,scmbc,夏のコンフリクト祭り,なごやこわい,ねこみみメイド,うさみエンジニア
+tags: git,github,workshop,scmbc,夏のコンフリクト祭り,なごやこわい,ねこみみメイド,うさみみエンジニア
 ---
 [7月21日 SCMBootCamp in Tokyo 3 #scmbc(東京都)](http://kokucheese.com/event/index/42642/)
 

@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/fukayatsu/middleman-blog.git
-  revision: a961f01c7bcba05684ce0388faab1cfa9ee6c56f
-  branch: fallback-utf8-tag
+  revision: 77d731cec7000d16e95cb647aef2e6eca66b0c26
+  branch: non-ascii-tag
   specs:
     middleman-blog (3.4.1)
       middleman-core (~> 3.2)
