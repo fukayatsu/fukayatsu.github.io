@@ -20,6 +20,11 @@ gem "middleman-blog", github: 'fukayatsu/middleman-blog', branch: 'non-ascii-tag
 ```
 とりあえず今はこんな感じで動かしている
 
+`追記: 2013-11-24 2:55`
+
+> [Handle UTF-8-MAC filename on MacOS by fukayatsu · Pull Request #1089 · middleman/middleman](https://github.com/middleman/middleman/pull/1089)
+プルリク出した
+
 ## 濁点を含むタグのページががビルド毎に生成と消滅を繰り返す
 mac特有の問題だった。
 
