@@ -20,12 +20,23 @@ gem "middleman-blog", github: 'fukayatsu/middleman-blog', branch: 'non-ascii-tag
 ```
 とりあえず今はこんな感じで動かしている
 
-## 日本語のタグページががビルド毎に生成と消滅を繰り返す
-調査中
+## 濁点を含むタグのページががビルド毎に生成と消滅を繰り返す
+mac特有の問題だった。
+
+現象としてはこれが近い
+> [カテゴリー名に濁点を含んだ日本語が使えない問題を解決する(Rsyncのiconvオプションを使う) - gam0022.net](http://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/)
+
+対策
+> [Support/NFC・NFD問題が解決 at master · Alice-Gits/Support](https://github.com/Alice-Gits/Support/tree/master/NFC%E3%83%BBNFD%E5%95%8F%E9%A1%8C%E3%81%8B%E3%82%99%E8%A7%A3%E6%B1%BA)
+
+```
+# on build/
+$ git config --local core.precomposeunicode true
+```
 
 `bundle exec middleman build --no-clean`
 
-でとりあえず対処
+一度`tags/*`を全部削除してから`build`でもいいかもしれない。
 
 ## 謎のpre-commit-hookでデプロイ出来ない
 自分のローカル環境ではリポジトリが作られると、自動的にmasterブランチにコミット出来ないようなpre-commit-hookが配置される。
