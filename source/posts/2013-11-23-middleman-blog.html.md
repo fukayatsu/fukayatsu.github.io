@@ -4,7 +4,7 @@ date: 2013-11-23 20:17 JST
 tags: middleman,middleman-blog
 ---
 
-## stylesheetがない
+## stylesheetどうしよう問題
 はまったというか、自分で1から書くか[Middleman Directory](http://directory.middlemanapp.com/#/templates/all)にあるやつを使うか迷った。
 せっかくなので自分で書いた。
 
