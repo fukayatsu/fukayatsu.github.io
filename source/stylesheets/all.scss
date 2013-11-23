@@ -14,7 +14,12 @@ body {
     color: inherit;
   }
   .publish-date {
-    text-align: right;
+    display: inline-block;
+    float: right;
+  }
+  .tags {
+    display: inline-block;
+    // text-align: left;
   }
 }
 

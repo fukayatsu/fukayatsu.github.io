@@ -1,9 +1,10 @@
 !!!
 %html
   %head
-    %meta{charset: "utf-8"}/
-    %meta{content: "IE=edge;chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{charset: "utf-8"}
+    %meta{content: "IE=edge;chrome=1", "http-equiv" => "X-UA-Compatible"}
     %link{href: "/stylesheets/all.css?1384954982", media: "all", rel: "stylesheet", type:"text/css"}
+  %link{href: "/images/favicon.ico", rel: "icon", type: "image/ico"}
     %title
       - if current_article.try(:title)
         #{current_article.title} - fukayatsu.dev
@@ -25,6 +26,10 @@
       - if current_article.try(:date)
         .publish-date
           = link_to current_article.date, current_article
+      - if current_article.try(:tags)
+        .tags
+          - current_article.tags.each do |tag|
+            = link_to tag, tag_path(tag)
       #main{role: "main"}
         - if current_article.try(:title)
           %h1.title= current_article.try(:title)
