@@ -13,6 +13,9 @@ body {
   a {
     color: inherit;
   }
+  .publish-date {
+    text-align: right;
+  }
 }
 
 header {
@@ -35,14 +38,32 @@ header {
 }
 
 #main {
-  margin-top: 40px;
+  // margin-top: 40px;
   padding: 20px;
   background-color: #F8F8F8;
   border-radius: 3px;
 
+  a {
+    color: #4183c4;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  h1 {
+    border-bottom: 1px solid #ddd;
+  }
+
+  h2 {
+    border-bottom: 1px solid #eee;
+  }
+
   pre {
-    background-color: #DDD;
     padding: 10px;
+    background-color: #EEE;
+    border: 1px solid #CCC;
     border-radius: 3px;
   }
 
@@ -58,6 +79,30 @@ header {
     padding-left: 1em;
   }
 
+  table {
+    width: 100%;
+    overflow: auto;
+    display: block;
+
+    td, th {
+      border: 1px solid #ddd;
+      padding: 6px 13px;
+    }
+
+    thead tr { background-color: #fff; }
+    tbody tr:nth-child(2n) {
+      background-color: #fff;
+    }
+  }
+
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin-top: 15px;
+  }
+
   img {
     width: 100%;
     display: block;
@@ -66,10 +111,6 @@ header {
 
   iframe {
     display: block;
-  }
-
-  .publish-date {
-    text-align: right;
   }
 }
 

@@ -21,11 +21,11 @@
               %h1.header-title
                 fukayatsu.dev
               %p.header-description
-                a blog about technology
+                under development
+      - if current_article.try(:date)
+        .publish-date
+          = link_to current_article.date, current_article
       #main{role: "main"}
-        - if current_article.try(:date)
-          .publish-date
-            = link_to current_article.date, current_article
         - if current_article.try(:title)
           %h1.title= current_article.try(:title)
         = yield

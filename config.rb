@@ -19,7 +19,7 @@ activate :blog do |blog|
   # blog.year_link = ":year.html"
   # blog.month_link = ":year/:month.html"
   # blog.day_link = ":year/:month/:day.html"
-  # blog.default_extension = ".md"
+  blog.default_extension = ".md"
 
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
@@ -30,7 +30,16 @@ activate :blog do |blog|
 end
 
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+set :markdown,
+  no_intra_emphasis: true,
+  tables: true,
+  fenced_code_blocks: true,
+  autolink: true,
+  strikethrough: true,
+  lax_spacing: true,
+  space_after_headers: true,
+  footnotes: true,
+  hard_wrap: true
 activate :syntax
 
 activate :directory_indexes
