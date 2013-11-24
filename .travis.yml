@@ -12,7 +12,8 @@ script:
     - bundle exec middleman build
 after_success:
     - cd build
-    - git add --all
+    - git init
+    - git add --all .
     - git commit -m 'Update by Travis CI'
     - 'git push --quiet https://$GH_TOKEN@github.com/fukayatsu/fukayatsu.github.io.git master -f 2> /dev/null'
 branches:
