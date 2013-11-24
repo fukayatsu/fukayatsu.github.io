@@ -67,7 +67,8 @@ function blog-publish() {
 
   # コミットしてremoteにpush
   git checkout source
-  git commit -am "Update Posts"
+  git add .
+  git commit -m "Update Posts"
   git push origin source
 
   echo 'done.'
