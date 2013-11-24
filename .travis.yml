@@ -8,14 +8,15 @@ env:
   - GIT_AUTHOR_NAME: fukayatsu
   - GIT_AUTHOR_EMAIL: fukayatsu@gmail.com
   - secure: "LUnQ0WkW5N+M19w6fbw8Eb5qQDXOJcJHET7ei/T21LmiLvidmZR29Jo9YiH3GuZ0X6GH3PI9NIlOTuz+Aq7fCh7pPolCBgGwskx08/7jFL770SmFVSa97y+b3vqUDBy69cLt214VJ3LKRzuvre/dmvvij+d0UeILPGo+RJrb4Oc="
+before_script:
+  - git clone https://github.com/fukayatsu/fukayatsu.github.io.git build
 script:
-    - bundle exec middleman build
+  - bundle exec middleman build
 after_success:
-    - cd build
-    - git init
-    - git add --all .
-    - 'git commit -m "Update by Travis CI [ci skip]"'
-    - 'git push --quiet https://$GH_TOKEN@github.com/fukayatsu/fukayatsu.github.io.git master -f 2> /dev/null'
+  - cd build
+  - git add --all .
+  - 'git commit -m "Update by Travis CI [ci skip]"'
+  - 'git push --quiet https://$GH_TOKEN@github.com/fukayatsu/fukayatsu.github.io.git master -f 2> /dev/null'
 branches:
   only:
     - source
