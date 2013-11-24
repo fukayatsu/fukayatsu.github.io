@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/get_dropbox_access_token/"/>
     <id>http://blog.url.com/2013/11/24/get_dropbox_access_token/</id>
     <published>2013-11-24T04:39:00Z</published>
-    <updated>2013-11-24T07:39:23+00:00</updated>
+    <updated>2013-11-24T07:49:59+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -28,7 +28,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman-blog/"/>
     <id>http://blog.url.com/2013/11/23/middleman-blog/</id>
     <published>2013-11-23T11:17:00Z</published>
-    <updated>2013-11-24T07:39:23+00:00</updated>
+    <updated>2013-11-24T07:49:59+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -93,7 +93,7 @@ $ git config --local core.precomposeunicode true
     <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman/"/>
     <id>http://blog.url.com/2013/11/23/middleman/</id>
     <published>2013-11-23T06:32:00Z</published>
-    <updated>2013-11-24T07:39:23+00:00</updated>
+    <updated>2013-11-24T07:49:59+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -141,7 +141,7 @@ $ git config --local core.precomposeunicode true
     <link rel="alternate" href="http://blog.url.com/2013/11/03/merge-fonts/"/>
     <id>http://blog.url.com/2013/11/03/merge-fonts/</id>
     <published>2013-11-02T17:13:00Z</published>
-    <updated>2013-11-24T07:39:23+00:00</updated>
+    <updated>2013-11-24T07:49:59+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -194,7 +194,7 @@ $ git config --local core.precomposeunicode true
     <link rel="alternate" href="http://blog.url.com/2013/08/11/iremocon-and-lita/"/>
     <id>http://blog.url.com/2013/08/11/iremocon-and-lita/</id>
     <published>2013-08-11T13:16:00Z</published>
-    <updated>2013-11-24T07:39:23+00:00</updated>
+    <updated>2013-11-24T07:49:59+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -323,7 +323,7 @@ hipchatのAndroidアプリ&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/08/11/run-gauche-with-sublime-text-2/"/>
     <id>http://blog.url.com/2013/08/11/run-gauche-with-sublime-text-2/</id>
     <published>2013-08-11T09:57:00Z</published>
-    <updated>2013-11-24T07:39:23+00:00</updated>
+    <updated>2013-11-24T07:49:59+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
