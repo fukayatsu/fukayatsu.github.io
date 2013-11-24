@@ -17,10 +17,11 @@
           .header-image
             = link_to '/' do
               %img{ src: '/images/fukayatsu.jpg' }
-          = link_to '/' do
-            .header-text
+          .header-text
+            = link_to '/' do
               %h1.header-title
                 fukayatsu.dev
+            = link_to 'http://blog.fukayatsu.com/', target: '_new' do
               %p.header-description
                 under development
       - if current_article.try(:date)
