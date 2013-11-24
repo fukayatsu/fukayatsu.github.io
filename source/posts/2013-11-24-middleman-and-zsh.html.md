@@ -33,6 +33,8 @@ tags:
     - `$ blog-publish`
 5. travis-ciとgithub pagesがよしなにしてくれる
 
+かなり心理的負担が無くなった。
+
 # 作業メモ
 ## zshの関数
 
