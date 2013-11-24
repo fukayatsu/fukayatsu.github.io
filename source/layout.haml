@@ -38,6 +38,11 @@
       %footer
         .footer-inner
           %p.copyright
-            = link_to '© fukayatsu', 'https:/twitter.com/fukayatsu'
+            = link_to '© fukayatsu', 'https:/twitter.com/fukayatsu', target: '_new'
           %p.powerd
-            Powered by GitHub & Travis & Middleman
+            Powered by
+            = link_to 'GitHub', 'https://github.com/fukayatsu/fukayatsu.github.io/tree/source', target: '_new'
+            &
+            = link_to 'Travis CI', 'https://travis-ci.org/fukayatsu/fukayatsu.github.io', target: '_new'
+            &
+            = link_to 'Middleman', 'http://middlemanapp.com/', target: '_new'
