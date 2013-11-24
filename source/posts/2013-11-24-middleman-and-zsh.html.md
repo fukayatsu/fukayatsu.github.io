@@ -1,7 +1,7 @@
 ---
 title: middleman-and-zsh
 date: 2013-11-24 19:53 JST
-tags:
+tags: middleman,zsh,pow
 ---
 
 ブログの記事を書くステップは、今までこんな感じだった。
