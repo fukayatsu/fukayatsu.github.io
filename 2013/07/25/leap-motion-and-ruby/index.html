@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+[WIP]Leap MotionとRubyで遊ぶ - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/07/25/leap-motion-and-ruby/">2013-07-25 20:23:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/leap-motion/">leap-motion</a>
+<a href="/tags/ruby/">ruby</a>
+<a href="/tags/wip/">wip</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>[WIP]Leap MotionとRubyで遊ぶ</h1>
+<p><img src="https://lh6.googleusercontent.com/-r7Cit35PdGs/Ue1PUJS9T3I/AAAAAAAAOrU/15GcUYE-Gc4/w739-h555-no/IMG_20130723_001953-MOTION.gif" /></p>
+
+<p>↑ leap motionのデモアプリで遊んでいる図</p>
+
+<hr>
+
+<p>今年の2月にorderした<a href="https://www.leapmotion.com/">Leap Motion</a>が先日(7/21)届いたので、<br>
+ここ数日<a href="https://airspace.leapmotion.com/">アプリをダウンロード</a>したりして遊んでいる。<br>
+(長時間姿勢を維持する必要があるアプリは結構疲れる)</p>
+
+<p>せっかくなので自分でも何か作ろうと思って<a href="https://developer.leapmotion.com/docs">Developerページ</a>を見ると、<br>
+今のところ公式にSDKが存在するのは</p>
+
+<ul>
+<li>C++</li>
+<li>Java</li>
+<li>Python</li>
+<li>C# and Unity</li>
+<li>JavaScript</li>
+</ul>
+
+<p>の5つ(6つ？)で、残念ながらRubyのSDKは無かった。</p>
+
+<p>ということで、以下Leap MotionをRubyで使うためにやったことの雑記</p>
+
+<h2>gemを探す</h2>
+
+<p>ちょっと探したところ、</p>
+
+<blockquote>
+<p><a href="https://github.com/glejeune/ruby-leap-motion">glejeune/ruby-leap-motion</a> &quot;Ruby interface to the Leap Motion Controller&quot;</p>
+</blockquote>
+
+<p>というのを見つけた。最終更新が2ヶ月前なので最新のSDKには対応していないのかもしれないけど、とりあえずこれを使ってみた</p>
+
+<h3>SWIG?</h3>
+
+<p>この<code>ruby-leap-motion</code>は<code>SWIG</code>というのを使っているらしかった。</p>
+
+<blockquote>
+<p><a href="http://ja.wikipedia.org/wiki/SWIG">SWIG - Wikipedia</a><br>
+  SWIG (Simplified Wrapper and Interface Generator) は、 C/C++ で書かれたプログラムやライブラリを、Tcl/Tk、Perl、Python、Ruby、PHP、Lua などのスクリプト言語や、Java、C#、Scheme、Ocaml などの言語に接続するためのオープンソースのツールである。</p>
+
+<p><a href="https://github.com/glejeune/ruby-leap-motion/blob/master/ext/swig/Leap.i">ruby-leap-motion/ext/swig/Leap.i at master · glejeune/ruby-leap-motion</a></p>
+</blockquote>
+
+<p>にはRuby用の設定が含まれているけど、最新のSDKの中の<code>Leap.i</code>には無かった。glejeuneさんが自分で追加したのだろうか。とりあえず今は保留。</p>
+
+<h3>座標を取得</h3>
+
+<p>とりあえず何らかの座標が取得できないと始まらないので(ジェスチャー認識もあるけど)、</p>
+
+<blockquote>
+<p><a href="https://github.com/glejeune/ruby-leap-motion/blob/master/ext/swig/Leap.i">ruby-leap-motion/ext/swig/Leap.i at master · glejeune/ruby-leap-motion</a></p>
+</blockquote>
+
+<p>これを見て試行錯誤して、指先の座標を取得することができた。</p>
+
+<h3>テルミンつくろう</h3>
+
+<p>画面を描写するのは大変そうだし、音だけ出ればいいやと思ってテルミン作ることにした。<br>
+先人↓</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/SE6XV3nLDUk" frameborder="0" allowfullscreen></iframe>
+
+<h3>テルミンの演奏法を調べる</h3>
+
+<blockquote>
+<p><a href="http://www.prhymx.com/theremin/text2.html">テルミン演奏法の説明</a></p>
+</blockquote>
+
+<p>右手を右に移動させると音が高くなって、左手を上に移動させると音が大きくなるらしい</p>
+
+<blockquote class="twitter-tweet"><p><a href="https://twitter.com/fukayatsu">@fukayatsu</a> 青山テルミン！... 何でもありません。</p>&mdash; dopin (@dopingoo) <a href="https://twitter.com/dopingoo/statuses/360042327479287808">July 24, 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h2>どうやって音鳴らそう?</h2>
+
+<p>Windowsならbeepとか使えた気がするけど、Macで音を出すプログラム書いた事なかったので困った。</p>
+
+<blockquote>
+<p><a href="https://github.com/nagachika/ruby-coreaudio">nagachika/ruby-coreaudio</a></p>
+</blockquote>
+
+<p>ちょっと調べて↑これを使わせてもらうことにした。</p>
+
+<h2>とりあえず動くようにした</h2>
+
+<blockquote>
+<p><a href="https://github.com/fukayatsu/leap-motion-sandbox">fukayatsu/leap-motion-sandbox</a></p>
+</blockquote>
+
+<p><a href="https://dl.dropboxusercontent.com/u/85825/blog/sound/2013-07-25/leap-t.mp3">↑録音してみた</a></p>
+
+<p>SDKを<code>~/Development/LeapSDK</code>に置いた場合はこんな感じで実行できるかもしれない(※後述)↓</p>
+<pre class="highlight text">$ git clone git@github.com:fukayatsu/leap-motion-sandbox.git
+$ cd leap-motion-sandbox
+$ bundle config build.leap-motion --with-leap-lib=~/Development/LeapSDK/lib --with-leap-include=~/Development/LeapSDK/include
+$ bundle
+$ bundle exec ruby theremin.rb
+</pre>
+<h3>既知の問題</h3>
+
+<ul>
+<li>音程が変わるときに音がブツブツ切れる
+
+<ul>
+<li><a href="http://nagano.monalisa-au.org/archives/204">この辺</a> の処理が必要かも</li>
+</ul></li>
+<li>しばらく動かすと、<code>[FATAL] failed to allocate memory</code>で落ちる</li>
+<li>なぜか <code>ruby 2.0.0p195 (2013-05-14 revision 40734) [x86_64-darwin12.3.0]</code>でしか<code>bundle</code>が成功しない
+
+<ul>
+<li>むしろなぜp195で成功したのか...</li>
+</ul></li>
+</ul>
+
+<h2>今後について</h2>
+
+<ul>
+<li><code>[FATAL] failed to allocate memory</code>の原因を探る</li>
+<li>bundleの検証</li>
+<li>Core Audioをもう少し深堀りする</li>
+<li>PythonのSDKを試してみる</li>
+</ul>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

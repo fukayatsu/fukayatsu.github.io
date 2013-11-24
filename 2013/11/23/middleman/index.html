@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+OctopressからMiddlemanに移行した - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/11/23/middleman/">2013-11-23 15:32:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/middleman/">middleman</a>
+<a href="/tags/markdown/">markdown</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>OctopressからMiddlemanに移行した</h1>
+<p>各記事の<a href="http://jekyllrb.com/docs/frontmatter/">Front-matter</a>を直すのと、いくつか<a href="http://via.me/">Via.Me</a>を参照していた画像があったので差し替えた。<br>
+その他はだいたいそのまま。</p>
+
+<h2>動機</h2>
+
+<ul>
+<li>そもそもOctopressのv2.0に、中途半端に2.1ブランチをマージして使っていたので気持ち悪かった
+
+<ul>
+<li>次のバージョンはいつ出るんだろう</li>
+</ul></li>
+<li>octopressで<code>rake new_post</code>, <code>rake deploy</code>するのが面倒になってきた</li>
+<li>Middleman便利というのはよく聞くが、実際に使う機会がなかった</li>
+</ul>
+
+<h2>移行にあたって</h2>
+
+<ul>
+<li>元の記事URLを踏襲</li>
+<li>デザインは最低限のものを用意
+
+<ul>
+<li>できるだけ<a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavored Markdown</a>のstyleに近くした</li>
+</ul></li>
+</ul>
+
+<h2>今後</h2>
+
+<ul>
+<li>DropBox経由で投稿できるようにする
+
+<ul>
+<li>参考: <a href="http://r7kamura.github.io/2013/11/10/hello-world.html">Hello world - r7kamura blog</a></li>
+</ul></li>
+<li>短めの記事をなるべく毎日書く</li>
+<li>qiitaみたいにcode-blockにファイル名を入れられるようにしたい</li>
+</ul>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

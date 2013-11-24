@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+zusaarのgem作った - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/03/24/zusaar-gem/">2013-03-24 20:48:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/ruby/">ruby</a>
+<a href="/tags/rubygem/">rubygem</a>
+<a href="/tags/zusaar/">zusaar</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>zusaarのgem作った</h1>
+<blockquote class="twitter-tweet"><p>いままでずっとZusaarのことZussarだと勘違いしてた</p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/315701285150158848">March 24, 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>gemをpublishする直前に気付いてリネーム祭りをした。<br>
+そしてこれからもちょくちょく間違える気がする。</p>
+
+<ul>
+<li><a href="https://rubygems.org/gems/zusaar">zusaar | RubyGems.org | your community gem host</a></li>
+<li><a href="https://github.com/fukayatsu/zusaar">fukayatsu/zusaar · GitHub</a></li>
+<li><a href="http://www.zusaar.com/doc/api.html">APIリファレンス｜参加費の決済もできるイベント開催支援サービス「Zusaar」</a></li>
+</ul>
+
+<p>そもそも検索系のAPIしかないので、自動でイベント参加とかはできないのが残念。</p>
+
+<h1>使用例</h1>
+
+<script src="https://gist.github.com/fukayatsu/5231578.js"></script>
+
+<h1>その他</h1>
+
+<h3>APIのバグ？</h3>
+
+<p>APIを叩いた時に、<code>profile_url</code>が<code>http//twitter.com/foobar</code>みたいな感じで<code>:</code>が抜けて返ってきたので、お問い合せフォームから報告しておいた。</p>
+
+<p>今のことろはgemの側で正しいurlに直している。</p>
+
+<h3>followのrate limit</h3>
+
+<blockquote>
+<p><a href="https://dev.twitter.com/docs/api/1.1/post/friendships/create">POST friendships/create | Twitter Developers</a></p>
+</blockquote>
+
+<p>には<code>Rate Limited? No</code>って書いてあるけど、どうも15分に15回に制限されてるような挙動をする。</p>
+
+<p>それで制限に引っかかると、環境によって<code>Twitter::Error::ClientError</code>が発生してハマった。</p>
+
+<h3>参考にしたgem</h3>
+
+<blockquote>
+<p><a href="https://github.com/sferik/twitter">sferik/twitter · GitHub</a></p>
+</blockquote>
+
+<p>attr_reader上書きしてるとことか、faraday gemつかってるとことかいろいろ真似してみた</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

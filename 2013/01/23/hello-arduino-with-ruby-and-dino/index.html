@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+Arduino買ったのでRubyとDinoでLチカした - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/01/23/hello-arduino-with-ruby-and-dino/">2013-01-23 22:49:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/arduino/">arduino</a>
+<a href="/tags/ruby/">ruby</a>
+<a href="/tags/dino/">dino</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>Arduino買ったのでRubyとDinoでLチカした</h1>
+<p>前回<a href="http://fukayatsu.github.com/2013/01/21/roomba-hack-01/">roomba-hack-01 準備編</a>で必要な部品を揃えるときに、<br>
+ついでに注文していた<a href="http://www.switch-science.com/products/detail.php?product_id=1120">Arduino Micro</a>が先に届いたのでいじってみた。</p>
+
+<h1>Arduino Micro</h1>
+
+<p><img alt="Arduino Micro" src="https://lh4.googleusercontent.com/-ICg8dyo-5eU/UP_oaT5a_-I/AAAAAAAAJxQ/K1MWoZt_u14/s865/IMG_20130123_223909.jpg" /></p>
+
+<p>PCとの接続は名前の通り(?)micro USBケーブル。<br>
+余ってるAndroidのケーブルとか使えて良い感じ。</p>
+
+<p>どうやら最初から<code>13 pin</code>にLEDが接続されているみたい。<br>
+他のArduinoもだいたいそうらしい。</p>
+
+<h1>はじめてのArduino</h1>
+
+<blockquote>
+<p><a href="http://9ensan.com/blog/diy/diy-arduino-setup-led-flash/">Arduinoをはじめようを購入してセットアップ〜LEDを点滅させるまで | 9ensanのLifeHack</a></p>
+</blockquote>
+
+<p>このページを参考にさせてもらってLEDをチカチカさせました。</p>
+
+<h1>RubyからArduinoコントロールしたい</h1>
+
+<p>これからJenkinsのXFDとか作るにあたって、どうせならRubyでコントロールしたいと思っていくつかライブラリを調べた。</p>
+
+<h2>library: funnel</h2>
+
+<p>最初に見つけたのがこれ。</p>
+
+<blockquote>
+<p><a href="http://funnel.cc/Software/Ruby">funnel.cc | Software / Ruby</a></p>
+</blockquote>
+
+<p>一度Arduino側に書き込んでしまえば、あとはRubyでやりたい放題らしい。</p>
+
+<p>へー、と思って<code>gem i funnel</code>とかやったら<br>
+&quot;a realtime resource-centric application framework&quot;な方の<a href="https://github.com/dansimpson/funnel">funnel</a><br>
+がインストールされたorz</p>
+
+<blockquote>
+<p><a href="http://code.google.com/p/funnel/downloads/list">Downloads - funnel - A toolkit to sketch your idea physically - Google Project Hosting</a></p>
+</blockquote>
+
+<p>↑ ここからダウンロードするのが正解だったみたい。</p>
+
+<p>でもRequirementsに<code>Ruby 1.8.6</code>とあったのでやめた。</p>
+
+<h2>gem: serialport</h2>
+
+<p>次に考えたのがこれ。</p>
+
+<blockquote>
+<p><a href="http://playground.arduino.cc/interfacing/ruby">Arduino Playground - Ruby</a></p>
+</blockquote>
+
+<p>にも</p>
+
+<blockquote>
+<p>The SerialPort gem seems to do the job.</p>
+</blockquote>
+
+<p>と書いてある。</p>
+
+<p>そういえば以前友人もこのgemを使ってArduinoで遊んでた。</p>
+
+<blockquote>
+<p><a href="http://hatone.hateblo.jp/entry/2012/02/12/160257">rubyとarduinoで、twitterのリプライをLED通知してみた - メモりメモる</a></p>
+</blockquote>
+
+<p>でも結局Arduino側もプログラム書かないといけないのでもうちょっと他の方法を探した。</p>
+
+<h2>gem: Dino</h2>
+
+<p>最後に見つけたのがこれ。<br>
+(というか最初から<a href="http://playground.arduino.cc/interfacing/ruby">Arduinoの公式のRubyのところ</a>を確認しておくべきだった。)</p>
+
+<p>2012年11月のRubyWorld Conference 2012で発表された、かなり新しいプロダクトらしい。<br>
+funnelと同じく一度Arduinoにバイナリを書き込んでしまえば、あとはRubyだけでいけるタイプ。</p>
+
+<p><a href="http://confreaks.com/videos/1294-rubyconf2012-arduino-the-ruby-way">Arduino the Ruby way - Austin Vance - Ruby Conference 2012</a></p>
+
+<script async class="speakerdeck-embed" data-id="5098572bc5f78d0002010edb" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
+
+<iframe width="640" height="360" src="http://www.youtube.com/embed/oUIor6GK-qA" frameborder="0" allowfullscreen></iframe>
+
+<p><br><br>
+<br></p>
+
+<h3>DinoでLチカ</h3>
+
+<p>うん、こういうのを探してた :)</p>
+<pre class="highlight ruby"><span class="nb">require</span> <span class="s1">&#39;dino&#39;</span>  <span class="c1"># gem install dino</span>
+
+<span class="n">board</span> <span class="o">=</span> <span class="no">Dino</span><span class="o">::</span><span class="no">Board</span><span class="nf">.new</span><span class="p">(</span><span class="no">Dino</span><span class="o">::</span><span class="no">TxRx</span><span class="nf">.new</span><span class="p">)</span>
+<span class="n">led</span> <span class="o">=</span> <span class="no">Dino</span><span class="o">::</span><span class="no">Components</span><span class="o">::</span><span class="no">Led</span><span class="nf">.new</span><span class="p">(</span><span class="ss">pin: </span><span class="mi">13</span><span class="p">,</span> <span class="ss">board: </span><span class="n">board</span><span class="p">)</span>
+
+<span class="o">[</span><span class="ss">:on</span><span class="p">,</span> <span class="ss">:off</span><span class="o">]</span><span class="nf">.cycle</span> <span class="k">do</span> <span class="o">|</span><span class="n">switch</span><span class="o">|</span>
+  <span class="n">led</span><span class="nf">.send</span><span class="p">(</span><span class="n">switch</span><span class="p">)</span>
+  <span class="nb">sleep</span> <span class="mi">0</span><span class="o">.</span><span class="mi">5</span>
+<span class="k">end</span>
+</pre>
+<p>使ってみようと思った人は↓このチュートリアルが詳しくて良いかも。</p>
+
+<blockquote>
+<p><a href="http://tutorials.jumpstartlab.com/projects/arduino/introducing_arduino.html">Introducing Arduino &amp; Dino - Jumpstart Lab Curriculum</a></p>
+</blockquote>
+
+<h1>つづく</h1>
+
+<p>ブレッドボードが手元になかったので今日はここまで。<br>
+早くセンサとかつないでいろいろ試したい</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

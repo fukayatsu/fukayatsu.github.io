@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+roomba-hack-02 はんだ付け&動作テスト編 - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/01/26/roomba-hack-02/">2013-01-26 21:19:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/roomba/">roomba</a>
+<a href="/tags/roomba780/">roomba780</a>
+<a href="/tags/roomba-hack/">roomba-hack</a>
+<a href="/tags/bluetooth/">bluetooth</a>
+<a href="/tags/bluesmirf/">bluesmirf</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>roomba-hack-02 はんだ付け&動作テスト編</h1>
+<p>↓ MacBookとBluetoothで接続したRoomba</p>
+
+<p><img src="https://lh4.googleusercontent.com/-_ikpMnQiunk/UQPL94eDwbI/AAAAAAAAKRI/xxWbqYDC4o4/s536/photo.jpg" /></p>
+
+<p>MacbookPro上でRubyからbluetooth経由でRoombaにコマンドを送って、掃除を開始させるところまでできました。</p>
+
+<p>手順とかちょっとハマったところとかを書いていきます。</p>
+
+<p>パーツに関しては<a href="http://fukayatsu.github.com/2013/01/21/roomba-hack-01/">前回の記事</a>をご参照下さい</p>
+
+<h2>BlueSMiRFにコネクタを取り付ける</h2>
+
+<p><img src="https://lh3.googleusercontent.com/-aMETeVkId8A/UQEsOt8eENI/AAAAAAAAJ2Y/PfwIMT9sH1c/s715/IMG_20130124_214029.jpg" /></p>
+
+<p>BlueSMiRFは1つ7000円ぐらいするので、取り外ししやすいようにコネクタをつけておきます。</p>
+
+<p>今回はXHコネクタというものを使ってみました。手元に圧着ペンチがなかったので、ラジオペンチで無理やり圧着させましたが、専用の工具を買ったほうが良さそうです。</p>
+
+<p><img src="https://lh5.googleusercontent.com/-PXJSo9Du9rY/UQEtqFM0_cI/AAAAAAAAJ50/KmObgoXQLVQ/s715/IMG_20130124_214755.jpg" /></p>
+
+<h2>3端子レギュレータにコンデンサを付ける</h2>
+
+<p><img src="https://lh4.googleusercontent.com/-rlAFOr_6sEo/UQEzVNeNfuI/AAAAAAAAJ8Y/qD-oHa4bVC4/s715/IMG_20130124_221213.jpg" /></p>
+
+<p>Roombaから取れる電源は16Vなので、そのままではBlueSMiRF(5V)につなげません。<br>
+間に3端子レギュレータを接続します。</p>
+
+<p>(回路図は秋月のパーツセットに入っています。)</p>
+
+<h2>コネクタに3端子レギュレータを(無理やり)付ける</h2>
+
+<p><img src="https://lh5.googleusercontent.com/-iLczJynhha4/UQE1wzwRriI/AAAAAAAAJ_4/JOHefyb_-aE/s715/IMG_20130124_222217.jpg" /></p>
+
+<p>写真だとちょっとわかりにくいのですが、コネクタのVCCの配線を切って3端子レギュレータの<code>in</code>と<code>out</code>をつないでいます。</p>
+
+<p>GNDの接続も忘れずに。</p>
+
+<h2>Roombaに接続</h2>
+
+<p><img src="https://lh4.googleusercontent.com/-cQGNFrgIBXo/UQFIO3Y61aI/AAAAAAAAKBc/lEUb7lSsj0k/s715/IMG_20130124_234043.jpg" /></p>
+
+<p>XHコネクタと単線をつないで、単線の反対側をroombaにつないでみます。</p>
+
+<p>ちなみに1番目のピンと6番目のピンは白い線でつないであります。</p>
+
+<p>どこに何をつなぐかは、<a href="http://media.wiley.com/product_ancillary/17/04700727/DOWNLOAD/iRobot%20Roomba%20Open%20Interface%20Specification.pdf">公式のリファレンス</a>を参照しましょう。</p>
+
+<p>とりあえずVCCとGNDが合っていればLEDが赤く点滅します。</p>
+
+<p>それから、RxとTxのつなぎ方に注意です。</p>
+<pre class="highlight text">BlueSMiRFのRx ---&gt; RoombaのTx
+BlueSMiRFのTx ---&gt; RoombaのRx
+</pre>
+<p>という感じにつなぎます。じゃないと僕みたいに小一時間なんで動かないんだろうと悩むことになりかねません。</p>
+
+<h2>MacとBlueSMiRFのペアリング</h2>
+
+<p>これはBluetoothマウスとかと同じような流れで行います。<br>
+確かパスコードは無しに設定した気がします。</p>
+
+<h2>シリアルポートの設定</h2>
+
+<p><img src="https://lh5.googleusercontent.com/-lWJ3AnXfTCo/UQPTthLkqhI/AAAAAAAAKSk/_hnBeL9CWI0/s713/Screen+Shot+2013-01-26+at+21.11.42.png" /></p>
+
+<p>ペアリングに成功したら、シリアルポートの設定をします。</p>
+
+<p>Bluetooth設定の画面で、デバイス(FireFly-...)を選択して歯車ボタンから<code>Edit serial ports...</code>を選ぶと↑この画像のような画面になります。</p>
+
+<p>この時の<code>Path: /dev/tty.FireFly...</code>は次で使うのでメモっておきましょう。</p>
+
+<h2>RubyからRoombaを操作するテスト</h2>
+
+<p>まずターミナルを開いて、必要なgemをinstallしておきます。</p>
+<pre class="highlight text">$ gem install serialport
+</pre>
+<p>次にirb(もしくはpry)から対話環境でシリアル通信してみます。</p>
+
+<p><strong>※Roombaの電源は入れておきましょう</strong></p>
+<pre class="highlight text">$ irb
+
+irb(main):001:0&gt; require &#39;serialport&#39;
+irb(main):002:0&gt; sp = SerialPort.new(&#39;/dev/tty.FireFly-86A2-SPP&#39;, 115200, 8, 1, 0)
+# &#39;/dev/tty.FireFly-86A2-SPP&#39;はさっきメモしたもの
+# この時点でBlueSMiRFのLEDが緑に点灯するはず
+
+irb(main):003:0&gt; sp.write 128.chr
+irb(main):004:0&gt; sp.write 130.chr
+irb(main):005:0&gt; sp.write 135.chr
+# roombaが掃除を始めるはず
+</pre>
+<p>128とか130とかが気になる人は<a href="http://media.wiley.com/product_ancillary/17/04700727/DOWNLOAD/iRobot%20Roomba%20Open%20Interface%20Specification.pdf">公式のリファレンス</a>を読みましょう。</p>
+
+<h1>つづく</h1>
+
+<p>次はいよいよTwitter連携とかをしていきたいと思います。</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

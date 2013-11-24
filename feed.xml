@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/</id>
+  <link href="http://blog.url.com/"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2013-11-24T04:39:00Z</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>get_dropbox_access_token</title>
+    <link rel="alternate" href="http://blog.url.com/2013/11/24/get_dropbox_access_token/"/>
+    <id>http://blog.url.com/2013/11/24/get_dropbox_access_token/</id>
+    <published>2013-11-24T04:39:00Z</published>
+    <updated>2013-11-24T07:39:23+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="https://github.com/fukayatsu/get_dropbox_access_token"&gt;というgemを作った。&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/jugyo/get-twitter-oauth-token"&gt;jugyo/get-twitter-oauth-token&lt;/a&gt;を参考にした。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>middleman-blogでちょっとはまったこと</title>
+    <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman-blog/"/>
+    <id>http://blog.url.com/2013/11/23/middleman-blog/</id>
+    <published>2013-11-23T11:17:00Z</published>
+    <updated>2013-11-24T07:39:23+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;h2&gt;stylesheetどうしよう問題&lt;/h2&gt;
+
+&lt;p&gt;はまったというか、自分で1から書くか&lt;a href="http://directory.middlemanapp.com/#/templates/all"&gt;Middleman Directory&lt;/a&gt;にあるやつを使うか迷った。&lt;br&gt;
+せっかくなので自分で書いた。&lt;/p&gt;
+
+&lt;h2&gt;日本語のタグが404になる&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/middleman/middleman-blog/pull/176"&gt;Non ascii tag support by fukayatsu · Pull Request #176 · middleman/middleman-blog&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ascii以外のタグを考慮してないっぽかったので、pull-req出した&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;# gem &amp;quot;middleman-blog&amp;quot;, &amp;quot;~&amp;gt; 3.4.1&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;middleman-blog&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;github: &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;fukayatsu/middleman-blog&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;branch: &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;non-ascii-tag&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;とりあえず今はこんな感じで動かしている&lt;/p&gt;
+
+&lt;h2&gt;濁点を含むタグのページががビルド毎に生成と消滅を繰り返す&lt;/h2&gt;
+
+&lt;p&gt;mac特有の問題だった。&lt;/p&gt;
+
+&lt;p&gt;現象としてはこれが近い&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/"&gt;カテゴリー名に濁点を含んだ日本語が使えない問題を解決する(Rsyncのiconvオプションを使う) - gam0022.net&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;対策&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/Alice-Gits/Support/tree/master/NFC%E3%83%BBNFD%E5%95%8F%E9%A1%8C%E3%81%8B%E3%82%99%E8%A7%A3%E6%B1%BA"&gt;Support/NFC・NFD問題が解決 at master · Alice-Gits/Support&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class="highlight text"&gt;# on build/
+$ git config --local core.precomposeunicode true
+&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;bundle exec middleman build --no-clean&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;一度&lt;code&gt;tags/*&lt;/code&gt;を全部削除してから&lt;code&gt;build&lt;/code&gt;でもいいかもしれない。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;追記: 2013-11-24 2:55&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/middleman/middleman/pull/1089"&gt;Handle UTF-8-MAC filename on MacOS by fukayatsu · Pull Request #1089 · middleman/middleman&lt;/a&gt;&lt;br&gt;
+プルリク出した&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;謎のpre-commit-hookでデプロイ出来ない&lt;/h2&gt;
+
+&lt;p&gt;自分のローカル環境ではリポジトリが作られると、自動的にmasterブランチにコミット出来ないようなpre-commit-hookが配置される。&lt;/p&gt;
+
+&lt;p&gt;今回&lt;code&gt;middleman-deploy&lt;/code&gt;というgemでデプロイしようとして、&lt;br&gt;
+&lt;code&gt;(blog root)/.git/hooks&lt;/code&gt;は空なのにデプロイ出来なくて数分悩んだ。&lt;/p&gt;
+
+&lt;p&gt;結局デプロイ時に自動で作られた&lt;code&gt;(blog root)/build/.git/hooks&lt;/code&gt;のpre-commit-hookが原因だったというオチ。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>OctopressからMiddlemanに移行した</title>
+    <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman/"/>
+    <id>http://blog.url.com/2013/11/23/middleman/</id>
+    <published>2013-11-23T06:32:00Z</published>
+    <updated>2013-11-24T07:39:23+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;各記事の&lt;a href="http://jekyllrb.com/docs/frontmatter/"&gt;Front-matter&lt;/a&gt;を直すのと、いくつか&lt;a href="http://via.me/"&gt;Via.Me&lt;/a&gt;を参照していた画像があったので差し替えた。&lt;br&gt;
+その他はだいたいそのまま。&lt;/p&gt;
+
+&lt;h2&gt;動機&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;そもそもOctopressのv2.0に、中途半端に2.1ブランチをマージして使っていたので気持ち悪かった
+
+&lt;ul&gt;
+&lt;li&gt;次のバージョンはいつ出るんだろう&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;octopressで&lt;code&gt;rake new_post&lt;/code&gt;, &lt;code&gt;rake deploy&lt;/code&gt;するのが面倒になってきた&lt;/li&gt;
+&lt;li&gt;Middleman便利というのはよく聞くが、実際に使う機会がなかった&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;移行にあたって&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;元の記事URLを踏襲&lt;/li&gt;
+&lt;li&gt;デザインは最低限のものを用意
+
+&lt;ul&gt;
+&lt;li&gt;できるだけ&lt;a href="https://help.github.com/articles/github-flavored-markdown"&gt;GitHub Flavored Markdown&lt;/a&gt;のstyleに近くした&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;今後&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DropBox経由で投稿できるようにする
+
+&lt;ul&gt;
+&lt;li&gt;参考: &lt;a href="http://r7kamura.github.io/2013/11/10/hello-world.html"&gt;Hello world - r7kamura blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;短めの記事をなるべく毎日書く&lt;/li&gt;
+&lt;li&gt;qiitaみたいにcode-blockにファイル名を入れられるようにしたい&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>半角:全角==1:2な等幅フォントを作る</title>
+    <link rel="alternate" href="http://blog.url.com/2013/11/03/merge-fonts/"/>
+    <id>http://blog.url.com/2013/11/03/merge-fonts/</id>
+    <published>2013-11-02T17:13:00Z</published>
+    <updated>2013-11-24T07:39:23+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;普段プログラミングする時は&lt;a href="http://www.sublimetext.com/3"&gt;Sublime Text 3&lt;/a&gt;と&lt;a href="http://sourceforge.jp/projects/sfnet_sourcecodepro.adobe/"&gt;Source Code Pro&lt;/a&gt;を使っているのだけれど、半角:全角の文字幅が1:2じゃなくて気になる時があった。&lt;/p&gt;
+
+&lt;p&gt;ちょっと無理矢理な例だけど、こんな感じ:&lt;br&gt;
+&lt;img src="/images/2013-11-03-a.png" /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;半角スペースが全角文字の半分の幅じゃないので&lt;code&gt;=&amp;gt;&lt;/code&gt;が揃わない。もやっとする&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;&lt;a href="http://sourceforge.jp/projects/sfnet_sourcecodepro.adobe/"&gt;Source Code Pro&lt;/a&gt; と &lt;a href="http://mix-mplus-ipa.sourceforge.jp/migmix/#diff_migmix1p_migmix2p"&gt;MigMix 1M&lt;/a&gt;の合成&lt;/h2&gt;
+
+&lt;p&gt;ベース: &lt;a href="https://github.com/MasayukiFukada/CodeMFont"&gt;MasayukiFukada/CodeMFont&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4&gt;ベースからの変更点&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Source Code Proの中間フォントに&lt;code&gt;Scale(70)&lt;/code&gt;を適用&lt;/li&gt;
+&lt;li&gt;記号をあまり改変しないように変更。全角スペースの可視化は残した&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="/images/2013-11-03-b.png" /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hashのkeyに日本語が入っていても、もやっとしなくなった。&lt;/li&gt;
+&lt;li&gt;半角文字が思ったより横に圧縮されたけど、ちょっと使ってたら慣れた&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Tips&lt;/h2&gt;
+
+&lt;p&gt;Macではフォントを削除→再生成→再インストールしてもキャッシュを消さないと反映されなかった。&lt;/p&gt;
+
+&lt;p&gt;キャッシュ削除コマンド: &lt;code&gt;$ atsutil databases -removeUser&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2&gt;TODO&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;generator公開
+
+&lt;ul&gt;
+&lt;li&gt;素材用のフォントを自動的にダウンロードしてフォント生成するやつを作りたい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>RubyとLita(chat bot)で自宅のエアコンを操作する</title>
+    <link rel="alternate" href="http://blog.url.com/2013/08/11/iremocon-and-lita/"/>
+    <id>http://blog.url.com/2013/08/11/iremocon-and-lita/</id>
+    <published>2013-08-11T13:16:00Z</published>
+    <updated>2013-11-24T07:39:23+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;以前は&lt;a href="https://github.com/fukayatsu/room_bot/blob/master/julius/roombot.rb"&gt;音声認識で家電操作&lt;/a&gt;をしてたけど、&lt;br&gt;
+引越しの時に環境が変わったのでちょっとやりかたを変えてみた。&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="ArduinoとiRemocon" src="https://lh6.googleusercontent.com/-kIVBmVmPATk/UgOX0He2ECI/AAAAAAAAPFs/QtRvi0Pc464/w701-h526-no/IMG_20130808_220558.jpg" /&gt;&lt;br&gt;
+ポスター用の剥がせる両面テープで壁に貼ってみた&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="w50" src="https://dl.dropboxusercontent.com/u/85825/blog/image/20130811/home-lita.png" /&gt;&lt;br&gt;
+hipchatのAndroidアプリ&lt;/p&gt;
+
+&lt;h1&gt;できること&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;30分おきに温度、湿度、明るさを報告&lt;/li&gt;
+&lt;li&gt;Hipchatからエアコンと照明のON/OFF
+
+&lt;ul&gt;
+&lt;li&gt;最近暑いので、会社を出る前にクーラー入れたりする&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;毎日8:00に照明ON, 25:00に照明OFF
+
+&lt;ul&gt;
+&lt;li&gt;寝起きが良くなった気がする&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;下準備&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;天井の照明をリモコン式のものに変更
+
+&lt;ul&gt;
+&lt;li&gt;制御が楽なのでONとOFFのボタンが付いているものがよい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;hipchatアカウント取得
+
+&lt;ul&gt;
+&lt;li&gt;今なら5人まで無料なので、自分の分とbotの分を作る&lt;/li&gt;
+&lt;li&gt;よく考えたらチャットルームに自分とbotしかいないのって...&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;ハードウェア&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MacBook Air(サーバ)&lt;/li&gt;
+&lt;li&gt;赤外線送信
+
+&lt;ul&gt;
+&lt;li&gt;iRemocon
+
+&lt;ul&gt;
+&lt;li&gt;以前音声認識で家電を操作してた時のを流用&lt;/li&gt;
+&lt;li&gt;無操作だと5分で接続が切れるので、keep aliveが必要ということを今回はじめて知った&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;温度、湿度、明るさセンサー
+
+&lt;ul&gt;
+&lt;li&gt;Arduino + 秋月電子で買ったパーツ&lt;/li&gt;
+&lt;li&gt;これも以前使っていたものを流用&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;ソフトウェア&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/home-lita"&gt;fukayatsu/home-lita&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;本体&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/jimmycuadra/lita"&gt;jimmycuadra/lita&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ざっくり言うとhubot(github製bot framework)のRuby版。userの権限管理とかもできる&lt;/li&gt;
+&lt;li&gt;ちょっと前に会社のhipchat上のbotをhubotからlitaに置き換えたら結構良かったので、今回採用&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/jimmycuadra/lita-hipchat"&gt;jimmycuadra/lita-hipchat&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;litaのhipchat adapter&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/lita-schedule"&gt;fukayatsu/lita-schedule&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;lita上でcron的なことをするやつ。とりあえず動くぐらいの完成度&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/r7kamura/iremocon"&gt;r7kamura/iremocon&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iremoconのrubyインタフェース&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/austinbv/dino"&gt;austinbv/dino&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/01/23/hello-arduino-with-ruby-and-dino/"&gt;Arduino買ったのでRubyとDinoでLチカした - fukayatsu.dev&lt;/a&gt;を参照&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;これからやりたいこと&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;音声認識、音声再生を復活させたい
+
+&lt;ul&gt;
+&lt;li&gt;「今何時？」とか「今日の天気は？」とか「電気消して」とかが地味に便利だった&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Androidとかと組み合わせて、自宅から出たら電気が消えるようにしたい
+
+&lt;ul&gt;
+&lt;li&gt;端末の自宅wifiへの接続の有無で制御できそう？&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Lita本体にschedule機能を入れたい
+
+&lt;ul&gt;
+&lt;li&gt;テスト書く&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Sublime Text 2でGaucheを実行する</title>
+    <link rel="alternate" href="http://blog.url.com/2013/08/11/run-gauche-with-sublime-text-2/"/>
+    <id>http://blog.url.com/2013/08/11/run-gauche-with-sublime-text-2/</id>
+    <published>2013-08-11T09:57:00Z</published>
+    <updated>2013-11-24T07:39:23+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src="https://dl.dropboxusercontent.com/u/85825/blog/image/20130811/sublime-scm.png" /&gt;&lt;/p&gt;
+
+&lt;h2&gt;設定方法&lt;/h2&gt;
+
+&lt;p&gt;[Tools] &amp;gt; [Build System] &amp;gt; [New Build System...]を選び、&lt;br&gt;
+以下を&lt;code&gt;Gauche.sublime-build&lt;/code&gt;のファイル名で保存(ディレクトリは&lt;code&gt;Packages/User/&lt;/code&gt;)&lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;cmd&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;gosh&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;$file&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;selector&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;source.lisp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;osx&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;path&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/usr/local/bin:/opt/local/bin&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;linux&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;path&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/usr/local/bin:/usr/bin&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/pre&gt;
+&lt;h3&gt;試しに実行してみる&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;hello.scm&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="highlight scheme"&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;hello, world&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;print&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;/pre&gt;
+&lt;p&gt;こんな感じに書いて、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Cmd(Ctrl) + B&lt;/code&gt;で実行してみる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;うまくいくとこんな感じに表示される&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;hello, world
+6
+&lt;span class="o"&gt;[&lt;/span&gt;Finished &lt;span class="k"&gt;in &lt;/span&gt;0.1s]
+&lt;/pre&gt;
+&lt;h3&gt;実行しても何も表示されない場合&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;[Tools] &amp;gt; [Build System]が&lt;code&gt;Automatic&lt;/code&gt;もしくは&lt;code&gt;Gauche&lt;/code&gt;になっているかどうか調べる&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Ctrl + `&lt;/code&gt;で実行時にエラーが発生してないか調べる&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;UnicodeDecodeError: &amp;#39;ascii&amp;#39; codec can&amp;#39;t decode&lt;/code&gt;というエラーの場合は&lt;br&gt;
+&lt;a href="https://github.com/maltize/sublime-text-2-ruby-tests/issues/116#issuecomment-11103810"&gt;Packages/Default/exec.pyを変更する&lt;/a&gt;ことで回避できた&lt;/p&gt;
+
+&lt;h3&gt;参考&lt;/h3&gt;
+
+&lt;p&gt;以下のページを参考にさせて頂きました&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://y-anz-m.blogspot.jp/2012/11/sublime-text-2-typescript.html"&gt;Y.A.M の 雑記帳: Sublime Text 2 で TypeScript をビルドする&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/maltize/sublime-text-2-ruby-tests/issues/116"&gt;UnicodeDecodeError: &amp;#39;ascii&amp;#39; codec can&amp;#39;t decode · Issue #116 · maltize/sublime-text-2-ruby-tests&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+</feed>

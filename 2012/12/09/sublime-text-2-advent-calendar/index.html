@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+ST2からTwitterに投稿するプラグイン作った - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2012/12/09/sublime-text-2-advent-calendar/">2012-12-09 16:55:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/advent_calendar/">advent_calendar</a>
+<a href="/tags/sublime_text_2/">sublime_text_2</a>
+<a href="/tags/st2/">st2</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>ST2からTwitterに投稿するプラグイン作った</h1>
+<p>この記事は<br>
+<a href="http://www.adventar.org/calendars/20">Sublime Text 2 Advent Calendar 2012</a>の9日目の記事です。</p>
+
+<h2>Sublime Text 2と僕</h2>
+
+<p>メインのエディタをVimからST2にしてからだいたい4ヶ月ぐらい経ちました。</p>
+
+<p>VimのキーバインドでPHPやRuby、markdownなどを書くのに使っています。</p>
+
+<p>使っているプラグインは<a href="https://github.com/fukayatsu/dotfiles/blob/master/sublime/User/Package%20Control.sublime-settings">このへん</a><br>
+で見れます。</p>
+
+<h2>プラグイン作ってみた</h2>
+
+<p><a href="https://github.com/fukayatsu/SublimeTweetLine">TweetLine</a>というSublime Text 2のTwitter投稿専用プラグインを作ったので紹介します。</p>
+
+<p>すでに高機能な<a href="https://github.com/rozboris/Sublime-Tweet">Sublime Tweet</a>というのがありますが、<br>
+input barからテキストを入力しても日本語変換確定時のEnterでTweetされてしまうなど<br>
+微妙に使いにくいという問題がありました。</p>
+
+<p>この問題はプラグインの問題というよりはSublime Text 2自体の問題のようなので、<br>
+新規にプラグインを作ってエディタからのTweetを快適にしようと考えました。</p>
+
+<h2>使いかた</h2>
+
+<ul>
+<li><code>super + shift + p</code> &gt; Install Package</li>
+</ul>
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/install_package.png" /></p>
+
+<ul>
+<li>TweetLineを選択</li>
+</ul>
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/install_tweetline.png" /></p>
+
+<ul>
+<li>key設定</li>
+</ul>
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/menu.png" /><br>
+↓<br>
+<img src="https://dl.dropbox.com/u/85825/blog/image/20121209/keymap.png" /></p>
+
+<ul>
+<li><code>super + ctrl + t</code> (初回のみ)</li>
+</ul>
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/authorize_web.png" /><br>
+↓<br>
+<img src="https://dl.dropbox.com/u/85825/blog/image/20121209/authorized.png" /><br>
+↓<br>
+<img src="https://dl.dropbox.com/u/85825/blog/image/20121209/input_pincode.png" /></p>
+
+<ul>
+<li>選択範囲無しで<code>super + ctrl + t</code> : 現在の行をつぶやく</li>
+</ul>
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/current_line.png" /><br>
+↓<br>
+<img src="https://dl.dropbox.com/u/85825/blog/image/20121209/tweet_current_line.png" /></p>
+
+<ul>
+<li>選択範囲ありで<code>super + ctrl + t</code> : 選択範囲をつぶやく</li>
+</ul>
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/selected_area.png" /><br>
+↓<br>
+<img src="https://dl.dropbox.com/u/85825/blog/image/20121209/tweet_selected_area.png" /></p>
+
+<ul>
+<li><code>super + shift + p</code> &gt; logout</li>
+</ul>
+
+<p><img src="https://dl.dropbox.com/u/85825/blog/image/20121209/logout.png" /></p>
+
+<ul>
+<li>おわり</li>
+</ul>
+
+<p>いかがでしたでしょうか。<br>
+エラー処理とかは未だちゃんと実装していないのですが、よかったら使ってみてください</p>
+
+<p>明日は<a href="https://twitter.com/yumu19">@yumu19</a>さんです :)</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

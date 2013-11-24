@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+octopress with pow - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2012/07/16/octopress-with-pow/">2012-07-16 00:13:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/octopress/">octopress</a>
+<a href="/tags/pow/">pow</a>
+<a href="/tags/mac/">mac</a>
+<a href="/tags/powder/">powder</a>
+<a href="/tags/grabbox/">grabbox</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>octopress with pow</h1>
+<p><img title="こんなかんじ" alt="screen shot" src="http://dl.dropbox.com/u/85825/Screenshots/mv63g2j1-e4e.png" /></p>
+
+<blockquote>
+<p><a href="http://marutanm.github.com/blog/2012/01/07/octopress-preview-pow/">OctopressのpreviewをPowでやると便利ですよという話 &gt; marutanmlog</a></p>
+</blockquote>
+
+<p>でも言及されているように、octopress + powが良い感じ。</p>
+
+<p>また、powを便利に使うための<code>powder</code>というgemがあり、</p>
+
+<p>たとえば、<br>
+    gem i powder<br>
+    cd path/to/octopress<br>
+    powder link</p>
+
+<p>とすれば、<code>http://octopress.dev</code>でpreviewできる。</p>
+
+<p>また、<code>http://hogehoge.dev</code>でpreviewしたい場合は、<br>
+    cd ~/.pow<br>
+    mv octopress hogehoge<br>
+のようにすればよい。</p>
+
+<p>あとは<code>rake watch</code>させておいて、いいかんじになったら<code>rake deploy</code>でok</p>
+
+<p>うーん、octopressといい、powといい、使っていて心地良い : )</p>
+
+<h4>余談:</h4>
+
+<p>screen shotを載せるために<a href="http://grabbox.devsoft.no/">GrabBox</a>というスクリーンキャプチャをつかってみた。これは<code>cmd+shift+4</code>などとした時に、<br>
+デスクトップに生成された画像を自動的にDropboxへ移動して、public linkをクリップボードにコピーしてくれる。これはこれで便利。</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

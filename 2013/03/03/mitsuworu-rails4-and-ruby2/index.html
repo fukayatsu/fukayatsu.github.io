@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+Rails4とRuby2で簡単なWebサービスを作ってみた - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/03/03/mitsuworu-rails4-and-ruby2/">2013-03-03 16:20:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/mitsuworu/">mitsuworu</a>
+<a href="/tags/rails4/">rails4</a>
+<a href="/tags/ruby2/">ruby2</a>
+<a href="/tags/みつをる/">みつをる</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>Rails4とRuby2で簡単なWebサービスを作ってみた</h1>
+<p>作ったのはこれ &gt; <a href="http://mitsuwo.net/">みつをる</a></p>
+
+<p><a href="http://mitsuwo.net/cards/1"><img alt="1362077672" src="https://s3-ap-northeast-1.amazonaws.com/mitsuwo/images/cards/1362077672.png" /></a></p>
+
+<p>いわゆる縦書ジェネレータ的なやつ。</p>
+
+<h1>経緯</h1>
+
+<p>先週の火曜日に社内chat(hipchat)で<a href="http://tegaki-maker.com/">手書きメーカー</a>で作成された画像(「えんじにあだもの　あつを」)が流れていて、いまいちそれっぽくなかったので自分で作ることにした。</p>
+
+<p>ちょうどRails 4.0.0.beta1のgemが公開されたタイミングだったので、今後の為に試してみることにした。</p>
+
+<h1>開発ログ</h1>
+
+<p>平日の帰宅後を使って3日程度掛かったのでコミットログを振り返りながら何をしたか書く</p>
+
+<h2>火曜夜</h2>
+
+<p>ドメインの確保と任意のフォントで縦書画像を生成する部分の検証。</p>
+
+<ul>
+<li>下準備
+
+<ul>
+<li>mitsuwo.netのドメインを取得</li>
+<li>s3のバケットを確保</li>
+</ul></li>
+<li>Initial commit</li>
+<li>rails g scaffold card author:string body:text image:string
+
+<ul>
+<li>モデル名はとりあえず<code>card</code>にした。</li>
+<li>add mini_magick</li>
+<li>この時はmini_magickで画像に文字を埋め込めると勘違いしていた</li>
+</ul></li>
+<li>add RMagick
+
+<ul>
+<li>mini_magickと入れ替え</li>
+</ul></li>
+<li>draw.annotateのテスト
+
+<ul>
+<li>画像に文字列描写できた</li>
+</ul></li>
+<li>縦書き対応
+
+<ul>
+<li>一文字ずつ描写してむりやり縦書き対応</li>
+<li><code>ー</code>を<code>｜</code>に置き換えたり</li>
+</ul></li>
+</ul>
+
+<h2>水曜夜</h2>
+
+<p>プロトタイプ完成まで</p>
+
+<ul>
+<li>プレビューボタンとダミー画像を追加</li>
+<li>rails g model TmpImage author:string body:text data:binary
+
+<ul>
+<li>この時は、プレビュー用の一時的な画像をDBに保存しようとしていた</li>
+</ul></li>
+<li>delete tmp image model
+
+<ul>
+<li>やっぱり別方式でやることにした</li>
+</ul></li>
+<li>プレビューの実装
+
+<ul>
+<li>base64エンコードでjson中に含めてしまうことにした。</li>
+<li>シンプル</li>
+</ul></li>
+<li>add aws-sdk gem
+
+<ul>
+<li>公開時にS3にアップロードする</li>
+</ul></li>
+</ul>
+
+<h2>木曜夜</h2>
+
+<p>本番公開のための準備とデプロイ</p>
+
+<ul>
+<li>twitter facebookボタンの追加</li>
+<li>meta tagの追加</li>
+<li>add favicon追加</li>
+<li><p>本番環境構築</p>
+
+<ul>
+<li>AWS
+
+<ul>
+<li>EC2 micro</li>
+<li>S3</li>
+<li>Route 53</li>
+</ul></li>
+<li>nginx</li>
+<li>unicorn</li>
+</ul></li>
+<li><p>本番デプロイ</p></li>
+</ul>
+
+<h2>金曜夜(T2-Study#5)</h2>
+
+<p>おまけ</p>
+
+<ul>
+<li>ビール飲みながら</li>
+<li>hubot scriptを作成
+
+<ul>
+<li>最初jsonでPOSTしようとしたが日本語が含まれているとうまくいかなかった</li>
+</ul></li>
+</ul>
+
+<p>{% gist 5065136 %}</p>
+
+<p>例えば<code>hubot mitsuwo 寿司が&lt;br&gt;食べたいのです,名無し</code>とコマンドを打つと、<br>
+結果をhipchatに貼ってくれる。便利。</p>
+
+<p><a href="http://mitsuwo.net/cards/52"><img alt="1362299581" src="https://s3-ap-northeast-1.amazonaws.com/mitsuwo/images/cards/1362299581.png" /></a></p>
+
+<h1>まとめ</h1>
+
+<p>あんまり複雑なことはしていないので、Rails 4とかRuby 2とかはあまり意識しなかった。</p>
+
+<p>思ったよりも時間が掛かった。半分ぐらいの時間で作れるようになりたい。</p>
+
+<p>nginx・unicorn・RMagickは初めて使ったので、良い経験になった。</p>
+
+<p>自分が必要とするものを作るのはやはり楽しい。</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

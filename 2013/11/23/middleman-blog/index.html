@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+middleman-blogでちょっとはまったこと - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/11/23/middleman-blog/">2013-11-23 20:17:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/middleman/">middleman</a>
+<a href="/tags/middleman-blog/">middleman-blog</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>middleman-blogでちょっとはまったこと</h1>
+<h2>stylesheetどうしよう問題</h2>
+
+<p>はまったというか、自分で1から書くか<a href="http://directory.middlemanapp.com/#/templates/all">Middleman Directory</a>にあるやつを使うか迷った。<br>
+せっかくなので自分で書いた。</p>
+
+<h2>日本語のタグが404になる</h2>
+
+<blockquote>
+<p><a href="https://github.com/middleman/middleman-blog/pull/176">Non ascii tag support by fukayatsu · Pull Request #176 · middleman/middleman-blog</a></p>
+</blockquote>
+
+<p>ascii以外のタグを考慮してないっぽかったので、pull-req出した</p>
+<pre class="highlight ruby"><span class="c1"># gem &quot;middleman-blog&quot;, &quot;~&gt; 3.4.1&quot;</span>
+<span class="n">gem</span> <span class="s2">&quot;middleman-blog&quot;</span><span class="p">,</span> <span class="ss">github: </span><span class="s1">&#39;fukayatsu/middleman-blog&#39;</span><span class="p">,</span> <span class="ss">branch: </span><span class="s1">&#39;non-ascii-tag&#39;</span>
+</pre>
+<p>とりあえず今はこんな感じで動かしている</p>
+
+<h2>濁点を含むタグのページががビルド毎に生成と消滅を繰り返す</h2>
+
+<p>mac特有の問題だった。</p>
+
+<p>現象としてはこれが近い</p>
+
+<blockquote>
+<p><a href="http://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/">カテゴリー名に濁点を含んだ日本語が使えない問題を解決する(Rsyncのiconvオプションを使う) - gam0022.net</a></p>
+</blockquote>
+
+<p>対策</p>
+
+<blockquote>
+<p><a href="https://github.com/Alice-Gits/Support/tree/master/NFC%E3%83%BBNFD%E5%95%8F%E9%A1%8C%E3%81%8B%E3%82%99%E8%A7%A3%E6%B1%BA">Support/NFC・NFD問題が解決 at master · Alice-Gits/Support</a></p>
+</blockquote>
+<pre class="highlight text"># on build/
+$ git config --local core.precomposeunicode true
+</pre>
+<p><code>bundle exec middleman build --no-clean</code></p>
+
+<p>一度<code>tags/*</code>を全部削除してから<code>build</code>でもいいかもしれない。</p>
+
+<p><code>追記: 2013-11-24 2:55</code></p>
+
+<blockquote>
+<p><a href="https://github.com/middleman/middleman/pull/1089">Handle UTF-8-MAC filename on MacOS by fukayatsu · Pull Request #1089 · middleman/middleman</a><br>
+プルリク出した</p>
+</blockquote>
+
+<h2>謎のpre-commit-hookでデプロイ出来ない</h2>
+
+<p>自分のローカル環境ではリポジトリが作られると、自動的にmasterブランチにコミット出来ないようなpre-commit-hookが配置される。</p>
+
+<p>今回<code>middleman-deploy</code>というgemでデプロイしようとして、<br>
+<code>(blog root)/.git/hooks</code>は空なのにデプロイ出来なくて数分悩んだ。</p>
+
+<p>結局デプロイ時に自動で作られた<code>(blog root)/build/.git/hooks</code>のpre-commit-hookが原因だったというオチ。</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+git-about.meをリリースしました - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/05/05/git-about-dot-me/">2013-05-05 12:00:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/service/">service</a>
+<a href="/tags/git-about-me/">git-about.me</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>git-about.meをリリースしました</h1>
+<p><a href="http://git-about.me/">GitAboutMe  -  &quot;ABOUT ME&quot; for Git users</a></p>
+
+<h2>使いかた</h2>
+
+<ul>
+<li><a href="http://git-about.me/">git-about.me</a> でユーザ名と公開鍵を登録</li>
+<li>git clone, edit file, git push</li>
+</ul>
+
+<p>例: <a href="http://git-about.me/fukayatsu">git-about.me/fukayatsu</a></p>
+<pre class="highlight text">$ git clone git@git-about.me:fukayatsu about-fukayatsu
+$ cd about-fukayatsu
+(edit README.md)
+$ git commit -am &#39;Update README.md&#39;
+$ git push origin master
+</pre>
+<ul>
+<li>Git版のabout.meです
+
+<ul>
+<li>(劣化版github pagesともいう)</li>
+</ul></li>
+<li>他のユーザのプロフィールをgit cloneできます</li>
+<li>デザインとか、細かい調整がまだ終わっていない</li>
+</ul>
+
+<h2>作った理由</h2>
+
+<ul>
+<li>PHP疲れ</li>
+<li>プログラマブルにリポジトリを操作するの面白そう
+
+<ul>
+<li>実際面白かった</li>
+</ul></li>
+<li>rails周りの開発、運用の経験値を上げたい
+
+<ul>
+<li>capstranoを初めてまともに使った</li>
+</ul></li>
+</ul>
+
+<h2>使った技術要素</h2>
+
+<ul>
+<li>aws-ec2-micro</li>
+<li>nginx</li>
+<li>unicorn</li>
+<li>ruby 2.0.0-p0</li>
+<li>rails 4.0.0.rc1</li>
+<li>capstrano</li>
+<li>gitolite</li>
+<li>grit</li>
+<li>ムームードメイン</li>
+</ul>
+
+<h2>その他</h2>
+
+<blockquote>
+<p><a href="http://naoty.hatenablog.com/entry/2012/07/17/221530">cui-about.meをリリースしました - naoty.to_s</a></p>
+</blockquote>
+
+<p>にインスパイアされました。 thanks! :)</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

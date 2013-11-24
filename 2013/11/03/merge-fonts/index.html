@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+半角:全角==1:2な等幅フォントを作る - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/11/03/merge-fonts/">2013-11-03 02:13:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/font/">font</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>半角:全角==1:2な等幅フォントを作る</h1>
+<p>普段プログラミングする時は<a href="http://www.sublimetext.com/3">Sublime Text 3</a>と<a href="http://sourceforge.jp/projects/sfnet_sourcecodepro.adobe/">Source Code Pro</a>を使っているのだけれど、半角:全角の文字幅が1:2じゃなくて気になる時があった。</p>
+
+<p>ちょっと無理矢理な例だけど、こんな感じ:<br>
+<img src="/images/2013-11-03-a.png" /></p>
+
+<ul>
+<li>半角スペースが全角文字の半分の幅じゃないので<code>=&gt;</code>が揃わない。もやっとする</li>
+</ul>
+
+<h2><a href="http://sourceforge.jp/projects/sfnet_sourcecodepro.adobe/">Source Code Pro</a> と <a href="http://mix-mplus-ipa.sourceforge.jp/migmix/#diff_migmix1p_migmix2p">MigMix 1M</a>の合成</h2>
+
+<p>ベース: <a href="https://github.com/MasayukiFukada/CodeMFont">MasayukiFukada/CodeMFont</a></p>
+
+<h4>ベースからの変更点</h4>
+
+<ul>
+<li>Source Code Proの中間フォントに<code>Scale(70)</code>を適用</li>
+<li>記号をあまり改変しないように変更。全角スペースの可視化は残した</li>
+</ul>
+
+<p><img src="/images/2013-11-03-b.png" /></p>
+
+<ul>
+<li>Hashのkeyに日本語が入っていても、もやっとしなくなった。</li>
+<li>半角文字が思ったより横に圧縮されたけど、ちょっと使ってたら慣れた</li>
+</ul>
+
+<h2>Tips</h2>
+
+<p>Macではフォントを削除→再生成→再インストールしてもキャッシュを消さないと反映されなかった。</p>
+
+<p>キャッシュ削除コマンド: <code>$ atsutil databases -removeUser</code></p>
+
+<h2>TODO</h2>
+
+<ul>
+<li>generator公開
+
+<ul>
+<li>素材用のフォントを自動的にダウンロードしてフォント生成するやつを作りたい</li>
+</ul></li>
+</ul>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

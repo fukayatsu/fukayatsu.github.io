@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+github上の時刻表示をちょっと見やすくするchrome extension - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/02/24/timezone-on-github/">2013-02-24 19:46:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/github/">github</a>
+<a href="/tags/chrome/">chrome</a>
+<a href="/tags/extension/">extension</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>github上の時刻表示をちょっと見やすくするchrome extension</h1>
+<p>github上でコミット時刻が<code>3 month ago</code>とか表示されているとき、カーソルを重ねてtooltipを見ても<code>-08:00</code>なタイムゾーンで表示されるのでわかりにくい。</p>
+
+<p>ちょっと探した範囲ではそれを解決するような拡張機能は見つからなかったので、試しに作ってみた。</p>
+
+<p>しばらく使ってみようと思う。</p>
+
+<ul>
+<li> <a href="https://chrome.google.com/webstore/detail/github-localtime/nnicjaooimionienobllhkaohdjohfhm">Chrome ウェブストア - github-localtime</a></li>
+<li> <a href="https://github.com/fukayatsu/github-localtime-crx">fukayatsu/github-localtime-crx · GitHub</a></li>
+</ul>
+
+<h2>screen shots</h2>
+
+<ul>
+<li><p>before<br>
+<img alt="before" src="https://raw.github.com/fukayatsu/github-localtime-crx/master/screen_shots/before.png" /></p></li>
+<li><p>after<br>
+<img alt="after" src="https://raw.github.com/fukayatsu/github-localtime-crx/master/screen_shots/after.png" /></p></li>
+</ul>
+
+<h2>既知の不具合</h2>
+
+<ul>
+<li>一定時間経つと表示が元に戻る
+
+<ul>
+<li>とりあえずリロードで対処...</li>
+</ul></li>
+</ul>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

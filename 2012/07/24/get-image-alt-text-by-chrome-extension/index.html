@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+コンテキストメニューで画像のalt-textを取得する - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2012/07/24/get-image-alt-text-by-chrome-extension/">2012-07-24 00:30:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/chrome-extensions/">chrome-extensions</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>コンテキストメニューで画像のalt-textを取得する</h1>
+<p>前回の記事で宿題になっていたコンテキストメニューからimgタグのalt取得の件が解決した。<br>
+content_script側でimgタグにイベントリスナを追加してやって、<br>
+そこからaltタグの情報をメッセージとしてbackground_pageに送ってやればよかった。</p>
+
+<p><a href="https://github.com/fukayatsu/chrome-markdown-linker/blob/master/src/content_script.js">src/content_script.js</a></p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

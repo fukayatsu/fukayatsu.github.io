@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+「もうひとつの Scheme 入門」をやってみる#01 - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/08/09/yet-another-scheme-abc-01/">2013-08-09 21:40:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/scheme-gauche/">scheme gauche</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>「もうひとつの Scheme 入門」をやってみる#01</h1>
+<p>この前<a href="http://connpass.com/event/2933/">10LISP &#39;00</a>で話題に挙がった<a href="http://www.shido.info/lisp/idx_scm.html">もうひとつの Scheme 入門</a>をやっていこうと思います。</p>
+
+<h1>1. Scheme 処理系のインストール</h1>
+
+<blockquote>
+<p><a href="http://nomnel.net/blog/st2-gauche/">Sublime Text 2でGaucheコードを書くために - 飲んだり寝たり</a></p>
+</blockquote>
+
+<p>↑ これを参考にしました</p>
+
+<h1>2. Scheme を電卓代わりに使う</h1>
+<pre class="highlight text">gosh&gt; (+ 1 2)
+3
+gosh&gt; +
+#&lt;subr +&gt;
+</pre>
+<p>MzSchemeだと<code>+</code>が評価されると<code>#&lt;procedure:+&gt;</code>となるらしいけど、gaucheだと<code>#&lt;subr +&gt;</code>となった</p>
+
+<h2>2.3. 四則演算</h2>
+<pre class="highlight text">gosh&gt; (* 2 3 4)
+24
+gosh&gt; (/ 29 3)
+29/3
+gosh&gt; (/ 29 3 7)
+29/21
+gosh&gt; (/ 9 6)
+3/2
+gosh&gt; (exact-&gt;inexact (/ 29 3 7))
+1.380952380952381
+</pre>
+<ul>
+<li>この<code>-></code>ってなんだろ</li>
+</ul>
+
+<h3>練習問題 1</h3>
+<pre class="highlight text">gosh&gt; (* (+ 1 39) (- 53 45))
+320
+
+gosh&gt; (+ (/ 1020 39) (* 45 2))
+1510/13
+
+gosh&gt; (+ 39 48 72 23 91)
+273
+
+gosh&gt; (exact-&gt;inexact (/ (+ 39 48 72 23 91) 5))
+54.6
+</pre>
+<h2>2.4 その他の算術関数</h2>
+
+<blockquote>
+<p>商を求めるにはquotient, 余りを求めるには remainder または modulo, 平方根を求めるには sqrt を使います。</p>
+</blockquote>
+<pre class="highlight text">gosh&gt; (quotient 7 3)
+2
+
+gosh&gt; (modulo 7 3)
+1
+
+gosh&gt; (sqrt 8)
+2.8284271247461903
+
+</pre>
+<h3>練習問題 2</h3>
+<pre class="highlight text">gosh&gt; (* 4 (atan 1))
+3.141592653589793
+
+
+gosh&gt; (exp (/ 2 3))
+1.9477340410546757
+
+gosh&gt; (expt 3 4)
+81
+
+gosh&gt; (log 1000)
+6.907755278982137
+</pre>
+<p>あ、解答ちゃんと載ってた...</p>
+
+<h1>3. リストを作ろう</h1>
+
+<h3>練習問題 1</h3>
+<pre class="highlight text">gosh&gt; (cons &quot;hi&quot; &quot;everybody&quot;)
+(&quot;hi&quot; . &quot;everybody&quot;)
+
+gosh&gt; (cons 0 &#39;())
+(0)
+
+gosh&gt; (cons 1 (cons 10 100))
+(1 10 . 100)
+
+gosh&gt; (cons 1 (cons 10 (cons 100 &#39;())))
+(1 10 100)
+
+gosh&gt; (cons #\I  (cons &quot;saw&quot; (cons 3 (cons &quot;girls&quot; &#39;()))))
+(#\I &quot;saw&quot; 3 &quot;girls&quot;)
+
+#\ってなんだ？
+
+
+gosh&gt; (cons &quot;Sum of&quot; (cons (cons 1 (cons 2 (cons 3 (cons 4 &#39;())))) (cons &quot;is&quot; (cons 10 &#39;()))))
+(&quot;Sum of&quot; (1 2 3 4) &quot;is&quot; 10)
+</pre>
+<h2>3.3. quote</h2>
+
+<blockquote>
+<p>...シンボルやリストなど、評価されると自分自身にならないデータそのものをプログラムに与えるときは quote という命令を使います。</p>
+
+<p>例えば、(+ 2 3) は評価されると 5 になりますが、(quote (+ 2 3)) とすれば (+ 2 3) そのものを プログラムに与えることができます。</p>
+</blockquote>
+
+<p>10lispで言ってた評価の抑制ってこれか。確かに評価されても自分自身になるのであればquote要らないな</p>
+
+<h3>3.3.1. 特殊形式</h3>
+
+<p>括弧の中身を全て評価して括弧の外に値を返す関数以外は<code>特殊形式</code>というらしい。<br>
+quoteとかifとかdefineとか</p>
+
+<p>10lispでやったとこだ!</p>
+
+<h2>3.4 関数 car と cdr</h2>
+
+<h3>練習問題 2</h3>
+<pre class="highlight text">gosh&gt; (car &#39;(0))
+0
+gosh&gt; (cdr &#39;(0))
+()
+gosh&gt; (car &#39;((1 2 3) (4 5 6)))
+(1 2 3)
+gosh&gt; (cdr &#39;(1 2 3 . 4))
+(2 3 . 4)
+gosh&gt; (cdr (cons 3 (cons 2 (cons 1 &#39;()))))
+(2 1)
+</pre>
+<h3>3.5. 関数 list</h3>
+<pre class="highlight text">gosh&gt; (list)
+()
+gosh&gt; (list 2)
+(2)
+gosh&gt; (car &#39;(1 2 3))
+1
+gosh&gt; (car (list 1 2 3))
+1
+</pre>
+<p>とりあえず今日はここまで</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

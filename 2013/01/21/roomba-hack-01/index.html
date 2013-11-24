@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+roomba-hack-01 準備編 - fukayatsu.dev
+</title>
+</link>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<a href="/"><div class='header-text'>
+<h1 class='header-title'>
+fukayatsu.dev
+</h1>
+<p class='header-description'>
+under development
+</p>
+</div>
+</a>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/01/21/roomba-hack-01/">2013-01-21 20:00:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/roomba/">roomba</a>
+<a href="/tags/roomba780/">roomba780</a>
+<a href="/tags/roomba-hack/">roomba-hack</a>
+<a href="/tags/bluetooth/">bluetooth</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>roomba-hack-01 準備編</h1>
+<p>↓脱走直前のiRobot Roomba780<br>
+<img src="https://lh5.googleusercontent.com/-V17Kbzqn_2Y/UP0ki9BulHI/AAAAAAAAJo4/KPZB-Slzgvw/s897/photo.jpg" /></p>
+
+<blockquote class="twitter-tweet"><p>やっぱそろそろroomba改造しないとだめだ</p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/status/293311694443253760" data-datetime="2013-01-21T10:58:52+00:00">January 21, 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>なにがダメなのイマイチ分からないが、工作したい欲が良い感じに高まって来たので行動に移すことにする。</p>
+
+<h2>これまで電子工作したものとか</h2>
+
+<p>大学の研究室で、夜な夜なAVRを使って3x3x3のLED Cube作ったりしてた程度。<br>
+あと、HHKBにTrackPoint植えてみたり<a href="http://fukayatsu.hateblo.jp/entry/2012/05/11/004332">HHKBにTrackPoint植えてみたり</a>、Lets&#39;s Noteにbluetoothドングル埋め込んでみたりしたことがある。</p>
+
+<p>そろそろArduinoも触ってみたい。JenkinsのXFDとか作るのがいいだろうか。</p>
+
+<h2>目標</h2>
+
+<ol>
+<li>roombaが自身のstatusをTwitterにつぶやく
+
+<ul>
+<li>掃除開始</li>
+<li>掃除終了(xxx minutes)</li>
+<li>充電中</li>
+<li>なんかうごけなくなった...</li>
+<li>etc</li>
+</ul></li>
+<li>roombaをtwitter経由で操作できる
+
+<ul>
+<li><code>@roomba 掃除よろしく</code></li>
+</ul></li>
+<li>statusをweb上で確認できる</li>
+<li>web上でroombaを操作できる</li>
+<li>roombaから写真を撮れる</li>
+</ol>
+
+<p>とりあえずは <code>1. roombaが自身のstatusをTwitterにつぶやく</code> の実現を目指す。<br>
+それ以外はその時のモチベーション次第。</p>
+
+<h2>roombaとPCの通信方法</h2>
+
+<blockquote>
+<p><a href="http://www.teamknox.com/Roomba/Roombaj.html">Roomba Hack (Japanese)</a></p>
+</blockquote>
+
+<p>このページを参考に、<br>
+<a href="http://strawberry-linux.com/catalog/items?code=18032">Bluetoothモデム BlueSMiRF</a><br>
+を使うことにする。</p>
+
+<p>PC側は、使ってないEeePCかMacbookAirを使う予定。<br>
+おそらくBlueSMiRFとBluetoothスタックとの相性があるので、どちらもだめなら適当なbluetoothドングルを買うかもしれない。</p>
+
+<h2>部品調達</h2>
+
+<p>秋葉原にいけばさくっと全部揃うだろうけど、今回は主に通販で買う場合を考えてみる。</p>
+
+<h4>BlueSMiRF</h4>
+
+<p><a href="http://strawberry-linux.com/catalog/items?code=18032">Bluetoothモデム BlueSMiRF - BlueSMiRF WRL-10268 - ネット販売</a></p>
+
+<p>1個あたり7,980円。これが材料代の大部分を占める。</p>
+
+<h4>三端子レギュレータ</h4>
+
+<p><a href="http://akizukidenshi.com/catalog/g/gI-00451/">低損失三端子レギュレーター　５Ｖ５００ｍＡ　ＴＡ４８Ｍ０５Ｆ: 半導体 秋月電子通商 電子部品 ネット通販</a></p>
+
+<p>1個あたり100円。</p>
+
+<h4>mini DIN 7極</h4>
+
+<p><a href="http://www.marutsu.co.jp/shohin_41258/">【MP-371/7】ミニDINプラグ 7P - ミニDINコネクター - その他　コネクター - マル信無線電機【マルツパーツ館WebShop】</a></p>
+
+<p>1個あたり283円。</p>
+
+<h4>コネクタ</h4>
+
+<p><a href="http://www.marutsu.co.jp/shohin_59184/">【S6B-XH-A】XHコネクター ベース付ポスト(サイド型) 6極(10個入) - XHコネクター - 電線対基板 - 日本圧着端子【マルツパーツ館WebShop】</a></p>
+
+<p><a href="http://www.marutsu.co.jp/shohin_59201/">【SXH-001T-0.6】XHコネクター コンタクト(10個入) - XHコネクター - 電線対基板 - 日本圧着端子【マルツパーツ館WebShop】</a></p>
+
+<p><a href="http://www.marutsu.co.jp/shohin_55364/">【XHP-6】XHコネクター ハウジング(6極) (10個入) - XHコネクター - 電線対基板 - 日本圧着端子【マルツパーツ館WebShop】</a></p>
+
+<p>バラで買えれば全部で100円ぐらい。</p>
+
+<h4>フリスクケース</h4>
+
+<p><a href="http://www.amazon.co.jp/dp/B000FQ5NQA">Amazon.co.jp： クラシエ フリスクペパーミント 50粒×12個: 食品&amp;飲料</a></p>
+
+<p>1個170円くらい</p>
+
+<h4>その他</h4>
+
+<p>線材は適当な手持ちを使う。あと、ホットボンドで適当に固める。</p>
+
+<hr>
+
+<p>とりあえず、こんなものだろうか。材料が揃ったら組立編を書きます。</p>
+
+<p>追記:</p>
+
+<p><a href="http://fukayatsu.github.com/2013/01/26/roomba-hack-02/">roomba-hack-02 はんだ付け&amp;動作テスト編</a></p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by GitHub & Travis & Middleman
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
