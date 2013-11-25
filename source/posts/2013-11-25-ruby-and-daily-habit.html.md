@@ -8,7 +8,7 @@ tags: ruby, lita, hipchat, daily-habit, 家電
 （左から、照明・エアコン・電気アンカ用のリモコン）
 
 
-今年の夏頃に[家電をhipchatから操作したり、スケジューリングできるようした](http://fk.dev/2013/08/11/iremocon-and-lita/)が、サーバのアップデート時に停止したままだったので、復旧するついでに秋冬用にスケジュールを細かく[設定し直した。](https://github.com/fukayatsu/home-lita/commit/c7f4d30d42970c149161cda0c3c8174ba3ef056a)
+今年の夏頃に[家電をhipchatから操作したり、スケジューリングできるようした](http://blog.fukayatsu.com/2013/08/11/iremocon-and-lita/)が、サーバのアップデート時に停止したままだったので、復旧するついでに秋冬用にスケジュールを細かく[設定し直した。](https://github.com/fukayatsu/home-lita/commit/c7f4d30d42970c149161cda0c3c8174ba3ef056a)
 
 一部抜粋するとこんな感じ
 
