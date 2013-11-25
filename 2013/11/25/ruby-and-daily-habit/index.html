@@ -66,7 +66,7 @@ under development
   <span class="n">cron</span> <span class="s1">&#39;0   20 * * * Asia/Tokyo&#39;</span><span class="p">,</span>  <span class="ss">:back_home</span>   <span class="c1"># 帰宅</span>
   <span class="n">cron</span> <span class="s1">&#39;0   23 * * * Asia/Tokyo&#39;</span><span class="p">,</span>  <span class="ss">:calm_down</span>   <span class="c1"># 落ち着く</span>
   <span class="n">cron</span> <span class="s1">&#39;25  1  * * * Asia/Tokyo&#39;</span><span class="p">,</span>  <span class="ss">:bed_down</span>    <span class="c1"># 布団に入る</span>
-  <span class="n">cron</span> <span class="s1">&#39;30  1  * * * Asia/Tokyo&#39;</span><span class="p">,</span>  <span class="ss">:sleep</span>       <span class="c1"># 寝る</span>
+  <span class="n">cron</span> <span class="s1">&#39;30  1  * * * Asia/Tokyo&#39;</span><span class="p">,</span>  <span class="ss">:sleeping</span>    <span class="c1"># 寝る</span>
 
   <span class="k">def </span><span class="nf">wake_up</span>
     <span class="c1"># all on</span>
@@ -101,7 +101,7 @@ under development
     <span class="n">exec_command</span> <span class="s1">&#39;heater off&#39;</span>
   <span class="k">end</span>
 
-  <span class="k">def </span><span class="nf">sleep</span>
+  <span class="k">def </span><span class="nf">sleeping</span>
     <span class="n">exec_command</span> <span class="s1">&#39;lights off&#39;</span>
   <span class="k">end</span>
 </pre>

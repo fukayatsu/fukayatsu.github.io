@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/25/ruby-and-daily-habit/"/>
     <id>http://blog.url.com/2013/11/25/ruby-and-daily-habit/</id>
     <published>2013-11-25T14:18:00Z</published>
-    <updated>2013-11-25T15:30:48+00:00</updated>
+    <updated>2013-11-25T17:36:06+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -30,7 +30,7 @@
   &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;0   20 * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:back_home&lt;/span&gt;   &lt;span class="c1"&gt;# 帰宅&lt;/span&gt;
   &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;0   23 * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:calm_down&lt;/span&gt;   &lt;span class="c1"&gt;# 落ち着く&lt;/span&gt;
   &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;25  1  * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:bed_down&lt;/span&gt;    &lt;span class="c1"&gt;# 布団に入る&lt;/span&gt;
-  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;30  1  * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:sleep&lt;/span&gt;       &lt;span class="c1"&gt;# 寝る&lt;/span&gt;
+  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;30  1  * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:sleeping&lt;/span&gt;    &lt;span class="c1"&gt;# 寝る&lt;/span&gt;
 
   &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;wake_up&lt;/span&gt;
     &lt;span class="c1"&gt;# all on&lt;/span&gt;
@@ -65,7 +65,7 @@
     &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;heater off&amp;#39;&lt;/span&gt;
   &lt;span class="k"&gt;end&lt;/span&gt;
 
-  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;sleep&lt;/span&gt;
+  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;sleeping&lt;/span&gt;
     &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights off&amp;#39;&lt;/span&gt;
   &lt;span class="k"&gt;end&lt;/span&gt;
 &lt;/pre&gt;
@@ -84,7 +84,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/25/sublime-text-config/"/>
     <id>http://blog.url.com/2013/11/25/sublime-text-config/</id>
     <published>2013-11-25T10:02:00Z</published>
-    <updated>2013-11-25T15:30:48+00:00</updated>
+    <updated>2013-11-25T17:36:06+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -113,7 +113,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/middleman-and-zsh/"/>
     <id>http://blog.url.com/2013/11/24/middleman-and-zsh/</id>
     <published>2013-11-24T10:53:00Z</published>
-    <updated>2013-11-25T15:30:48+00:00</updated>
+    <updated>2013-11-25T17:36:06+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -256,7 +256,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/get_dropbox_access_token/"/>
     <id>http://blog.url.com/2013/11/24/get_dropbox_access_token/</id>
     <published>2013-11-24T04:39:00Z</published>
-    <updated>2013-11-25T15:30:48+00:00</updated>
+    <updated>2013-11-25T17:36:06+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -270,7 +270,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman-blog/"/>
     <id>http://blog.url.com/2013/11/23/middleman-blog/</id>
     <published>2013-11-23T11:17:00Z</published>
-    <updated>2013-11-25T15:30:48+00:00</updated>
+    <updated>2013-11-25T17:36:06+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -335,7 +335,7 @@ $ git config --local core.precomposeunicode true
     <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman/"/>
     <id>http://blog.url.com/2013/11/23/middleman/</id>
     <published>2013-11-23T06:32:00Z</published>
-    <updated>2013-11-25T15:30:48+00:00</updated>
+    <updated>2013-11-25T17:36:06+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
