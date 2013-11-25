@@ -14,14 +14,14 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/25/ruby-and-daily-habit/"/>
     <id>http://blog.url.com/2013/11/25/ruby-and-daily-habit/</id>
     <published>2013-11-25T14:18:00Z</published>
-    <updated>2013-11-25T15:08:10+00:00</updated>
+    <updated>2013-11-25T15:30:48+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;p&gt;&lt;img alt="使っているリモコン" src="/images/2013-11-25-remotes.jpg" /&gt;&lt;br&gt;
 （左から、照明・エアコン・電気アンカ用のリモコン）&lt;/p&gt;
 
-&lt;p&gt;今年の夏頃に&lt;a href="http://fk.dev/2013/08/11/iremocon-and-lita/"&gt;家電をhipchatから操作したり、スケジューリングできるようした&lt;/a&gt;が、サーバのアップデート時に停止したままだったので、復旧するついでに秋冬用にスケジュールを細かく&lt;a href="https://github.com/fukayatsu/home-lita/commit/c7f4d30d42970c149161cda0c3c8174ba3ef056a"&gt;設定し直した。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;今年の夏頃に&lt;a href="http://blog.fukayatsu.com/2013/08/11/iremocon-and-lita/"&gt;家電をhipchatから操作したり、スケジューリングできるようした&lt;/a&gt;が、サーバのアップデート時に停止したままだったので、復旧するついでに秋冬用にスケジュールを細かく&lt;a href="https://github.com/fukayatsu/home-lita/commit/c7f4d30d42970c149161cda0c3c8174ba3ef056a"&gt;設定し直した。&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;一部抜粋するとこんな感じ&lt;/p&gt;
 &lt;pre class="highlight ruby"&gt;  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;0   8  * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:wake_up&lt;/span&gt;     &lt;span class="c1"&gt;# 目を覚ます&lt;/span&gt;
@@ -84,7 +84,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/25/sublime-text-config/"/>
     <id>http://blog.url.com/2013/11/25/sublime-text-config/</id>
     <published>2013-11-25T10:02:00Z</published>
-    <updated>2013-11-25T15:08:10+00:00</updated>
+    <updated>2013-11-25T15:30:48+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -113,7 +113,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/middleman-and-zsh/"/>
     <id>http://blog.url.com/2013/11/24/middleman-and-zsh/</id>
     <published>2013-11-24T10:53:00Z</published>
-    <updated>2013-11-25T15:08:10+00:00</updated>
+    <updated>2013-11-25T15:30:48+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -256,7 +256,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/get_dropbox_access_token/"/>
     <id>http://blog.url.com/2013/11/24/get_dropbox_access_token/</id>
     <published>2013-11-24T04:39:00Z</published>
-    <updated>2013-11-25T15:08:10+00:00</updated>
+    <updated>2013-11-25T15:30:48+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -270,7 +270,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman-blog/"/>
     <id>http://blog.url.com/2013/11/23/middleman-blog/</id>
     <published>2013-11-23T11:17:00Z</published>
-    <updated>2013-11-25T15:08:10+00:00</updated>
+    <updated>2013-11-25T15:30:48+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -335,7 +335,7 @@ $ git config --local core.precomposeunicode true
     <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman/"/>
     <id>http://blog.url.com/2013/11/23/middleman/</id>
     <published>2013-11-23T06:32:00Z</published>
-    <updated>2013-11-25T15:08:10+00:00</updated>
+    <updated>2013-11-25T15:30:48+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
