@@ -5,16 +5,86 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-11-25T10:02:00Z</updated>
+  <updated>2013-11-25T14:18:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>寒くて朝起きるのが辛いのでプログラムでなんとかしたい</title>
+    <link rel="alternate" href="http://blog.url.com/2013/11/25/ruby-and-daily-habit/"/>
+    <id>http://blog.url.com/2013/11/25/ruby-and-daily-habit/</id>
+    <published>2013-11-25T14:18:00Z</published>
+    <updated>2013-11-25T15:08:10+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img alt="使っているリモコン" src="/images/2013-11-25-remotes.jpg" /&gt;&lt;br&gt;
+（左から、照明・エアコン・電気アンカ用のリモコン）&lt;/p&gt;
+
+&lt;p&gt;今年の夏頃に&lt;a href="http://fk.dev/2013/08/11/iremocon-and-lita/"&gt;家電をhipchatから操作したり、スケジューリングできるようした&lt;/a&gt;が、サーバのアップデート時に停止したままだったので、復旧するついでに秋冬用にスケジュールを細かく&lt;a href="https://github.com/fukayatsu/home-lita/commit/c7f4d30d42970c149161cda0c3c8174ba3ef056a"&gt;設定し直した。&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;一部抜粋するとこんな感じ&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;0   8  * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:wake_up&lt;/span&gt;     &lt;span class="c1"&gt;# 目を覚ます&lt;/span&gt;
+  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;30  8  * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:turn_out&lt;/span&gt;    &lt;span class="c1"&gt;# 布団から出る&lt;/span&gt;
+  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;30  10 * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:go_out&lt;/span&gt;      &lt;span class="c1"&gt;# 外出&lt;/span&gt;
+  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;0   20 * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:back_home&lt;/span&gt;   &lt;span class="c1"&gt;# 帰宅&lt;/span&gt;
+  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;0   23 * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:calm_down&lt;/span&gt;   &lt;span class="c1"&gt;# 落ち着く&lt;/span&gt;
+  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;25  1  * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:bed_down&lt;/span&gt;    &lt;span class="c1"&gt;# 布団に入る&lt;/span&gt;
+  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;30  1  * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:sleep&lt;/span&gt;       &lt;span class="c1"&gt;# 寝る&lt;/span&gt;
+
+  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;wake_up&lt;/span&gt;
+    &lt;span class="c1"&gt;# all on&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights warm&amp;#39;&lt;/span&gt; &lt;span class="c1"&gt;# 照明をオレンジっぽい光にする&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;heater on&amp;#39;&lt;/span&gt;   &lt;span class="c1"&gt;# エアコン(暖房) ON&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;pad on&amp;#39;&lt;/span&gt;      &lt;span class="c1"&gt;# 電気あんか ON&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;turn_out&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights max&amp;#39;&lt;/span&gt; &lt;span class="c1"&gt;# 照明光量 max&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;go_out&lt;/span&gt;
+    &lt;span class="c1"&gt;# all off&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights off&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;heater off&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;pad off&amp;#39;&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;back_home&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights on&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;heater on&amp;#39;&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;calm_down&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights warm&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;pad on&amp;#39;&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;bed_down&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights min&amp;#39;&lt;/span&gt; &lt;span class="c1"&gt;# 照明を常夜灯にする&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;heater off&amp;#39;&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;sleep&lt;/span&gt;
+    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights off&amp;#39;&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;h2&gt;雑感&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;すべての家電にリモコンつけて欲しい&lt;/li&gt;
+&lt;li&gt;電気アンカは多少不安なので手動でもON/OFFできるようにした&lt;/li&gt;
+&lt;li&gt;照明は意外と細かく色みや光量をコントロールできて面白い&lt;/li&gt;
+&lt;li&gt;数日試したら、寝起きが改善されたか書く&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>sublime-text-config</title>
     <link rel="alternate" href="http://blog.url.com/2013/11/25/sublime-text-config/"/>
     <id>http://blog.url.com/2013/11/25/sublime-text-config/</id>
     <published>2013-11-25T10:02:00Z</published>
-    <updated>2013-11-25T10:11:52+00:00</updated>
+    <updated>2013-11-25T15:08:10+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -43,7 +113,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/middleman-and-zsh/"/>
     <id>http://blog.url.com/2013/11/24/middleman-and-zsh/</id>
     <published>2013-11-24T10:53:00Z</published>
-    <updated>2013-11-25T10:11:52+00:00</updated>
+    <updated>2013-11-25T15:08:10+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -186,7 +256,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/get_dropbox_access_token/"/>
     <id>http://blog.url.com/2013/11/24/get_dropbox_access_token/</id>
     <published>2013-11-24T04:39:00Z</published>
-    <updated>2013-11-25T10:11:52+00:00</updated>
+    <updated>2013-11-25T15:08:10+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -200,7 +270,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman-blog/"/>
     <id>http://blog.url.com/2013/11/23/middleman-blog/</id>
     <published>2013-11-23T11:17:00Z</published>
-    <updated>2013-11-25T10:11:52+00:00</updated>
+    <updated>2013-11-25T15:08:10+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -265,7 +335,7 @@ $ git config --local core.precomposeunicode true
     <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman/"/>
     <id>http://blog.url.com/2013/11/23/middleman/</id>
     <published>2013-11-23T06:32:00Z</published>
-    <updated>2013-11-25T10:11:52+00:00</updated>
+    <updated>2013-11-25T15:08:10+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -305,59 +375,6 @@ $ git config --local core.precomposeunicode true
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;短めの記事をなるべく毎日書く&lt;/li&gt;
 &lt;li&gt;qiitaみたいにcode-blockにファイル名を入れられるようにしたい&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>半角:全角==1:2な等幅フォントを作る</title>
-    <link rel="alternate" href="http://blog.url.com/2013/11/03/merge-fonts/"/>
-    <id>http://blog.url.com/2013/11/03/merge-fonts/</id>
-    <published>2013-11-02T17:13:00Z</published>
-    <updated>2013-11-25T10:11:52+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;普段プログラミングする時は&lt;a href="http://www.sublimetext.com/3"&gt;Sublime Text 3&lt;/a&gt;と&lt;a href="http://sourceforge.jp/projects/sfnet_sourcecodepro.adobe/"&gt;Source Code Pro&lt;/a&gt;を使っているのだけれど、半角:全角の文字幅が1:2じゃなくて気になる時があった。&lt;/p&gt;
-
-&lt;p&gt;ちょっと無理矢理な例だけど、こんな感じ:&lt;br&gt;
-&lt;img src="/images/2013-11-03-a.png" /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;半角スペースが全角文字の半分の幅じゃないので&lt;code&gt;=&amp;gt;&lt;/code&gt;が揃わない。もやっとする&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;&lt;a href="http://sourceforge.jp/projects/sfnet_sourcecodepro.adobe/"&gt;Source Code Pro&lt;/a&gt; と &lt;a href="http://mix-mplus-ipa.sourceforge.jp/migmix/#diff_migmix1p_migmix2p"&gt;MigMix 1M&lt;/a&gt;の合成&lt;/h2&gt;
-
-&lt;p&gt;ベース: &lt;a href="https://github.com/MasayukiFukada/CodeMFont"&gt;MasayukiFukada/CodeMFont&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4&gt;ベースからの変更点&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Source Code Proの中間フォントに&lt;code&gt;Scale(70)&lt;/code&gt;を適用&lt;/li&gt;
-&lt;li&gt;記号をあまり改変しないように変更。全角スペースの可視化は残した&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src="/images/2013-11-03-b.png" /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Hashのkeyに日本語が入っていても、もやっとしなくなった。&lt;/li&gt;
-&lt;li&gt;半角文字が思ったより横に圧縮されたけど、ちょっと使ってたら慣れた&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Tips&lt;/h2&gt;
-
-&lt;p&gt;Macではフォントを削除→再生成→再インストールしてもキャッシュを消さないと反映されなかった。&lt;/p&gt;
-
-&lt;p&gt;キャッシュ削除コマンド: &lt;code&gt;$ atsutil databases -removeUser&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2&gt;TODO&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;generator公開
-
-&lt;ul&gt;
-&lt;li&gt;素材用のフォントを自動的にダウンロードしてフォント生成するやつを作りたい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
