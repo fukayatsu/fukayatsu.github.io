@@ -19,7 +19,7 @@ tags: ruby, lita, hipchat, daily-habit, 家電
   cron '0   20 * * * Asia/Tokyo',  :back_home   # 帰宅
   cron '0   23 * * * Asia/Tokyo',  :calm_down   # 落ち着く
   cron '25  1  * * * Asia/Tokyo',  :bed_down    # 布団に入る
-  cron '30  1  * * * Asia/Tokyo',  :sleep       # 寝る
+  cron '30  1  * * * Asia/Tokyo',  :sleeping    # 寝る
 
   def wake_up
     # all on
@@ -54,7 +54,7 @@ tags: ruby, lita, hipchat, daily-habit, 家電
     exec_command 'heater off'
   end
 
-  def sleep
+  def sleeping
     exec_command 'lights off'
   end
 ```
