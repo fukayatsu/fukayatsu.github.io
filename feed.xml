@@ -5,16 +5,45 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-11-24T10:53:00Z</updated>
+  <updated>2013-11-25T10:02:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>sublime-text-config</title>
+    <link rel="alternate" href="http://blog.url.com/2013/11/25/sublime-text-config/"/>
+    <id>http://blog.url.com/2013/11/25/sublime-text-config/</id>
+    <published>2013-11-25T10:02:00Z</published>
+    <updated>2013-11-25T10:11:52+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src="/images/2013-11-25-sublime.png" /&gt;&lt;/p&gt;
+
+&lt;h2&gt;設定を変えた&lt;/h2&gt;
+&lt;pre class="highlight json"&gt;&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;indent_guide_options&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="w"&gt;
+        &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;draw_normal&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+        &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;draw_active&amp;quot;&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;rulers&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="w"&gt;
+        &lt;/span&gt;&lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+        &lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+        &lt;/span&gt;&lt;span class="mi"&gt;120&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/pre&gt;
+&lt;h2&gt;テーマに手を入れた&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/fukayatsu/flatland/compare/105a62fe2637795ae93563b30280840129f02faa...fcedf2dcbf867b419d0ec45da35004758ab68519"&gt;変更点はこんな感じ&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>middleman-and-zsh</title>
     <link rel="alternate" href="http://blog.url.com/2013/11/24/middleman-and-zsh/"/>
     <id>http://blog.url.com/2013/11/24/middleman-and-zsh/</id>
     <published>2013-11-24T10:53:00Z</published>
-    <updated>2013-11-25T01:45:27+00:00</updated>
+    <updated>2013-11-25T10:11:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -157,7 +186,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/get_dropbox_access_token/"/>
     <id>http://blog.url.com/2013/11/24/get_dropbox_access_token/</id>
     <published>2013-11-24T04:39:00Z</published>
-    <updated>2013-11-25T01:45:27+00:00</updated>
+    <updated>2013-11-25T10:11:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -171,7 +200,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman-blog/"/>
     <id>http://blog.url.com/2013/11/23/middleman-blog/</id>
     <published>2013-11-23T11:17:00Z</published>
-    <updated>2013-11-25T01:45:27+00:00</updated>
+    <updated>2013-11-25T10:11:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -236,7 +265,7 @@ $ git config --local core.precomposeunicode true
     <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman/"/>
     <id>http://blog.url.com/2013/11/23/middleman/</id>
     <published>2013-11-23T06:32:00Z</published>
-    <updated>2013-11-25T01:45:27+00:00</updated>
+    <updated>2013-11-25T10:11:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -284,7 +313,7 @@ $ git config --local core.precomposeunicode true
     <link rel="alternate" href="http://blog.url.com/2013/11/03/merge-fonts/"/>
     <id>http://blog.url.com/2013/11/03/merge-fonts/</id>
     <published>2013-11-02T17:13:00Z</published>
-    <updated>2013-11-25T01:45:27+00:00</updated>
+    <updated>2013-11-25T10:11:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -328,135 +357,6 @@ $ git config --local core.precomposeunicode true
 
 &lt;ul&gt;
 &lt;li&gt;素材用のフォントを自動的にダウンロードしてフォント生成するやつを作りたい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>RubyとLita(chat bot)で自宅のエアコンを操作する</title>
-    <link rel="alternate" href="http://blog.url.com/2013/08/11/iremocon-and-lita/"/>
-    <id>http://blog.url.com/2013/08/11/iremocon-and-lita/</id>
-    <published>2013-08-11T13:16:00Z</published>
-    <updated>2013-11-25T01:45:27+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;以前は&lt;a href="https://github.com/fukayatsu/room_bot/blob/master/julius/roombot.rb"&gt;音声認識で家電操作&lt;/a&gt;をしてたけど、&lt;br&gt;
-引越しの時に環境が変わったのでちょっとやりかたを変えてみた。&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt="ArduinoとiRemocon" src="https://lh6.googleusercontent.com/-kIVBmVmPATk/UgOX0He2ECI/AAAAAAAAPFs/QtRvi0Pc464/w701-h526-no/IMG_20130808_220558.jpg" /&gt;&lt;br&gt;
-ポスター用の剥がせる両面テープで壁に貼ってみた&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt="w50" src="https://dl.dropboxusercontent.com/u/85825/blog/image/20130811/home-lita.png" /&gt;&lt;br&gt;
-hipchatのAndroidアプリ&lt;/p&gt;
-
-&lt;h1&gt;できること&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;30分おきに温度、湿度、明るさを報告&lt;/li&gt;
-&lt;li&gt;Hipchatからエアコンと照明のON/OFF
-
-&lt;ul&gt;
-&lt;li&gt;最近暑いので、会社を出る前にクーラー入れたりする&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;毎日8:00に照明ON, 25:00に照明OFF
-
-&lt;ul&gt;
-&lt;li&gt;寝起きが良くなった気がする&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;下準備&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;天井の照明をリモコン式のものに変更
-
-&lt;ul&gt;
-&lt;li&gt;制御が楽なのでONとOFFのボタンが付いているものがよい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;hipchatアカウント取得
-
-&lt;ul&gt;
-&lt;li&gt;今なら5人まで無料なので、自分の分とbotの分を作る&lt;/li&gt;
-&lt;li&gt;よく考えたらチャットルームに自分とbotしかいないのって...&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;ハードウェア&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;MacBook Air(サーバ)&lt;/li&gt;
-&lt;li&gt;赤外線送信
-
-&lt;ul&gt;
-&lt;li&gt;iRemocon
-
-&lt;ul&gt;
-&lt;li&gt;以前音声認識で家電を操作してた時のを流用&lt;/li&gt;
-&lt;li&gt;無操作だと5分で接続が切れるので、keep aliveが必要ということを今回はじめて知った&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;温度、湿度、明るさセンサー
-
-&lt;ul&gt;
-&lt;li&gt;Arduino + 秋月電子で買ったパーツ&lt;/li&gt;
-&lt;li&gt;これも以前使っていたものを流用&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;ソフトウェア&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/home-lita"&gt;fukayatsu/home-lita&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;本体&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/jimmycuadra/lita"&gt;jimmycuadra/lita&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ざっくり言うとhubot(github製bot framework)のRuby版。userの権限管理とかもできる&lt;/li&gt;
-&lt;li&gt;ちょっと前に会社のhipchat上のbotをhubotからlitaに置き換えたら結構良かったので、今回採用&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/jimmycuadra/lita-hipchat"&gt;jimmycuadra/lita-hipchat&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;litaのhipchat adapter&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/lita-schedule"&gt;fukayatsu/lita-schedule&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;lita上でcron的なことをするやつ。とりあえず動くぐらいの完成度&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/r7kamura/iremocon"&gt;r7kamura/iremocon&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;iremoconのrubyインタフェース&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/austinbv/dino"&gt;austinbv/dino&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/01/23/hello-arduino-with-ruby-and-dino/"&gt;Arduino買ったのでRubyとDinoでLチカした - fukayatsu.dev&lt;/a&gt;を参照&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;これからやりたいこと&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;音声認識、音声再生を復活させたい
-
-&lt;ul&gt;
-&lt;li&gt;「今何時？」とか「今日の天気は？」とか「電気消して」とかが地味に便利だった&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Androidとかと組み合わせて、自宅から出たら電気が消えるようにしたい
-
-&lt;ul&gt;
-&lt;li&gt;端末の自宅wifiへの接続の有無で制御できそう？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Lita本体にschedule機能を入れたい
-
-&lt;ul&gt;
-&lt;li&gt;テスト書く&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
