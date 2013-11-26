@@ -5,16 +5,67 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-11-25T14:18:00Z</updated>
+  <updated>2013-11-26T14:07:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>say-japanese-gem</title>
+    <link rel="alternate" href="http://blog.url.com/2013/11/26/say-japanese/"/>
+    <id>http://blog.url.com/2013/11/26/say-japanese/</id>
+    <published>2013-11-26T14:07:00Z</published>
+    <updated>2013-11-26T14:42:14+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="https://rubygems.org/gems/say-japanese"&gt;say-japanese&lt;/a&gt;というRubyから日本語を喋らせるGemを作った(Mac限定)。&lt;/p&gt;
+
+&lt;p&gt;ちょっと調べた段階で、&lt;a href="https://github.com/smart/say"&gt;smart/say&lt;/a&gt;を見つけましたが、日本語の音声に対応していないのと作者がgithub上で活動していないようなので作ることに。&lt;/p&gt;
+
+&lt;p&gt;今のところvoiceは&lt;code&gt;Kyoko&lt;/code&gt;と&lt;code&gt;Otoya&lt;/code&gt;だけに対応している。&lt;/p&gt;
+
+&lt;h2&gt;サンプルコード&lt;/h2&gt;
+&lt;pre class="highlight text"&gt;$ gem install say-japanese
+&lt;/pre&gt;&lt;pre class="highlight ruby"&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;say/japanese&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;say&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;オブジェクト指向スクリプト言語 ルビー&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;set_say_as_default&lt;/span&gt; &lt;span class="ss"&gt;:otoya&lt;/span&gt;
+
+&lt;span class="n"&gt;say&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;オブジェクト指向スクリプト言語 ルビー&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;say_as&lt;/span&gt; &lt;span class="ss"&gt;:kyoko&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;ルビーとは、&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;say_as&lt;/span&gt; &lt;span class="ss"&gt;:otoya&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="no"&gt;EOT&lt;/span&gt;&lt;span class="sh"&gt;
+  オープンソースの動的なプログラミング言語で、
+  シンプルさと高い生産性を備えています。
+  エレガントな文法を持ち、自然に読み書きができます。
+&lt;/span&gt;&lt;span class="no"&gt;EOT&lt;/span&gt;
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;デフォルトの音声はkyoko&lt;/li&gt;
+&lt;li&gt;文字列に改行が入っている場合は&lt;code&gt;。&lt;/code&gt;に置き換えている&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Otoya&lt;/h2&gt;
+
+&lt;iframe width="420" height="315" src="//www.youtube.com/embed/2KRD09whqB4?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Lionで追加されたKyoko(女声)につづいてMavericksから追加されたOtoya(男声)。&lt;br&gt;
+動画の自己紹介では&amp;quot;Otoya&amp;quot;が&amp;quot;あといや&amp;quot;みたいに聞こえる。&lt;/p&gt;
+
+&lt;p&gt;他のvoiceデータの名前からしてOtoyaも名前の方なんだろうけど、&lt;br&gt;
+ちょっと苗字っぽいとおもって調べてみた。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www2s.biglobe.ne.jp/~suzakihp/index40.html"&gt;全国の苗字（名字）１１万種&lt;/a&gt;によると、&lt;code&gt;男谷(オトヤ)&lt;/code&gt;さんが実在するらしい。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>寒くて朝起きるのが辛いのでプログラムでなんとかしたい</title>
     <link rel="alternate" href="http://blog.url.com/2013/11/25/ruby-and-daily-habit/"/>
     <id>http://blog.url.com/2013/11/25/ruby-and-daily-habit/</id>
     <published>2013-11-25T14:18:00Z</published>
-    <updated>2013-11-25T17:36:06+00:00</updated>
+    <updated>2013-11-26T14:42:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -84,7 +135,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/25/sublime-text-config/"/>
     <id>http://blog.url.com/2013/11/25/sublime-text-config/</id>
     <published>2013-11-25T10:02:00Z</published>
-    <updated>2013-11-25T17:36:06+00:00</updated>
+    <updated>2013-11-26T14:42:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -113,7 +164,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/middleman-and-zsh/"/>
     <id>http://blog.url.com/2013/11/24/middleman-and-zsh/</id>
     <published>2013-11-24T10:53:00Z</published>
-    <updated>2013-11-25T17:36:06+00:00</updated>
+    <updated>2013-11-26T14:42:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -256,7 +307,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/get_dropbox_access_token/"/>
     <id>http://blog.url.com/2013/11/24/get_dropbox_access_token/</id>
     <published>2013-11-24T04:39:00Z</published>
-    <updated>2013-11-25T17:36:06+00:00</updated>
+    <updated>2013-11-26T14:42:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -270,7 +321,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman-blog/"/>
     <id>http://blog.url.com/2013/11/23/middleman-blog/</id>
     <published>2013-11-23T11:17:00Z</published>
-    <updated>2013-11-25T17:36:06+00:00</updated>
+    <updated>2013-11-26T14:42:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -328,54 +379,6 @@ $ git config --local core.precomposeunicode true
 &lt;code&gt;(blog root)/.git/hooks&lt;/code&gt;は空なのにデプロイ出来なくて数分悩んだ。&lt;/p&gt;
 
 &lt;p&gt;結局デプロイ時に自動で作られた&lt;code&gt;(blog root)/build/.git/hooks&lt;/code&gt;のpre-commit-hookが原因だったというオチ。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>OctopressからMiddlemanに移行した</title>
-    <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman/"/>
-    <id>http://blog.url.com/2013/11/23/middleman/</id>
-    <published>2013-11-23T06:32:00Z</published>
-    <updated>2013-11-25T17:36:06+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;各記事の&lt;a href="http://jekyllrb.com/docs/frontmatter/"&gt;Front-matter&lt;/a&gt;を直すのと、いくつか&lt;a href="http://via.me/"&gt;Via.Me&lt;/a&gt;を参照していた画像があったので差し替えた。&lt;br&gt;
-その他はだいたいそのまま。&lt;/p&gt;
-
-&lt;h2&gt;動機&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;そもそもOctopressのv2.0に、中途半端に2.1ブランチをマージして使っていたので気持ち悪かった
-
-&lt;ul&gt;
-&lt;li&gt;次のバージョンはいつ出るんだろう&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;octopressで&lt;code&gt;rake new_post&lt;/code&gt;, &lt;code&gt;rake deploy&lt;/code&gt;するのが面倒になってきた&lt;/li&gt;
-&lt;li&gt;Middleman便利というのはよく聞くが、実際に使う機会がなかった&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;移行にあたって&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;元の記事URLを踏襲&lt;/li&gt;
-&lt;li&gt;デザインは最低限のものを用意
-
-&lt;ul&gt;
-&lt;li&gt;できるだけ&lt;a href="https://help.github.com/articles/github-flavored-markdown"&gt;GitHub Flavored Markdown&lt;/a&gt;のstyleに近くした&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;今後&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;DropBox経由で投稿できるようにする
-
-&lt;ul&gt;
-&lt;li&gt;参考: &lt;a href="http://r7kamura.github.io/2013/11/10/hello-world.html"&gt;Hello world - r7kamura blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;短めの記事をなるべく毎日書く&lt;/li&gt;
-&lt;li&gt;qiitaみたいにcode-blockにファイル名を入れられるようにしたい&lt;/li&gt;
-&lt;/ul&gt;
 </content>
   </entry>
 </feed>
