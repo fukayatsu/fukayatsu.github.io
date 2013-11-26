@@ -7,7 +7,7 @@ tags: ruby, gem
 
 [say-japanese](https://rubygems.org/gems/say-japanese)というRubyから日本語を喋らせるGemを作った(Mac限定)。
 
-ちょっと調べた段階で、[smart/say](https://github.com/smart/say)を見つけましたが、日本語の音声に対応していないのと作者がgithub上で活動していないようなので作ることに。
+ちょっと調べた段階で、[smart/say](https://github.com/smart/say)を見つけたけど、日本語の音声に対応していないのと作者がgithub上で活動していないようなので作ることに。
 
 今のところvoiceは`Kyoko`と`Otoya`だけに対応している。
 
