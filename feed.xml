@@ -14,13 +14,13 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/26/say-japanese/"/>
     <id>http://blog.url.com/2013/11/26/say-japanese/</id>
     <published>2013-11-26T14:07:00Z</published>
-    <updated>2013-11-26T14:42:14+00:00</updated>
+    <updated>2013-11-26T14:55:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;p&gt;&lt;a href="https://rubygems.org/gems/say-japanese"&gt;say-japanese&lt;/a&gt;というRubyから日本語を喋らせるGemを作った(Mac限定)。&lt;/p&gt;
 
-&lt;p&gt;ちょっと調べた段階で、&lt;a href="https://github.com/smart/say"&gt;smart/say&lt;/a&gt;を見つけましたが、日本語の音声に対応していないのと作者がgithub上で活動していないようなので作ることに。&lt;/p&gt;
+&lt;p&gt;ちょっと調べた段階で、&lt;a href="https://github.com/smart/say"&gt;smart/say&lt;/a&gt;を見つけたけど、日本語の音声に対応していないのと作者がgithub上で活動していないようなので作ることに。&lt;/p&gt;
 
 &lt;p&gt;今のところvoiceは&lt;code&gt;Kyoko&lt;/code&gt;と&lt;code&gt;Otoya&lt;/code&gt;だけに対応している。&lt;/p&gt;
 
@@ -65,7 +65,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/25/ruby-and-daily-habit/"/>
     <id>http://blog.url.com/2013/11/25/ruby-and-daily-habit/</id>
     <published>2013-11-25T14:18:00Z</published>
-    <updated>2013-11-26T14:42:14+00:00</updated>
+    <updated>2013-11-26T14:55:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -135,7 +135,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/25/sublime-text-config/"/>
     <id>http://blog.url.com/2013/11/25/sublime-text-config/</id>
     <published>2013-11-25T10:02:00Z</published>
-    <updated>2013-11-26T14:42:14+00:00</updated>
+    <updated>2013-11-26T14:55:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -164,7 +164,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/middleman-and-zsh/"/>
     <id>http://blog.url.com/2013/11/24/middleman-and-zsh/</id>
     <published>2013-11-24T10:53:00Z</published>
-    <updated>2013-11-26T14:42:14+00:00</updated>
+    <updated>2013-11-26T14:55:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -307,7 +307,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/get_dropbox_access_token/"/>
     <id>http://blog.url.com/2013/11/24/get_dropbox_access_token/</id>
     <published>2013-11-24T04:39:00Z</published>
-    <updated>2013-11-26T14:42:14+00:00</updated>
+    <updated>2013-11-26T14:55:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -321,7 +321,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman-blog/"/>
     <id>http://blog.url.com/2013/11/23/middleman-blog/</id>
     <published>2013-11-23T11:17:00Z</published>
-    <updated>2013-11-26T14:42:14+00:00</updated>
+    <updated>2013-11-26T14:55:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
