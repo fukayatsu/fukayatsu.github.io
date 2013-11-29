@@ -5,16 +5,61 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-11-26T14:07:00Z</updated>
+  <updated>2013-11-29T03:08:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>fukayatsu Advent Aalendar 2013</title>
+    <link rel="alternate" href="http://blog.url.com/2013/11/29/advent-calendar-2013/"/>
+    <id>http://blog.url.com/2013/11/29/advent-calendar-2013/</id>
+    <published>2013-11-29T03:08:00Z</published>
+    <updated>2013-11-29T03:29:11+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;去年はいくつかの技術系Advent Calendarに参加したけど、&lt;br&gt;
+今年は &lt;code&gt;1人 Advent Calendar&lt;/code&gt; をやることにした。&lt;/p&gt;
+
+&lt;h1&gt;目次&lt;/h1&gt;
+
+&lt;p&gt;※ 予定なのでタイトルとか内容は変更される可能性あり&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2013-12-01: MacとUS配列とGoogle 日本語入力&lt;/li&gt;
+&lt;li&gt;2013-12-02: ChatBotとGoogle Analytics&lt;/li&gt;
+&lt;li&gt;2013-12-03: Chrome Platform APIs&lt;/li&gt;
+&lt;li&gt;2013-12-04:&lt;/li&gt;
+&lt;li&gt;2013-12-05:&lt;/li&gt;
+&lt;li&gt;2013-12-06:&lt;/li&gt;
+&lt;li&gt;2013-12-07:&lt;/li&gt;
+&lt;li&gt;2013-12-08:&lt;/li&gt;
+&lt;li&gt;2013-12-09:&lt;/li&gt;
+&lt;li&gt;2013-12-10:&lt;/li&gt;
+&lt;li&gt;2013-12-11:&lt;/li&gt;
+&lt;li&gt;2013-12-12:&lt;/li&gt;
+&lt;li&gt;2013-12-13:&lt;/li&gt;
+&lt;li&gt;2013-12-14:&lt;/li&gt;
+&lt;li&gt;2013-12-15:&lt;/li&gt;
+&lt;li&gt;2013-12-16:&lt;/li&gt;
+&lt;li&gt;2013-12-17:&lt;/li&gt;
+&lt;li&gt;2013-12-18:&lt;/li&gt;
+&lt;li&gt;2013-12-19:&lt;/li&gt;
+&lt;li&gt;2013-12-20:&lt;/li&gt;
+&lt;li&gt;2013-12-21:&lt;/li&gt;
+&lt;li&gt;2013-12-22:&lt;/li&gt;
+&lt;li&gt;2013-12-23:&lt;/li&gt;
+&lt;li&gt;2013-12-24:&lt;/li&gt;
+&lt;li&gt;2013-12-25:&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>say-japanese-gem</title>
     <link rel="alternate" href="http://blog.url.com/2013/11/26/say-japanese/"/>
     <id>http://blog.url.com/2013/11/26/say-japanese/</id>
     <published>2013-11-26T14:07:00Z</published>
-    <updated>2013-11-26T14:55:20+00:00</updated>
+    <updated>2013-11-29T03:29:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -65,7 +110,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/25/ruby-and-daily-habit/"/>
     <id>http://blog.url.com/2013/11/25/ruby-and-daily-habit/</id>
     <published>2013-11-25T14:18:00Z</published>
-    <updated>2013-11-26T14:55:20+00:00</updated>
+    <updated>2013-11-29T03:29:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -135,7 +180,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/25/sublime-text-config/"/>
     <id>http://blog.url.com/2013/11/25/sublime-text-config/</id>
     <published>2013-11-25T10:02:00Z</published>
-    <updated>2013-11-26T14:55:20+00:00</updated>
+    <updated>2013-11-29T03:29:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -164,7 +209,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/middleman-and-zsh/"/>
     <id>http://blog.url.com/2013/11/24/middleman-and-zsh/</id>
     <published>2013-11-24T10:53:00Z</published>
-    <updated>2013-11-26T14:55:20+00:00</updated>
+    <updated>2013-11-29T03:29:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -307,78 +352,13 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/24/get_dropbox_access_token/"/>
     <id>http://blog.url.com/2013/11/24/get_dropbox_access_token/</id>
     <published>2013-11-24T04:39:00Z</published>
-    <updated>2013-11-26T14:55:20+00:00</updated>
+    <updated>2013-11-29T03:29:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;p&gt;&lt;a href="https://github.com/fukayatsu/get_dropbox_access_token"&gt;というgemを作った。&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/jugyo/get-twitter-oauth-token"&gt;jugyo/get-twitter-oauth-token&lt;/a&gt;を参考にした。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>middleman-blogでちょっとはまったこと</title>
-    <link rel="alternate" href="http://blog.url.com/2013/11/23/middleman-blog/"/>
-    <id>http://blog.url.com/2013/11/23/middleman-blog/</id>
-    <published>2013-11-23T11:17:00Z</published>
-    <updated>2013-11-26T14:55:20+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;h2&gt;stylesheetどうしよう問題&lt;/h2&gt;
-
-&lt;p&gt;はまったというか、自分で1から書くか&lt;a href="http://directory.middlemanapp.com/#/templates/all"&gt;Middleman Directory&lt;/a&gt;にあるやつを使うか迷った。&lt;br&gt;
-せっかくなので自分で書いた。&lt;/p&gt;
-
-&lt;h2&gt;日本語のタグが404になる&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="https://github.com/middleman/middleman-blog/pull/176"&gt;Non ascii tag support by fukayatsu · Pull Request #176 · middleman/middleman-blog&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;ascii以外のタグを考慮してないっぽかったので、pull-req出した&lt;/p&gt;
-&lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;# gem &amp;quot;middleman-blog&amp;quot;, &amp;quot;~&amp;gt; 3.4.1&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;middleman-blog&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;github: &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;fukayatsu/middleman-blog&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;branch: &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;non-ascii-tag&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;
-&lt;p&gt;とりあえず今はこんな感じで動かしている&lt;/p&gt;
-
-&lt;h2&gt;濁点を含むタグのページががビルド毎に生成と消滅を繰り返す&lt;/h2&gt;
-
-&lt;p&gt;mac特有の問題だった。&lt;/p&gt;
-
-&lt;p&gt;現象としてはこれが近い&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="http://gam0022.net/blog/2012/08/11/use-rsync-iconv-option/"&gt;カテゴリー名に濁点を含んだ日本語が使えない問題を解決する(Rsyncのiconvオプションを使う) - gam0022.net&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;対策&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="https://github.com/Alice-Gits/Support/tree/master/NFC%E3%83%BBNFD%E5%95%8F%E9%A1%8C%E3%81%8B%E3%82%99%E8%A7%A3%E6%B1%BA"&gt;Support/NFC・NFD問題が解決 at master · Alice-Gits/Support&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre class="highlight text"&gt;# on build/
-$ git config --local core.precomposeunicode true
-&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;bundle exec middleman build --no-clean&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;一度&lt;code&gt;tags/*&lt;/code&gt;を全部削除してから&lt;code&gt;build&lt;/code&gt;でもいいかもしれない。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;追記: 2013-11-24 2:55&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="https://github.com/middleman/middleman/pull/1089"&gt;Handle UTF-8-MAC filename on MacOS by fukayatsu · Pull Request #1089 · middleman/middleman&lt;/a&gt;&lt;br&gt;
-プルリク出した&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2&gt;謎のpre-commit-hookでデプロイ出来ない&lt;/h2&gt;
-
-&lt;p&gt;自分のローカル環境ではリポジトリが作られると、自動的にmasterブランチにコミット出来ないようなpre-commit-hookが配置される。&lt;/p&gt;
-
-&lt;p&gt;今回&lt;code&gt;middleman-deploy&lt;/code&gt;というgemでデプロイしようとして、&lt;br&gt;
-&lt;code&gt;(blog root)/.git/hooks&lt;/code&gt;は空なのにデプロイ出来なくて数分悩んだ。&lt;/p&gt;
-
-&lt;p&gt;結局デプロイ時に自動で作られた&lt;code&gt;(blog root)/build/.git/hooks&lt;/code&gt;のpre-commit-hookが原因だったというオチ。&lt;/p&gt;
 </content>
   </entry>
 </feed>
