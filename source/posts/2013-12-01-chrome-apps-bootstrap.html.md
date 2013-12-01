@@ -34,4 +34,4 @@ macだとインストール時に`*.app`を作ってくれるので、spotlight�
 - [GoogleChrome/chrome-app-samples](https://github.com/GoogleChrome/chrome-app-samples)
     - 公式サンプル集のリポジトリ
 
-公式ドキュメントをちょっと見て、後はサンプルコードを試しながら読めばよいと思う。
+公式ドキュメントをちょっと見て、後はサンプルコードを試しながらコード読めばよいと思う。
