@@ -1,5 +1,5 @@
 ---
-title: fukayatsu Advent Aalendar 2013
+title: fukayatsu Advent Calendar 2013
 date: 2013-11-29 12:08 JST
 tags: advent-calendar-2013, list
 ---
@@ -11,28 +11,28 @@ tags: advent-calendar-2013, list
 
 ※ 予定なのでタイトルとか内容は変更される可能性あり
 
-- 2013-12-01: MacとUS配列とGoogle 日本語入力
-- 2013-12-02: ChatBotとGoogle Analytics
-- 2013-12-03: Chrome Platform APIs
-- 2013-12-04:
-- 2013-12-05:
-- 2013-12-06:
-- 2013-12-07:
-- 2013-12-08:
-- 2013-12-09:
-- 2013-12-10:
-- 2013-12-11:
-- 2013-12-12:
-- 2013-12-13:
-- 2013-12-14:
-- 2013-12-15:
-- 2013-12-16:
-- 2013-12-17:
-- 2013-12-18:
-- 2013-12-19:
-- 2013-12-20:
-- 2013-12-21:
-- 2013-12-22:
-- 2013-12-23:
-- 2013-12-24:
-- 2013-12-25:
+1. Chrome Apps Bootstrap
+1. Fukayatsu Room Controller (FRC)
+1. MacとUS配列とGoogle 日本語入力
+1. ChatBotとGoogle Analytics
+1. Chrome Platform APIs
+1. Middleman
+1. > 突然の死 <
+1. PHP
+1. (未定)
+1. (未定)
+1. (未定)
+1. (未定)
+1. (未定)
+1. (未定)
+1. (未定)
+1. (未定)
+1. (未定)
+1. (未定)
+1. (未定)
+1. (未定)
+1. (未定)
+1. (未定)
+1. (未定)
+1. 今年買ってよかった物
+1. 今年の振り返り
