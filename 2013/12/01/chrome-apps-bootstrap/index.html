@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+chrome-apps-bootstrap - fukayatsu.dev
+</title>
+</link>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36253613-1']);
+  _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<div class='header-text'>
+<a href="/"><h1 class='header-title'>
+fukayatsu.dev
+</h1>
+</a>
+<a target="_new" href="http://blog.fukayatsu.com/"><p class='header-description'>
+under development
+</p>
+</a>
+</div>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/12/01/chrome-apps-bootstrap/">2013-12-01 10:31:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/advent-calendar-2013/">advent-calendar-2013</a>
+<a href="/tags/chrome-apps/">chrome-apps</a>
+<a href="/tags/bootstrap/">bootstrap</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>chrome-apps-bootstrap</h1>
+<blockquote>
+<p><a href="/2013/11/29/advent-calendar-2013/">fukayatsu Advent Aalendar 2013</a> - 1日目</p>
+</blockquote>
+
+<p>技術調査の目的で、Twitter BootstrapとjQueryを使って<a href="https://github.com/fukayatsu/chrome-apps-bootstrap">Chrome Appsのサンプルを作った</a>。</p>
+
+<p>開発方法はChrome Extensionとほぼ同じだけど、Chrome AppsはChromeが立ち上がっていなくても動作する（実際はAppsを立ち上げるとChromeのプロセスも立ち上がる）。</p>
+
+<p>ChromeさえインストールされていればWindows/Mac/Linuxで動作するデスクトップアプリがWebの知識(html/css/js)で作れて、それが簡単に公開できる。便利。</p>
+
+<p><img src="https://raw.github.com/fukayatsu/chrome-apps-bootstrap/master/screenshots/Screen%20Shot%202013-11-30%20at%2021.11.00.png" /></p>
+
+<h2>.app</h2>
+
+<p>macだとインストール時に<code>*.app</code>を作ってくれるので、spotlightやランチャーの検索対象になる。<br>
+<img src="https://raw.github.com/fukayatsu/chrome-apps-bootstrap/master/screenshots/Screen%20Shot%202013-11-30%20at%2021.07.03.png" /></p>
+
+<h2>雑感</h2>
+
+<ul>
+<li>WebAPIベースのデスクトップアプリを作るなら、一番楽な選択肢なのでは</li>
+<li>最初<code>Chrome Apps Bootstrap</code>という名前でChrome Web Storeにアップロードしようとしたら、ガイドライン違反だと警告された</li>
+<li>アプリのviewに<code>&lt;a href=&quot;http://example.com/foo&quot;&gt;&lt;/a&gt;</code>とか書いても反応しない
+
+<ul>
+<li><code>target=&quot;_new&quot;</code>とか<code>target=&quot;_blank&quot;</code>のように、target属性を指定する必要がある</li>
+</ul></li>
+<li>Macのmenu barにアイコンがでるようなアプリを作りたくてgoogle hangoutsのChrome Appを調べてたら、内部で<a href="http://developer.chrome.com/extensions/npapi.html">NPAPI Plugins (deprecated)</a>を使っていた。
+
+<ul>
+<li>それなら普通にMacApp作ったほうが楽そう。
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/19795976/macruby-on-os-x-mavericks">MacRubyを使ったMacAppがMavericksで動きさえすれば...</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2>参考リンク</h2>
+
+<ul>
+<li><a href="http://developer.chrome.com/apps/about_apps.html">What Are Chrome Apps? - Google Chrome</a>
+
+<ul>
+<li>公式ドキュメント</li>
+</ul></li>
+<li><a href="https://github.com/GoogleChrome/chrome-app-samples">GoogleChrome/chrome-app-samples</a>
+
+<ul>
+<li>公式サンプル集のリポジトリ</li>
+</ul></li>
+</ul>
+
+<p>公式ドキュメントをちょっと見て、後はサンプルコードを試しながらコード読めばよいと思う。</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a target="_new" href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by
+<a target="_new" href="https://github.com/fukayatsu/fukayatsu.github.io/tree/source">GitHub</a>
+&
+<a target="_new" href="https://travis-ci.org/fukayatsu/fukayatsu.github.io">Travis CI</a>
+&
+<a target="_new" href="http://middlemanapp.com/">Middleman</a>
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
