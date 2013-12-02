@@ -5,16 +5,63 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-01T01:31:00Z</updated>
+  <updated>2013-12-02T08:43:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Grape on Rails and Session</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/02/grape-on-rails-and-session/"/>
+    <id>http://blog.url.com/2013/12/02/grape-on-rails-and-session/</id>
+    <published>2013-12-02T08:43:00Z</published>
+    <updated>2013-12-02T09:09:11+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Aalendar 2013&lt;/a&gt; - 2日目&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/intridea/grape"&gt;intridea/grape&lt;/a&gt;でAPIをRailsにmountして使っていて、両方のCookieSessionを共有したかった。&lt;br&gt;
+最終的に以下のようなhelper methodを用意することに落ち着いた。&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;
+&lt;span class="c1"&gt;# routes.rb&lt;/span&gt;
+&lt;span class="no"&gt;FooBar&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Application&lt;/span&gt;&lt;span class="nf"&gt;.routes.draw&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;mount&lt;/span&gt; &lt;span class="no"&gt;API&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/api&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;# api.rb&lt;/span&gt;
+&lt;span class="k"&gt;class &lt;/span&gt;&lt;span class="nc"&gt;API&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="no"&gt;Grape&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;API&lt;/span&gt;
+  &lt;span class="nb"&gt;format&lt;/span&gt; &lt;span class="ss"&gt;:json&lt;/span&gt;
+
+  &lt;span class="n"&gt;helpers&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;session&lt;/span&gt;
+      &lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="no"&gt;Rack&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Session&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Abstract&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;ENV_SESSION_KEY&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;end&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="n"&gt;mount&lt;/span&gt; &lt;span class="no"&gt;API&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;V1&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;h1&gt;余談&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Session is responsible for lazily loading the session from store.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.rubydoc.info/docs/rails/ActionDispatch/Request/Session"&gt;ActionDispatch::Request::Session&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;にあるようにsessionの情報は&lt;code&gt;Session#[]&lt;/code&gt;や&lt;code&gt;Session#[]=&lt;/code&gt;の初回呼び出し時にloadされ、&lt;br&gt;
+その前に&lt;code&gt;Session#inspect&lt;/code&gt;が呼ばれると&lt;code&gt;#&amp;lt;Session [id] not yet loaded&amp;gt;&lt;/code&gt;が返ってくる。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>chrome-apps-bootstrap</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/01/chrome-apps-bootstrap/"/>
     <id>http://blog.url.com/2013/12/01/chrome-apps-bootstrap/</id>
     <published>2013-12-01T01:31:00Z</published>
-    <updated>2013-12-01T02:13:22+00:00</updated>
+    <updated>2013-12-02T09:09:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -79,7 +126,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/29/advent-calendar-2013/"/>
     <id>http://blog.url.com/2013/11/29/advent-calendar-2013/</id>
     <published>2013-11-29T03:08:00Z</published>
-    <updated>2013-12-01T02:13:22+00:00</updated>
+    <updated>2013-12-02T09:09:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -91,7 +138,8 @@
 &lt;p&gt;※ 予定なのでタイトルとか内容は変更される可能性あり&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Chrome Apps Bootstrap&lt;/li&gt;
+&lt;li&gt;&lt;a href="/2013/12/01/chrome-apps-bootstrap/"&gt;Chrome Apps Bootstrap&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/2013/12/02/grape-on-rails-and-session/"&gt;Grape on Rails and Session&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fukayatsu Room Controller (FRC)&lt;/li&gt;
 &lt;li&gt;MacとUS配列とGoogle 日本語入力&lt;/li&gt;
 &lt;li&gt;ChatBotとGoogle Analytics&lt;/li&gt;
@@ -99,7 +147,6 @@
 &lt;li&gt;Middleman&lt;/li&gt;
 &lt;li&gt;&amp;gt; 突然の死 &amp;lt;&lt;/li&gt;
 &lt;li&gt;PHP&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
 &lt;li&gt;(未定)&lt;/li&gt;
 &lt;li&gt;(未定)&lt;/li&gt;
 &lt;li&gt;(未定)&lt;/li&gt;
@@ -124,7 +171,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/26/say-japanese/"/>
     <id>http://blog.url.com/2013/11/26/say-japanese/</id>
     <published>2013-11-26T14:07:00Z</published>
-    <updated>2013-12-01T02:13:22+00:00</updated>
+    <updated>2013-12-02T09:09:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -175,7 +222,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/25/ruby-and-daily-habit/"/>
     <id>http://blog.url.com/2013/11/25/ruby-and-daily-habit/</id>
     <published>2013-11-25T14:18:00Z</published>
-    <updated>2013-12-01T02:13:22+00:00</updated>
+    <updated>2013-12-02T09:09:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -245,7 +292,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/11/25/sublime-text-config/"/>
     <id>http://blog.url.com/2013/11/25/sublime-text-config/</id>
     <published>2013-11-25T10:02:00Z</published>
-    <updated>2013-12-01T02:13:22+00:00</updated>
+    <updated>2013-12-02T09:09:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -268,148 +315,5 @@
 
 &lt;p&gt;&lt;a href="https://github.com/fukayatsu/flatland/compare/105a62fe2637795ae93563b30280840129f02faa...fcedf2dcbf867b419d0ec45da35004758ab68519"&gt;変更点はこんな感じ&lt;/a&gt;&lt;/p&gt;
 </content>
-  </entry>
-  <entry>
-    <title>middleman-and-zsh</title>
-    <link rel="alternate" href="http://blog.url.com/2013/11/24/middleman-and-zsh/"/>
-    <id>http://blog.url.com/2013/11/24/middleman-and-zsh/</id>
-    <published>2013-11-24T10:53:00Z</published>
-    <updated>2013-12-01T02:13:22+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;ブログの記事を書くステップは、今までこんな感じだった。&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;iTerm2を立ち上げる
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;CMD + SPACE&lt;/code&gt; =&amp;gt; &lt;code&gt;iterm + ENTER&lt;/code&gt; (alfred)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;blogのリポジトリに移動する
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$ cd ~/github/fukayatsu.github.io&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;記事を新規作成する
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$ bundle exec middleman article middleman-and-zsh&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;記事を編集する
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$ subl source/posts/2013-11-24-middleman-and-zsh.html.md&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;記事をプレビューする
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$ middleman&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;open in browser&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;記事をコミットする
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$ git commit -am &amp;#39;Add post&amp;#39;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;記事をpushする
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$ git push&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;travis-ciとgithub pagesがよしなにしてくれる&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2&gt;今はこうなった&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;iTerm2を立ち上げる
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;CMD + SPACE&lt;/code&gt; =&amp;gt; &lt;code&gt;iterm + ENTER&lt;/code&gt; (alfred)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;blogのリポジトリに移動して、記事を作成し、powのプレビューを立ち上げる
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$ blog middleman-and-zsh&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;LiveReloadで確認しながら記事を書く&lt;/li&gt;
-&lt;li&gt;記事を公開する
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;$ blog-publish&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;travis-ciとgithub pagesがよしなにしてくれる&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;かなり心理的負担が無くなった。&lt;/p&gt;
-
-&lt;h1&gt;作業メモ&lt;/h1&gt;
-
-&lt;h2&gt;zshの関数&lt;/h2&gt;
-&lt;pre class="highlight shell"&gt;&lt;span class="k"&gt;function &lt;/span&gt;blog&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-  &lt;span class="c"&gt;# リポジトリに移動&lt;/span&gt;
-  &lt;span class="nb"&gt;cd&lt;/span&gt; /Users/fukayatsu/github/fukayatsu.github.io
-  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
-  &lt;span class="k"&gt;then&lt;/span&gt;
-    &lt;span class="c"&gt;# 新規記事作成&lt;/span&gt;
-    &lt;span class="nv"&gt;file&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;bundle &lt;span class="nb"&gt;exec &lt;/span&gt;middleman article &lt;span class="nv"&gt;$1&lt;/span&gt; | &lt;span class="se"&gt;\&lt;/span&gt;
-      grep &lt;span class="s1"&gt;&amp;#39;create\|update&amp;#39;&lt;/span&gt; | &lt;span class="se"&gt;\&lt;/span&gt;
-      awk &lt;span class="s1"&gt;&amp;#39;{print $3}&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
-
-    &lt;span class="c"&gt;# ファイル名からプレビュー用url生成&lt;/span&gt;
-    &lt;span class="nv"&gt;url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$file&lt;/span&gt; | &lt;span class="se"&gt;\&lt;/span&gt;
-      sed -e &lt;span class="s1"&gt;&amp;#39;s/source\/posts/http:\/\/fk.dev/&amp;#39;&lt;/span&gt; | &lt;span class="se"&gt;\&lt;/span&gt;
-      sed -e &lt;span class="s1"&gt;&amp;#39;s/\.html\.md/\//&amp;#39;&lt;/span&gt; | &lt;span class="se"&gt;\&lt;/span&gt;
-      sed -e &lt;span class="s1"&gt;&amp;#39;s/\(201[0-9]\)-\([0-9][0-9]\)-\([0-9][0-9]\)-/\1\/\2\/\3\//&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
-
-    &lt;span class="c"&gt;# エディタを開く&lt;/span&gt;
-    subl &lt;span class="nv"&gt;$file&lt;/span&gt;
-
-    &lt;span class="c"&gt;# ブラウザでプレビューを開く&lt;/span&gt;
-    open &lt;span class="nv"&gt;$url&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="nb"&gt;echo &lt;/span&gt;preview: &lt;span class="nv"&gt;$url&lt;/span&gt;
-  &lt;span class="k"&gt;fi&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-
-&lt;span class="k"&gt;function &lt;/span&gt;blog-publish&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-  &lt;span class="c"&gt;# リポジトリに移動&lt;/span&gt;
-  &lt;span class="nb"&gt;cd&lt;/span&gt; /Users/fukayatsu/github/fukayatsu.github.io
-
-  &lt;span class="c"&gt;# コミットしてremoteにpush&lt;/span&gt;
-  git checkout &lt;span class="nb"&gt;source
-  &lt;/span&gt;git add .
-  git commit -m &lt;span class="s2"&gt;&amp;quot;Update Posts&amp;quot;&lt;/span&gt;
-  git push origin &lt;span class="nb"&gt;source
-
-  echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;done.&amp;#39;&lt;/span&gt;
-&lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;
-&lt;h2&gt;pow用のconfig.ru&lt;/h2&gt;
-&lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;# Make Rack comparable to middleman server by tdreyno · Pull Request #560 · middleman/middleman&lt;/span&gt;
-&lt;span class="c1"&gt;# https://github.com/middleman/middleman/pull/560&lt;/span&gt;
-
-&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;rubygems&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;bundler&amp;#39;&lt;/span&gt;
-&lt;span class="no"&gt;Bundler&lt;/span&gt;&lt;span class="nf"&gt;.setup&lt;/span&gt;
-
-&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;middleman-core/load_paths&amp;quot;&lt;/span&gt;
-
-&lt;span class="no"&gt;Middleman&lt;/span&gt;&lt;span class="nf"&gt;.setup_load_paths&lt;/span&gt;
-
-&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;middleman-core&amp;quot;&lt;/span&gt;
-&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;middleman-core/preview_server&amp;quot;&lt;/span&gt;
-
-&lt;span class="k"&gt;module&lt;/span&gt; &lt;span class="nn"&gt;Middleman::PreviewServer&lt;/span&gt;
-  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nc"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;preview_in_rack&lt;/span&gt;
-    &lt;span class="vi"&gt;@options&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="ss"&gt;latency: &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="vi"&gt;@app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new_app&lt;/span&gt;
-    &lt;span class="n"&gt;start_file_watcher&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-
-&lt;span class="no"&gt;Middleman&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;PreviewServer&lt;/span&gt;&lt;span class="nf"&gt;.preview_in_rack&lt;/span&gt;
-&lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="no"&gt;Middleman&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;PreviewServer&lt;/span&gt;&lt;span class="nf"&gt;.app.class.to_rack_app&lt;/span&gt;
-
-&lt;/pre&gt;</content>
   </entry>
 </feed>
