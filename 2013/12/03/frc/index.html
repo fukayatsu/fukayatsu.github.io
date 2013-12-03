@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+Fukayatsu Room Controller (FRC) - fukayatsu.dev
+</title>
+</link>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36253613-1']);
+  _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<div class='header-text'>
+<a href="/"><h1 class='header-title'>
+fukayatsu.dev
+</h1>
+</a>
+<a target="_new" href="http://blog.fukayatsu.com/"><p class='header-description'>
+under development
+</p>
+</a>
+</div>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/12/03/frc/">2013-12-03 22:08:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/advent-calendar-2013/">advent-calendar-2013</a>
+<a href="/tags/google-apps/">google-apps</a>
+<a href="/tags/lita/">lita</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>Fukayatsu Room Controller (FRC)</h1>
+<blockquote>
+<p><a href="/2013/11/29/advent-calendar-2013/">fukayatsu Advent Aalendar 2013</a> - 3日目</p>
+</blockquote>
+
+<p>おなかいたい</p>
+
+<h2>背景</h2>
+
+<p><a href="http://fk.dev/2013/08/11/iremocon-and-lita/">RubyとLita(chat bot)で自宅のエアコンを操作する</a>ことができるようになって便利になったものの、<br>
+横になってPCを使っている時などにHipChatを開いてコマンドを打つのが若干めんどくさくもあった。</p>
+
+<h2>Chrome Appsでリモコンを作った</h2>
+
+<p>ということで、1日目の<a href="/2013/12/01/chrome-apps-bootstrap/">Chrome Apps Bootstrap</a>を使って部屋のリモコンを作り、(無駄に)<a href="https://chrome.google.com/webstore/detail/fukayatsu-room-controller/imkaddobkcpdgncmlokkpcmgfkcflfak">公開した。</a></p>
+
+<p>家電制御に使っているHipChatのroom_idとtokenがあれば、誰でもうちの家電を操作できる。</p>
+
+<ul>
+<li><p>Dockの中に登録しておけば、2クリックで電気が消せるのでかなり捗る。<br>
+<img alt="w50" src="/images/2013-12-03-d.png" /></p></li>
+<li><p>メインタブ。<br>
+<img src="/images/2013-12-03-a.png" /></p></li>
+<li><p>設定タブ。chromeにログインしていれば他のPCでも同期される。<br>
+<img src="/images/2013-12-03-b.png" /></p></li>
+</ul>
+
+<h2>技術的なこと</h2>
+
+<p>コードはこのあたり</p>
+
+<blockquote>
+<p><a href="https://github.com/fukayatsu/home-lita/blob/master/chrome_app/src/js/window.js">home-lita/chrome_app/src/js/window.js at master · fukayatsu/home-lita</a></p>
+</blockquote>
+
+<p>リモコンのボタンを押すと、hipchat上のroomにコマンドが書き込まれ、それがbotに処理される。<br>
+bot側は特に変更の必要が無いので楽だった。</p>
+
+<p><img src="/images/2013-12-03-c.png" /></p>
+
+<h2>余談</h2>
+
+<p>chrome web storeの拡張機能・Appの公開の上限は20個で、これで上限に達した。<br>
+でも半分ぐらいはあまり意味のない拡張機能なのであとで記事に書いたら順次非公開にしていこうと思う。</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a target="_new" href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by
+<a target="_new" href="https://github.com/fukayatsu/fukayatsu.github.io/tree/source">GitHub</a>
+&
+<a target="_new" href="https://travis-ci.org/fukayatsu/fukayatsu.github.io">Travis CI</a>
+&
+<a target="_new" href="http://middlemanapp.com/">Middleman</a>
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
