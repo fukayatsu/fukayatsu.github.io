@@ -1,7 +1,7 @@
 ---
 title: Grape on Rails and Session
 date: 2013-12-02 17:43 JST
-tags: rails, grape, session, cookie
+tags: advent-calendar-2013, rails, grape, session, cookie
 ---
 
 > [fukayatsu Advent Aalendar 2013](/2013/11/29/advent-calendar-2013/) - 2日目
