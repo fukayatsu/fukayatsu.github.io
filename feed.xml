@@ -5,16 +5,38 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-03T13:08:00Z</updated>
+  <updated>2013-12-04T11:57:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>おかゆ</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/04/rice-gruel/"/>
+    <id>http://blog.url.com/2013/12/04/rice-gruel/</id>
+    <published>2013-12-04T11:57:00Z</published>
+    <updated>2013-12-04T12:35:11+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Aalendar 2013&lt;/a&gt; - 4日目&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;昨日の午後から体調が悪くてまともに食べてないのでおかゆを作った。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/2013-12-04.jpg" /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://cookpad.com/recipe/1288348"&gt;３０分で完成☆1人用土鍋で簡単お粥 by michila [クックパッド]&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+  </entry>
   <entry>
     <title>Fukayatsu Room Controller (FRC)</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/03/frc/"/>
     <id>http://blog.url.com/2013/12/03/frc/</id>
     <published>2013-12-03T13:08:00Z</published>
-    <updated>2013-12-03T14:19:30+00:00</updated>
+    <updated>2013-12-04T12:35:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -70,7 +92,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/02/grape-on-rails-and-session/"/>
     <id>http://blog.url.com/2013/12/02/grape-on-rails-and-session/</id>
     <published>2013-12-02T08:43:00Z</published>
-    <updated>2013-12-03T14:19:30+00:00</updated>
+    <updated>2013-12-04T12:35:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -117,7 +139,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/01/chrome-apps-bootstrap/"/>
     <id>http://blog.url.com/2013/12/01/chrome-apps-bootstrap/</id>
     <published>2013-12-01T01:31:00Z</published>
-    <updated>2013-12-03T14:19:30+00:00</updated>
+    <updated>2013-12-04T12:35:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -182,7 +204,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/11/29/advent-calendar-2013/"/>
     <id>http://blog.url.com/2013/11/29/advent-calendar-2013/</id>
     <published>2013-11-29T03:08:00Z</published>
-    <updated>2013-12-03T14:19:30+00:00</updated>
+    <updated>2013-12-04T12:35:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -197,6 +219,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
 &lt;li&gt;&lt;a href="/2013/12/01/chrome-apps-bootstrap/"&gt;Chrome Apps Bootstrap&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/2013/12/02/grape-on-rails-and-session/"&gt;Grape on Rails and Session&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/2013/12/03/frc/"&gt;Fukayatsu Room Controller (FRC)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/2013/12/04/rice-gruel/"&gt;おかゆ&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;deploy with lita&lt;/li&gt;
 &lt;li&gt;MacとUS配列とGoogle 日本語入力&lt;/li&gt;
 &lt;li&gt;ChatBotとGoogle Analytics&lt;/li&gt;
@@ -204,7 +227,6 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
 &lt;li&gt;Middleman&lt;/li&gt;
 &lt;li&gt;&amp;gt; 突然の死 &amp;lt;&lt;/li&gt;
 &lt;li&gt;PHP&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
 &lt;li&gt;(未定)&lt;/li&gt;
 &lt;li&gt;(未定)&lt;/li&gt;
 &lt;li&gt;(未定)&lt;/li&gt;
@@ -227,7 +249,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/11/26/say-japanese/"/>
     <id>http://blog.url.com/2013/11/26/say-japanese/</id>
     <published>2013-11-26T14:07:00Z</published>
-    <updated>2013-12-03T14:19:30+00:00</updated>
+    <updated>2013-12-04T12:35:11+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -271,76 +293,6 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
 ちょっと苗字っぽいとおもって調べてみた。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://www2s.biglobe.ne.jp/~suzakihp/index40.html"&gt;全国の苗字（名字）１１万種&lt;/a&gt;によると、&lt;code&gt;男谷(オトヤ)&lt;/code&gt;さんが実在するらしい。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>寒くて朝起きるのが辛いのでプログラムでなんとかしたい</title>
-    <link rel="alternate" href="http://blog.url.com/2013/11/25/ruby-and-daily-habit/"/>
-    <id>http://blog.url.com/2013/11/25/ruby-and-daily-habit/</id>
-    <published>2013-11-25T14:18:00Z</published>
-    <updated>2013-12-03T14:19:30+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;img alt="使っているリモコン" src="/images/2013-11-25-remotes.jpg" /&gt;&lt;br&gt;
-（左から、照明・エアコン・電気アンカ用のリモコン）&lt;/p&gt;
-
-&lt;p&gt;今年の夏頃に&lt;a href="http://blog.fukayatsu.com/2013/08/11/iremocon-and-lita/"&gt;家電をhipchatから操作したり、スケジューリングできるようした&lt;/a&gt;が、サーバのアップデート時に停止したままだったので、復旧するついでに秋冬用にスケジュールを細かく&lt;a href="https://github.com/fukayatsu/home-lita/commit/c7f4d30d42970c149161cda0c3c8174ba3ef056a"&gt;設定し直した。&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;一部抜粋するとこんな感じ&lt;/p&gt;
-&lt;pre class="highlight ruby"&gt;  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;0   8  * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:wake_up&lt;/span&gt;     &lt;span class="c1"&gt;# 目を覚ます&lt;/span&gt;
-  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;30  8  * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:turn_out&lt;/span&gt;    &lt;span class="c1"&gt;# 布団から出る&lt;/span&gt;
-  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;30  10 * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:go_out&lt;/span&gt;      &lt;span class="c1"&gt;# 外出&lt;/span&gt;
-  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;0   20 * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:back_home&lt;/span&gt;   &lt;span class="c1"&gt;# 帰宅&lt;/span&gt;
-  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;0   23 * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:calm_down&lt;/span&gt;   &lt;span class="c1"&gt;# 落ち着く&lt;/span&gt;
-  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;25  1  * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:bed_down&lt;/span&gt;    &lt;span class="c1"&gt;# 布団に入る&lt;/span&gt;
-  &lt;span class="n"&gt;cron&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;30  1  * * * Asia/Tokyo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="ss"&gt;:sleeping&lt;/span&gt;    &lt;span class="c1"&gt;# 寝る&lt;/span&gt;
-
-  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;wake_up&lt;/span&gt;
-    &lt;span class="c1"&gt;# all on&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights warm&amp;#39;&lt;/span&gt; &lt;span class="c1"&gt;# 照明をオレンジっぽい光にする&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;heater on&amp;#39;&lt;/span&gt;   &lt;span class="c1"&gt;# エアコン(暖房) ON&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;pad on&amp;#39;&lt;/span&gt;      &lt;span class="c1"&gt;# 電気あんか ON&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
-
-  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;turn_out&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights max&amp;#39;&lt;/span&gt; &lt;span class="c1"&gt;# 照明光量 max&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
-
-  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;go_out&lt;/span&gt;
-    &lt;span class="c1"&gt;# all off&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights off&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;heater off&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;pad off&amp;#39;&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
-
-  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;back_home&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights on&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;heater on&amp;#39;&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
-
-  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;calm_down&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights warm&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;pad on&amp;#39;&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
-
-  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;bed_down&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights min&amp;#39;&lt;/span&gt; &lt;span class="c1"&gt;# 照明を常夜灯にする&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;heater off&amp;#39;&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
-
-  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;sleeping&lt;/span&gt;
-    &lt;span class="n"&gt;exec_command&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lights off&amp;#39;&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;
-&lt;h2&gt;雑感&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;すべての家電にリモコンつけて欲しい&lt;/li&gt;
-&lt;li&gt;電気アンカは多少不安なので手動でもON/OFFできるようにした&lt;/li&gt;
-&lt;li&gt;照明は意外と細かく色みや光量をコントロールできて面白い&lt;/li&gt;
-&lt;li&gt;数日試したら、寝起きが改善されたか書く&lt;/li&gt;
-&lt;/ul&gt;
 </content>
   </entry>
 </feed>
