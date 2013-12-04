@@ -14,12 +14,12 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/04/rice-gruel/"/>
     <id>http://blog.url.com/2013/12/04/rice-gruel/</id>
     <published>2013-12-04T11:57:00Z</published>
-    <updated>2013-12-04T12:35:11+00:00</updated>
+    <updated>2013-12-04T12:52:49+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Aalendar 2013&lt;/a&gt; - 4日目&lt;/p&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 4日目&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;昨日の午後から体調が悪くてまともに食べてないのでおかゆを作った。&lt;/p&gt;
@@ -36,12 +36,12 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/03/frc/"/>
     <id>http://blog.url.com/2013/12/03/frc/</id>
     <published>2013-12-03T13:08:00Z</published>
-    <updated>2013-12-04T12:35:11+00:00</updated>
+    <updated>2013-12-04T12:52:49+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Aalendar 2013&lt;/a&gt; - 3日目&lt;/p&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 3日目&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;おなかいたい&lt;/p&gt;
@@ -92,12 +92,12 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/02/grape-on-rails-and-session/"/>
     <id>http://blog.url.com/2013/12/02/grape-on-rails-and-session/</id>
     <published>2013-12-02T08:43:00Z</published>
-    <updated>2013-12-04T12:35:11+00:00</updated>
+    <updated>2013-12-04T12:52:49+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Aalendar 2013&lt;/a&gt; - 2日目&lt;/p&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 2日目&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/intridea/grape"&gt;intridea/grape&lt;/a&gt;でAPIをRailsにmountして使っていて、両方のCookieSessionを共有したかった。&lt;br&gt;
@@ -139,12 +139,12 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/01/chrome-apps-bootstrap/"/>
     <id>http://blog.url.com/2013/12/01/chrome-apps-bootstrap/</id>
     <published>2013-12-01T01:31:00Z</published>
-    <updated>2013-12-04T12:35:11+00:00</updated>
+    <updated>2013-12-04T12:52:49+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Aalendar 2013&lt;/a&gt; - 1日目&lt;/p&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 1日目&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;技術調査の目的で、Twitter BootstrapとjQueryを使って&lt;a href="https://github.com/fukayatsu/chrome-apps-bootstrap"&gt;Chrome Appsのサンプルを作った&lt;/a&gt;。&lt;/p&gt;
@@ -204,7 +204,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/11/29/advent-calendar-2013/"/>
     <id>http://blog.url.com/2013/11/29/advent-calendar-2013/</id>
     <published>2013-11-29T03:08:00Z</published>
-    <updated>2013-12-04T12:35:11+00:00</updated>
+    <updated>2013-12-04T12:52:49+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -249,7 +249,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/11/26/say-japanese/"/>
     <id>http://blog.url.com/2013/11/26/say-japanese/</id>
     <published>2013-11-26T14:07:00Z</published>
-    <updated>2013-12-04T12:35:11+00:00</updated>
+    <updated>2013-12-04T12:52:49+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
