@@ -5,7 +5,7 @@ tags: advent-calendar-2013, chrome-apps, bootstrap
 ---
 
 
-> [fukayatsu Advent Aalendar 2013](/2013/11/29/advent-calendar-2013/) - 1日目
+> [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 1日目
 
 技術調査の目的で、Twitter BootstrapとjQueryを使って[Chrome Appsのサンプルを作った](https://github.com/fukayatsu/chrome-apps-bootstrap)。
 

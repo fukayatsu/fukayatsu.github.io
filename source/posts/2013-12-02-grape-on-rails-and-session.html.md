@@ -4,7 +4,7 @@ date: 2013-12-02 17:43 JST
 tags: advent-calendar-2013, rails, grape, session, cookie
 ---
 
-> [fukayatsu Advent Aalendar 2013](/2013/11/29/advent-calendar-2013/) - 2日目
+> [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 2日目
 
 [intridea/grape](https://github.com/intridea/grape)でAPIをRailsにmountして使っていて、両方のCookieSessionを共有したかった。
 最終的に以下のようなhelper methodを用意することに落ち着いた。
