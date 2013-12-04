@@ -14,6 +14,7 @@ tags: advent-calendar-2013, list
 1. [Chrome Apps Bootstrap](/2013/12/01/chrome-apps-bootstrap/)
 1. [Grape on Rails and Session](/2013/12/02/grape-on-rails-and-session/)
 1. [Fukayatsu Room Controller (FRC)](/2013/12/03/frc/)
+1. [おかゆ](/2013/12/04/rice-gruel/)
 1. deploy with lita
 1. MacとUS配列とGoogle 日本語入力
 1. ChatBotとGoogle Analytics
@@ -21,7 +22,6 @@ tags: advent-calendar-2013, list
 1. Middleman
 1. > 突然の死 <
 1. PHP
-1. (未定)
 1. (未定)
 1. (未定)
 1. (未定)
