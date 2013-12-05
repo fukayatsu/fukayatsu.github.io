@@ -5,16 +5,41 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-04T11:57:00Z</updated>
+  <updated>2013-12-05T15:24:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>wriper</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/06/wriper/"/>
+    <id>http://blog.url.com/2013/12/06/wriper/</id>
+    <published>2013-12-05T15:24:00Z</published>
+    <updated>2013-12-05T15:38:00+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 5日目&lt;br&gt;
+間に合わなかった...&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1&gt;&lt;a href="https://wri.pe/"&gt;wri.pe&lt;/a&gt;をChrome App化した&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://chrome.google.com/webstore/detail/wriper/bjbpioaagmcdgpplnofkgofibdbcfplk"&gt;wriper - Google Chrome Web Store&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src="/images/2013-12-06-wriper.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;これでevernoteに近い感覚で使える気がする&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>おかゆ</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/04/rice-gruel/"/>
     <id>http://blog.url.com/2013/12/04/rice-gruel/</id>
     <published>2013-12-04T11:57:00Z</published>
-    <updated>2013-12-04T13:05:16+00:00</updated>
+    <updated>2013-12-05T15:38:00+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -36,7 +61,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/03/frc/"/>
     <id>http://blog.url.com/2013/12/03/frc/</id>
     <published>2013-12-03T13:08:00Z</published>
-    <updated>2013-12-04T13:05:16+00:00</updated>
+    <updated>2013-12-05T15:38:00+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -92,7 +117,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/02/grape-on-rails-and-session/"/>
     <id>http://blog.url.com/2013/12/02/grape-on-rails-and-session/</id>
     <published>2013-12-02T08:43:00Z</published>
-    <updated>2013-12-04T13:05:16+00:00</updated>
+    <updated>2013-12-05T15:38:00+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -139,7 +164,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/01/chrome-apps-bootstrap/"/>
     <id>http://blog.url.com/2013/12/01/chrome-apps-bootstrap/</id>
     <published>2013-12-01T01:31:00Z</published>
-    <updated>2013-12-04T13:05:16+00:00</updated>
+    <updated>2013-12-05T15:38:00+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -204,7 +229,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/11/29/advent-calendar-2013/"/>
     <id>http://blog.url.com/2013/11/29/advent-calendar-2013/</id>
     <published>2013-11-29T03:08:00Z</published>
-    <updated>2013-12-04T13:05:16+00:00</updated>
+    <updated>2013-12-05T15:38:00+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -220,6 +245,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
 &lt;li&gt;&lt;a href="/2013/12/02/grape-on-rails-and-session/"&gt;Grape on Rails and Session&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/2013/12/03/frc/"&gt;Fukayatsu Room Controller (FRC)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/2013/12/04/rice-gruel/"&gt;おかゆ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/2013/12/06/wriper"&gt;wriper&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;deploy with lita&lt;/li&gt;
 &lt;li&gt;MacとUS配列とGoogle 日本語入力&lt;/li&gt;
 &lt;li&gt;ChatBotとGoogle Analytics&lt;/li&gt;
@@ -238,61 +264,9 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
 &lt;li&gt;(未定)&lt;/li&gt;
 &lt;li&gt;(未定)&lt;/li&gt;
 &lt;li&gt;(未定)&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
 &lt;li&gt;今年買ってよかった物&lt;/li&gt;
 &lt;li&gt;今年の振り返り&lt;/li&gt;
 &lt;/ol&gt;
-</content>
-  </entry>
-  <entry>
-    <title>say-japanese-gem</title>
-    <link rel="alternate" href="http://blog.url.com/2013/11/26/say-japanese/"/>
-    <id>http://blog.url.com/2013/11/26/say-japanese/</id>
-    <published>2013-11-26T14:07:00Z</published>
-    <updated>2013-12-04T13:05:16+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="https://rubygems.org/gems/say-japanese"&gt;say-japanese&lt;/a&gt;というRubyから日本語を喋らせるGemを作った(Mac限定)。&lt;/p&gt;
-
-&lt;p&gt;ちょっと調べた段階で、&lt;a href="https://github.com/smart/say"&gt;smart/say&lt;/a&gt;を見つけたけど、日本語の音声に対応していないのと作者がgithub上で活動していないようなので作ることに。&lt;/p&gt;
-
-&lt;p&gt;今のところvoiceは&lt;code&gt;Kyoko&lt;/code&gt;と&lt;code&gt;Otoya&lt;/code&gt;だけに対応している。&lt;/p&gt;
-
-&lt;h2&gt;サンプルコード&lt;/h2&gt;
-&lt;pre class="highlight text"&gt;$ gem install say-japanese
-&lt;/pre&gt;&lt;pre class="highlight ruby"&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;say/japanese&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;say&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;オブジェクト指向スクリプト言語 ルビー&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;set_say_as_default&lt;/span&gt; &lt;span class="ss"&gt;:otoya&lt;/span&gt;
-
-&lt;span class="n"&gt;say&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;オブジェクト指向スクリプト言語 ルビー&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;say_as&lt;/span&gt; &lt;span class="ss"&gt;:kyoko&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;ルビーとは、&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;say_as&lt;/span&gt; &lt;span class="ss"&gt;:otoya&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="no"&gt;EOT&lt;/span&gt;&lt;span class="sh"&gt;
-  オープンソースの動的なプログラミング言語で、
-  シンプルさと高い生産性を備えています。
-  エレガントな文法を持ち、自然に読み書きができます。
-&lt;/span&gt;&lt;span class="no"&gt;EOT&lt;/span&gt;
-&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;デフォルトの音声はkyoko&lt;/li&gt;
-&lt;li&gt;文字列に改行が入っている場合は&lt;code&gt;。&lt;/code&gt;に置き換えている&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Otoya&lt;/h2&gt;
-
-&lt;iframe width="420" height="315" src="//www.youtube.com/embed/2KRD09whqB4?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Lionで追加されたKyoko(女声)につづいてMavericksから追加されたOtoya(男声)。&lt;br&gt;
-動画の自己紹介では&amp;quot;Otoya&amp;quot;が&amp;quot;あといや&amp;quot;みたいに聞こえる。&lt;/p&gt;
-
-&lt;p&gt;他のvoiceデータの名前からしてOtoyaも名前の方なんだろうけど、&lt;br&gt;
-ちょっと苗字っぽいとおもって調べてみた。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://www2s.biglobe.ne.jp/~suzakihp/index40.html"&gt;全国の苗字（名字）１１万種&lt;/a&gt;によると、&lt;code&gt;男谷(オトヤ)&lt;/code&gt;さんが実在するらしい。&lt;/p&gt;
 </content>
   </entry>
 </feed>
