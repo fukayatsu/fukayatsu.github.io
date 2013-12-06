@@ -5,16 +5,75 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-05T15:24:00Z</updated>
+  <updated>2013-12-06T12:30:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>WebサービスをChrome App化する</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/06/chrome-apps-generator/"/>
+    <id>http://blog.url.com/2013/12/06/chrome-apps-generator/</id>
+    <published>2013-12-06T12:30:00Z</published>
+    <updated>2013-12-06T12:38:23+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 6日目&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;昨日作った&lt;a href="/2013/12/06/wriper"&gt;wriper&lt;/a&gt;で結構簡単にWebアプリをChrome Appにできることがわかったので、&lt;br&gt;
+ほかのWebアプリも簡単にChromeアプリにできるようにGeneratorを作った。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://chrome-apps-generator.herokuapp.com/"&gt;ChromeAppsGenerator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;使いかた&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://chrome-apps-generator.herokuapp.com/"&gt;http://chrome-apps-generator.herokuapp.com/&lt;/a&gt; でアプリにしたいURLとアプリ名と説明を入力する&lt;br&gt;
+&lt;img src="/images/2013-12-06-a.png" /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;ダウンロードして解凍&lt;br&gt;
+&lt;img alt="w50" src="/images/2013-12-06-b.png" /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;chrome://extensions/ に解凍して出来たフォルダをDrag &amp;amp; Drop&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;Launch&lt;/code&gt;をクリック&lt;br&gt;
+&lt;img src="/images/2013-12-06-e.png" /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Chrome アプリになった&lt;br&gt;
+&lt;img src="/images/2013-12-06-c.png" /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;.appも生成されている&lt;br&gt;
+&lt;img src="/images/2013-12-06-d.png" /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;が、しかし日本語入力が出来ない&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;調査中
+
+&lt;ul&gt;
+&lt;li&gt;確認したらwriperもだめだった&lt;/li&gt;
+&lt;li&gt;この辺の問題？ &lt;a href="https://code.google.com/p/chromium/issues/detail?id=235573"&gt;Issue 235573 - chromium - webview does not properly interface with the IME - An open-source project to help move the web forward. - Google Project Hosting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;そのほかのTODO&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;デザイン調整
+
+&lt;ul&gt;
+&lt;li&gt;微妙にwebviewの下の方が切れている&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;アイコンをアップロードできるようにする&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>wriper</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/06/wriper/"/>
     <id>http://blog.url.com/2013/12/06/wriper/</id>
     <published>2013-12-05T15:24:00Z</published>
-    <updated>2013-12-05T15:38:00+00:00</updated>
+    <updated>2013-12-06T12:38:23+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -39,7 +98,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/04/rice-gruel/"/>
     <id>http://blog.url.com/2013/12/04/rice-gruel/</id>
     <published>2013-12-04T11:57:00Z</published>
-    <updated>2013-12-05T15:38:00+00:00</updated>
+    <updated>2013-12-06T12:38:23+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -61,7 +120,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/03/frc/"/>
     <id>http://blog.url.com/2013/12/03/frc/</id>
     <published>2013-12-03T13:08:00Z</published>
-    <updated>2013-12-05T15:38:00+00:00</updated>
+    <updated>2013-12-06T12:38:23+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -117,7 +176,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/02/grape-on-rails-and-session/"/>
     <id>http://blog.url.com/2013/12/02/grape-on-rails-and-session/</id>
     <published>2013-12-02T08:43:00Z</published>
-    <updated>2013-12-05T15:38:00+00:00</updated>
+    <updated>2013-12-06T12:38:23+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -164,7 +223,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/01/chrome-apps-bootstrap/"/>
     <id>http://blog.url.com/2013/12/01/chrome-apps-bootstrap/</id>
     <published>2013-12-01T01:31:00Z</published>
-    <updated>2013-12-05T15:38:00+00:00</updated>
+    <updated>2013-12-06T12:38:23+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -222,51 +281,6 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;公式ドキュメントをちょっと見て、後はサンプルコードを試しながらコード読めばよいと思う。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>fukayatsu Advent Calendar 2013</title>
-    <link rel="alternate" href="http://blog.url.com/2013/11/29/advent-calendar-2013/"/>
-    <id>http://blog.url.com/2013/11/29/advent-calendar-2013/</id>
-    <published>2013-11-29T03:08:00Z</published>
-    <updated>2013-12-05T15:38:00+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;去年はいくつかの技術系Advent Calendarに参加したけど、&lt;br&gt;
-今年は &lt;code&gt;1人 Advent Calendar&lt;/code&gt; をやることにした。&lt;/p&gt;
-
-&lt;h1&gt;目次&lt;/h1&gt;
-
-&lt;p&gt;※ 予定なのでタイトルとか内容は変更される可能性あり&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href="/2013/12/01/chrome-apps-bootstrap/"&gt;Chrome Apps Bootstrap&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/2013/12/02/grape-on-rails-and-session/"&gt;Grape on Rails and Session&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/2013/12/03/frc/"&gt;Fukayatsu Room Controller (FRC)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/2013/12/04/rice-gruel/"&gt;おかゆ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/2013/12/06/wriper"&gt;wriper&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;deploy with lita&lt;/li&gt;
-&lt;li&gt;MacとUS配列とGoogle 日本語入力&lt;/li&gt;
-&lt;li&gt;ChatBotとGoogle Analytics&lt;/li&gt;
-&lt;li&gt;Chrome Platform APIs&lt;/li&gt;
-&lt;li&gt;Middleman&lt;/li&gt;
-&lt;li&gt;&amp;gt; 突然の死 &amp;lt;&lt;/li&gt;
-&lt;li&gt;PHP&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
-&lt;li&gt;(未定)&lt;/li&gt;
-&lt;li&gt;今年買ってよかった物&lt;/li&gt;
-&lt;li&gt;今年の振り返り&lt;/li&gt;
-&lt;/ol&gt;
 </content>
   </entry>
 </feed>

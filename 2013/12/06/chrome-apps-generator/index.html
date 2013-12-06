@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+WebサービスをChrome App化する - fukayatsu.dev
+</title>
+</link>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36253613-1']);
+  _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<div class='header-text'>
+<a href="/"><h1 class='header-title'>
+fukayatsu.dev
+</h1>
+</a>
+<a target="_new" href="http://blog.fukayatsu.com/"><p class='header-description'>
+under development
+</p>
+</a>
+</div>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/12/06/chrome-apps-generator/">2013-12-06 21:30:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/chrome-app-heroku/">chrome-app heroku</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>WebサービスをChrome App化する</h1>
+<blockquote>
+<p><a href="/2013/11/29/advent-calendar-2013/">fukayatsu Advent Calendar 2013</a> - 6日目</p>
+</blockquote>
+
+<p>昨日作った<a href="/2013/12/06/wriper">wriper</a>で結構簡単にWebアプリをChrome Appにできることがわかったので、<br>
+ほかのWebアプリも簡単にChromeアプリにできるようにGeneratorを作った。</p>
+
+<ul>
+<li><a href="http://chrome-apps-generator.herokuapp.com/">ChromeAppsGenerator</a></li>
+</ul>
+
+<h1>使いかた</h1>
+
+<ul>
+<li><p><a href="http://chrome-apps-generator.herokuapp.com/">http://chrome-apps-generator.herokuapp.com/</a> でアプリにしたいURLとアプリ名と説明を入力する<br>
+<img src="/images/2013-12-06-a.png" /></p></li>
+<li><p>ダウンロードして解凍<br>
+<img alt="w50" src="/images/2013-12-06-b.png" /></p></li>
+<li><p>chrome://extensions/ に解凍して出来たフォルダをDrag &amp; Drop</p></li>
+<li><p><code>Launch</code>をクリック<br>
+<img src="/images/2013-12-06-e.png" /></p></li>
+<li><p>Chrome アプリになった<br>
+<img src="/images/2013-12-06-c.png" /></p></li>
+<li><p>.appも生成されている<br>
+<img src="/images/2013-12-06-d.png" /></p></li>
+</ul>
+
+<h1>が、しかし日本語入力が出来ない</h1>
+
+<ul>
+<li>調査中
+
+<ul>
+<li>確認したらwriperもだめだった</li>
+<li>この辺の問題？ <a href="https://code.google.com/p/chromium/issues/detail?id=235573">Issue 235573 - chromium - webview does not properly interface with the IME - An open-source project to help move the web forward. - Google Project Hosting</a></li>
+</ul></li>
+</ul>
+
+<h2>そのほかのTODO</h2>
+
+<ul>
+<li>デザイン調整
+
+<ul>
+<li>微妙にwebviewの下の方が切れている</li>
+</ul></li>
+<li>アイコンをアップロードできるようにする</li>
+</ul>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a target="_new" href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by
+<a target="_new" href="https://github.com/fukayatsu/fukayatsu.github.io/tree/source">GitHub</a>
+&
+<a target="_new" href="https://travis-ci.org/fukayatsu/fukayatsu.github.io">Travis CI</a>
+&
+<a target="_new" href="http://middlemanapp.com/">Middleman</a>
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
