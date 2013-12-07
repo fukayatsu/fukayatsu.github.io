@@ -5,16 +5,64 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-06T12:30:00Z</updated>
+  <updated>2013-12-07T03:36:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>＞Sublime Text 3＜</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/07/sublime-sudden-death/"/>
+    <id>http://blog.url.com/2013/12/07/sublime-sudden-death/</id>
+    <published>2013-12-07T03:36:00Z</published>
+    <updated>2013-12-07T03:53:13+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 7日目&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;sublime text 3 で&lt;br&gt;
+＿人人人人人人＿&lt;br&gt;
+＞　例のあれ　＜&lt;br&gt;
+￣ＹＹＹＹＹＹ￣&lt;br&gt;
+をやるやつを書いた。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/SublimeSuddenDeath"&gt;fukayatsu/SublimeSuddenDeath&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;文字列処理周りがpython 3系向けに書いてあるので、sublime text 2では動かない。&lt;/p&gt;
+
+&lt;p&gt;pull-requestを出したので、悪ふざけだととられなければじきにpackage controlから使えるようになると思う。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/wbond/package_control_channel/pull/2458"&gt;Add Sudden Death by fukayatsu · Pull Request #2458 · wbond/package_control_channel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;雑感&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;久しぶりのpythonでちょっと戸惑った
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;print(foo)&lt;/code&gt;をつい&lt;code&gt;print foo&lt;/code&gt;と書いてしまう。&lt;code&gt;:&lt;/code&gt;を書き忘れるなど&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;package_control_channelへの追加の仕方が前と変わってた&lt;/li&gt;
+&lt;li&gt;作ったあとでSublimeText2のコードを見つけた
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/ice_tkg/items/0865696b3f463a5b63d1"&gt;SublimeText2 - SublimeTextで突然の死 - Qiita [キータ]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>WebサービスをChrome App化する</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/06/chrome-apps-generator/"/>
     <id>http://blog.url.com/2013/12/06/chrome-apps-generator/</id>
     <published>2013-12-06T12:30:00Z</published>
-    <updated>2013-12-06T12:38:23+00:00</updated>
+    <updated>2013-12-07T03:53:13+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -73,7 +121,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/06/wriper/"/>
     <id>http://blog.url.com/2013/12/06/wriper/</id>
     <published>2013-12-05T15:24:00Z</published>
-    <updated>2013-12-06T12:38:23+00:00</updated>
+    <updated>2013-12-07T03:53:13+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -98,7 +146,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/04/rice-gruel/"/>
     <id>http://blog.url.com/2013/12/04/rice-gruel/</id>
     <published>2013-12-04T11:57:00Z</published>
-    <updated>2013-12-06T12:38:23+00:00</updated>
+    <updated>2013-12-07T03:53:13+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -120,7 +168,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/03/frc/"/>
     <id>http://blog.url.com/2013/12/03/frc/</id>
     <published>2013-12-03T13:08:00Z</published>
-    <updated>2013-12-06T12:38:23+00:00</updated>
+    <updated>2013-12-07T03:53:13+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -176,7 +224,7 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/02/grape-on-rails-and-session/"/>
     <id>http://blog.url.com/2013/12/02/grape-on-rails-and-session/</id>
     <published>2013-12-02T08:43:00Z</published>
-    <updated>2013-12-06T12:38:23+00:00</updated>
+    <updated>2013-12-07T03:53:13+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -216,71 +264,6 @@ bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
 
 &lt;p&gt;にあるようにsessionの情報は&lt;code&gt;Session#[]&lt;/code&gt;や&lt;code&gt;Session#[]=&lt;/code&gt;の初回呼び出し時にloadされ、&lt;br&gt;
 その前に&lt;code&gt;Session#inspect&lt;/code&gt;が呼ばれると&lt;code&gt;#&amp;lt;Session [id] not yet loaded&amp;gt;&lt;/code&gt;が返ってくる。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>chrome-apps-bootstrap</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/01/chrome-apps-bootstrap/"/>
-    <id>http://blog.url.com/2013/12/01/chrome-apps-bootstrap/</id>
-    <published>2013-12-01T01:31:00Z</published>
-    <updated>2013-12-06T12:38:23+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 1日目&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;技術調査の目的で、Twitter BootstrapとjQueryを使って&lt;a href="https://github.com/fukayatsu/chrome-apps-bootstrap"&gt;Chrome Appsのサンプルを作った&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;開発方法はChrome Extensionとほぼ同じだけど、Chrome AppsはChromeが立ち上がっていなくても動作する（実際はAppsを立ち上げるとChromeのプロセスも立ち上がる）。&lt;/p&gt;
-
-&lt;p&gt;ChromeさえインストールされていればWindows/Mac/Linuxで動作するデスクトップアプリがWebの知識(html/css/js)で作れて、それが簡単に公開できる。便利。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="https://raw.github.com/fukayatsu/chrome-apps-bootstrap/master/screenshots/Screen%20Shot%202013-11-30%20at%2021.11.00.png" /&gt;&lt;/p&gt;
-
-&lt;h2&gt;.app&lt;/h2&gt;
-
-&lt;p&gt;macだとインストール時に&lt;code&gt;*.app&lt;/code&gt;を作ってくれるので、spotlightやランチャーの検索対象になる。&lt;br&gt;
-&lt;img src="https://raw.github.com/fukayatsu/chrome-apps-bootstrap/master/screenshots/Screen%20Shot%202013-11-30%20at%2021.07.03.png" /&gt;&lt;/p&gt;
-
-&lt;h2&gt;雑感&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;WebAPIベースのデスクトップアプリを作るなら、一番楽な選択肢なのでは&lt;/li&gt;
-&lt;li&gt;最初&lt;code&gt;Chrome Apps Bootstrap&lt;/code&gt;という名前でChrome Web Storeにアップロードしようとしたら、ガイドライン違反だと警告された&lt;/li&gt;
-&lt;li&gt;アプリのviewに&lt;code&gt;&amp;lt;a href=&amp;quot;http://example.com/foo&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;とか書いても反応しない
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;target=&amp;quot;_new&amp;quot;&lt;/code&gt;とか&lt;code&gt;target=&amp;quot;_blank&amp;quot;&lt;/code&gt;のように、target属性を指定する必要がある&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Macのmenu barにアイコンがでるようなアプリを作りたくてgoogle hangoutsのChrome Appを調べてたら、内部で&lt;a href="http://developer.chrome.com/extensions/npapi.html"&gt;NPAPI Plugins (deprecated)&lt;/a&gt;を使っていた。
-
-&lt;ul&gt;
-&lt;li&gt;それなら普通にMacApp作ったほうが楽そう。
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://stackoverflow.com/questions/19795976/macruby-on-os-x-mavericks"&gt;MacRubyを使ったMacAppがMavericksで動きさえすれば...&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;参考リンク&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://developer.chrome.com/apps/about_apps.html"&gt;What Are Chrome Apps? - Google Chrome&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;公式ドキュメント&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/GoogleChrome/chrome-app-samples"&gt;GoogleChrome/chrome-app-samples&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;公式サンプル集のリポジトリ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;公式ドキュメントをちょっと見て、後はサンプルコードを試しながらコード読めばよいと思う。&lt;/p&gt;
 </content>
   </entry>
 </feed>
