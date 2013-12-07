@@ -17,12 +17,12 @@ tags: advent-calendar-2013, list
 1. [おかゆ](/2013/12/04/rice-gruel/)
 1. [wriper](/2013/12/06/wriper)
 1. [ChromeAppsGenerator](2013/12/06/chrome-apps-generator/)
+1. [＞Sublime Text 3＜](/2013/12/07/sublime-sudden-death/)
 1. deploy with lita
 1. MacとUS配列とGoogle 日本語入力
 1. ChatBotとGoogle Analytics
 1. Chrome Platform APIs
 1. Middleman
-1. > 突然の死 <
 1. PHP
 1. (未定)
 1. (未定)
