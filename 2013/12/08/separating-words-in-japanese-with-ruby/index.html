@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+Rubyで分かち書き - fukayatsu.dev
+</title>
+</link>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36253613-1']);
+  _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<div class='header-text'>
+<a href="/"><h1 class='header-title'>
+fukayatsu.dev
+</h1>
+</a>
+<a target="_new" href="http://blog.fukayatsu.com/"><p class='header-description'>
+under development
+</p>
+</a>
+</div>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/12/08/separating-words-in-japanese-with-ruby/">2013-12-08 14:22:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/ruby/">ruby</a>
+<a href="/tags/okura/">okura</a>
+<a href="/tags/morphological-analysis/">morphological-analysis</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>Rubyで分かち書き</h1>
+<blockquote>
+<p><a href="/2013/11/29/advent-calendar-2013/">fukayatsu Advent Calendar 2013</a> - 8日目</p>
+</blockquote>
+
+<p>ちょっと分かち書きの需要があったので、<a href="https://github.com/todesking/okura">todesking/okura</a>を使わせてもらうことにした。</p>
+<pre class="highlight ruby"><span class="c1"># Gemfile</span>
+<span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
+
+<span class="c1"># ver 0.0.1のgemだと`Tagger#wakati`が動かなかったのでmasterを指定している</span>
+<span class="n">gem</span> <span class="s2">&quot;okura&quot;</span><span class="p">,</span> <span class="ss">github: </span><span class="s1">&#39;todesking/okura&#39;</span>
+</pre><pre class="highlight ruby"><span class="c1"># sample.rb</span>
+
+<span class="nb">require</span> <span class="s1">&#39;okura/serializer&#39;</span>
+
+<span class="n">dict_dir</span> <span class="o">=</span> <span class="s1">&#39;lib/okura-dic&#39;</span> <span class="c1"># mecabの辞書を元に生成しておく</span>
+<span class="n">tagger</span>   <span class="o">=</span> <span class="no">Okura</span><span class="o">::</span><span class="no">Serializer</span><span class="o">::</span><span class="no">FormatInfo</span><span class="nf">.create_tagger</span> <span class="n">dict_dir</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;分かち書き対象のテキストです...慈悲はない...&#39;</span>
+<span class="nb">p</span> <span class="n">tagger</span><span class="nf">.wakati</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre><pre class="highlight shell"><span class="gp">$ </span>bundle <span class="nb">exec </span>ruby sample.rb
+<span class="c">#=&gt; [&quot;BOS/EOS&quot;, &quot;分かち書き&quot;, &quot;対象&quot;, &quot;の&quot;, &quot;テキスト&quot;, &quot;です&quot;, &quot;.&quot;, &quot;.&quot;, &quot;.&quot;, &quot;.&quot;, &quot;慈悲&quot;, &quot;は&quot;, &quot;ない&quot;, &quot;.&quot;, &quot;.&quot;, &quot;.&quot;, &quot;BOS/EOS&quot;]</span>
+</pre>
+<h2>参考</h2>
+
+<blockquote>
+<p><a href="http://d.hatena.ne.jp/gnarl/20120319/1332153697">Rubyによる形態素解析エンジンokura 0.0.1をリリースしました</a><br>
+バージョン0.0.xのうちは､インタフェースや辞書フォーマットは頻繁に変更される予定です｡<br>
+ある程度安定したら0.1.0出します｡</p>
+</blockquote>
+
+<p>辞書ファイルのコンパイル方法もこちらで。</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a target="_new" href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by
+<a target="_new" href="https://github.com/fukayatsu/fukayatsu.github.io/tree/source">GitHub</a>
+&
+<a target="_new" href="https://travis-ci.org/fukayatsu/fukayatsu.github.io">Travis CI</a>
+&
+<a target="_new" href="http://middlemanapp.com/">Middleman</a>
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
