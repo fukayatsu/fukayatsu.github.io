@@ -5,16 +5,84 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-08T05:22:00Z</updated>
+  <updated>2013-12-09T13:12:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>かにさん(twitter bot)</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/09/twitter-bot/"/>
+    <id>http://blog.url.com/2013/12/09/twitter-bot/</id>
+    <published>2013-12-09T13:12:00Z</published>
+    <updated>2013-12-09T13:58:27+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 9日目&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/sferik/twitter"&gt;sferik/twitter&lt;/a&gt;のバージョンが5に上がったので、その検証を兼ねてtwitter botを作った。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/kani_acid"&gt;かにさん (kani_acid) on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;一瞬でほっこりっていうかにやにやですわ&lt;/p&gt;&amp;mdash; かにさん (@kani_acid) &lt;a href="https://twitter.com/kani_acid/statuses/409983296315981824"&gt;December 9, 2013&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;ズズッ、ぷは〜(ほっこりほっこりと家の近くの自販機で買うこのミルクセーキは実は思い出 (&amp;#39;､3_ヽ)ほっこりばーか&lt;/p&gt;&amp;mdash; かにさん (@kani_acid) &lt;a href="https://twitter.com/kani_acid/statuses/409922898178998272"&gt;December 9, 2013&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;そんなことなかった！かわいい！ぬいぐるみみたいだ！&lt;/p&gt;&amp;mdash; かにさん (@kani_acid) &lt;a href="https://twitter.com/kani_acid/statuses/409885207873851393"&gt;December 9, 2013&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;あーそれとてもいいですねえ（ほっこりかい∩^ω^)⊃━☆゜.*・。&lt;/p&gt;&amp;mdash; かにさん (@kani_acid) &lt;a href="https://twitter.com/kani_acid/statuses/409865156286369792"&gt;December 9, 2013&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;仕組み的には&lt;a href="https://twitter.com/shuumai"&gt;しゅうまい君&lt;/a&gt;と同じで、学習した単語からマルコフ連鎖で文章を生成している。&lt;/p&gt;
+
+&lt;p&gt;学習はhome timelineと&lt;code&gt;ほっこり&lt;/code&gt;で検索した結果が元になっているので、&lt;br&gt;
+全体的にtweetがほっこりしている&lt;/p&gt;
+
+&lt;p&gt;tweetがfavられることによって単語の重み付けを変化させる機能もつけたが、&lt;br&gt;
+いかんせんまだデータが足りない&lt;/p&gt;
+
+&lt;h1&gt;Twitter::Streaming::Client&lt;/h1&gt;
+
+&lt;p&gt;twitter gemはver 5から、Streaming APIを単体で使えるようになった (Experimental)。今回はこんな感じで使っている&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Twitter&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Streaming&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Client&lt;/span&gt;&lt;span class="nf"&gt;.new&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="nf"&gt;.consumer_key&lt;/span&gt;        &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;YOUR_CONSUMER_KEY&amp;quot;&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="nf"&gt;.consumer_secret&lt;/span&gt;     &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;YOUR_CONSUMER_SECRET&amp;quot;&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="nf"&gt;.access_token&lt;/span&gt;        &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;YOUR_ACCESS_TOKEN&amp;quot;&lt;/span&gt;
+  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="nf"&gt;.access_token_secret&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;YOUR_ACCESS_SECRET&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="nf"&gt;.user&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;object&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;object&lt;/span&gt;
+  &lt;span class="k"&gt;when&lt;/span&gt; &lt;span class="no"&gt;Twitter&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Tweet&lt;/span&gt;
+    &lt;span class="c1"&gt;# tweetを学習する&lt;/span&gt;
+  &lt;span class="k"&gt;when&lt;/span&gt; &lt;span class="no"&gt;Twitter&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Streaming&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Event&lt;/span&gt;
+    &lt;span class="n"&gt;event&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;object&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="nf"&gt;.name&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="ss"&gt;:favorite&lt;/span&gt;
+      &lt;span class="c1"&gt;# 単語の重みづけを変更する&lt;/span&gt;
+    &lt;span class="k"&gt;elsif&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="nf"&gt;.name&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="ss"&gt;:follow&lt;/span&gt;
+      &lt;span class="c1"&gt;# フォローバックする&lt;/span&gt;
+    &lt;span class="k"&gt;end&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;h2&gt;サーバ&lt;/h2&gt;
+
+&lt;p&gt;最初はherokuに上げようかと思ったけど、単語リストが結構レコード数増えそうなので、 &lt;a href="http://rackhub.net/"&gt;http://rackhub.net/&lt;/a&gt; を使っている。&lt;/p&gt;
+
+&lt;p&gt;多分無料でSSHが使えるレンタルサーバもたくさんあるだろうけど、rackhubは作ったり壊したりが楽でよい。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Rubyで分かち書き</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/08/separating-words-in-japanese-with-ruby/"/>
     <id>http://blog.url.com/2013/12/08/separating-words-in-japanese-with-ruby/</id>
     <published>2013-12-08T05:22:00Z</published>
-    <updated>2013-12-08T05:46:52+00:00</updated>
+    <updated>2013-12-09T13:58:27+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -56,7 +124,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/07/sublime-sudden-death/"/>
     <id>http://blog.url.com/2013/12/07/sublime-sudden-death/</id>
     <published>2013-12-07T03:36:00Z</published>
-    <updated>2013-12-08T05:46:52+00:00</updated>
+    <updated>2013-12-09T13:58:27+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -104,7 +172,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/06/chrome-apps-generator/"/>
     <id>http://blog.url.com/2013/12/06/chrome-apps-generator/</id>
     <published>2013-12-06T12:30:00Z</published>
-    <updated>2013-12-08T05:46:52+00:00</updated>
+    <updated>2013-12-09T13:58:27+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -163,7 +231,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/06/wriper/"/>
     <id>http://blog.url.com/2013/12/06/wriper/</id>
     <published>2013-12-05T15:24:00Z</published>
-    <updated>2013-12-08T05:46:52+00:00</updated>
+    <updated>2013-12-09T13:58:27+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -188,7 +256,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/04/rice-gruel/"/>
     <id>http://blog.url.com/2013/12/04/rice-gruel/</id>
     <published>2013-12-04T11:57:00Z</published>
-    <updated>2013-12-08T05:46:52+00:00</updated>
+    <updated>2013-12-09T13:58:27+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -203,62 +271,6 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href="http://cookpad.com/recipe/1288348"&gt;３０分で完成☆1人用土鍋で簡単お粥 by michila [クックパッド]&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Fukayatsu Room Controller (FRC)</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/03/frc/"/>
-    <id>http://blog.url.com/2013/12/03/frc/</id>
-    <published>2013-12-03T13:08:00Z</published>
-    <updated>2013-12-08T05:46:52+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 3日目&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;おなかいたい&lt;/p&gt;
-
-&lt;h2&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href="/2013/08/11/iremocon-and-lita/"&gt;RubyとLita(chat bot)で自宅のエアコンを操作する&lt;/a&gt;ことができるようになって便利になったものの、&lt;br&gt;
-横になってPCを使っている時などにHipChatを開いてコマンドを打つのが若干めんどくさくもあった。&lt;/p&gt;
-
-&lt;h2&gt;Chrome Appsでリモコンを作った&lt;/h2&gt;
-
-&lt;p&gt;問題を解決するために、1日目の&lt;a href="/2013/12/01/chrome-apps-bootstrap/"&gt;Chrome Apps Bootstrap&lt;/a&gt;を使って部屋のリモコンを作り、(無駄に)&lt;a href="https://chrome.google.com/webstore/detail/fukayatsu-room-controller/imkaddobkcpdgncmlokkpcmgfkcflfak"&gt;公開した。&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;家電制御に使っているHipChatのroom_idとtokenがあれば、誰でもうちの家電を(無駄に)操作できる。&lt;/p&gt;
-
-&lt;h2&gt;screenshots&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Dockの中に登録しておけば、2クリックで電気が消せるので捗る&lt;br&gt;
-&lt;img alt="w50" src="/images/2013-12-03-d.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;メインタブ&lt;br&gt;
-&lt;img src="/images/2013-12-03-a.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;設定タブ: chromeにログインしていれば他のPCでも同期される。&lt;br&gt;
-&lt;img src="/images/2013-12-03-b.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;技術的なこと&lt;/h2&gt;
-
-&lt;p&gt;コードはこのあたり&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="https://github.com/fukayatsu/home-lita/blob/master/chrome_app/src/js/window.js"&gt;home-lita/chrome_app/src/js/window.js at master · fukayatsu/home-lita&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;リモコンのボタンを押すと、hipchat上のroomにコマンドが書き込まれ、それがbotに処理される。&lt;br&gt;
-bot側は特に変更の必要が無いので楽だった。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/2013-12-03-c.png" /&gt;&lt;/p&gt;
-
-&lt;h2&gt;余談&lt;/h2&gt;
-
-&lt;p&gt;chrome web storeの拡張機能・Appの公開の上限は20個で、これで上限に達した。&lt;br&gt;
-でも半分ぐらいはあまり意味のない拡張機能なのであとで記事に書いたら順次非公開にしていこうと思う。&lt;/p&gt;
 </content>
   </entry>
 </feed>

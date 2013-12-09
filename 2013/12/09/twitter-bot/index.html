@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+かにさん(twitter bot) - fukayatsu.dev
+</title>
+</link>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36253613-1']);
+  _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<div class='header-text'>
+<a href="/"><h1 class='header-title'>
+fukayatsu.dev
+</h1>
+</a>
+<a target="_new" href="http://blog.fukayatsu.com/"><p class='header-description'>
+under development
+</p>
+</a>
+</div>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/12/09/twitter-bot/">2013-12-09 22:12:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/twitter-bot/">twitter-bot</a>
+<a href="/tags/markov-chain/">markov-chain</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>かにさん(twitter bot)</h1>
+<blockquote>
+<p><a href="/2013/11/29/advent-calendar-2013/">fukayatsu Advent Calendar 2013</a> - 9日目</p>
+</blockquote>
+
+<p><a href="https://github.com/sferik/twitter">sferik/twitter</a>のバージョンが5に上がったので、その検証を兼ねてtwitter botを作った。</p>
+
+<ul>
+<li><a href="https://twitter.com/kani_acid">かにさん (kani_acid) on Twitter</a></li>
+</ul>
+
+<blockquote class="twitter-tweet" lang="en"><p>一瞬でほっこりっていうかにやにやですわ</p>&mdash; かにさん (@kani_acid) <a href="https://twitter.com/kani_acid/statuses/409983296315981824">December 9, 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" lang="en"><p>ズズッ、ぷは〜(ほっこりほっこりと家の近くの自販機で買うこのミルクセーキは実は思い出 (&#39;､3_ヽ)ほっこりばーか</p>&mdash; かにさん (@kani_acid) <a href="https://twitter.com/kani_acid/statuses/409922898178998272">December 9, 2013</a></blockquote>
+
+<blockquote class="twitter-tweet" lang="en"><p>そんなことなかった！かわいい！ぬいぐるみみたいだ！</p>&mdash; かにさん (@kani_acid) <a href="https://twitter.com/kani_acid/statuses/409885207873851393">December 9, 2013</a></blockquote>
+
+<blockquote class="twitter-tweet" lang="en"><p>あーそれとてもいいですねえ（ほっこりかい∩^ω^)⊃━☆゜.*・。</p>&mdash; かにさん (@kani_acid) <a href="https://twitter.com/kani_acid/statuses/409865156286369792">December 9, 2013</a></blockquote>
+
+<p>仕組み的には<a href="https://twitter.com/shuumai">しゅうまい君</a>と同じで、学習した単語からマルコフ連鎖で文章を生成している。</p>
+
+<p>学習はhome timelineと<code>ほっこり</code>で検索した結果が元になっているので、<br>
+全体的にtweetがほっこりしている</p>
+
+<p>tweetがfavられることによって単語の重み付けを変化させる機能もつけたが、<br>
+いかんせんまだデータが足りない</p>
+
+<h1>Twitter::Streaming::Client</h1>
+
+<p>twitter gemはver 5から、Streaming APIを単体で使えるようになった (Experimental)。今回はこんな感じで使っている</p>
+<pre class="highlight ruby"><span class="n">client</span> <span class="o">=</span> <span class="no">Twitter</span><span class="o">::</span><span class="no">Streaming</span><span class="o">::</span><span class="no">Client</span><span class="nf">.new</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+  <span class="n">config</span><span class="nf">.consumer_key</span>        <span class="o">=</span> <span class="s2">&quot;YOUR_CONSUMER_KEY&quot;</span>
+  <span class="n">config</span><span class="nf">.consumer_secret</span>     <span class="o">=</span> <span class="s2">&quot;YOUR_CONSUMER_SECRET&quot;</span>
+  <span class="n">config</span><span class="nf">.access_token</span>        <span class="o">=</span> <span class="s2">&quot;YOUR_ACCESS_TOKEN&quot;</span>
+  <span class="n">config</span><span class="nf">.access_token_secret</span> <span class="o">=</span> <span class="s2">&quot;YOUR_ACCESS_SECRET&quot;</span>
+<span class="k">end</span>
+
+<span class="n">client</span><span class="nf">.user</span> <span class="k">do</span> <span class="o">|</span><span class="n">object</span><span class="o">|</span>
+  <span class="k">case</span> <span class="n">object</span>
+  <span class="k">when</span> <span class="no">Twitter</span><span class="o">::</span><span class="no">Tweet</span>
+    <span class="c1"># tweetを学習する</span>
+  <span class="k">when</span> <span class="no">Twitter</span><span class="o">::</span><span class="no">Streaming</span><span class="o">::</span><span class="no">Event</span>
+    <span class="n">event</span> <span class="o">=</span> <span class="n">object</span>
+    <span class="k">if</span> <span class="n">event</span><span class="nf">.name</span> <span class="o">==</span> <span class="ss">:favorite</span>
+      <span class="c1"># 単語の重みづけを変更する</span>
+    <span class="k">elsif</span> <span class="n">event</span><span class="nf">.name</span> <span class="o">==</span> <span class="ss">:follow</span>
+      <span class="c1"># フォローバックする</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre>
+<h2>サーバ</h2>
+
+<p>最初はherokuに上げようかと思ったけど、単語リストが結構レコード数増えそうなので、 <a href="http://rackhub.net/">http://rackhub.net/</a> を使っている。</p>
+
+<p>多分無料でSSHが使えるレンタルサーバもたくさんあるだろうけど、rackhubは作ったり壊したりが楽でよい。</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a target="_new" href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by
+<a target="_new" href="https://github.com/fukayatsu/fukayatsu.github.io/tree/source">GitHub</a>
+&
+<a target="_new" href="https://travis-ci.org/fukayatsu/fukayatsu.github.io">Travis CI</a>
+&
+<a target="_new" href="http://middlemanapp.com/">Middleman</a>
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
