@@ -21,6 +21,7 @@ tags: advent-calendar-2013, list
 1. [Rubyで分かち書き](/2013/12/08/separating-words-in-japanese-with-ruby/)
 1. [かにさん(twitter bot)](/2013/12/09/twitter-bot/)
 1. [jquery-and-file-upload](/2013/12/10/jquery-and-file-upload/)
+1. [＞Sublime Text 3＜、その後](/2013/12/11/sublime-sudden-death-2/)
 1. deploy with lita
 1. MacとUS配列とGoogle 日本語入力
 1. ChatBotとGoogle Analytics
