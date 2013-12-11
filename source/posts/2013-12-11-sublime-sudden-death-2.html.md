@@ -1,5 +1,5 @@
 ---
-title: sublime-sudden-death-2
+title: ＞Sublime Text 3＜、その後
 date: 2013-12-11 22:46 JST
 tags: sublime-text-3,plugin,sudden-death
 ---
