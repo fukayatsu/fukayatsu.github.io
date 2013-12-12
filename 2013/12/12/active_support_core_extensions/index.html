@@ -7,7 +7,7 @@
 </head>
 <link href='/images/favicon.ico' rel='icon' type='image/ico'>
 <title>
-fukayatsu.dev
+Active Support Core Extensions - fukayatsu.dev
 </title>
 </link>
 <script>
@@ -42,15 +42,83 @@ under development
 </div>
 </div>
 </header>
+<div class='publish-date'>
+<a href="/2013/12/12/active_support_core_extensions/">2013-12-12 21:33:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/rails/">rails</a>
+<a href="/tags/active_support/">active_support</a>
+</div>
 <div id='main' role='main'>
-<h1>
-Articles tagged 'mac'
-</h1>
+<h1 class='title'>Active Support Core Extensions</h1>
+<p><a href="http://edgeguides.rubyonrails.org/active_support_core_extensions.html">Active Support Core Extensions — Ruby on Rails Guides</a>を斜め読みした。<br>
+普段から使ってるのに、半分も知らなかった。</p>
+
+<p>「へー」と思ったメモ:</p>
+
+<h3>String</h3>
+
 <ul>
-<li>
-<a href="/2012/07/16/octopress-with-pow/">octopress with pow</a>
-<span>Jul 16</span>
-</li>
+<li>5.5 inquiry
+
+<ul>
+<li><code>Rails.env.production?</code>とかやってるあれ</li>
+</ul></li>
+<li>5.8 indent
+
+<ul>
+<li>インデント</li>
+</ul></li>
+<li>5.10.5 titleize
+
+<ul>
+<li>タイトルっぽくする</li>
+</ul></li>
+<li>5.10.14 foreign_key
+
+<ul>
+<li>foreign_keyっぽくする</li>
+</ul></li>
+</ul>
+
+<h3>Numeric</h3>
+
+<ul>
+<li>6.1 Bytes
+
+<ul>
+<li><code>2.kilobytes   # =&gt; 2048</code></li>
+</ul></li>
+</ul>
+
+<h3>Enumerable</h3>
+
+<ul>
+<li>9.3 many?
+
+<ul>
+<li>1より大きいものは&quot;たくさん&quot;</li>
+</ul></li>
+</ul>
+
+<h3>Hash</h3>
+
+<ul>
+<li>11.6 Extracting
+
+<ul>
+<li>KVを引き抜くイメージ</li>
+</ul></li>
+</ul>
+
+<p>他にも時刻、時間関係の拡張が沢山ある。<br>
+中には正直英語圏の人しか使わないのではというものもあるけど、<br>
+Railsっぽいコードを書くために、使えるところでは使っていきたい。</p>
+
+<p>TODO</p>
+
+<ul>
+<li>各メソッドの定義を確認</li>
 </ul>
 
 </div>

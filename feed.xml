@@ -5,16 +5,96 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-11T13:46:00Z</updated>
+  <updated>2013-12-12T12:33:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Active Support Core Extensions</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/12/active_support_core_extensions/"/>
+    <id>http://blog.url.com/2013/12/12/active_support_core_extensions/</id>
+    <published>2013-12-12T12:33:00Z</published>
+    <updated>2013-12-12T12:53:14+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://edgeguides.rubyonrails.org/active_support_core_extensions.html"&gt;Active Support Core Extensions — Ruby on Rails Guides&lt;/a&gt;を斜め読みした。&lt;br&gt;
+普段から使ってるのに、半分も知らなかった。&lt;/p&gt;
+
+&lt;p&gt;「へー」と思ったメモ:&lt;/p&gt;
+
+&lt;h3&gt;String&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;5.5 inquiry
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Rails.env.production?&lt;/code&gt;とかやってるあれ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;5.8 indent
+
+&lt;ul&gt;
+&lt;li&gt;インデント&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;5.10.5 titleize
+
+&lt;ul&gt;
+&lt;li&gt;タイトルっぽくする&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;5.10.14 foreign_key
+
+&lt;ul&gt;
+&lt;li&gt;foreign_keyっぽくする&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Numeric&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;6.1 Bytes
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;2.kilobytes   # =&amp;gt; 2048&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Enumerable&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;9.3 many?
+
+&lt;ul&gt;
+&lt;li&gt;1より大きいものは&amp;quot;たくさん&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Hash&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;11.6 Extracting
+
+&lt;ul&gt;
+&lt;li&gt;KVを引き抜くイメージ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;他にも時刻、時間関係の拡張が沢山ある。&lt;br&gt;
+中には正直英語圏の人しか使わないのではというものもあるけど、&lt;br&gt;
+Railsっぽいコードを書くために、使えるところでは使っていきたい。&lt;/p&gt;
+
+&lt;p&gt;TODO&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;各メソッドの定義を確認&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>＞Sublime Text 3＜、その後</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/11/sublime-sudden-death-2/"/>
     <id>http://blog.url.com/2013/12/11/sublime-sudden-death-2/</id>
     <published>2013-12-11T13:46:00Z</published>
-    <updated>2013-12-11T14:18:25+00:00</updated>
+    <updated>2013-12-12T12:53:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -43,7 +123,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/10/jquery-and-file-upload/"/>
     <id>http://blog.url.com/2013/12/10/jquery-and-file-upload/</id>
     <published>2013-12-10T12:57:00Z</published>
-    <updated>2013-12-11T14:18:25+00:00</updated>
+    <updated>2013-12-12T12:53:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -86,7 +166,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/09/twitter-bot/"/>
     <id>http://blog.url.com/2013/12/09/twitter-bot/</id>
     <published>2013-12-09T13:12:00Z</published>
-    <updated>2013-12-11T14:18:25+00:00</updated>
+    <updated>2013-12-12T12:53:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -154,7 +234,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/08/separating-words-in-japanese-with-ruby/"/>
     <id>http://blog.url.com/2013/12/08/separating-words-in-japanese-with-ruby/</id>
     <published>2013-12-08T05:22:00Z</published>
-    <updated>2013-12-11T14:18:25+00:00</updated>
+    <updated>2013-12-12T12:53:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -196,7 +276,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/07/sublime-sudden-death/"/>
     <id>http://blog.url.com/2013/12/07/sublime-sudden-death/</id>
     <published>2013-12-07T03:36:00Z</published>
-    <updated>2013-12-11T14:18:25+00:00</updated>
+    <updated>2013-12-12T12:53:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -236,65 +316,6 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://qiita.com/ice_tkg/items/0865696b3f463a5b63d1"&gt;SublimeText2 - SublimeTextで突然の死 - Qiita [キータ]&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>WebサービスをChrome App化する</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/06/chrome-apps-generator/"/>
-    <id>http://blog.url.com/2013/12/06/chrome-apps-generator/</id>
-    <published>2013-12-06T12:30:00Z</published>
-    <updated>2013-12-11T14:18:25+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 6日目&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;昨日作った&lt;a href="/2013/12/06/wriper"&gt;wriper&lt;/a&gt;で結構簡単にWebアプリをChrome Appにできることがわかったので、&lt;br&gt;
-ほかのWebアプリも簡単にChromeアプリにできるようにGeneratorを作った。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://chrome-apps-generator.herokuapp.com/"&gt;ChromeAppsGenerator&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;使いかた&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="http://chrome-apps-generator.herokuapp.com/"&gt;http://chrome-apps-generator.herokuapp.com/&lt;/a&gt; でアプリにしたいURLとアプリ名と説明を入力する&lt;br&gt;
-&lt;img src="/images/2013-12-06-a.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;ダウンロードして解凍&lt;br&gt;
-&lt;img alt="w50" src="/images/2013-12-06-b.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;chrome://extensions/ に解凍して出来たフォルダをDrag &amp;amp; Drop&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;Launch&lt;/code&gt;をクリック&lt;br&gt;
-&lt;img src="/images/2013-12-06-e.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Chrome アプリになった&lt;br&gt;
-&lt;img src="/images/2013-12-06-c.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;.appも生成されている&lt;br&gt;
-&lt;img src="/images/2013-12-06-d.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;が、しかし日本語入力が出来ない&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;調査中
-
-&lt;ul&gt;
-&lt;li&gt;確認したらwriperもだめだった&lt;/li&gt;
-&lt;li&gt;この辺の問題？ &lt;a href="https://code.google.com/p/chromium/issues/detail?id=235573"&gt;Issue 235573 - chromium - webview does not properly interface with the IME - An open-source project to help move the web forward. - Google Project Hosting&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;そのほかのTODO&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;デザイン調整
-
-&lt;ul&gt;
-&lt;li&gt;微妙にwebviewの下の方が切れている&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;アイコンをアップロードできるようにする&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
