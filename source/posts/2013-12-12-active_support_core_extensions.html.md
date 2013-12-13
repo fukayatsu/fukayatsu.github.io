@@ -4,6 +4,9 @@ date: 2013-12-12 21:33 JST
 tags: rails, active_support
 ---
 
+> [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 12日目
+
+
 [Active Support Core Extensions — Ruby on Rails Guides](http://edgeguides.rubyonrails.org/active_support_core_extensions.html)を斜め読みした。
 普段から使ってるのに、半分も知らなかった。
 

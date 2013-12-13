@@ -22,6 +22,8 @@ tags: advent-calendar-2013, list
 1. [かにさん(twitter bot)](/2013/12/09/twitter-bot/)
 1. [jquery-and-file-upload](/2013/12/10/jquery-and-file-upload/)
 1. [＞Sublime Text 3＜、その後](/2013/12/11/sublime-sudden-death-2/)
+1. [Active Support Core Extensions](/2013/12/12/active_support_core_extensions/)
+1. [JS String Replace](/2013/12/13/js-string-replace/)
 1. deploy with lita
 1. MacとUS配列とGoogle 日本語入力
 1. ChatBotとGoogle Analytics
