@@ -7,7 +7,7 @@
 </head>
 <link href='/images/favicon.ico' rel='icon' type='image/ico'>
 <title>
-Active Support Core Extensions - fukayatsu.dev
+JavaScript String Replace - fukayatsu.dev
 </title>
 </link>
 <script>
@@ -43,88 +43,29 @@ under development
 </div>
 </header>
 <div class='publish-date'>
-<a href="/2013/12/12/active_support_core_extensions/">2013-12-12 21:33:00 +0900</a>
+<a href="/2013/12/13/js-string-replace/">2013-12-13 20:51:00 +0900</a>
 </div>
 <div class='tags'>
-<a href="/tags/rails/">rails</a>
-<a href="/tags/active_support/">active_support</a>
+<a href="/tags/javascript/">javascript</a>
 </div>
 <div id='main' role='main'>
-<h1 class='title'>Active Support Core Extensions</h1>
+<h1 class='title'>JavaScript String Replace</h1>
 <blockquote>
-<p><a href="/2013/11/29/advent-calendar-2013/">fukayatsu Advent Calendar 2013</a> - 12日目</p>
+<p><a href="/2013/11/29/advent-calendar-2013/">fukayatsu Advent Calendar 2013</a> - 13日目</p>
 </blockquote>
 
-<p><a href="http://edgeguides.rubyonrails.org/active_support_core_extensions.html">Active Support Core Extensions — Ruby on Rails Guides</a>を斜め読みした。<br>
-普段から使ってるのに、半分も知らなかった。</p>
+<p>今日遭遇したバグの話</p>
+<pre class="highlight javascript"><span class="s1">&#39;foo bar&#39;</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s1">&#39;$$BAZ$$&#39;</span><span class="p">);</span>
+<span class="c1">// =&gt; &quot;foo $BAZ$&quot;
+</span></pre>
+<p><code>&quot;$$BAZ$$&quot;</code>が返ってくるのを期待していたコードだったが、<br>
+第二引数に<code>$$</code>が含まれる場合、<code>replace</code>メソッドによって<code>$$</code>が<code>$</code>に置換されるため、<br>
+意図したとおりに動いていなかった。</p>
 
-<p>「へー」と思ったメモ:</p>
-
-<h3>String</h3>
-
-<ul>
-<li>5.5 inquiry
-
-<ul>
-<li><code>Rails.env.production?</code>とかやってるあれ</li>
-</ul></li>
-<li>5.8 indent
-
-<ul>
-<li>インデント</li>
-</ul></li>
-<li>5.10.5 titleize
-
-<ul>
-<li>タイトルっぽくする</li>
-</ul></li>
-<li>5.10.14 foreign_key
-
-<ul>
-<li>foreign_keyっぽくする</li>
-</ul></li>
-</ul>
-
-<h3>Numeric</h3>
-
-<ul>
-<li>6.1 Bytes
-
-<ul>
-<li><code>2.kilobytes   # =&gt; 2048</code></li>
-</ul></li>
-</ul>
-
-<h3>Enumerable</h3>
-
-<ul>
-<li>9.3 many?
-
-<ul>
-<li>1より大きいものは&quot;たくさん&quot;</li>
-</ul></li>
-</ul>
-
-<h3>Hash</h3>
-
-<ul>
-<li>11.6 Extracting
-
-<ul>
-<li>KVを引き抜くイメージ</li>
-</ul></li>
-</ul>
-
-<p>他にも時刻、時間関係の拡張が沢山ある。<br>
-中には正直英語圏の人しか使わないのではというものもあるけど、<br>
-Railsっぽいコードを書くために、使えるところでは使っていきたい。</p>
-
-<p>TODO</p>
-
-<ul>
-<li>各メソッドの定義を確認</li>
-</ul>
-
+<p>次のように修正した。</p>
+<pre class="highlight javascript"><span class="s1">&#39;foo bar&#39;</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s1">&#39;$$BAZ$$&#39;</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;$$&#39;</span><span class="p">));</span>
+<span class="c1">// =&gt; &quot;foo $$BAZ$$&quot;
+</span></pre>
 </div>
 <footer>
 <div class='footer-inner'>
