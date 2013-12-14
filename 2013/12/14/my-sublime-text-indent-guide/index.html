@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+おれのさぶらいむてきすとはインデントが見やすい - fukayatsu.dev
+</title>
+</link>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36253613-1']);
+  _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<div class='header-text'>
+<a href="/"><h1 class='header-title'>
+fukayatsu.dev
+</h1>
+</a>
+<a target="_new" href="http://blog.fukayatsu.com/"><p class='header-description'>
+under development
+</p>
+</a>
+</div>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/12/14/my-sublime-text-indent-guide/">2013-12-14 13:05:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/sublime-text/">sublime-text</a>
+<a href="/tags/settings/">settings</a>
+<a href="/tags/indent_guide/">indent_guide</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>おれのさぶらいむてきすとはインデントが見やすい</h1>
+<p>この記事は、<a href="http://www.adventar.org/calendars/184">おれのさぶらいむてきすと Advent Calendar 2013 - Adventar</a>の14日目です。</p>
+
+<p>前回は<a href="https://twitter.com/irohiroki">irohiroki</a>さんの<a href="http://irohiroki.github.io/blog/2013/12/13/sublime-texts-multiple-selection-and-me/">おれとさぶらいむてきすとの複数選択</a>でした。</p>
+
+<p>(密かに<a href="/2013/11/29/advent-calendar-2013/">fukayatsu Advent Calendar 2013</a>の14日目でもあったりします)</p>
+
+<h2>おれとさぶらいむ</h2>
+
+<p>去年の夏ぐらいからメインのテキストエディタとしてSublime Text 2を使っていて、<br>
+数ヶ月前からはSublime Text 3を使っています。</p>
+
+<p>この記事で使っているカラーテーマは<a href="https://github.com/thinkpixellab/flatland">thinkpixellab/flatland</a>をforkした<a href="https://github.com/fukayatsu/flatland">fukayatsu/flatland</a>です。</p>
+
+<h2>さぶらいむてきすとのインデントガイド</h2>
+
+<p>Sublime Text のデフォルト設定はこんな感じです。</p>
+<pre class="highlight javascript"><span class="c1">// Packages/Default/Preferences.sublime-settings
+</span>
+    <span class="c1">// Set to false to turn off the indentation guides.
+</span>    <span class="c1">// The color and width of the indent guides may be customized by editing
+</span>    <span class="c1">// the corresponding .tmTheme file, and specifying the colors &quot;guide&quot;,
+</span>    <span class="c1">// &quot;activeGuide&quot; and &quot;stackGuide&quot;
+</span>    <span class="s2">&quot;draw_indent_guides&quot;</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Controls how the indent guides are drawn, valid options are
+</span>    <span class="c1">// &quot;draw_normal&quot; and &quot;draw_active&quot;. draw_active will draw the indent
+</span>    <span class="c1">// guides containing the caret in a different color.
+</span>    <span class="s2">&quot;indent_guide_options&quot;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&quot;draw_normal&quot;</span><span class="p">],</span>
+</pre>
+<p>インデントの深さごとに、薄い縦線が引かれます。</p>
+
+<p><a href="/images/2013-12-14-a.png"><img src="/images/2013-12-14-a.png" /></a></p>
+
+<p>でもインデントがspace 2とかだと、どのインデントの中にいるのか迷子になることがあります。</p>
+
+<hr>
+
+<p>ユーザ設定で上書きしてやります。</p>
+<pre class="highlight javascript"><span class="c1">// Packages/User/Preferences.sublime-settings
+</span>    <span class="s2">&quot;draw_indent_guides&quot;</span><span class="err">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;indent_guide_options&quot;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&quot;draw_normal&quot;</span><span class="p">,</span> <span class="s2">&quot;draw_active&quot;</span><span class="p">],</span>
+</pre>
+<p>インデントの種類によって色分けされるようになりました。<br>
+<a href="/images/2013-12-14-b.png"><img src="/images/2013-12-14-b.png" /></a></p>
+
+<hr>
+
+<p>使っているカラーテーマによってはdraw_active時のインデントガイドの設定がないことがあるので、<br>
+そういう場合は自分で色を指定します。</p>
+
+<p><code>[カラーテーマ名].tmTheme</code>の中の<code>&lt;key&gt;guide&lt;/key&gt;</code>を探して、<code>activeGuide</code>と<code>stackGuide</code>の設定を追加します。色は適当です。</p>
+<pre class="highlight xml"><span class="c">&lt;!-- 通常のインデント --&gt;</span>
+<span class="nt">&lt;key&gt;</span>guide<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>#444444<span class="nt">&lt;/string&gt;</span>
+
+<span class="c">&lt;!-- 自分が今いるインデント --&gt;</span>
+<span class="nt">&lt;key&gt;</span>activeGuide<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>#aa7b60<span class="nt">&lt;/string&gt;</span>
+
+<span class="c">&lt;!-- 自分が今いるインデントの親 --&gt;</span>
+<span class="nt">&lt;key&gt;</span>stackGuide<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>#607b60<span class="nt">&lt;/string&gt;</span>
+</pre>
+<p><a href="/images/2013-12-14-guides.png"><img src="/images/2013-12-14-guides.png" /></a></p>
+
+<p>これでインデントが見やすくなったのではないかと思います。</p>
+
+<p>ちなみにvimだと同様のプラグインとして、<br>
+<a href="https://github.com/nathanaelkane/vim-indent-guides">nathanaelkane/vim-indent-guides</a>が有名なようです。</p>
+
+<hr>
+
+<p>次回は<a href="https://twitter.com/s12bt">s12bt</a>さんです！</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a target="_new" href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by
+<a target="_new" href="https://github.com/fukayatsu/fukayatsu.github.io/tree/source">GitHub</a>
+&
+<a target="_new" href="https://travis-ci.org/fukayatsu/fukayatsu.github.io">Travis CI</a>
+&
+<a target="_new" href="http://middlemanapp.com/">Middleman</a>
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

@@ -5,16 +5,100 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-13T11:51:00Z</updated>
+  <updated>2013-12-14T04:05:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>おれのさぶらいむてきすとはインデントが見やすい</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/14/my-sublime-text-indent-guide/"/>
+    <id>http://blog.url.com/2013/12/14/my-sublime-text-indent-guide/</id>
+    <published>2013-12-14T04:05:00Z</published>
+    <updated>2013-12-14T05:18:36+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;この記事は、&lt;a href="http://www.adventar.org/calendars/184"&gt;おれのさぶらいむてきすと Advent Calendar 2013 - Adventar&lt;/a&gt;の14日目です。&lt;/p&gt;
+
+&lt;p&gt;前回は&lt;a href="https://twitter.com/irohiroki"&gt;irohiroki&lt;/a&gt;さんの&lt;a href="http://irohiroki.github.io/blog/2013/12/13/sublime-texts-multiple-selection-and-me/"&gt;おれとさぶらいむてきすとの複数選択&lt;/a&gt;でした。&lt;/p&gt;
+
+&lt;p&gt;(密かに&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt;の14日目でもあったりします)&lt;/p&gt;
+
+&lt;h2&gt;おれとさぶらいむ&lt;/h2&gt;
+
+&lt;p&gt;去年の夏ぐらいからメインのテキストエディタとしてSublime Text 2を使っていて、&lt;br&gt;
+数ヶ月前からはSublime Text 3を使っています。&lt;/p&gt;
+
+&lt;p&gt;この記事で使っているカラーテーマは&lt;a href="https://github.com/thinkpixellab/flatland"&gt;thinkpixellab/flatland&lt;/a&gt;をforkした&lt;a href="https://github.com/fukayatsu/flatland"&gt;fukayatsu/flatland&lt;/a&gt;です。&lt;/p&gt;
+
+&lt;h2&gt;さぶらいむてきすとのインデントガイド&lt;/h2&gt;
+
+&lt;p&gt;Sublime Text のデフォルト設定はこんな感じです。&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;span class="c1"&gt;// Packages/Default/Preferences.sublime-settings
+&lt;/span&gt;
+    &lt;span class="c1"&gt;// Set to false to turn off the indentation guides.
+&lt;/span&gt;    &lt;span class="c1"&gt;// The color and width of the indent guides may be customized by editing
+&lt;/span&gt;    &lt;span class="c1"&gt;// the corresponding .tmTheme file, and specifying the colors &amp;quot;guide&amp;quot;,
+&lt;/span&gt;    &lt;span class="c1"&gt;// &amp;quot;activeGuide&amp;quot; and &amp;quot;stackGuide&amp;quot;
+&lt;/span&gt;    &lt;span class="s2"&gt;&amp;quot;draw_indent_guides&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+
+    &lt;span class="c1"&gt;// Controls how the indent guides are drawn, valid options are
+&lt;/span&gt;    &lt;span class="c1"&gt;// &amp;quot;draw_normal&amp;quot; and &amp;quot;draw_active&amp;quot;. draw_active will draw the indent
+&lt;/span&gt;    &lt;span class="c1"&gt;// guides containing the caret in a different color.
+&lt;/span&gt;    &lt;span class="s2"&gt;&amp;quot;indent_guide_options&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;draw_normal&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;インデントの深さごとに、薄い縦線が引かれます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="/images/2013-12-14-a.png"&gt;&lt;img src="/images/2013-12-14-a.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;でもインデントがspace 2とかだと、どのインデントの中にいるのか迷子になることがあります。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;ユーザ設定で上書きしてやります。&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;span class="c1"&gt;// Packages/User/Preferences.sublime-settings
+&lt;/span&gt;    &lt;span class="s2"&gt;&amp;quot;draw_indent_guides&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s2"&gt;&amp;quot;indent_guide_options&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;draw_normal&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;draw_active&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;インデントの種類によって色分けされるようになりました。&lt;br&gt;
+&lt;a href="/images/2013-12-14-b.png"&gt;&lt;img src="/images/2013-12-14-b.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;使っているカラーテーマによってはdraw_active時のインデントガイドの設定がないことがあるので、&lt;br&gt;
+そういう場合は自分で色を指定します。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;[カラーテーマ名].tmTheme&lt;/code&gt;の中の&lt;code&gt;&amp;lt;key&amp;gt;guide&amp;lt;/key&amp;gt;&lt;/code&gt;を探して、&lt;code&gt;activeGuide&lt;/code&gt;と&lt;code&gt;stackGuide&lt;/code&gt;の設定を追加します。色は適当です。&lt;/p&gt;
+&lt;pre class="highlight xml"&gt;&lt;span class="c"&gt;&amp;lt;!-- 通常のインデント --&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;guide&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;#444444&lt;span class="nt"&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;lt;!-- 自分が今いるインデント --&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;activeGuide&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;#aa7b60&lt;span class="nt"&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;lt;!-- 自分が今いるインデントの親 --&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;stackGuide&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;#607b60&lt;span class="nt"&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;&lt;a href="/images/2013-12-14-guides.png"&gt;&lt;img src="/images/2013-12-14-guides.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これでインデントが見やすくなったのではないかと思います。&lt;/p&gt;
+
+&lt;p&gt;ちなみにvimだと同様のプラグインとして、&lt;br&gt;
+&lt;a href="https://github.com/nathanaelkane/vim-indent-guides"&gt;nathanaelkane/vim-indent-guides&lt;/a&gt;が有名なようです。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;次回は&lt;a href="https://twitter.com/s12bt"&gt;s12bt&lt;/a&gt;さんです！&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>JavaScript String Replace</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/13/js-string-replace/"/>
     <id>http://blog.url.com/2013/12/13/js-string-replace/</id>
     <published>2013-12-13T11:51:00Z</published>
-    <updated>2013-12-13T12:16:13+00:00</updated>
+    <updated>2013-12-14T05:18:36+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -40,7 +124,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/12/active_support_core_extensions/"/>
     <id>http://blog.url.com/2013/12/12/active_support_core_extensions/</id>
     <published>2013-12-12T12:33:00Z</published>
-    <updated>2013-12-13T12:16:13+00:00</updated>
+    <updated>2013-12-14T05:18:36+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -124,7 +208,7 @@ Railsっぽいコードを書くために、使えるところでは使ってい
     <link rel="alternate" href="http://blog.url.com/2013/12/11/sublime-sudden-death-2/"/>
     <id>http://blog.url.com/2013/12/11/sublime-sudden-death-2/</id>
     <published>2013-12-11T13:46:00Z</published>
-    <updated>2013-12-13T12:16:13+00:00</updated>
+    <updated>2013-12-14T05:18:36+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -153,7 +237,7 @@ Railsっぽいコードを書くために、使えるところでは使ってい
     <link rel="alternate" href="http://blog.url.com/2013/12/10/jquery-and-file-upload/"/>
     <id>http://blog.url.com/2013/12/10/jquery-and-file-upload/</id>
     <published>2013-12-10T12:57:00Z</published>
-    <updated>2013-12-13T12:16:13+00:00</updated>
+    <updated>2013-12-14T05:18:36+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -196,7 +280,7 @@ Railsっぽいコードを書くために、使えるところでは使ってい
     <link rel="alternate" href="http://blog.url.com/2013/12/09/twitter-bot/"/>
     <id>http://blog.url.com/2013/12/09/twitter-bot/</id>
     <published>2013-12-09T13:12:00Z</published>
-    <updated>2013-12-13T12:16:13+00:00</updated>
+    <updated>2013-12-14T05:18:36+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -257,48 +341,6 @@ Railsっぽいコードを書くために、使えるところでは使ってい
 &lt;p&gt;最初はherokuに上げようかと思ったけど、単語リストが結構レコード数増えそうなので、 &lt;a href="http://rackhub.net/"&gt;http://rackhub.net/&lt;/a&gt; を使っている。&lt;/p&gt;
 
 &lt;p&gt;多分無料でSSHが使えるレンタルサーバもたくさんあるだろうけど、rackhubは作ったり壊したりが楽でよい。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Rubyで分かち書き</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/08/separating-words-in-japanese-with-ruby/"/>
-    <id>http://blog.url.com/2013/12/08/separating-words-in-japanese-with-ruby/</id>
-    <published>2013-12-08T05:22:00Z</published>
-    <updated>2013-12-13T12:16:13+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 8日目&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;ちょっと分かち書きの需要があったので、&lt;a href="https://github.com/todesking/okura"&gt;todesking/okura&lt;/a&gt;を使わせてもらうことにした。&lt;/p&gt;
-&lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;# Gemfile&lt;/span&gt;
-&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;https://rubygems.org&amp;quot;&lt;/span&gt;
-
-&lt;span class="c1"&gt;# ver 0.0.1のgemだと`Tagger#wakati`が動かなかったのでmasterを指定している&lt;/span&gt;
-&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;okura&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;github: &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;todesking/okura&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;# sample.rb&lt;/span&gt;
-
-&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;okura/serializer&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;dict_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lib/okura-dic&amp;#39;&lt;/span&gt; &lt;span class="c1"&gt;# mecabの辞書を元に生成しておく&lt;/span&gt;
-&lt;span class="n"&gt;tagger&lt;/span&gt;   &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Okura&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Serializer&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;FormatInfo&lt;/span&gt;&lt;span class="nf"&gt;.create_tagger&lt;/span&gt; &lt;span class="n"&gt;dict_dir&lt;/span&gt;
-
-&lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;分かち書き対象のテキストです...慈悲はない...&amp;#39;&lt;/span&gt;
-&lt;span class="nb"&gt;p&lt;/span&gt; &lt;span class="n"&gt;tagger&lt;/span&gt;&lt;span class="nf"&gt;.wakati&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;pre class="highlight shell"&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;bundle &lt;span class="nb"&gt;exec &lt;/span&gt;ruby sample.rb
-&lt;span class="c"&gt;#=&amp;gt; [&amp;quot;BOS/EOS&amp;quot;, &amp;quot;分かち書き&amp;quot;, &amp;quot;対象&amp;quot;, &amp;quot;の&amp;quot;, &amp;quot;テキスト&amp;quot;, &amp;quot;です&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;慈悲&amp;quot;, &amp;quot;は&amp;quot;, &amp;quot;ない&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;BOS/EOS&amp;quot;]&lt;/span&gt;
-&lt;/pre&gt;
-&lt;h2&gt;参考&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="http://d.hatena.ne.jp/gnarl/20120319/1332153697"&gt;Rubyによる形態素解析エンジンokura 0.0.1をリリースしました&lt;/a&gt;&lt;br&gt;
-バージョン0.0.xのうちは､インタフェースや辞書フォーマットは頻繁に変更される予定です｡&lt;br&gt;
-ある程度安定したら0.1.0出します｡&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;辞書ファイルのコンパイル方法もこちらで。&lt;/p&gt;
 </content>
   </entry>
 </feed>
