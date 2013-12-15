@@ -5,16 +5,48 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-14T04:05:00Z</updated>
+  <updated>2013-12-15T02:16:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Alfred Suddenly Death</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/15/alfred-suddenly-death/"/>
+    <id>http://blog.url.com/2013/12/15/alfred-suddenly-death/</id>
+    <published>2013-12-15T02:16:00Z</published>
+    <updated>2013-12-15T02:27:12+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 15日目&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;alfredに課金してworkflow作れる様になったので、&lt;br&gt;
+&lt;a href="https://github.com/fukayatsu/alfred-suddenly-death"&gt;alfred-suddenly-death&lt;/a&gt;を作った。&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="w50" src="https://f.cloud.github.com/assets/1041857/1749633/befda5a0-652b-11e3-9160-3bdd5d13351e.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="w50" src="https://f.cloud.github.com/assets/1041857/1749632/b903f226-652b-11e3-8b0e-c49482c64a14.png" /&gt;&lt;/p&gt;
+
+&lt;h1&gt;workflow&lt;/h1&gt;
+
+&lt;p&gt;bash/zsh/ruby他が使えたり通知とかクリップボードと連携したり、&lt;br&gt;
+結構作ってて面白いので他にも便利っぽいものを作りたい。&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="screen shot 2013-12-15 at 10 46 50" src="https://f.cloud.github.com/assets/1041857/1749631/ace45382-652b-11e3-9c5f-20c810018395.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;それぞれのノードに対して設定やスクリプトを書いてそれをGUIでつなげていく感じ&lt;/p&gt;
+
+&lt;p&gt;※ /bin/bashから rubyのスクリプトを呼んでいる&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>おれのさぶらいむてきすとはインデントが見やすい</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/14/my-sublime-text-indent-guide/"/>
     <id>http://blog.url.com/2013/12/14/my-sublime-text-indent-guide/</id>
     <published>2013-12-14T04:05:00Z</published>
-    <updated>2013-12-14T05:18:36+00:00</updated>
+    <updated>2013-12-15T02:27:12+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -98,7 +130,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/13/js-string-replace/"/>
     <id>http://blog.url.com/2013/12/13/js-string-replace/</id>
     <published>2013-12-13T11:51:00Z</published>
-    <updated>2013-12-14T05:18:36+00:00</updated>
+    <updated>2013-12-15T02:27:12+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -124,7 +156,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/12/active_support_core_extensions/"/>
     <id>http://blog.url.com/2013/12/12/active_support_core_extensions/</id>
     <published>2013-12-12T12:33:00Z</published>
-    <updated>2013-12-14T05:18:36+00:00</updated>
+    <updated>2013-12-15T02:27:12+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -208,7 +240,7 @@ Railsっぽいコードを書くために、使えるところでは使ってい
     <link rel="alternate" href="http://blog.url.com/2013/12/11/sublime-sudden-death-2/"/>
     <id>http://blog.url.com/2013/12/11/sublime-sudden-death-2/</id>
     <published>2013-12-11T13:46:00Z</published>
-    <updated>2013-12-14T05:18:36+00:00</updated>
+    <updated>2013-12-15T02:27:12+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -237,7 +269,7 @@ Railsっぽいコードを書くために、使えるところでは使ってい
     <link rel="alternate" href="http://blog.url.com/2013/12/10/jquery-and-file-upload/"/>
     <id>http://blog.url.com/2013/12/10/jquery-and-file-upload/</id>
     <published>2013-12-10T12:57:00Z</published>
-    <updated>2013-12-14T05:18:36+00:00</updated>
+    <updated>2013-12-15T02:27:12+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -273,74 +305,6 @@ Railsっぽいコードを書くために、使えるところでは使ってい
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://stackoverflow.com/questions/5392344/sending-multipart-formdata-with-jquery-ajax"&gt;Sending multipart/formdata with jQuery.ajax - Stack Overflow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>かにさん(twitter bot)</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/09/twitter-bot/"/>
-    <id>http://blog.url.com/2013/12/09/twitter-bot/</id>
-    <published>2013-12-09T13:12:00Z</published>
-    <updated>2013-12-14T05:18:36+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 9日目&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/sferik/twitter"&gt;sferik/twitter&lt;/a&gt;のバージョンが5に上がったので、その検証を兼ねてtwitter botを作った。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://twitter.com/kani_acid"&gt;かにさん (kani_acid) on Twitter&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;一瞬でほっこりっていうかにやにやですわ&lt;/p&gt;&amp;mdash; かにさん (@kani_acid) &lt;a href="https://twitter.com/kani_acid/statuses/409983296315981824"&gt;December 9, 2013&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-
-&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;ズズッ、ぷは〜(ほっこりほっこりと家の近くの自販機で買うこのミルクセーキは実は思い出 (&amp;#39;､3_ヽ)ほっこりばーか&lt;/p&gt;&amp;mdash; かにさん (@kani_acid) &lt;a href="https://twitter.com/kani_acid/statuses/409922898178998272"&gt;December 9, 2013&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;そんなことなかった！かわいい！ぬいぐるみみたいだ！&lt;/p&gt;&amp;mdash; かにさん (@kani_acid) &lt;a href="https://twitter.com/kani_acid/statuses/409885207873851393"&gt;December 9, 2013&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;あーそれとてもいいですねえ（ほっこりかい∩^ω^)⊃━☆゜.*・。&lt;/p&gt;&amp;mdash; かにさん (@kani_acid) &lt;a href="https://twitter.com/kani_acid/statuses/409865156286369792"&gt;December 9, 2013&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;仕組み的には&lt;a href="https://twitter.com/shuumai"&gt;しゅうまい君&lt;/a&gt;と同じで、学習した単語からマルコフ連鎖で文章を生成している。&lt;/p&gt;
-
-&lt;p&gt;学習はhome timelineと&lt;code&gt;ほっこり&lt;/code&gt;で検索した結果が元になっているので、&lt;br&gt;
-全体的にtweetがほっこりしている&lt;/p&gt;
-
-&lt;p&gt;tweetがfavられることによって単語の重み付けを変化させる機能もつけたが、&lt;br&gt;
-いかんせんまだデータが足りない&lt;/p&gt;
-
-&lt;h1&gt;Twitter::Streaming::Client&lt;/h1&gt;
-
-&lt;p&gt;twitter gemはver 5から、Streaming APIを単体で使えるようになった (Experimental)。今回はこんな感じで使っている&lt;/p&gt;
-&lt;pre class="highlight ruby"&gt;&lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Twitter&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Streaming&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Client&lt;/span&gt;&lt;span class="nf"&gt;.new&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
-  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="nf"&gt;.consumer_key&lt;/span&gt;        &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;YOUR_CONSUMER_KEY&amp;quot;&lt;/span&gt;
-  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="nf"&gt;.consumer_secret&lt;/span&gt;     &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;YOUR_CONSUMER_SECRET&amp;quot;&lt;/span&gt;
-  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="nf"&gt;.access_token&lt;/span&gt;        &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;YOUR_ACCESS_TOKEN&amp;quot;&lt;/span&gt;
-  &lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="nf"&gt;.access_token_secret&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;YOUR_ACCESS_SECRET&amp;quot;&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-
-&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="nf"&gt;.user&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;object&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
-  &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;object&lt;/span&gt;
-  &lt;span class="k"&gt;when&lt;/span&gt; &lt;span class="no"&gt;Twitter&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Tweet&lt;/span&gt;
-    &lt;span class="c1"&gt;# tweetを学習する&lt;/span&gt;
-  &lt;span class="k"&gt;when&lt;/span&gt; &lt;span class="no"&gt;Twitter&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Streaming&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Event&lt;/span&gt;
-    &lt;span class="n"&gt;event&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;object&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="nf"&gt;.name&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="ss"&gt;:favorite&lt;/span&gt;
-      &lt;span class="c1"&gt;# 単語の重みづけを変更する&lt;/span&gt;
-    &lt;span class="k"&gt;elsif&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="nf"&gt;.name&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="ss"&gt;:follow&lt;/span&gt;
-      &lt;span class="c1"&gt;# フォローバックする&lt;/span&gt;
-    &lt;span class="k"&gt;end&lt;/span&gt;
-  &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;
-&lt;h2&gt;サーバ&lt;/h2&gt;
-
-&lt;p&gt;最初はherokuに上げようかと思ったけど、単語リストが結構レコード数増えそうなので、 &lt;a href="http://rackhub.net/"&gt;http://rackhub.net/&lt;/a&gt; を使っている。&lt;/p&gt;
-
-&lt;p&gt;多分無料でSSHが使えるレンタルサーバもたくさんあるだろうけど、rackhubは作ったり壊したりが楽でよい。&lt;/p&gt;
 </content>
   </entry>
 </feed>
