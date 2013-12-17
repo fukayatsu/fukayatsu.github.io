@@ -5,16 +5,43 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-16T22:14:00Z</updated>
+  <updated>2013-12-17T13:12:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>ChromeAppのwebviewでIMEが使えるようになった！！！</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/17/chromium-issues-235573-fixed/"/>
+    <id>http://blog.url.com/2013/12/17/chromium-issues-235573-fixed/</id>
+    <published>2013-12-17T13:12:00Z</published>
+    <updated>2013-12-17T13:28:20+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 17日目&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;今朝の記事で言及した&lt;a href="/2013/12/17/chromium-issues-235573/"&gt;chromium-issues-235573&lt;/a&gt;の修正が&lt;br&gt;
+canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;chrome、Version 33.0.1750.0 canaryでwebviewタグの中でIME使えるようになったのでkochiさんに感謝している&lt;/p&gt;&amp;mdash; ふかやつ (@fukayatsu) &lt;a href="https://twitter.com/fukayatsu/statuses/412900109924302848"&gt;December 17, 2013&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;テンション上がる &lt;a href="http://t.co/eyxEsFhtqz"&gt;pic.twitter.com/eyxEsFhtqz&lt;/a&gt;&lt;/p&gt;&amp;mdash; ふかやつ (@fukayatsu) &lt;a href="https://twitter.com/fukayatsu/statuses/412921120124203008"&gt;December 17, 2013&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://chrome.google.com/webstore/detail/wriper/bjbpioaagmcdgpplnofkgofibdbcfplk?utm_source=chrome-ntp-icon"&gt;Chrome Web Store - Wriper&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>chromium-issues-235573</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/17/chromium-issues-235573/"/>
     <id>http://blog.url.com/2013/12/17/chromium-issues-235573/</id>
     <published>2013-12-16T22:14:00Z</published>
-    <updated>2013-12-16T22:44:55+00:00</updated>
+    <updated>2013-12-17T13:28:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -33,7 +60,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/15/alfred-suddenly-death/"/>
     <id>http://blog.url.com/2013/12/15/alfred-suddenly-death/</id>
     <published>2013-12-15T02:16:00Z</published>
-    <updated>2013-12-16T22:44:55+00:00</updated>
+    <updated>2013-12-17T13:28:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -65,7 +92,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/14/my-sublime-text-indent-guide/"/>
     <id>http://blog.url.com/2013/12/14/my-sublime-text-indent-guide/</id>
     <published>2013-12-14T04:05:00Z</published>
-    <updated>2013-12-16T22:44:55+00:00</updated>
+    <updated>2013-12-17T13:28:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -149,7 +176,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/13/js-string-replace/"/>
     <id>http://blog.url.com/2013/12/13/js-string-replace/</id>
     <published>2013-12-13T11:51:00Z</published>
-    <updated>2013-12-16T22:44:55+00:00</updated>
+    <updated>2013-12-17T13:28:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -175,7 +202,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/12/active_support_core_extensions/"/>
     <id>http://blog.url.com/2013/12/12/active_support_core_extensions/</id>
     <published>2013-12-12T12:33:00Z</published>
-    <updated>2013-12-16T22:44:55+00:00</updated>
+    <updated>2013-12-17T13:28:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -252,35 +279,6 @@ Railsっぽいコードを書くために、使えるところでは使ってい
 &lt;ul&gt;
 &lt;li&gt;各メソッドの定義を確認&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>＞Sublime Text 3＜、その後</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/11/sublime-sudden-death-2/"/>
-    <id>http://blog.url.com/2013/12/11/sublime-sudden-death-2/</id>
-    <published>2013-12-11T13:46:00Z</published>
-    <updated>2013-12-16T22:44:55+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 11日目&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;7日目の&lt;a href="/2013/12/07/sublime-sudden-death/"&gt;＞例のあれ＜&lt;/a&gt;がSublimeText Package Control Channelに&lt;a href="https://github.com/wbond/package_control_channel/pull/2458"&gt;無事にマージされた&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;案の定「ごめん、なにこれ？」と聞かれたので、&lt;br&gt;
-「日本で使われるアスキーアートの一種だよ」的な説明をするはめになった。&lt;/p&gt;
-
-&lt;p&gt;インストールも簡単になったし、便利なのでSublime Text 3な人は使ってみてください。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="https://github.com/fukayatsu/SublimeSuddenDeath"&gt;fukayatsu/SublimeSuddenDeath&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img alt="w50" src="/images/2013-12-11-a.png" /&gt;&lt;br&gt;
-&lt;img alt="w50" src="/images/2013-12-11-b.png" /&gt;&lt;br&gt;
-&lt;img alt="w50" src="/images/2013-12-11-c.png" /&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
