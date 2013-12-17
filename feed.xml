@@ -5,16 +5,57 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-17T13:12:00Z</updated>
+  <updated>2013-12-17T16:07:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>ChromeAppsGeneratorを更新した</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/18/chrome-apps-generator-update/"/>
+    <id>http://blog.url.com/2013/12/18/chrome-apps-generator-update/</id>
+    <published>2013-12-17T16:07:00Z</published>
+    <updated>2013-12-17T16:23:16+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 18日目&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Chrome Ver33からchrome appのwebview内でIMEが使えるようになることがわかったので、&lt;br&gt;
+また&lt;a href="http://chrome-apps-generator.herokuapp.com/"&gt;ChromeAppsGenerator&lt;/a&gt;へのモチベーションが高まり、機能追加等をした。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;webview margin調整&lt;/li&gt;
+&lt;li&gt;初期アイコン登録
+
+&lt;ul&gt;
+&lt;li&gt;mini_magickで中心をcropしてリサイズ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ダウンロード数表示
+
+&lt;ul&gt;
+&lt;li&gt;redisでカウントだけ保存&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;favicon追加&lt;/li&gt;
+&lt;li&gt;like, tweetボタン追加&lt;/li&gt;
+&lt;li&gt;analytics追加&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Chrome(stable)でもIMEが効くようになったら、ドキュメントとかテストを整備していこうと思う。&lt;/p&gt;
+
+&lt;h2&gt;蛇足&lt;/h2&gt;
+
+&lt;p&gt;ChromeAppsGeneratorをapp化したらどうなるかと思ってやってみたけど、&lt;br&gt;
+ChromeAppにはdownloaderの機能がないので駄目だった。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>ChromeAppのwebviewでIMEが使えるようになった！！！</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/17/chromium-issues-235573-fixed/"/>
     <id>http://blog.url.com/2013/12/17/chromium-issues-235573-fixed/</id>
     <published>2013-12-17T13:12:00Z</published>
-    <updated>2013-12-17T13:28:20+00:00</updated>
+    <updated>2013-12-17T16:23:16+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -41,7 +82,7 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/17/chromium-issues-235573/"/>
     <id>http://blog.url.com/2013/12/17/chromium-issues-235573/</id>
     <published>2013-12-16T22:14:00Z</published>
-    <updated>2013-12-17T13:28:20+00:00</updated>
+    <updated>2013-12-17T16:23:16+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -60,7 +101,7 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/15/alfred-suddenly-death/"/>
     <id>http://blog.url.com/2013/12/15/alfred-suddenly-death/</id>
     <published>2013-12-15T02:16:00Z</published>
-    <updated>2013-12-17T13:28:20+00:00</updated>
+    <updated>2013-12-17T16:23:16+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -92,7 +133,7 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/14/my-sublime-text-indent-guide/"/>
     <id>http://blog.url.com/2013/12/14/my-sublime-text-indent-guide/</id>
     <published>2013-12-14T04:05:00Z</published>
-    <updated>2013-12-17T13:28:20+00:00</updated>
+    <updated>2013-12-17T16:23:16+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -176,7 +217,7 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/13/js-string-replace/"/>
     <id>http://blog.url.com/2013/12/13/js-string-replace/</id>
     <published>2013-12-13T11:51:00Z</published>
-    <updated>2013-12-17T13:28:20+00:00</updated>
+    <updated>2013-12-17T16:23:16+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -196,89 +237,5 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
 &lt;pre class="highlight javascript"&gt;&lt;span class="s1"&gt;&amp;#39;foo bar&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;$$BAZ$$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
 &lt;span class="c1"&gt;// =&amp;gt; &amp;quot;foo $$BAZ$$&amp;quot;
 &lt;/span&gt;&lt;/pre&gt;</content>
-  </entry>
-  <entry>
-    <title>Active Support Core Extensions</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/12/active_support_core_extensions/"/>
-    <id>http://blog.url.com/2013/12/12/active_support_core_extensions/</id>
-    <published>2013-12-12T12:33:00Z</published>
-    <updated>2013-12-17T13:28:20+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 12日目&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href="http://edgeguides.rubyonrails.org/active_support_core_extensions.html"&gt;Active Support Core Extensions — Ruby on Rails Guides&lt;/a&gt;を斜め読みした。&lt;br&gt;
-普段から使ってるのに、半分も知らなかった。&lt;/p&gt;
-
-&lt;p&gt;「へー」と思ったメモ:&lt;/p&gt;
-
-&lt;h3&gt;String&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;5.5 inquiry
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Rails.env.production?&lt;/code&gt;とかやってるあれ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;5.8 indent
-
-&lt;ul&gt;
-&lt;li&gt;インデント&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;5.10.5 titleize
-
-&lt;ul&gt;
-&lt;li&gt;タイトルっぽくする&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;5.10.14 foreign_key
-
-&lt;ul&gt;
-&lt;li&gt;foreign_keyっぽくする&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Numeric&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;6.1 Bytes
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;2.kilobytes   # =&amp;gt; 2048&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Enumerable&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;9.3 many?
-
-&lt;ul&gt;
-&lt;li&gt;1より大きいものは&amp;quot;たくさん&amp;quot;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Hash&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;11.6 Extracting
-
-&lt;ul&gt;
-&lt;li&gt;KVを引き抜くイメージ&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;他にも時刻、時間関係の拡張が沢山ある。&lt;br&gt;
-中には正直英語圏の人しか使わないのではというものもあるけど、&lt;br&gt;
-Railsっぽいコードを書くために、使えるところでは使っていきたい。&lt;/p&gt;
-
-&lt;p&gt;TODO&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;各メソッドの定義を確認&lt;/li&gt;
-&lt;/ul&gt;
-</content>
   </entry>
 </feed>

@@ -7,7 +7,7 @@
 </head>
 <link href='/images/favicon.ico' rel='icon' type='image/ico'>
 <title>
-fukayatsu.dev
+ChromeAppsGeneratorを更新した - fukayatsu.dev
 </title>
 </link>
 <script>
@@ -42,28 +42,44 @@ under development
 </div>
 </div>
 </header>
+<div class='publish-date'>
+<a href="/2013/12/18/chrome-apps-generator-update/">2013-12-18 01:07:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/chrome-apps/">chrome-apps</a>
+</div>
 <div id='main' role='main'>
-<h1>
-Articles tagged 'chrome-apps'
-</h1>
+<h1 class='title'>ChromeAppsGeneratorを更新した</h1>
+<blockquote>
+<p><a href="/2013/11/29/advent-calendar-2013/">fukayatsu Advent Calendar 2013</a> - 18日目</p>
+</blockquote>
+
+<p>Chrome Ver33からchrome appのwebview内でIMEが使えるようになることがわかったので、<br>
+また<a href="http://chrome-apps-generator.herokuapp.com/">ChromeAppsGenerator</a>へのモチベーションが高まり、機能追加等をした。</p>
+
 <ul>
-<li>
-<a href="/2013/12/18/chrome-apps-generator-update/">ChromeAppsGeneratorを更新した</a>
-<span>Dec 18</span>
-</li>
-<li>
-<a href="/2013/12/17/chromium-issues-235573-fixed/">ChromeAppのwebviewでIMEが使えるようになった！！！</a>
-<span>Dec 17</span>
-</li>
-<li>
-<a href="/2013/12/06/wriper/">wriper</a>
-<span>Dec  6</span>
-</li>
-<li>
-<a href="/2013/12/01/chrome-apps-bootstrap/">chrome-apps-bootstrap</a>
-<span>Dec  1</span>
-</li>
+<li>webview margin調整</li>
+<li>初期アイコン登録
+
+<ul>
+<li>mini_magickで中心をcropしてリサイズ</li>
+</ul></li>
+<li>ダウンロード数表示
+
+<ul>
+<li>redisでカウントだけ保存</li>
+</ul></li>
+<li>favicon追加</li>
+<li>like, tweetボタン追加</li>
+<li>analytics追加</li>
 </ul>
+
+<p>Chrome(stable)でもIMEが効くようになったら、ドキュメントとかテストを整備していこうと思う。</p>
+
+<h2>蛇足</h2>
+
+<p>ChromeAppsGeneratorをapp化したらどうなるかと思ってやってみたけど、<br>
+ChromeAppにはdownloaderの機能がないので駄目だった。</p>
 
 </div>
 <footer>
