@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/18/chrome-apps-generator-update/"/>
     <id>http://blog.url.com/2013/12/18/chrome-apps-generator-update/</id>
     <published>2013-12-17T16:07:00Z</published>
-    <updated>2013-12-17T16:23:16+00:00</updated>
+    <updated>2013-12-18T00:27:47+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -46,7 +46,7 @@
 
 &lt;h2&gt;蛇足&lt;/h2&gt;
 
-&lt;p&gt;ChromeAppsGeneratorをapp化したらどうなるかと思ってやってみたけど、&lt;br&gt;
+&lt;p&gt;ChromeAppsGeneratorをそれ自身でapp化したらどうなるかと思ってやってみたけど、&lt;br&gt;
 ChromeAppにはdownloaderの機能がないので駄目だった。&lt;/p&gt;
 </content>
   </entry>
@@ -55,7 +55,7 @@ ChromeAppにはdownloaderの機能がないので駄目だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/17/chromium-issues-235573-fixed/"/>
     <id>http://blog.url.com/2013/12/17/chromium-issues-235573-fixed/</id>
     <published>2013-12-17T13:12:00Z</published>
-    <updated>2013-12-17T16:23:16+00:00</updated>
+    <updated>2013-12-18T00:27:47+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -82,7 +82,7 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/17/chromium-issues-235573/"/>
     <id>http://blog.url.com/2013/12/17/chromium-issues-235573/</id>
     <published>2013-12-16T22:14:00Z</published>
-    <updated>2013-12-17T16:23:16+00:00</updated>
+    <updated>2013-12-18T00:27:47+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -101,7 +101,7 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/15/alfred-suddenly-death/"/>
     <id>http://blog.url.com/2013/12/15/alfred-suddenly-death/</id>
     <published>2013-12-15T02:16:00Z</published>
-    <updated>2013-12-17T16:23:16+00:00</updated>
+    <updated>2013-12-18T00:27:47+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -133,7 +133,7 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/14/my-sublime-text-indent-guide/"/>
     <id>http://blog.url.com/2013/12/14/my-sublime-text-indent-guide/</id>
     <published>2013-12-14T04:05:00Z</published>
-    <updated>2013-12-17T16:23:16+00:00</updated>
+    <updated>2013-12-18T00:27:47+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -217,7 +217,7 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/13/js-string-replace/"/>
     <id>http://blog.url.com/2013/12/13/js-string-replace/</id>
     <published>2013-12-13T11:51:00Z</published>
-    <updated>2013-12-17T16:23:16+00:00</updated>
+    <updated>2013-12-18T00:27:47+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
