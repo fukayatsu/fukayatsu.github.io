@@ -29,7 +29,7 @@ tags: advent-calendar-2013, list
 1. [Alfred Suddenly Death](/2013/12/15/alfred-suddenly-death/)
 1. [chromium-issues-235573](/2013/12/17/chromium-issues-235573/)
 1. [ChromeAppのwebviewでIMEが使えるようになった！！！](/2013/12/17/chromium-issues-235573-fixed/)
-1. [ChromeAppsGenerator update](2013/12/06/chrome-apps-generator/)
+1. [ChromeAppsGeneratorを更新した](/2013/12/18/chrome-apps-generator-update/)
 1. deploy with lita
 1. MacとUS配列とGoogle 日本語入力
 1. ChatBotとGoogle Analytics

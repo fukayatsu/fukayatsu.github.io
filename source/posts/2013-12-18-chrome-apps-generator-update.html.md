@@ -22,5 +22,5 @@ Chrome Ver33からchrome appのwebview内でIMEが使えるようになること
 Chrome(stable)でもIMEが効くようになったら、ドキュメントとかテストを整備していこうと思う。
 
 ## 蛇足
-ChromeAppsGeneratorをapp化したらどうなるかと思ってやってみたけど、
+ChromeAppsGeneratorをそれ自身でapp化したらどうなるかと思ってやってみたけど、
 ChromeAppにはdownloaderの機能がないので駄目だった。
