@@ -5,16 +5,52 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-18T12:27:00Z</updated>
+  <updated>2013-12-19T16:29:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>おれのさぶらいむてきすとと検索</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/20/my-sublime-text-and-ime/"/>
+    <id>http://blog.url.com/2013/12/20/my-sublime-text-and-ime/</id>
+    <published>2013-12-19T16:29:00Z</published>
+    <updated>2013-12-19T16:52:20+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;この記事は、&lt;a href="http://www.adventar.org/calendars/184"&gt;おれのさぶらいむてきすと Advent Calendar 2013 - Adventar&lt;/a&gt;の20日目です。&lt;/p&gt;
+
+&lt;p&gt;前回は&lt;a href="http://profile.hatena.ne.jp/fushimik/"&gt;Charlie55&lt;/a&gt;さんの&lt;a href="http://charlie.hateblo.jp/entry/2013/12/19/223102"&gt;じっくり解説！おれのさぶらいむてきすとInputSequenceプラグイン - フロントエンドとかPCとかスマホとか&lt;/a&gt;でした。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;小ネタです。&lt;/p&gt;
+
+&lt;p&gt;4日目の&lt;a href="http://blog.obentoba.co/entry/2013/12/04/sublimetext-japaneseSearch"&gt;おれのさぶらいむてきすとは日本語検索がうまくできない&lt;/a&gt;でも話題になっていましたが、検索ウィンドウで日本語入力時に変換確定のEnterを押すと入力されていた文字が消えてしまいます。&lt;/p&gt;
+
+&lt;p&gt;一昨日ぐらいにSublimeのアップデートがありましたが、やっぱりまだ駄目。&lt;/p&gt;
+
+&lt;p&gt;いろいろ試した結果、自分の環境ではこんな感じに落ち着きました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + Enter&lt;/code&gt;で確定をする&lt;/li&gt;
+&lt;li&gt;2回目以降は普通にEnterで検索する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;# keyremap4macbookとgoogle imeを組み合わせてTabやEnterをすり替えたりもしてみましたが、&lt;br&gt;
+副作用が大きすぎて断念しました...&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;明日は&lt;a href="https://twitter.com/TalesofFox"&gt;TalesofFox&lt;/a&gt;さんです！&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>渋谷.rb[:20131218]に行ってきた</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/18/shibuya-rb/"/>
     <id>http://blog.url.com/2013/12/18/shibuya-rb/</id>
     <published>2013-12-18T12:27:00Z</published>
-    <updated>2013-12-18T16:12:27+00:00</updated>
+    <updated>2013-12-19T16:52:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -119,7 +155,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/18/chrome-apps-generator-update/"/>
     <id>http://blog.url.com/2013/12/18/chrome-apps-generator-update/</id>
     <published>2013-12-17T16:07:00Z</published>
-    <updated>2013-12-18T16:12:27+00:00</updated>
+    <updated>2013-12-19T16:52:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -160,7 +196,7 @@ ChromeAppにはdownloaderの機能がないので駄目だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/17/chromium-issues-235573-fixed/"/>
     <id>http://blog.url.com/2013/12/17/chromium-issues-235573-fixed/</id>
     <published>2013-12-17T13:12:00Z</published>
-    <updated>2013-12-18T16:12:27+00:00</updated>
+    <updated>2013-12-19T16:52:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -187,7 +223,7 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/17/chromium-issues-235573/"/>
     <id>http://blog.url.com/2013/12/17/chromium-issues-235573/</id>
     <published>2013-12-16T22:14:00Z</published>
-    <updated>2013-12-18T16:12:27+00:00</updated>
+    <updated>2013-12-19T16:52:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -206,7 +242,7 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/15/alfred-suddenly-death/"/>
     <id>http://blog.url.com/2013/12/15/alfred-suddenly-death/</id>
     <published>2013-12-15T02:16:00Z</published>
-    <updated>2013-12-18T16:12:27+00:00</updated>
+    <updated>2013-12-19T16:52:20+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -231,90 +267,6 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
 &lt;p&gt;それぞれのノードに対して設定やスクリプトを書いてそれをGUIでつなげていく感じ&lt;/p&gt;
 
 &lt;p&gt;※ /bin/bashから rubyのスクリプトを呼んでいる&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>おれのさぶらいむてきすとはインデントが見やすい</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/14/my-sublime-text-indent-guide/"/>
-    <id>http://blog.url.com/2013/12/14/my-sublime-text-indent-guide/</id>
-    <published>2013-12-14T04:05:00Z</published>
-    <updated>2013-12-18T16:12:27+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;この記事は、&lt;a href="http://www.adventar.org/calendars/184"&gt;おれのさぶらいむてきすと Advent Calendar 2013 - Adventar&lt;/a&gt;の14日目です。&lt;/p&gt;
-
-&lt;p&gt;前回は&lt;a href="https://twitter.com/irohiroki"&gt;irohiroki&lt;/a&gt;さんの&lt;a href="http://irohiroki.github.io/blog/2013/12/13/sublime-texts-multiple-selection-and-me/"&gt;おれとさぶらいむてきすとの複数選択&lt;/a&gt;でした。&lt;/p&gt;
-
-&lt;p&gt;(密かに&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt;の14日目でもあったりします)&lt;/p&gt;
-
-&lt;h2&gt;おれとさぶらいむ&lt;/h2&gt;
-
-&lt;p&gt;去年の夏ぐらいからメインのテキストエディタとしてSublime Text 2を使っていて、&lt;br&gt;
-数ヶ月前からはSublime Text 3を使っています。&lt;/p&gt;
-
-&lt;p&gt;この記事で使っているカラーテーマは&lt;a href="https://github.com/thinkpixellab/flatland"&gt;thinkpixellab/flatland&lt;/a&gt;をforkした&lt;a href="https://github.com/fukayatsu/flatland"&gt;fukayatsu/flatland&lt;/a&gt;です。&lt;/p&gt;
-
-&lt;h2&gt;さぶらいむてきすとのインデントガイド&lt;/h2&gt;
-
-&lt;p&gt;Sublime Text のデフォルト設定はこんな感じです。&lt;/p&gt;
-&lt;pre class="highlight javascript"&gt;&lt;span class="c1"&gt;// Packages/Default/Preferences.sublime-settings
-&lt;/span&gt;
-    &lt;span class="c1"&gt;// Set to false to turn off the indentation guides.
-&lt;/span&gt;    &lt;span class="c1"&gt;// The color and width of the indent guides may be customized by editing
-&lt;/span&gt;    &lt;span class="c1"&gt;// the corresponding .tmTheme file, and specifying the colors &amp;quot;guide&amp;quot;,
-&lt;/span&gt;    &lt;span class="c1"&gt;// &amp;quot;activeGuide&amp;quot; and &amp;quot;stackGuide&amp;quot;
-&lt;/span&gt;    &lt;span class="s2"&gt;&amp;quot;draw_indent_guides&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-
-    &lt;span class="c1"&gt;// Controls how the indent guides are drawn, valid options are
-&lt;/span&gt;    &lt;span class="c1"&gt;// &amp;quot;draw_normal&amp;quot; and &amp;quot;draw_active&amp;quot;. draw_active will draw the indent
-&lt;/span&gt;    &lt;span class="c1"&gt;// guides containing the caret in a different color.
-&lt;/span&gt;    &lt;span class="s2"&gt;&amp;quot;indent_guide_options&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;draw_normal&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-&lt;/pre&gt;
-&lt;p&gt;インデントの深さごとに、薄い縦線が引かれます。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="/images/2013-12-14-a.png"&gt;&lt;img src="/images/2013-12-14-a.png" /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;でもインデントがspace 2とかだと、どのインデントの中にいるのか迷子になることがあります。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;ユーザ設定で上書きしてやります。&lt;/p&gt;
-&lt;pre class="highlight javascript"&gt;&lt;span class="c1"&gt;// Packages/User/Preferences.sublime-settings
-&lt;/span&gt;    &lt;span class="s2"&gt;&amp;quot;draw_indent_guides&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s2"&gt;&amp;quot;indent_guide_options&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;draw_normal&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;draw_active&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-&lt;/pre&gt;
-&lt;p&gt;インデントの種類によって色分けされるようになりました。&lt;br&gt;
-&lt;a href="/images/2013-12-14-b.png"&gt;&lt;img src="/images/2013-12-14-b.png" /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;使っているカラーテーマによってはdraw_active時のインデントガイドの設定がないことがあるので、&lt;br&gt;
-そういう場合は自分で色を指定します。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;[カラーテーマ名].tmTheme&lt;/code&gt;の中の&lt;code&gt;&amp;lt;key&amp;gt;guide&amp;lt;/key&amp;gt;&lt;/code&gt;を探して、&lt;code&gt;activeGuide&lt;/code&gt;と&lt;code&gt;stackGuide&lt;/code&gt;の設定を追加します。色は適当です。&lt;/p&gt;
-&lt;pre class="highlight xml"&gt;&lt;span class="c"&gt;&amp;lt;!-- 通常のインデント --&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;guide&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;#444444&lt;span class="nt"&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
-
-&lt;span class="c"&gt;&amp;lt;!-- 自分が今いるインデント --&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;activeGuide&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;#aa7b60&lt;span class="nt"&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
-
-&lt;span class="c"&gt;&amp;lt;!-- 自分が今いるインデントの親 --&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;key&amp;gt;&lt;/span&gt;stackGuide&lt;span class="nt"&gt;&amp;lt;/key&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;#607b60&lt;span class="nt"&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
-&lt;p&gt;&lt;a href="/images/2013-12-14-guides.png"&gt;&lt;img src="/images/2013-12-14-guides.png" /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;これでインデントが見やすくなったのではないかと思います。&lt;/p&gt;
-
-&lt;p&gt;ちなみにvimだと同様のプラグインとして、&lt;br&gt;
-&lt;a href="https://github.com/nathanaelkane/vim-indent-guides"&gt;nathanaelkane/vim-indent-guides&lt;/a&gt;が有名なようです。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;次回は&lt;a href="https://twitter.com/s12bt"&gt;s12bt&lt;/a&gt;さんです！&lt;/p&gt;
 </content>
   </entry>
 </feed>
