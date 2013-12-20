@@ -5,22 +5,90 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-19T16:29:00Z</updated>
+  <updated>2013-12-20T00:04:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>active_record-deselectというgemを作った</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/20/active_record-deselect/"/>
+    <id>http://blog.url.com/2013/12/20/active_record-deselect/</id>
+    <published>2013-12-20T00:04:00Z</published>
+    <updated>2013-12-20T00:43:56+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; #21&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;Post&lt;/code&gt;モデルの&lt;code&gt;body&lt;/code&gt;以外を取得したいというような時に、&lt;br&gt;
+&lt;code&gt;#select&lt;/code&gt;で必要なカラムをすべて明示するのが面倒だった。&lt;/p&gt;
+
+&lt;p&gt;(もし似たようなgemがあれば教えて下さい)&lt;/p&gt;
+
+&lt;h2&gt;usage&lt;/h2&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;# Postモデル&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="no"&gt;Post&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; class Post &amp;lt; ActiveRecord::Base {&lt;/span&gt;
+              &lt;span class="ss"&gt;:id&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:integer&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="ss"&gt;:name&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:string&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+            &lt;span class="ss"&gt;:body&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+         &lt;span class="ss"&gt;:user_id&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:integer&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="ss"&gt;:published_at&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:datetime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="ss"&gt;:created_at&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:datetime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="ss"&gt;:updated_at&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:datetime&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# body以外のカラムを取得&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="no"&gt;Post&lt;/span&gt;&lt;span class="nf"&gt;.deselect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:body&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.to_sql&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; &amp;quot;SELECT id, name, user_id, published_at, created_at, updated_at FROM \&amp;quot;posts\&amp;quot;&amp;quot;&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# selectの取り消し&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="no"&gt;Post&lt;/span&gt;&lt;span class="nf"&gt;.select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:body&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:user_id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.deselect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:body&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;user_id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.to_sql&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; &amp;quot;SELECT id, name FROM \&amp;quot;posts\&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="no"&gt;Post&lt;/span&gt;&lt;span class="nf"&gt;.select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;posts.id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;posts.name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.deselect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.to_sql&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; &amp;quot;SELECT posts.id FROM \&amp;quot;posts\&amp;quot;&amp;quot;&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# *** Post.all.to_sql相当になる場合 ***&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="no"&gt;Post&lt;/span&gt;&lt;span class="nf"&gt;.select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.deselect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.to_sql&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; &amp;quot;SELECT \&amp;quot;posts\&amp;quot;.* FROM \&amp;quot;posts\&amp;quot;&amp;quot;&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# *** deselect後にselectする場合 ***&lt;/span&gt;
+&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="no"&gt;Post&lt;/span&gt;&lt;span class="nf"&gt;.deselect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.to_sql&lt;/span&gt;
+&lt;span class="c1"&gt;#=&amp;gt; &amp;quot;SELECT body, user_id, published_at, created_at, updated_at, id FROM \&amp;quot;posts\&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# Post.deselect(:name).to_sql 相当&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;最後の2つの挙動をどうしようか、まだちょっと迷っている&lt;/p&gt;
+
+&lt;h2&gt;link&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://eow.alc.co.jp/search?q=deselect"&gt;deselectの意味・用例｜英辞郎 on the WEB：アルク&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/active_record-deselect"&gt;fukayatsu/active_record-deselect | GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rubygems.org/gems/active_record-deselect"&gt;active_record-deselect | RubyGems.org | your community gem host&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>おれのさぶらいむてきすとと検索</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/20/my-sublime-text-and-ime/"/>
     <id>http://blog.url.com/2013/12/20/my-sublime-text-and-ime/</id>
     <published>2013-12-19T16:29:00Z</published>
-    <updated>2013-12-19T16:52:20+00:00</updated>
+    <updated>2013-12-20T00:43:56+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
     <content type="html">&lt;p&gt;この記事は、&lt;a href="http://www.adventar.org/calendars/184"&gt;おれのさぶらいむてきすと Advent Calendar 2013 - Adventar&lt;/a&gt;の20日目です。&lt;/p&gt;
 
-&lt;p&gt;前回は&lt;a href="http://profile.hatena.ne.jp/fushimik/"&gt;Charlie55&lt;/a&gt;さんの&lt;a href="http://charlie.hateblo.jp/entry/2013/12/19/223102"&gt;じっくり解説！おれのさぶらいむてきすとInputSequenceプラグイン - フロントエンドとかPCとかスマホとか&lt;/a&gt;でした。&lt;/p&gt;
+&lt;p&gt;前回は&lt;a href="http://profile.hatena.ne.jp/fushimik/"&gt;Charlie55&lt;/a&gt;さんの&lt;a href="http://charlie.hateblo.jp/entry/2013/12/19/223102"&gt;じっくり解説！おれのさぶらいむてきすとInputSequenceプラグイン&lt;/a&gt;でした。&lt;/p&gt;
 
 &lt;hr&gt;
 
@@ -50,7 +118,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/18/shibuya-rb/"/>
     <id>http://blog.url.com/2013/12/18/shibuya-rb/</id>
     <published>2013-12-18T12:27:00Z</published>
-    <updated>2013-12-19T16:52:20+00:00</updated>
+    <updated>2013-12-20T00:43:56+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -155,7 +223,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/18/chrome-apps-generator-update/"/>
     <id>http://blog.url.com/2013/12/18/chrome-apps-generator-update/</id>
     <published>2013-12-17T16:07:00Z</published>
-    <updated>2013-12-19T16:52:20+00:00</updated>
+    <updated>2013-12-20T00:43:56+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -196,7 +264,7 @@ ChromeAppにはdownloaderの機能がないので駄目だった。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/17/chromium-issues-235573-fixed/"/>
     <id>http://blog.url.com/2013/12/17/chromium-issues-235573-fixed/</id>
     <published>2013-12-17T13:12:00Z</published>
-    <updated>2013-12-19T16:52:20+00:00</updated>
+    <updated>2013-12-20T00:43:56+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -223,7 +291,7 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
     <link rel="alternate" href="http://blog.url.com/2013/12/17/chromium-issues-235573/"/>
     <id>http://blog.url.com/2013/12/17/chromium-issues-235573/</id>
     <published>2013-12-16T22:14:00Z</published>
-    <updated>2013-12-19T16:52:20+00:00</updated>
+    <updated>2013-12-20T00:43:56+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -235,38 +303,6 @@ canary buildに(もしかしたらdev buildにも)反映された。&lt;/p&gt;
 
 &lt;p&gt;これでChrome appsの中の&lt;code&gt;webview&lt;/code&gt;タグで日本語入力できるようになると思うので嬉しい。&lt;br&gt;
 数日中に&lt;a href="https://www.google.com/intl/en/chrome/browser/canary.html"&gt;canary build&lt;/a&gt;で試せるようになるのかな。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Alfred Suddenly Death</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/15/alfred-suddenly-death/"/>
-    <id>http://blog.url.com/2013/12/15/alfred-suddenly-death/</id>
-    <published>2013-12-15T02:16:00Z</published>
-    <updated>2013-12-19T16:52:20+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - 15日目&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;alfredに課金してworkflow作れる様になったので、&lt;br&gt;
-&lt;a href="https://github.com/fukayatsu/alfred-suddenly-death"&gt;alfred-suddenly-death&lt;/a&gt;を作った。&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt="w50" src="https://f.cloud.github.com/assets/1041857/1749633/befda5a0-652b-11e3-9160-3bdd5d13351e.png" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt="w50" src="https://f.cloud.github.com/assets/1041857/1749632/b903f226-652b-11e3-8b0e-c49482c64a14.png" /&gt;&lt;/p&gt;
-
-&lt;h1&gt;workflow&lt;/h1&gt;
-
-&lt;p&gt;bash/zsh/ruby他が使えたり通知とかクリップボードと連携したり、&lt;br&gt;
-結構作ってて面白いので他にも便利っぽいものを作りたい。&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt="screen shot 2013-12-15 at 10 46 50" src="https://f.cloud.github.com/assets/1041857/1749631/ace45382-652b-11e3-9c5f-20c810018395.png" /&gt;&lt;/p&gt;
-
-&lt;p&gt;それぞれのノードに対して設定やスクリプトを書いてそれをGUIでつなげていく感じ&lt;/p&gt;
-
-&lt;p&gt;※ /bin/bashから rubyのスクリプトを呼んでいる&lt;/p&gt;
 </content>
   </entry>
 </feed>

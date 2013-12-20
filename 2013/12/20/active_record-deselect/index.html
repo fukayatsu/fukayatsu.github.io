@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+</head>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+active_record-deselectというgemを作った - fukayatsu.dev
+</title>
+</link>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36253613-1']);
+  _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<div class='header-text'>
+<a href="/"><h1 class='header-title'>
+fukayatsu.dev
+</h1>
+</a>
+<a target="_new" href="http://blog.fukayatsu.com/"><p class='header-description'>
+under development
+</p>
+</a>
+</div>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/12/20/active_record-deselect/">2013-12-20 09:04:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/ruby/">ruby</a>
+<a href="/tags/rails/">rails</a>
+<a href="/tags/gem/">gem</a>
+<a href="/tags/active_record/">active_record</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>active_record-deselectというgemを作った</h1>
+<blockquote>
+<p><a href="/2013/11/29/advent-calendar-2013/">fukayatsu Advent Calendar 2013</a> #21</p>
+</blockquote>
+
+<h2>背景</h2>
+
+<p><code>Post</code>モデルの<code>body</code>以外を取得したいというような時に、<br>
+<code>#select</code>で必要なカラムをすべて明示するのが面倒だった。</p>
+
+<p>(もし似たようなgemがあれば教えて下さい)</p>
+
+<h2>usage</h2>
+<pre class="highlight ruby"><span class="c1"># Postモデル</span>
+<span class="mi">4</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span> <span class="err">@</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span><span class="no">Post</span>
+<span class="c1">#=&gt; class Post &lt; ActiveRecord::Base {</span>
+              <span class="ss">:id</span> <span class="o">=&gt;</span> <span class="ss">:integer</span><span class="p">,</span>
+            <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="ss">:string</span><span class="p">,</span>
+            <span class="ss">:body</span> <span class="o">=&gt;</span> <span class="ss">:text</span><span class="p">,</span>
+         <span class="ss">:user_id</span> <span class="o">=&gt;</span> <span class="ss">:integer</span><span class="p">,</span>
+    <span class="ss">:published_at</span> <span class="o">=&gt;</span> <span class="ss">:datetime</span><span class="p">,</span>
+      <span class="ss">:created_at</span> <span class="o">=&gt;</span> <span class="ss">:datetime</span><span class="p">,</span>
+      <span class="ss">:updated_at</span> <span class="o">=&gt;</span> <span class="ss">:datetime</span>
+<span class="p">}</span>
+
+
+<span class="c1"># body以外のカラムを取得</span>
+<span class="mi">4</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span> <span class="err">@</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span><span class="no">Post</span><span class="nf">.deselect</span><span class="p">(</span><span class="ss">:body</span><span class="p">)</span><span class="nf">.to_sql</span>
+<span class="c1">#=&gt; &quot;SELECT id, name, user_id, published_at, created_at, updated_at FROM \&quot;posts\&quot;&quot;</span>
+
+
+<span class="c1"># selectの取り消し</span>
+<span class="mi">4</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span> <span class="err">@</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span><span class="no">Post</span><span class="nf">.select</span><span class="p">(</span><span class="ss">:id</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:body</span><span class="p">,</span> <span class="ss">:user_id</span><span class="p">)</span><span class="nf">.deselect</span><span class="p">(</span><span class="ss">:body</span><span class="p">,</span> <span class="s2">&quot;user_id&quot;</span><span class="p">)</span><span class="nf">.to_sql</span>
+<span class="c1">#=&gt; &quot;SELECT id, name FROM \&quot;posts\&quot;&quot;</span>
+
+<span class="mi">4</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span> <span class="err">@</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span><span class="no">Post</span><span class="nf">.select</span><span class="p">(</span><span class="s1">&#39;posts.id&#39;</span><span class="p">,</span> <span class="s1">&#39;posts.name&#39;</span><span class="p">)</span><span class="nf">.deselect</span><span class="p">(</span><span class="ss">:name</span><span class="p">)</span><span class="nf">.to_sql</span>
+<span class="c1">#=&gt; &quot;SELECT posts.id FROM \&quot;posts\&quot;&quot;</span>
+
+
+<span class="c1"># *** Post.all.to_sql相当になる場合 ***</span>
+<span class="mi">4</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span> <span class="err">@</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span><span class="no">Post</span><span class="nf">.select</span><span class="p">(</span><span class="ss">:id</span><span class="p">)</span><span class="nf">.deselect</span><span class="p">(</span><span class="ss">:id</span><span class="p">)</span><span class="nf">.to_sql</span>
+<span class="c1">#=&gt; &quot;SELECT \&quot;posts\&quot;.* FROM \&quot;posts\&quot;&quot;</span>
+
+
+<span class="c1"># *** deselect後にselectする場合 ***</span>
+<span class="mi">4</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span> <span class="err">@</span> <span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">&gt;</span><span class="no">Post</span><span class="nf">.deselect</span><span class="p">(</span><span class="ss">:id</span><span class="p">,</span> <span class="ss">:name</span><span class="p">)</span><span class="nf">.select</span><span class="p">(</span><span class="ss">:id</span><span class="p">)</span><span class="nf">.to_sql</span>
+<span class="c1">#=&gt; &quot;SELECT body, user_id, published_at, created_at, updated_at, id FROM \&quot;posts\&quot;&quot;</span>
+<span class="c1"># Post.deselect(:name).to_sql 相当</span>
+</pre>
+<p>最後の2つの挙動をどうしようか、まだちょっと迷っている</p>
+
+<h2>link</h2>
+
+<ul>
+<li><a href="http://eow.alc.co.jp/search?q=deselect">deselectの意味・用例｜英辞郎 on the WEB：アルク</a></li>
+<li><a href="https://github.com/fukayatsu/active_record-deselect">fukayatsu/active_record-deselect | GitHub</a></li>
+<li><a href="https://rubygems.org/gems/active_record-deselect">active_record-deselect | RubyGems.org | your community gem host</a></li>
+</ul>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a target="_new" href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by
+<a target="_new" href="https://github.com/fukayatsu/fukayatsu.github.io/tree/source">GitHub</a>
+&
+<a target="_new" href="https://travis-ci.org/fukayatsu/fukayatsu.github.io">Travis CI</a>
+&
+<a target="_new" href="http://middlemanapp.com/">Middleman</a>
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
