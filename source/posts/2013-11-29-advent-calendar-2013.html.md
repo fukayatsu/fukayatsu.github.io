@@ -32,7 +32,9 @@ tags: advent-calendar-2013, list
 1. [ChromeAppsGeneratorを更新した](/2013/12/18/chrome-apps-generator-update/)
 1. [渋谷.rb[:20131218]に行ってきた](/2013/12/18/shibuya-rb/)
 1. [おれのさぶらいむてきすとと検索](/2013/12/20/my-sublime-text-and-ime/)
+    - => [おれのさぶらいむてきすと Advent Calendar 2013](http://www.adventar.org/calendars/184)
 1. [active_record-deselectというgemを作った](/2013/12/20/active_record-deselect/)
+1. [今年買ってよかったもの(2013)](/2013/12/21/2013-best-buy/)
 1. deploy with lita
 1. MacとUS配列とGoogle 日本語入力
 1. ChatBotとGoogle Analytics
