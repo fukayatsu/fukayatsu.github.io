@@ -30,6 +30,9 @@ tags: advent-calendar-2013, list
 1. [chromium-issues-235573](/2013/12/17/chromium-issues-235573/)
 1. [ChromeAppのwebviewでIMEが使えるようになった！！！](/2013/12/17/chromium-issues-235573-fixed/)
 1. [ChromeAppsGeneratorを更新した](/2013/12/18/chrome-apps-generator-update/)
+1. [渋谷.rb[:20131218]に行ってきた](/2013/12/18/shibuya-rb/)
+1. [おれのさぶらいむてきすとと検索](/2013/12/20/my-sublime-text-and-ime/)
+1. [active_record-deselectというgemを作った](/2013/12/20/active_record-deselect/)
 1. deploy with lita
 1. MacとUS配列とGoogle 日本語入力
 1. ChatBotとGoogle Analytics

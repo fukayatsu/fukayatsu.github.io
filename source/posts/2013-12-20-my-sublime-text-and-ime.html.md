@@ -6,7 +6,7 @@ tags: sublime-text, ime
 
 この記事は、[おれのさぶらいむてきすと Advent Calendar 2013 - Adventar](http://www.adventar.org/calendars/184)の20日目です。
 
-前回は[Charlie55](http://profile.hatena.ne.jp/fushimik/)さんの[じっくり解説！おれのさぶらいむてきすとInputSequenceプラグイン - フロントエンドとかPCとかスマホとか](http://charlie.hateblo.jp/entry/2013/12/19/223102)でした。
+前回は[Charlie55](http://profile.hatena.ne.jp/fushimik/)さんの[じっくり解説！おれのさぶらいむてきすとInputSequenceプラグイン](http://charlie.hateblo.jp/entry/2013/12/19/223102)でした。
 
 ---
 
