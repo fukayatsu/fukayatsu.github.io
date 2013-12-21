@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/21/blog/"/>
     <id>http://blog.url.com/2013/12/21/blog/</id>
     <published>2013-12-21T07:08:00Z</published>
-    <updated>2013-12-21T08:00:27+00:00</updated>
+    <updated>2013-12-21T08:02:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -27,7 +27,7 @@
 &lt;p&gt;middleman-blogでローカル環境のみで&lt;code&gt;my-blog://new?name=sushi&lt;/code&gt;のようなリンクを埋込み、&lt;br&gt;
 &lt;a href="https://www.macupdate.com/app/mac/47375/lincastor"&gt;LinCastor&lt;/a&gt;でそれをhandlingするようにした。&lt;/p&gt;
 
-&lt;p&gt;LinCastorは任意のapple script/shell/appの起動ができるので、応用範囲が広そう。&lt;/p&gt;
+&lt;p&gt;LinCastorは任意のapple script/shell/appの実行ができるので、応用範囲が広そう。&lt;/p&gt;
 
 &lt;h1&gt;LinCastorの設定&lt;/h1&gt;
 
@@ -100,7 +100,7 @@ end handle_url
     <link rel="alternate" href="http://blog.url.com/2013/12/21/mac-alt/"/>
     <id>http://blog.url.com/2013/12/21/mac-alt/</id>
     <published>2013-12-21T00:45:00Z</published>
-    <updated>2013-12-21T08:00:27+00:00</updated>
+    <updated>2013-12-21T08:02:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -124,7 +124,7 @@ end handle_url
     <link rel="alternate" href="http://blog.url.com/2013/12/21/2013-best-buy/"/>
     <id>http://blog.url.com/2013/12/21/2013-best-buy/</id>
     <published>2013-12-20T15:07:00Z</published>
-    <updated>2013-12-21T08:00:27+00:00</updated>
+    <updated>2013-12-21T08:02:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -241,7 +241,7 @@ end handle_url
     <link rel="alternate" href="http://blog.url.com/2013/12/20/active_record-deselect/"/>
     <id>http://blog.url.com/2013/12/20/active_record-deselect/</id>
     <published>2013-12-20T00:04:00Z</published>
-    <updated>2013-12-21T08:00:27+00:00</updated>
+    <updated>2013-12-21T08:02:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -309,7 +309,7 @@ end handle_url
     <link rel="alternate" href="http://blog.url.com/2013/12/20/my-sublime-text-and-ime/"/>
     <id>http://blog.url.com/2013/12/20/my-sublime-text-and-ime/</id>
     <published>2013-12-19T16:29:00Z</published>
-    <updated>2013-12-21T08:00:27+00:00</updated>
+    <updated>2013-12-21T08:02:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -345,7 +345,7 @@ end handle_url
     <link rel="alternate" href="http://blog.url.com/2013/12/18/shibuya-rb/"/>
     <id>http://blog.url.com/2013/12/18/shibuya-rb/</id>
     <published>2013-12-18T12:27:00Z</published>
-    <updated>2013-12-21T08:00:27+00:00</updated>
+    <updated>2013-12-21T08:02:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
