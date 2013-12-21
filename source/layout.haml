@@ -33,7 +33,10 @@
           .header-text
             = link_to '/' do
               %h1.header-title
-                fukayatsu.dev
+                - if environment == :build
+                  fukayatsu.dev
+                - else
+                  [dev] fukayatsu.dev
             = link_to 'http://blog.fukayatsu.com/', target: '_new' do
               %p.header-description
                 - if environment == :build
