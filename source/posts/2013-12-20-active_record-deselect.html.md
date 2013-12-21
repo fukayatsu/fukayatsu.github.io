@@ -1,7 +1,7 @@
 ---
 title: active_record-deselectというgemを作った
 date: 2013-12-20 09:04 JST
-tags: ruby, rails, gem, active_record
+tags: advent-calendar-2013, ruby, rails, gem, active_record
 ---
 
 > [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) #21

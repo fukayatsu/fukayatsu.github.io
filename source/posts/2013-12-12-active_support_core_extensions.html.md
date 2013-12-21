@@ -1,7 +1,7 @@
 ---
 title: Active Support Core Extensions
 date: 2013-12-12 21:33 JST
-tags: rails, active_support
+tags: advent-calendar-2013, rails, active_support
 ---
 
 > [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 12日目

@@ -1,7 +1,7 @@
 ---
 title: 渋谷.rb[:20131218]に行ってきた
 date: 2013-12-18 21:27 JST
-tags: shibuya-rb, ruby, community
+tags: advent-calendar-2013, shibuya-rb, ruby, community
 ---
 
 ![](/images/2013-12-18-b.jpg)

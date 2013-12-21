@@ -1,7 +1,7 @@
 ---
 title: WebサービスをChrome App化する
 date: 2013-12-06 21:30 JST
-tags: chrome-app heroku
+tags: advent-calendar-2013, chrome-app heroku
 ---
 
 > [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 6日目

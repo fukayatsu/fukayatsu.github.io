@@ -1,7 +1,7 @@
 ---
 title: おかゆ
 date: 2013-12-04 20:57 JST
-tags: cooking
+tags: advent-calendar-2013, cooking
 ---
 > [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 4日目
 

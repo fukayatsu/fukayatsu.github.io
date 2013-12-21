@@ -1,7 +1,7 @@
 ---
 title: JavaScript String Replace
 date: 2013-12-13 20:51 JST
-tags: javascript
+tags: advent-calendar-2013, javascript
 ---
 
 > [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 13日目

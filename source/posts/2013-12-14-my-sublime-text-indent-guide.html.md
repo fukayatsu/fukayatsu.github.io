@@ -1,7 +1,7 @@
 ---
 title: おれのさぶらいむてきすとはインデントが見やすい
 date: 2013-12-14 13:05 JST
-tags: sublime-text, settings, indent_guide
+tags: advent-calendar-2013, sublime-text, settings, indent_guide
 ---
 
 この記事は、[おれのさぶらいむてきすと Advent Calendar 2013 - Adventar](http://www.adventar.org/calendars/184)の14日目です。

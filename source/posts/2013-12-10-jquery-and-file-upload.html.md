@@ -1,7 +1,7 @@
 ---
 title: jquery-and-file-upload
 date: 2013-12-10 21:57 JST
-tags: jquery, file-upload
+tags: advent-calendar-2013, jquery, file-upload
 ---
 
 > [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 10日目

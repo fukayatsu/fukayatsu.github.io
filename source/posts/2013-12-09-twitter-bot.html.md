@@ -1,7 +1,7 @@
 ---
 title: かにさん(twitter bot)
 date: 2013-12-09 22:12 JST
-tags: twitter-bot, markov-chain
+tags: advent-calendar-2013, twitter-bot, markov-chain
 ---
 
 > [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 9日目

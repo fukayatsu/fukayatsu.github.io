@@ -1,7 +1,7 @@
 ---
 title: ChromeAppのwebviewでIMEが使えるようになった！！！
 date: 2013-12-17 22:12 JST
-tags: chrome-apps, webview, ime
+tags: advent-calendar-2013, chrome-apps, webview, ime
 ---
 
 > [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 17日目

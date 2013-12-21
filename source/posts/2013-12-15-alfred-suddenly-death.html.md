@@ -1,7 +1,7 @@
 ---
 title: Alfred Suddenly Death
 date: 2013-12-15 11:16 JST
-tags: alfred, suddenly-death
+tags: advent-calendar-2013, alfred, suddenly-death
 ---
 
 > [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 15日目

@@ -1,7 +1,7 @@
 ---
 title: おれのさぶらいむてきすとと検索
 date: 2013-12-20 01:29 JST
-tags: sublime-text, ime
+tags: advent-calendar-2013, sublime-text, ime
 ---
 
 この記事は、[おれのさぶらいむてきすと Advent Calendar 2013 - Adventar](http://www.adventar.org/calendars/184)の20日目です。

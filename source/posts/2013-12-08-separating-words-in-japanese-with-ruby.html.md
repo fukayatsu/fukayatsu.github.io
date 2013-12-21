@@ -1,7 +1,7 @@
 ---
 title: Rubyで分かち書き
 date: 2013-12-08 14:22 JST
-tags: ruby, okura, morphological-analysis
+tags: advent-calendar-2013, ruby, okura, morphological-analysis
 ---
 > [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 8日目
 

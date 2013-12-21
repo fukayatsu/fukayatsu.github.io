@@ -1,7 +1,7 @@
 ---
 title: ＞Sublime Text 3＜、その後
 date: 2013-12-11 22:46 JST
-tags: sublime-text-3,plugin,sudden-death
+tags: advent-calendar-2013, sublime-text-3,plugin,sudden-death
 ---
 
 > [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 11日目

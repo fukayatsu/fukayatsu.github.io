@@ -1,7 +1,7 @@
 ---
 title: ChromeAppsGeneratorを更新した
 date: 2013-12-18 01:07 JST
-tags: chrome-apps
+tags: advent-calendar-2013, chrome-apps
 ---
 
 > [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - 18日目
