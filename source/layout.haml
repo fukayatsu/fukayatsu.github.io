@@ -4,24 +4,25 @@
     %meta{charset: "utf-8"}
     %meta{content: "IE=edge;chrome=1", "http-equiv" => "X-UA-Compatible"}
     %link{href: "/stylesheets/all.css?1384954982", media: "all", rel: "stylesheet", type:"text/css"}
-  %link{href: "/images/favicon.ico", rel: "icon", type: "image/ico"}
+    %link{href: "/images/favicon.ico", rel: "icon", type: "image/ico"}
     %title
       - if current_article.try(:title)
         #{current_article.title} - fukayatsu.dev
       - else
         fukayatsu.dev
-  - if environment == :build
-    :javascript
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-36253613-1']);
-      _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
-      _gaq.push(['_trackPageview']);
+    = javascript_include_tag "all"
+    - if environment == :build
+      :javascript
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36253613-1']);
+        _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
+        _gaq.push(['_trackPageview']);
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
   %body
     .content
       %header
@@ -37,10 +38,15 @@
               %p.header-description
                 - if environment == :build
                   under development
-                - else environment == :development
+                - elsif environment == :development
                   = link_to '[term]', 'my-term://?dir=/Users/fukayatsu/github/fukayatsu.github.io'
                   - if current_article.try(:source_file)
                     = link_to '[subl]', "subl://open/?url=file://#{current_article.source_file}"
+                  %input#new_post_name{type: 'text', name: 'name', placeholder: 'new_post'}
+                  %a#new_post_link
+                    [new]
+                  = link_to '[publish]', 'my-blog://publish', data: { confirm: 'ok?' }
+
       - if current_article.try(:date)
         .publish-date
           = link_to current_article.date, current_article
