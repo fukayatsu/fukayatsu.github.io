@@ -35,10 +35,6 @@ tags: advent-calendar-2013, list
     - => [おれのさぶらいむてきすと Advent Calendar 2013](http://www.adventar.org/calendars/184)
 1. [active_record-deselectというgemを作った](/2013/12/20/active_record-deselect/)
 1. [今年買ってよかったもの(2013)](/2013/12/21/2013-best-buy/)
-1. deploy with lita
-1. MacとUS配列とGoogle 日本語入力
-1. ChatBotとGoogle Analytics
-1. Chrome Platform APIs
-1. Middleman
-1. 今年買ってよかった物
+1. [Macのalt(option)キー便利](/2013/12/21/mac-alt/)
+1. lita
 1. 今年の振り返り
