@@ -697,77 +697,80 @@ header {
     /* line 39, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
     header .header-text .header-description {
       margin-top: 0px; }
+  /* line 43, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+  header #new_post_name {
+    width: 100px; }
 
-/* line 45, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+/* line 48, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
 #main {
   padding: 20px;
   background-color: #F8F8F8;
   border-radius: 3px; }
-  /* line 51, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+  /* line 54, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
   #main a {
     color: #4183c4;
     text-decoration: none; }
-  /* line 56, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+  /* line 59, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
   #main a:hover {
     text-decoration: underline; }
-  /* line 60, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+  /* line 63, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
   #main h1 {
     border-bottom: 1px solid #ddd; }
-  /* line 64, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+  /* line 67, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
   #main h2 {
     border-bottom: 1px solid #eee; }
-  /* line 68, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+  /* line 71, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
   #main pre {
     padding: 10px;
     background-color: #EEE;
     border: 1px solid #CCC;
     border-radius: 3px; }
-  /* line 75, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+  /* line 78, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
   #main code {
     background-color: #EEE;
     white-space: nowrap;
     border: 1px solid #CCC;
     border-radius: 3px; }
-  /* line 81, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+  /* line 84, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
   #main blockquote {
     border-left: 3px solid #999;
     margin-left: 1em;
     padding-left: 1em; }
-  /* line 87, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+  /* line 90, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
   #main table {
     width: 100%;
     overflow: auto;
     display: block; }
-    /* line 92, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+    /* line 95, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
     #main table td, #main table th {
       border: 1px solid #ddd;
       padding: 6px 13px; }
-    /* line 97, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+    /* line 100, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
     #main table thead tr {
       background-color: #fff; }
-    /* line 98, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+    /* line 101, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
     #main table tbody tr:nth-child(2n) {
       background-color: #fff; }
-  /* line 103, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+  /* line 106, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
   #main dl dt {
     font-size: 14px;
     font-weight: bold;
     font-style: italic;
     padding: 0;
     margin-top: 15px; }
-  /* line 111, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+  /* line 114, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
   #main img {
     width: 100%;
     display: block; }
-  /* line 115, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+  /* line 118, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
   #main img[alt=w50] {
     width: 50%;
     display: block; }
-  /* line 117, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+  /* line 120, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
   #main iframe {
     display: block; }
 
-/* line 124, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
+/* line 127, /home/travis/build/fukayatsu/fukayatsu.github.io/source/stylesheets/all.scss */
 footer .footer-inner p {
   display: inline-block;
   margin-right: 10px; }
