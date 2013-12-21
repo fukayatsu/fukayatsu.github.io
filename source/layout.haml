@@ -35,12 +35,15 @@
                 fukayatsu.dev
             = link_to 'http://blog.fukayatsu.com/', target: '_new' do
               %p.header-description
-                under development
+                - if environment == :build
+                  under development
+                - else environment == :development
+                  = link_to '[term]', 'my-term://?dir=/Users/fukayatsu/github/fukayatsu.github.io'
+                  - if current_article.try(:source_file)
+                    = link_to '[subl]', "subl://open/?url=file://#{current_article.source_file}"
       - if current_article.try(:date)
         .publish-date
           = link_to current_article.date, current_article
-          - if environment == :development && current_article.try(:source_file)
-            = link_to '[subl]', "subl://open/?url=file://#{current_article.source_file}"
       - if current_article.try(:tags)
         .tags
           - current_article.tags.each do |tag|
