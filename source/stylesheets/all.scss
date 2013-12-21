@@ -32,6 +32,9 @@ header {
   .header-text {
     display: inline-block;
     margin-left: 20px;
+    a {
+      text-decoration: none;
+    }
 
     .header-title {
       margin-bottom: 5px;
