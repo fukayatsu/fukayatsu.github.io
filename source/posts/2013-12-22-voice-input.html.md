@@ -1,8 +1,11 @@
 ---
 title: voice-input
 date: 2013-12-22 19:42 JST
-tags: hipchat, voice-input, julius
+tags: advent-calendar-2013, hipchat, voice-input, julius
 ---
+
+> [fukayatsu Advent Calendar 2013](/2013/11/29/advent-calendar-2013/) - #25
+
 
 久しぶりに[Julius](http://julius.sourceforge.jp/)をいじって、
 hipchatに音声認識でコマンドを書き込めるようにした。

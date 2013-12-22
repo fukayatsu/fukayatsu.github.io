@@ -37,4 +37,4 @@ tags: advent-calendar-2013, list
 1. [今年買ってよかったもの(2013)](/2013/12/21/2013-best-buy/)
 1. [Macのalt(option)キー便利](/2013/12/21/mac-alt/)
 1. [middleman-blog + LinCastor](/2013/12/21/blog/)
-1. lita
+1. [voice-input](/2013/12/22/voice-input/)
