@@ -5,16 +5,49 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-22T10:42:00Z</updated>
+  <updated>2013-12-23T00:36:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>今年買ってよかった文房具</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/23/white-sheet/"/>
+    <id>http://blog.url.com/2013/12/23/white-sheet/</id>
+    <published>2013-12-23T00:36:00Z</published>
+    <updated>2013-12-23T01:01:57+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src="/images/2013-12-23-white-sheet.jpg" /&gt;&lt;/p&gt;
+
+&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B004BEJ9MG" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;これを自宅の壁に適用した。気軽に使えてとてもよい。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;静電気でくっついているので位置を気軽に変えられる&lt;/li&gt;
+&lt;li&gt;文字が消えにくくなったら新しいシートに交換すればよい
+
+&lt;ul&gt;
+&lt;li&gt;一枚(60cm x 80 cm)あたり約100円&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;シートなので捨てるときのことを気にしなくて良い&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;ポスター用両面テープ&lt;/h3&gt;
+
+&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B0013N0G20" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;iRemoconやブレッドボードを壁に固定したり、&lt;br&gt;
+Roombaのホームベースを床に固定するのに地味に活躍している。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>voice-input</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/22/voice-input/"/>
     <id>http://blog.url.com/2013/12/22/voice-input/</id>
     <published>2013-12-22T10:42:00Z</published>
-    <updated>2013-12-22T10:57:29+00:00</updated>
+    <updated>2013-12-23T01:01:57+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -49,7 +82,7 @@ hipchatに音声認識でコマンドを書き込めるようにした。&lt;/p&
     <link rel="alternate" href="http://blog.url.com/2013/12/21/blog/"/>
     <id>http://blog.url.com/2013/12/21/blog/</id>
     <published>2013-12-21T07:08:00Z</published>
-    <updated>2013-12-22T10:57:29+00:00</updated>
+    <updated>2013-12-23T01:01:57+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -137,7 +170,7 @@ end handle_url
     <link rel="alternate" href="http://blog.url.com/2013/12/21/mac-alt/"/>
     <id>http://blog.url.com/2013/12/21/mac-alt/</id>
     <published>2013-12-21T00:45:00Z</published>
-    <updated>2013-12-22T10:57:29+00:00</updated>
+    <updated>2013-12-23T01:01:57+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -161,7 +194,7 @@ end handle_url
     <link rel="alternate" href="http://blog.url.com/2013/12/21/2013-best-buy/"/>
     <id>http://blog.url.com/2013/12/21/2013-best-buy/</id>
     <published>2013-12-20T15:07:00Z</published>
-    <updated>2013-12-22T10:57:29+00:00</updated>
+    <updated>2013-12-23T01:01:57+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -278,7 +311,7 @@ end handle_url
     <link rel="alternate" href="http://blog.url.com/2013/12/20/active_record-deselect/"/>
     <id>http://blog.url.com/2013/12/20/active_record-deselect/</id>
     <published>2013-12-20T00:04:00Z</published>
-    <updated>2013-12-22T10:57:29+00:00</updated>
+    <updated>2013-12-23T01:01:57+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -339,42 +372,6 @@ end handle_url
 &lt;li&gt;&lt;a href="https://github.com/fukayatsu/active_record-deselect"&gt;fukayatsu/active_record-deselect | GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rubygems.org/gems/active_record-deselect"&gt;active_record-deselect | RubyGems.org | your community gem host&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>おれのさぶらいむてきすとと検索</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/20/my-sublime-text-and-ime/"/>
-    <id>http://blog.url.com/2013/12/20/my-sublime-text-and-ime/</id>
-    <published>2013-12-19T16:29:00Z</published>
-    <updated>2013-12-22T10:57:29+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;この記事は、&lt;a href="http://www.adventar.org/calendars/184"&gt;おれのさぶらいむてきすと Advent Calendar 2013 - Adventar&lt;/a&gt;の20日目です。&lt;/p&gt;
-
-&lt;p&gt;前回は&lt;a href="http://profile.hatena.ne.jp/fushimik/"&gt;Charlie55&lt;/a&gt;さんの&lt;a href="http://charlie.hateblo.jp/entry/2013/12/19/223102"&gt;じっくり解説！おれのさぶらいむてきすとInputSequenceプラグイン&lt;/a&gt;でした。&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;小ネタです。&lt;/p&gt;
-
-&lt;p&gt;4日目の&lt;a href="http://blog.obentoba.co/entry/2013/12/04/sublimetext-japaneseSearch"&gt;おれのさぶらいむてきすとは日本語検索がうまくできない&lt;/a&gt;でも話題になっていましたが、検索ウィンドウで日本語入力時に変換確定のEnterを押すと入力されていた文字が消えてしまいます。&lt;/p&gt;
-
-&lt;p&gt;一昨日ぐらいにSublimeのアップデートがありましたが、やっぱりまだ駄目。&lt;/p&gt;
-
-&lt;p&gt;いろいろ試した結果、自分の環境ではこんな感じに落ち着きました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Ctrl + Enter&lt;/code&gt;で確定をする&lt;/li&gt;
-&lt;li&gt;2回目以降は普通にEnterで検索する&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;# keyremap4macbookとgoogle imeを組み合わせてTabやEnterをすり替えたりもしてみましたが、&lt;br&gt;
-副作用が大きすぎて断念しました...&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;明日は&lt;a href="https://twitter.com/TalesofFox"&gt;TalesofFox&lt;/a&gt;さんです！&lt;/p&gt;
 </content>
   </entry>
 </feed>
