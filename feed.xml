@@ -5,16 +5,61 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-23T00:36:00Z</updated>
+  <updated>2013-12-25T13:34:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>年末年始にやること</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/25/year-end-and-new-year-todos/"/>
+    <id>http://blog.url.com/2013/12/25/year-end-and-new-year-todos/</id>
+    <published>2013-12-25T13:34:00Z</published>
+    <updated>2013-12-25T13:48:49+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;1人アドベントカレンダーの振り返り&lt;/li&gt;
+&lt;li&gt;各種AdventCalendar2013を読む&lt;/li&gt;
+&lt;li&gt;2013の振り返りと2014の抱負
+
+&lt;ul&gt;
+&lt;li&gt;振り返り
+
+&lt;ul&gt;
+&lt;li&gt;ruby&lt;/li&gt;
+&lt;li&gt;引っ越し&lt;/li&gt;
+&lt;li&gt;pull request&lt;/li&gt;
+&lt;li&gt;gem&lt;/li&gt;
+&lt;li&gt;chrome extension / app&lt;/li&gt;
+&lt;li&gt;今年のはじめに書いた抱負&lt;/li&gt;
+&lt;li&gt;イベント&lt;/li&gt;
+&lt;li&gt;家電制御&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;抱負
+
+&lt;ul&gt;
+&lt;li&gt;プロダクト
+
+&lt;ul&gt;
+&lt;li&gt;fluentd&lt;/li&gt;
+&lt;li&gt;docker&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;設計&lt;/li&gt;
+&lt;li&gt;テスト&lt;/li&gt;
+&lt;li&gt;方向性&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;普段使っている(小さめの)gemのソースを読んで気付いたことをまとめる&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>今年買ってよかった文房具</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/23/white-sheet/"/>
     <id>http://blog.url.com/2013/12/23/white-sheet/</id>
     <published>2013-12-23T00:36:00Z</published>
-    <updated>2013-12-23T01:01:57+00:00</updated>
+    <updated>2013-12-25T13:48:49+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -47,7 +92,7 @@ Roombaのホームベースを床に固定するのに地味に活躍してい�
     <link rel="alternate" href="http://blog.url.com/2013/12/22/voice-input/"/>
     <id>http://blog.url.com/2013/12/22/voice-input/</id>
     <published>2013-12-22T10:42:00Z</published>
-    <updated>2013-12-23T01:01:57+00:00</updated>
+    <updated>2013-12-25T13:48:49+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -82,7 +127,7 @@ hipchatに音声認識でコマンドを書き込めるようにした。&lt;/p&
     <link rel="alternate" href="http://blog.url.com/2013/12/21/blog/"/>
     <id>http://blog.url.com/2013/12/21/blog/</id>
     <published>2013-12-21T07:08:00Z</published>
-    <updated>2013-12-23T01:01:57+00:00</updated>
+    <updated>2013-12-25T13:48:49+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -170,7 +215,7 @@ end handle_url
     <link rel="alternate" href="http://blog.url.com/2013/12/21/mac-alt/"/>
     <id>http://blog.url.com/2013/12/21/mac-alt/</id>
     <published>2013-12-21T00:45:00Z</published>
-    <updated>2013-12-23T01:01:57+00:00</updated>
+    <updated>2013-12-25T13:48:49+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -194,7 +239,7 @@ end handle_url
     <link rel="alternate" href="http://blog.url.com/2013/12/21/2013-best-buy/"/>
     <id>http://blog.url.com/2013/12/21/2013-best-buy/</id>
     <published>2013-12-20T15:07:00Z</published>
-    <updated>2013-12-23T01:01:57+00:00</updated>
+    <updated>2013-12-25T13:48:49+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -303,74 +348,6 @@ end handle_url
 &lt;ul&gt;
 &lt;li&gt;家賃的にはギリギリのとこだけど、2年ぐらいはいいかなと思う&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>active_record-deselectというgemを作った</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/20/active_record-deselect/"/>
-    <id>http://blog.url.com/2013/12/20/active_record-deselect/</id>
-    <published>2013-12-20T00:04:00Z</published>
-    <updated>2013-12-23T01:01:57+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; #21&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;Post&lt;/code&gt;モデルの&lt;code&gt;body&lt;/code&gt;以外を取得したいというような時に、&lt;br&gt;
-&lt;code&gt;#select&lt;/code&gt;で必要なカラムをすべて明示するのが面倒だった。&lt;/p&gt;
-
-&lt;p&gt;(もし似たようなgemがあれば教えて下さい)&lt;/p&gt;
-
-&lt;h2&gt;usage&lt;/h2&gt;
-&lt;pre class="highlight ruby"&gt;&lt;span class="c1"&gt;# Postモデル&lt;/span&gt;
-&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="no"&gt;Post&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; class Post &amp;lt; ActiveRecord::Base {&lt;/span&gt;
-              &lt;span class="ss"&gt;:id&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:integer&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="ss"&gt;:name&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:string&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="ss"&gt;:body&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-         &lt;span class="ss"&gt;:user_id&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:integer&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="ss"&gt;:published_at&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:datetime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-      &lt;span class="ss"&gt;:created_at&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:datetime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-      &lt;span class="ss"&gt;:updated_at&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:datetime&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-
-
-&lt;span class="c1"&gt;# body以外のカラムを取得&lt;/span&gt;
-&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="no"&gt;Post&lt;/span&gt;&lt;span class="nf"&gt;.deselect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:body&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.to_sql&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; &amp;quot;SELECT id, name, user_id, published_at, created_at, updated_at FROM \&amp;quot;posts\&amp;quot;&amp;quot;&lt;/span&gt;
-
-
-&lt;span class="c1"&gt;# selectの取り消し&lt;/span&gt;
-&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="no"&gt;Post&lt;/span&gt;&lt;span class="nf"&gt;.select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:body&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:user_id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.deselect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:body&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;user_id&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.to_sql&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; &amp;quot;SELECT id, name FROM \&amp;quot;posts\&amp;quot;&amp;quot;&lt;/span&gt;
-
-&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="no"&gt;Post&lt;/span&gt;&lt;span class="nf"&gt;.select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;posts.id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;posts.name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.deselect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.to_sql&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; &amp;quot;SELECT posts.id FROM \&amp;quot;posts\&amp;quot;&amp;quot;&lt;/span&gt;
-
-
-&lt;span class="c1"&gt;# *** Post.all.to_sql相当になる場合 ***&lt;/span&gt;
-&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="no"&gt;Post&lt;/span&gt;&lt;span class="nf"&gt;.select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.deselect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.to_sql&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; &amp;quot;SELECT \&amp;quot;posts\&amp;quot;.* FROM \&amp;quot;posts\&amp;quot;&amp;quot;&lt;/span&gt;
-
-
-&lt;span class="c1"&gt;# *** deselect後にselectする場合 ***&lt;/span&gt;
-&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="no"&gt;Post&lt;/span&gt;&lt;span class="nf"&gt;.deselect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;:id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;.to_sql&lt;/span&gt;
-&lt;span class="c1"&gt;#=&amp;gt; &amp;quot;SELECT body, user_id, published_at, created_at, updated_at, id FROM \&amp;quot;posts\&amp;quot;&amp;quot;&lt;/span&gt;
-&lt;span class="c1"&gt;# Post.deselect(:name).to_sql 相当&lt;/span&gt;
-&lt;/pre&gt;
-&lt;p&gt;最後の2つの挙動をどうしようか、まだちょっと迷っている&lt;/p&gt;
-
-&lt;h2&gt;link&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://eow.alc.co.jp/search?q=deselect"&gt;deselectの意味・用例｜英辞郎 on the WEB：アルク&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/active_record-deselect"&gt;fukayatsu/active_record-deselect | GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rubygems.org/gems/active_record-deselect"&gt;active_record-deselect | RubyGems.org | your community gem host&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
