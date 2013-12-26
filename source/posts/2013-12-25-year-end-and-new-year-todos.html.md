@@ -27,4 +27,5 @@ tags: todo, memo
 
 # memo
 
-- [不具合にテストを書いて立ち向かう - t-wadaのブログ](http://t-wada.hatenablog.jp/entry/debugging-tests)
+- [TDD Advent Calendar 2013 - Qiita [キータ]](http://qiita.com/advent-calendar/2013/tddadventjp)
+    - [不具合にテストを書いて立ち向かう - t-wadaのブログ](http://t-wada.hatenablog.jp/entry/debugging-tests)
