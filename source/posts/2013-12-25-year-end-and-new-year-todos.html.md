@@ -24,3 +24,7 @@ tags: todo, memo
         - テスト
         - 方向性
 - 普段使っている(小さめの)gemのソースを読んで気付いたことをまとめる
+
+# memo
+
+- [不具合にテストを書いて立ち向かう - t-wadaのブログ](http://t-wada.hatenablog.jp/entry/debugging-tests)
