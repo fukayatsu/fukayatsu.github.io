@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/25/year-end-and-new-year-todos/"/>
     <id>http://blog.url.com/2013/12/25/year-end-and-new-year-todos/</id>
     <published>2013-12-25T13:34:00Z</published>
-    <updated>2013-12-25T13:48:49+00:00</updated>
+    <updated>2013-12-26T13:35:15+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -52,6 +52,16 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;普段使っている(小さめの)gemのソースを読んで気付いたことをまとめる&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h1&gt;memo&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/advent-calendar/2013/tddadventjp"&gt;TDD Advent Calendar 2013 - Qiita [キータ]&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://t-wada.hatenablog.jp/entry/debugging-tests"&gt;不具合にテストを書いて立ち向かう - t-wadaのブログ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
   <entry>
@@ -59,7 +69,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/23/white-sheet/"/>
     <id>http://blog.url.com/2013/12/23/white-sheet/</id>
     <published>2013-12-23T00:36:00Z</published>
-    <updated>2013-12-25T13:48:49+00:00</updated>
+    <updated>2013-12-26T13:35:15+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -92,7 +102,7 @@ Roombaのホームベースを床に固定するのに地味に活躍してい�
     <link rel="alternate" href="http://blog.url.com/2013/12/22/voice-input/"/>
     <id>http://blog.url.com/2013/12/22/voice-input/</id>
     <published>2013-12-22T10:42:00Z</published>
-    <updated>2013-12-25T13:48:49+00:00</updated>
+    <updated>2013-12-26T13:35:15+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -127,7 +137,7 @@ hipchatに音声認識でコマンドを書き込めるようにした。&lt;/p&
     <link rel="alternate" href="http://blog.url.com/2013/12/21/blog/"/>
     <id>http://blog.url.com/2013/12/21/blog/</id>
     <published>2013-12-21T07:08:00Z</published>
-    <updated>2013-12-25T13:48:49+00:00</updated>
+    <updated>2013-12-26T13:35:15+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -215,7 +225,7 @@ end handle_url
     <link rel="alternate" href="http://blog.url.com/2013/12/21/mac-alt/"/>
     <id>http://blog.url.com/2013/12/21/mac-alt/</id>
     <published>2013-12-21T00:45:00Z</published>
-    <updated>2013-12-25T13:48:49+00:00</updated>
+    <updated>2013-12-26T13:35:15+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -239,7 +249,7 @@ end handle_url
     <link rel="alternate" href="http://blog.url.com/2013/12/21/2013-best-buy/"/>
     <id>http://blog.url.com/2013/12/21/2013-best-buy/</id>
     <published>2013-12-20T15:07:00Z</published>
-    <updated>2013-12-25T13:48:49+00:00</updated>
+    <updated>2013-12-26T13:35:15+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
