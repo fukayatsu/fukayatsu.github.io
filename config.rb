@@ -1,3 +1,6 @@
+# http://blog.n-z.jp/blog/2013-12-04-rails-i18n-deprecated-warning.html
+I18n.enforce_available_locales = false
+
 ###
 # Blog settings
 ###
