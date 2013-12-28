@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+faviconを生成するgemを作った - fukayatsu.dev
+</title>
+<script src="/javascripts/all.js" type="text/javascript"></script>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36253613-1']);
+  _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<div class='header-text'>
+<a href="/"><h1 class='header-title'>
+fukayatsu.dev
+</h1>
+</a>
+<a target="_new" href="http://blog.fukayatsu.com/"><p class='header-description'>
+under development
+</p>
+</a>
+</div>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/12/28/favidenticon/">2013-12-28 22:27:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/favidenticon/">favidenticon</a>
+<a href="/tags/gem/">gem</a>
+<a href="/tags/identicon/">identicon</a>
+<a href="/tags/favicon/">favicon</a>
+<a href="/tags/ruby/">ruby</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>faviconを生成するgemを作った</h1>
+<p><code>rails new</code>した後に、ちゃんとしたfaviconが決まるまで適当なfaviconを拾ってくるのが面倒だったので、適当に生成できるようにした。</p>
+
+<p>多分ImageMagickが入っていれば動く。windowsではどうなんだろう。</p>
+
+<ul>
+<li><a href="https://github.com/fukayatsu/favidenticon#usage">fukayatsu/favidenticon</a></li>
+</ul>
+<pre class="highlight text">$ favidenticon g
+</pre>
+<p>とかやると、カレントディレクトリに<code>favicon.ico</code>が生成(上書き)される。</p>
+
+<h1>サンプル</h1>
+
+<p><img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/1.png" /><br>
+<img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/2.png" /><br>
+<img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/3.png" /><br>
+<img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/4.png" /><br>
+<img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/5.png" /></p>
+
+<h1>thanks</h1>
+
+<ul>
+<li><a href="https://github.com/chrisbranson/ruby_identicon">chrisbranson/ruby_identicon</a>
+
+<ul>
+<li>identicon生成担当</li>
+</ul></li>
+<li><a href="https://github.com/naoty/picon">naoty/picon</a>
+
+<ul>
+<li>インスパイアされた</li>
+</ul></li>
+</ul>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a target="_new" href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by
+<a target="_new" href="https://github.com/fukayatsu/fukayatsu.github.io/tree/source">GitHub</a>
+&
+<a target="_new" href="https://travis-ci.org/fukayatsu/fukayatsu.github.io">Travis CI</a>
+&
+<a target="_new" href="http://middlemanapp.com/">Middleman</a>
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

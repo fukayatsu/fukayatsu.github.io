@@ -5,16 +5,60 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-26T13:44:00Z</updated>
+  <updated>2013-12-28T13:27:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>faviconを生成するgemを作った</title>
+    <link rel="alternate" href="http://blog.url.com/2013/12/28/favidenticon/"/>
+    <id>http://blog.url.com/2013/12/28/favidenticon/</id>
+    <published>2013-12-28T13:27:00Z</published>
+    <updated>2013-12-28T13:46:56+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;code&gt;rails new&lt;/code&gt;した後に、ちゃんとしたfaviconが決まるまで適当なfaviconを拾ってくるのが面倒だったので、適当に生成できるようにした。&lt;/p&gt;
+
+&lt;p&gt;多分ImageMagickが入っていれば動く。windowsではどうなんだろう。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/favidenticon#usage"&gt;fukayatsu/favidenticon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="highlight text"&gt;$ favidenticon g
+&lt;/pre&gt;
+&lt;p&gt;とかやると、カレントディレクトリに&lt;code&gt;favicon.ico&lt;/code&gt;が生成(上書き)される。&lt;/p&gt;
+
+&lt;h1&gt;サンプル&lt;/h1&gt;
+
+&lt;p&gt;&lt;img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/1.png" /&gt;&lt;br&gt;
+&lt;img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/2.png" /&gt;&lt;br&gt;
+&lt;img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/3.png" /&gt;&lt;br&gt;
+&lt;img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/4.png" /&gt;&lt;br&gt;
+&lt;img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/5.png" /&gt;&lt;/p&gt;
+
+&lt;h1&gt;thanks&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/chrisbranson/ruby_identicon"&gt;chrisbranson/ruby_identicon&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;identicon生成担当&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/naoty/picon"&gt;naoty/picon&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;インスパイアされた&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>deselect!</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/26/deselect/"/>
     <id>http://blog.url.com/2013/12/26/deselect/</id>
     <published>2013-12-26T13:44:00Z</published>
-    <updated>2013-12-28T05:36:53+00:00</updated>
+    <updated>2013-12-28T13:46:56+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -32,7 +76,7 @@ posts.to_sql
     <link rel="alternate" href="http://blog.url.com/2013/12/25/year-end-and-new-year-todos/"/>
     <id>http://blog.url.com/2013/12/25/year-end-and-new-year-todos/</id>
     <published>2013-12-25T13:34:00Z</published>
-    <updated>2013-12-28T05:36:53+00:00</updated>
+    <updated>2013-12-28T13:46:56+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -87,7 +131,7 @@ posts.to_sql
     <link rel="alternate" href="http://blog.url.com/2013/12/23/white-sheet/"/>
     <id>http://blog.url.com/2013/12/23/white-sheet/</id>
     <published>2013-12-23T00:36:00Z</published>
-    <updated>2013-12-28T05:36:53+00:00</updated>
+    <updated>2013-12-28T13:46:56+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -120,7 +164,7 @@ Roombaのホームベースを床に固定するのに地味に活躍してい�
     <link rel="alternate" href="http://blog.url.com/2013/12/22/voice-input/"/>
     <id>http://blog.url.com/2013/12/22/voice-input/</id>
     <published>2013-12-22T10:42:00Z</published>
-    <updated>2013-12-28T05:36:53+00:00</updated>
+    <updated>2013-12-28T13:46:56+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -155,7 +199,7 @@ hipchatに音声認識でコマンドを書き込めるようにした。&lt;/p&
     <link rel="alternate" href="http://blog.url.com/2013/12/21/blog/"/>
     <id>http://blog.url.com/2013/12/21/blog/</id>
     <published>2013-12-21T07:08:00Z</published>
-    <updated>2013-12-28T05:36:53+00:00</updated>
+    <updated>2013-12-28T13:46:56+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -237,29 +281,5 @@ end handle_url
 
 &lt;/span&gt;&lt;span class="nb"&gt;exit &lt;/span&gt;0
 &lt;/pre&gt;</content>
-  </entry>
-  <entry>
-    <title>Macのalt(option)キー便利</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/21/mac-alt/"/>
-    <id>http://blog.url.com/2013/12/21/mac-alt/</id>
-    <published>2013-12-21T00:45:00Z</published>
-    <updated>2013-12-28T05:36:53+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - #23&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://lifehacker.com/5588323/squeeze-hidden-functionality-out-of-every-corner-of-your-mac-with-the-option-key"&gt;Squeeze Hidden Functionality Out of Every Corner of Your Mac with the Option Key&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img alt="w50" src="/images/2013-12-21-a.png" /&gt;&lt;/p&gt;
-
-&lt;p&gt;例えば左上のりんごマーク押したときのメニューで、altキーを押している間だけ表示が変わるものがある。&lt;code&gt;Restart...&lt;/code&gt;は&lt;code&gt;Restart&lt;/code&gt;になり、その状態でクリックすると確認なしで再起動してくれる。&lt;/p&gt;
-
-&lt;p&gt;アプリのメニューでも同様で、割りと便利なものが隠れていたりするので探してみると面白い。&lt;/p&gt;
-</content>
   </entry>
 </feed>
