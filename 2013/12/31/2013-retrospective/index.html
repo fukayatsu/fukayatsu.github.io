@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+2013の振り返り - fukayatsu.dev
+</title>
+<script src="/javascripts/all.js" type="text/javascript"></script>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36253613-1']);
+  _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<div class='header-text'>
+<a href="/"><h1 class='header-title'>
+fukayatsu.dev
+</h1>
+</a>
+<a target="_new" href="http://blog.fukayatsu.com/"><p class='header-description'>
+under development
+</p>
+</a>
+</div>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2013/12/31/2013-retrospective/">2013-12-31 14:29:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/2013/">2013</a>
+<a href="/tags/retrospective/">retrospective</a>
+<a href="/tags/ruby/">ruby</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>2013の振り返り</h1>
+<p>個人的にどんな一年だったかを雑に振り返ってみる。</p>
+
+<p>今年の始めに書いた<a href="http://blog.fukayatsu.com/2013/01/02/guess-my-2013/">今年はきっとこんな感じの1年になる</a>は7割ぐらいあたっている感じ。</p>
+
+<h1>GitHub Contributions</h1>
+
+<p><img src="/images/2013-12-31-a.png" /><br>
+<img src="/images/2013-12-31-b.png" /></p>
+
+<p>5月 ~ 9月ごろはシステムの引っ越しやリアルの引っ越しが合った時期で、活動が鈍っている。</p>
+
+<h1>今年作ったもの</h1>
+
+<h2>Webサービス</h2>
+
+<h3><a href="http://chrome-apps-generator.herokuapp.com/">Chrome Apps Generator</a></h3>
+
+<p>WebサービスをChrome App化するサービス</p>
+
+<h3><a href="http://mitsuwo.net/">みつをる</a></h3>
+
+<p>手書きっぽい画像を生成するサービス</p>
+
+<h3><a href="http://git-about.me/">GitAboutMe</a></h3>
+
+<p>gitで更新するabout.me的なサービス[WIP]<br>
+そろそろ閉じる</p>
+
+<h3>アレからアレをアレしてきてアレするサービス</h3>
+
+<p>10月ぐらいにオープンして月間PVが6万ぐらい。技術検証を兼ねている。</p>
+
+<h2>家電制御</h2>
+
+<ul>
+<li><a href="http://blog.fukayatsu.com/2013/08/11/iremocon-and-lita/">RubyとLita(chat bot)で自宅のエアコンを操作する</a></li>
+<li><a href="http://blog.fukayatsu.com/2013/11/25/ruby-and-daily-habit/">寒くて朝起きるのが辛いのでプログラムでなんとかしたい</a></li>
+<li><a href="http://blog.fukayatsu.com/2013/12/03/frc/">Fukayatsu Room Controller (FRC)</a></li>
+<li><a href="http://blog.fukayatsu.com/2013/12/22/voice-input/">voice-input</a></li>
+</ul>
+
+<p>引っ越しを期に一度再構築してhipchat中心の構成にした。<br>
+次に作りなおす時はfluentdを使うと思う。</p>
+
+<h2>Chrome Extension / Apps</h2>
+
+<p>今年20個弱作って公開制限に達したので、使わなそうなものから非公開にしている。</p>
+
+<p>※ ある程度ユーザ数が多いものを紹介</p>
+
+<h3><a href="https://chrome.google.com/webstore/detail/githubstatus/ibhpkjddiffbbmgagacamppmdkhlijpd?utm_source=chrome-ntp-icon">github:status</a></h3>
+
+<p>githubのステータスをアイコンで表示</p>
+
+<h3><a href="https://chrome.google.com/webstore/detail/bootstrap-sample/baifdhffdhpckmfbikekfljcaggninhm?utm_source=chrome-ntp-icon">Bootstrap Sample</a></h3>
+
+<p>chrome appをtwitter bootstrapを使って作るサンプル</p>
+
+<h3><a href="https://chrome.google.com/webstore/detail/autoproxy/bjbdlacnaiicmclhlmppiejhmbphcblc">AutoProxy</a></h3>
+
+<p>urlごとにproxyを設定する</p>
+
+<h2>RubyGems</h2>
+
+<p>気付いたら増えてた。</p>
+
+<h3><a href="https://rubygems.org/gems/favidenticon">favidenticon</a></h3>
+
+<p>faviconをcommand lineで生成</p>
+
+<h3><a href="https://rubygems.org/gems/active_record-deselect">active_record-deselect</a></h3>
+
+<p>Railsとかでmodelの特定カラム*以外*をselectして取得するためのgem</p>
+
+<h3><a href="https://rubygems.org/gems/say-japanese">say-japanese</a></h3>
+
+<p>Macの<code>say</code>コマンドのwrapper(日本語音声特化)</p>
+
+<h3><a href="https://rubygems.org/gems/get_dropbox_access_token">get_dropbox_access_token</a></h3>
+
+<p>名前の通り。</p>
+
+<h3><a href="https://rubygems.org/gems/json2yaml">json2yaml</a></h3>
+
+<p>json と yamlを相互変換するコマンド</p>
+
+<h3><a href="https://rubygems.org/gems/pebbles-suddenly_death_string">pebbles-suddenly_death_string</a></h3>
+
+<p><code>&gt; 突然の死 &lt;</code></p>
+
+<h3><a href="https://rubygems.org/gems/sakenote">sakenote</a></h3>
+
+<p><a href="http://sakenote.com/">日本酒アプリSakenote</a>のapi client</p>
+
+<h3><a href="https://rubygems.org/gems/lita-schedule">lita-schedule</a></h3>
+
+<p><a href="https://github.com/jimmycuadra/lita">jimmycuadra/lita</a>にスケジュール機能を追加</p>
+
+<h3><a href="https://rubygems.org/gems/zusaar">zusaar</a></h3>
+
+<p>zusaarのapi client</p>
+
+<h3><a href="https://rubygems.org/gems/pebbles-fujoshi">pebbles-fujoshi</a></h3>
+
+<p>いったい何がしたかったのか</p>
+
+<h2>Alfred workflow</h2>
+
+<ul>
+<li><a href="https://github.com/fukayatsu/alfred-suddenly-death">fukayatsu/alfred-suddenly-death</a></li>
+</ul>
+
+<h2>Sublime Text 3 plugin</h2>
+
+<ul>
+<li><a href="https://github.com/fukayatsu/SublimeSuddenDeath">fukayatsu/SublimeSuddenDeath</a></li>
+</ul>
+
+<h2>pull request</h2>
+
+<p><code>middleman</code>とか<code>hipchat-rb</code>とかにバグ修正pull-requestがマージされた。<br>
+github中心の生活をして、だんだんそういうのが普通のことになってきたので詳しくは書かない。</p>
+
+<h1>今年変えたもの</h1>
+
+<ul>
+<li>住む場所
+
+<ul>
+<li>=&gt; 会社から徒歩5分</li>
+</ul></li>
+<li>Sublime Text 2
+
+<ul>
+<li>=&gt; Sublime Text 3</li>
+</ul></li>
+<li>平日の日中に書く言語
+
+<ul>
+<li>PHP =&gt; Ruby</li>
+</ul></li>
+</ul>
+
+<h1>今年参加したイベント</h1>
+
+<p>過去記事から抜粋</p>
+
+<ul>
+<li><a href="http://blog.fukayatsu.com/2013/12/18/shibuya-rb/">渋谷.rb[:20131218]に行ってきた</a></li>
+<li><a href="http://blog.fukayatsu.com/2013/08/03/10lisp-00/">#10LISP &#39;00に参加しました</a></li>
+<li><a href="http://blog.fukayatsu.com/2013/05/15/shibuya-rb/">5月の渋谷.rbに行ってきた</a></li>
+<li><a href="http://blog.fukayatsu.com/2013/04/17/shibuyarb-2013-04-17/">4月のShibuya.rbの集まりに行ってきた箇条書き</a></li>
+<li><a href="http://blog.fukayatsu.com/2013/03/21/shibuyarb-20130320/">渋谷.rb<a href="拡大版">:20130320</a>に参加してきた</a></li>
+<li><a href="http://blog.fukayatsu.com/2013/03/19/oedo-ruby-kaigi-03/">大江戸Ruby会議03に参加してきた #odrk03</a></li>
+<li><a href="http://blog.fukayatsu.com/2013/02/10/tkrk10-3rd/">東京Ruby会議3日目&amp;大和田Ruby会議に参加してました</a></li>
+<li><a href="http://blog.fukayatsu.com/2013/02/15/devsumi2013/">デブサミ2013に行ってきた</a></li>
+<li><a href="http://blog.fukayatsu.com/2013/01/18/t2-study-3/">T2-Study#3を開催しました</a></li>
+<li><a href="http://blog.fukayatsu.com/2013/01/16/shibuya-rb/">新年最初のShibuya.rbに参加してきた</a></li>
+<li><a href="http://blog.fukayatsu.com/2013/01/14/tokyo-ruby-kaigi-10/">東京Ruby会議10に参加してきた</a></li>
+</ul>
+
+<p>今年前半はイベントに参加することが多くて、後半はイベントにあまり行かずにコード書いてたようだ。</p>
+
+<h1>来年やること</h1>
+
+<ul>
+<li><a href="https://github.com/fukayatsu/fukayatsu-gem">fukayatsu/fukayatsu-gem</a> のテストを通す/テストを追加する</li>
+<li>今年は小粒なものを作ることが多かったので、「fukayatsuといえばこれ」みたいなプロダクト/プロジェクトを作って長期的に取り組みたい</li>
+<li>もっとコミュニケーション</li>
+<li>もっと低レイヤー</li>
+</ul>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a target="_new" href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by
+<a target="_new" href="https://github.com/fukayatsu/fukayatsu.github.io/tree/source">GitHub</a>
+&
+<a target="_new" href="https://travis-ci.org/fukayatsu/fukayatsu.github.io">Travis CI</a>
+&
+<a target="_new" href="http://middlemanapp.com/">Middleman</a>
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
