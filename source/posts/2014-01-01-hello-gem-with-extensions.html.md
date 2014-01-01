@@ -1,7 +1,7 @@
 ---
 title: BundlerでC拡張を含んだgemを作ってテストする
 date: 2014-01-01 12:01 JST
-tags:
+tags: ruby, gem, c, bundler
 ---
 
 <blockquote class="twitter-tweet" lang="en"><p>fukayatsuが来年学ぶべき言語は『C』です。 <a href="http://t.co/pFf1wzHZ5r">http://t.co/pFf1wzHZ5r</a></p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/statuses/418011728656363520">December 31, 2013</a></blockquote>
@@ -58,7 +58,7 @@ end
     - jrubyの場合はC拡張を読み込むために、"JRUBY_OPTS=-Xcext.enabled=true"が必要らしい
 
 
-# 参考リンク
+# 参考にしたリンク
 Ruby - BundlerでC拡張を含んだgemを公開する - Qiita [キータ]
 http://qiita.com/gam0022/items/2ee82e84e5c9f608eb85
 
