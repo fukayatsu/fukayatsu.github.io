@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+goを試す - fukayatsu.dev
+</title>
+<script src="/javascripts/all.js" type="text/javascript"></script>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36253613-1']);
+  _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<div class='header-text'>
+<a href="/"><h1 class='header-title'>
+fukayatsu.dev
+</h1>
+</a>
+<a target="_new" href="http://blog.fukayatsu.com/"><p class='header-description'>
+under development
+</p>
+</a>
+</div>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2014/01/01/hello-go/">2014-01-01 12:43:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/go/">go</a>
+<a href="/tags/hello-world/">hello-world</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>goを試す</h1>
+<blockquote class="twitter-tweet" lang="en"><p>ふかやつが来年学ぶべき言語は『Go』です。 <a href="http://t.co/pFf1wzHZ5r">http://t.co/pFf1wzHZ5r</a></p>&mdash; ふかやつ (@fukayatsu) <a href="https://twitter.com/fukayatsu/statuses/418214284892463104">January 1, 2014</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>はい</p>
+
+<ul>
+<li><a href="http://golang.org/">The Go Programming Language</a>
+
+<ul>
+<li><a href="https://code.google.com/p/go/downloads/list">Downloads</a>:
+go1.2.darwin-amd64-osx10.8.pkg をインストール</li>
+</ul></li>
+</ul>
+
+<p><img src="/images/2014-01-01-go.png" /></p>
+
+<ul>
+<li>顔がうざい</li>
+</ul>
+<pre class="highlight text">% go version
+go version go1.2 darwin/amd64
+
+% go -h
+Go is a tool for managing Go source code.
+
+Usage:
+
+    go command [arguments]
+
+The commands are:
+
+    build       compile packages and dependencies
+    clean       remove object files
+    env         print Go environment information
+    fix         run go tool fix on packages
+    fmt         run gofmt on package sources
+    get         download and install packages and dependencies
+    install     compile and install packages and dependencies
+    list        list packages
+    run         compile and run Go program
+    test        test packages
+    tool        run specified go tool
+    version     print Go version
+    vet         run go tool vet on packages
+
+Use &quot;go help [command]&quot; for more information about a command.
+
+Additional help topics:
+
+    c           calling between Go and C
+    gopath      GOPATH environment variable
+    importpath  import path syntax
+    packages    description of package lists
+    testflag    description of testing flags
+    testfunc    description of testing functions
+
+Use &quot;go help [topic]&quot; for more information about that topic.
+</pre>
+<p>サンプルコード(一応写経)</p>
+<pre class="highlight go"><span class="c">// hello.go</span><span class="x">
+</span><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+
+</span><span class="k">import</span><span class="x"> </span><span class="s">&quot;fmt&quot;</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+  </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">&quot;Hello, 世界&quot;</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></pre>
+<p>実行してみる</p>
+<pre class="highlight text">% go run hello.go
+Hello, 世界
+</pre>
+<p>ビルドして実行してみる</p>
+<pre class="highlight text">% go build hello.go
+% chmod +x hello
+% ./hello
+Hello, 世界
+</pre>
+<p>おー</p>
+
+<h2>TODO</h2>
+
+<ul>
+<li>基本の制御構文を学ぶ</li>
+<li>何か作りたいものをgoで作る</li>
+</ul>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a target="_new" href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by
+<a target="_new" href="https://github.com/fukayatsu/fukayatsu.github.io/tree/source">GitHub</a>
+&
+<a target="_new" href="https://travis-ci.org/fukayatsu/fukayatsu.github.io">Travis CI</a>
+&
+<a target="_new" href="http://middlemanapp.com/">Middleman</a>
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

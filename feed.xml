@@ -5,16 +5,114 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-01-01T03:01:00Z</updated>
+  <updated>2014-01-01T03:43:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>goを試す</title>
+    <link rel="alternate" href="http://blog.url.com/2014/01/01/hello-go/"/>
+    <id>http://blog.url.com/2014/01/01/hello-go/</id>
+    <published>2014-01-01T03:43:00Z</published>
+    <updated>2014-01-01T04:02:43+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;ふかやつが来年学ぶべき言語は『Go』です。 &lt;a href="http://t.co/pFf1wzHZ5r"&gt;http://t.co/pFf1wzHZ5r&lt;/a&gt;&lt;/p&gt;&amp;mdash; ふかやつ (@fukayatsu) &lt;a href="https://twitter.com/fukayatsu/statuses/418214284892463104"&gt;January 1, 2014&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;はい&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://golang.org/"&gt;The Go Programming Language&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://code.google.com/p/go/downloads/list"&gt;Downloads&lt;/a&gt;:
+go1.2.darwin-amd64-osx10.8.pkg をインストール&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="/images/2014-01-01-go.png" /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;顔がうざい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="highlight text"&gt;% go version
+go version go1.2 darwin/amd64
+
+% go -h
+Go is a tool for managing Go source code.
+
+Usage:
+
+    go command [arguments]
+
+The commands are:
+
+    build       compile packages and dependencies
+    clean       remove object files
+    env         print Go environment information
+    fix         run go tool fix on packages
+    fmt         run gofmt on package sources
+    get         download and install packages and dependencies
+    install     compile and install packages and dependencies
+    list        list packages
+    run         compile and run Go program
+    test        test packages
+    tool        run specified go tool
+    version     print Go version
+    vet         run go tool vet on packages
+
+Use &amp;quot;go help [command]&amp;quot; for more information about a command.
+
+Additional help topics:
+
+    c           calling between Go and C
+    gopath      GOPATH environment variable
+    importpath  import path syntax
+    packages    description of package lists
+    testflag    description of testing flags
+    testfunc    description of testing functions
+
+Use &amp;quot;go help [topic]&amp;quot; for more information about that topic.
+&lt;/pre&gt;
+&lt;p&gt;サンプルコード(一応写経)&lt;/p&gt;
+&lt;pre class="highlight go"&gt;&lt;span class="c"&gt;// hello.go&lt;/span&gt;&lt;span class="x"&gt;
+&lt;/span&gt;&lt;span class="k"&gt;package&lt;/span&gt;&lt;span class="x"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="x"&gt;
+
+&lt;/span&gt;&lt;span class="k"&gt;import&lt;/span&gt;&lt;span class="x"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;fmt&amp;quot;&lt;/span&gt;&lt;span class="x"&gt;
+
+&lt;/span&gt;&lt;span class="k"&gt;func&lt;/span&gt;&lt;span class="x"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="x"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="x"&gt;
+  &lt;/span&gt;&lt;span class="n"&gt;fmt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello, 世界&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="x"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="x"&gt;
+&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;実行してみる&lt;/p&gt;
+&lt;pre class="highlight text"&gt;% go run hello.go
+Hello, 世界
+&lt;/pre&gt;
+&lt;p&gt;ビルドして実行してみる&lt;/p&gt;
+&lt;pre class="highlight text"&gt;% go build hello.go
+% chmod +x hello
+% ./hello
+Hello, 世界
+&lt;/pre&gt;
+&lt;p&gt;おー&lt;/p&gt;
+
+&lt;h2&gt;TODO&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;基本の制御構文を学ぶ&lt;/li&gt;
+&lt;li&gt;何か作りたいものをgoで作る&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>BundlerでC拡張を含んだgemを作ってテストする</title>
     <link rel="alternate" href="http://blog.url.com/2014/01/01/hello-gem-with-extensions/"/>
     <id>http://blog.url.com/2014/01/01/hello-gem-with-extensions/</id>
     <published>2014-01-01T03:01:00Z</published>
-    <updated>2014-01-01T03:39:13+00:00</updated>
+    <updated>2014-01-01T04:02:43+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -104,7 +202,7 @@
     <link rel="alternate" href="http://blog.url.com/2013/12/31/2013-retrospective/"/>
     <id>http://blog.url.com/2013/12/31/2013-retrospective/</id>
     <published>2013-12-31T05:29:00Z</published>
-    <updated>2014-01-01T03:39:13+00:00</updated>
+    <updated>2014-01-01T04:02:43+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -286,7 +384,7 @@ github中心の生活をして、だんだんそういうのが普通のこと�
     <link rel="alternate" href="http://blog.url.com/2013/12/28/favidenticon/"/>
     <id>http://blog.url.com/2013/12/28/favidenticon/</id>
     <published>2013-12-28T13:27:00Z</published>
-    <updated>2014-01-01T03:39:13+00:00</updated>
+    <updated>2014-01-01T04:02:43+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -330,7 +428,7 @@ github中心の生活をして、だんだんそういうのが普通のこと�
     <link rel="alternate" href="http://blog.url.com/2013/12/26/deselect/"/>
     <id>http://blog.url.com/2013/12/26/deselect/</id>
     <published>2013-12-26T13:44:00Z</published>
-    <updated>2014-01-01T03:39:13+00:00</updated>
+    <updated>2014-01-01T04:02:43+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -348,7 +446,7 @@ posts.to_sql
     <link rel="alternate" href="http://blog.url.com/2013/12/25/year-end-and-new-year-todos/"/>
     <id>http://blog.url.com/2013/12/25/year-end-and-new-year-todos/</id>
     <published>2013-12-25T13:34:00Z</published>
-    <updated>2014-01-01T03:39:13+00:00</updated>
+    <updated>2014-01-01T04:02:43+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -396,39 +494,6 @@ posts.to_sql
 &lt;li&gt;&lt;a href="http://t-wada.hatenablog.jp/entry/debugging-tests"&gt;不具合にテストを書いて立ち向かう - t-wadaのブログ&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>今年買ってよかった文房具</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/23/white-sheet/"/>
-    <id>http://blog.url.com/2013/12/23/white-sheet/</id>
-    <published>2013-12-23T00:36:00Z</published>
-    <updated>2014-01-01T03:39:13+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;img src="/images/2013-12-23-white-sheet.jpg" /&gt;&lt;/p&gt;
-
-&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B004BEJ9MG" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;
-
-&lt;p&gt;これを自宅の壁に適用した。気軽に使えてとてもよい。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;静電気でくっついているので位置を気軽に変えられる&lt;/li&gt;
-&lt;li&gt;文字が消えにくくなったら新しいシートに交換すればよい
-
-&lt;ul&gt;
-&lt;li&gt;一枚(60cm x 80 cm)あたり約100円&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;シートなので捨てるときのことを気にしなくて良い&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;ポスター用両面テープ&lt;/h3&gt;
-
-&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B0013N0G20" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;
-
-&lt;p&gt;iRemoconやブレッドボードを壁に固定したり、&lt;br&gt;
-Roombaのホームベースを床に固定するのに地味に活躍している。&lt;/p&gt;
 </content>
   </entry>
 </feed>
