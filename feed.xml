@@ -5,16 +5,106 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-12-31T05:29:00Z</updated>
+  <updated>2014-01-01T03:01:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>BundlerでC拡張を含んだgemを作ってテストする</title>
+    <link rel="alternate" href="http://blog.url.com/2014/01/01/hello-gem-with-extensions/"/>
+    <id>http://blog.url.com/2014/01/01/hello-gem-with-extensions/</id>
+    <published>2014-01-01T03:01:00Z</published>
+    <updated>2014-01-01T03:24:54+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;fukayatsuが来年学ぶべき言語は『C』です。 &lt;a href="http://t.co/pFf1wzHZ5r"&gt;http://t.co/pFf1wzHZ5r&lt;/a&gt;&lt;/p&gt;&amp;mdash; ふかやつ (@fukayatsu) &lt;a href="https://twitter.com/fukayatsu/statuses/418011728656363520"&gt;December 31, 2013&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;ということなのでC拡張を含むgemを初めて作ったのがこちら。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/hello_gem_with_extensions"&gt;fukayatsu/hello_gem_with_extensions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="highlight c"&gt;&lt;span class="cp"&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;ruby.h&amp;gt;
+&lt;/span&gt;
+&lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt;
+&lt;span class="nf"&gt;c_hello&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;name_val&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;StringValuePtr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name_val&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+  &lt;span class="n"&gt;sprintf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Hello, %s&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;rb_str_new2&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;greet&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kt"&gt;void&lt;/span&gt;
+&lt;span class="nf"&gt;Init_hello_gem_with_extensions&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;VALUE&lt;/span&gt; &lt;span class="n"&gt;cHelloGemWithExtensions&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="n"&gt;cHelloGemWithExtensions&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rb_const_get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rb_cObject&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rb_intern&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;HelloGemWithExtensions&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+
+  &lt;span class="n"&gt;rb_define_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cHelloGemWithExtensions&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c_hello&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;C言語側でRubyのHelloGemWithExtensionsクラスにhelloという名前で引数を一つ取るc_helloメソッドを登録している。&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;spec_helper&amp;#39;&lt;/span&gt;
+
+&lt;span class="n"&gt;describe&lt;/span&gt; &lt;span class="no"&gt;HelloGemWithExtensions&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+  &lt;span class="n"&gt;subject&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="no"&gt;HelloGemWithExtensions&lt;/span&gt;&lt;span class="nf"&gt;.new&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;subject&lt;/span&gt;&lt;span class="nf"&gt;.hello&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;C extension&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="nf"&gt;.to&lt;/span&gt; &lt;span class="n"&gt;eq&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello, C extension&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;それをRubyから呼ぶテスト。簡単ですごい。&lt;/p&gt;
+
+&lt;h1&gt;雑感&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;『Rubyソースコード完全解説』を昨日ちょっと読んでたので、「VALUEってなんだよ」とか思わずに済んだ。&lt;/li&gt;
+&lt;li&gt;bundle gem fooとした時に拡張ライブラリ用のディレクトリやファイルを作成するオプションがあると便利そう&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/luislavena/rake-compiler"&gt;luislavena/rake-compiler&lt;/a&gt;便利。
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;spec.add_development_dependency &amp;quot;rake-compiler&amp;quot;&lt;/code&gt;しておく&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;compile時に生成されるファイルをgitignoreしておく。
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/sparklemotion/nokogiri/blob/master/.gitignore"&gt;nokogiri/.gitignore at master · sparklemotion/nokogiri&lt;/a&gt;を参考にした&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://travis-ci.org/fukayatsu/hello_gem_with_extensions"&gt;jrubyとrubiniusでテストが失敗する&lt;/a&gt;けど保留している
+
+&lt;ul&gt;
+&lt;li&gt;jrubyの場合はC拡張を読み込むために、&amp;quot;JRUBY_OPTS=-Xcext.enabled=true&amp;quot;が必要らしい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;参考リンク&lt;/h1&gt;
+
+&lt;p&gt;Ruby - BundlerでC拡張を含んだgemを公開する - Qiita [キータ]&lt;br&gt;
+&lt;a href="http://qiita.com/gam0022/items/2ee82e84e5c9f608eb85"&gt;http://qiita.com/gam0022/items/2ee82e84e5c9f608eb85&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Gems with Extensions - RubyGems Guides&lt;br&gt;
+&lt;a href="http://guides.rubygems.org/gems-with-extensions/"&gt;http://guides.rubygems.org/gems-with-extensions/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Ruby用拡張ライブラリをCで作る --- Little Penguin&lt;br&gt;
+&lt;a href="http://members.jcom.home.ne.jp/mitakelp/old/_hellorb.html"&gt;http://members.jcom.home.ne.jp/mitakelp/old/_hellorb.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Rubyの拡張ライブラリを作ってみよう！ - ser1zw&amp;#39;s blog&lt;br&gt;
+&lt;a href="http://ser1zw.hatenablog.com/entry/20111217/1324133118"&gt;http://ser1zw.hatenablog.com/entry/20111217/1324133118&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;『Rubyソースコード完全解説』サポートページ&lt;br&gt;
+&lt;a href="http://i.loveruby.net/ja/rhg/"&gt;http://i.loveruby.net/ja/rhg/&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>2013の振り返り</title>
     <link rel="alternate" href="http://blog.url.com/2013/12/31/2013-retrospective/"/>
     <id>http://blog.url.com/2013/12/31/2013-retrospective/</id>
     <published>2013-12-31T05:29:00Z</published>
-    <updated>2013-12-31T07:02:59+00:00</updated>
+    <updated>2014-01-01T03:24:54+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -196,7 +286,7 @@ github中心の生活をして、だんだんそういうのが普通のこと�
     <link rel="alternate" href="http://blog.url.com/2013/12/28/favidenticon/"/>
     <id>http://blog.url.com/2013/12/28/favidenticon/</id>
     <published>2013-12-28T13:27:00Z</published>
-    <updated>2013-12-31T07:02:59+00:00</updated>
+    <updated>2014-01-01T03:24:54+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -240,7 +330,7 @@ github中心の生活をして、だんだんそういうのが普通のこと�
     <link rel="alternate" href="http://blog.url.com/2013/12/26/deselect/"/>
     <id>http://blog.url.com/2013/12/26/deselect/</id>
     <published>2013-12-26T13:44:00Z</published>
-    <updated>2013-12-31T07:02:59+00:00</updated>
+    <updated>2014-01-01T03:24:54+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -258,7 +348,7 @@ posts.to_sql
     <link rel="alternate" href="http://blog.url.com/2013/12/25/year-end-and-new-year-todos/"/>
     <id>http://blog.url.com/2013/12/25/year-end-and-new-year-todos/</id>
     <published>2013-12-25T13:34:00Z</published>
-    <updated>2013-12-31T07:02:59+00:00</updated>
+    <updated>2014-01-01T03:24:54+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -313,7 +403,7 @@ posts.to_sql
     <link rel="alternate" href="http://blog.url.com/2013/12/23/white-sheet/"/>
     <id>http://blog.url.com/2013/12/23/white-sheet/</id>
     <published>2013-12-23T00:36:00Z</published>
-    <updated>2013-12-31T07:02:59+00:00</updated>
+    <updated>2014-01-01T03:24:54+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -339,41 +429,6 @@ posts.to_sql
 
 &lt;p&gt;iRemoconやブレッドボードを壁に固定したり、&lt;br&gt;
 Roombaのホームベースを床に固定するのに地味に活躍している。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>voice-input</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/22/voice-input/"/>
-    <id>http://blog.url.com/2013/12/22/voice-input/</id>
-    <published>2013-12-22T10:42:00Z</published>
-    <updated>2013-12-31T07:02:59+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="/2013/11/29/advent-calendar-2013/"&gt;fukayatsu Advent Calendar 2013&lt;/a&gt; - #25&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;久しぶりに&lt;a href="http://julius.sourceforge.jp/"&gt;Julius&lt;/a&gt;をいじって、&lt;br&gt;
-hipchatに音声認識でコマンドを書き込めるようにした。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/voice"&gt;fukayatsu/voice&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;予め設定してある単語を認識した時にhipchatに書き込むだけなので、結構単純。&lt;br&gt;
-結果としてこんなことができるようになった。&lt;/p&gt;
-
-&lt;!-- Place this tag in your head or just before your close body tag. --&gt;
-
-&lt;script type="text/javascript" src="https://apis.google.com/js/plusone.js"&gt;&lt;/script&gt;
-
-&lt;!-- Place this tag where you want the widget to render. --&gt;
-
-&lt;div class="g-post" data-href="https://plus.google.com/107310933832095421631/posts/BGsy658KNNk"&gt;&lt;/div&gt;
-
-&lt;p&gt;ただ声が小さいと認識しなかったりするので、&lt;br&gt;
-ちゃんと使うには指向性のマイクを設置するとかしないといけなさそう。&lt;/p&gt;
 </content>
   </entry>
 </feed>
