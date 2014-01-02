@@ -1,7 +1,7 @@
 ---
 title: ブログに画像貼り付けるのが面倒くさい問題
 date: 2014-01-02 13:11 JST
-tags: blog, mac, automator
+tags: blog, mac, automator, image
 ---
 
 [LinCastorを使う](/2013/12/21/blog/)ことによってブログを書くのがかなり楽になったが、
