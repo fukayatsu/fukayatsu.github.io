@@ -39,12 +39,12 @@ require 'fileutils'
 BLOG_IMAGE_DIR = '/Users/fukayatsu/github/fukayatsu.github.io/source/images'
 TIME_STR       = Time.now.strftime("%Y-%m-%d-%s")
 
-ARGV.each.with_index(1) { |file, i|
-    extname = File.extname(file)
+ARGV.each.with_index(1) do |file, i|
+    extname  = File.extname(file)
     new_file = "#{TIME_STR}_#{i}#{extname}"
     FileUtils.copy(file, "#{BLOG_IMAGE_DIR}/#{new_file}")
     puts "![](/images/#{new_file})"
-}
+end
 ```
 
 
