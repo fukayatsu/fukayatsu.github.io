@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+ブログに画像貼り付けるのが面倒くさい問題 - fukayatsu.dev
+</title>
+<script src="/javascripts/all.js" type="text/javascript"></script>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36253613-1']);
+  _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<div class='header-text'>
+<a href="/"><h1 class='header-title'>
+fukayatsu.dev
+</h1>
+</a>
+<a target="_new" href="http://blog.fukayatsu.com/"><p class='header-description'>
+under development
+</p>
+</a>
+</div>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2014/01/02/blog-image/">2014-01-02 13:11:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/blog/">blog</a>
+<a href="/tags/mac/">mac</a>
+<a href="/tags/automator/">automator</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>ブログに画像貼り付けるのが面倒くさい問題</h1>
+<p><a href="/2013/12/21/blog/">LinCastorを使う</a>ことによってブログを書くのがかなり楽になったが、<br>
+まだスクリーンショット等のデスクトップ上の画像ファイルを記事に埋め込むのが面倒だった。</p>
+
+<p>当初はこれをsublime text 3のプラグインを開発することによって解決しようと思ったのだけど、<br>
+実験した結果、ST3上に画像ファイルをドラッグ＆ドロップした時のイベントは拾え無かったので、この方法はひとまず諦めた。</p>
+
+<p>また、Dropboxや類似のサービス(例えばGyazo)のようなものを使えば、スクリーンショットを撮ったと同時にWeb上にアップロードしてURLを取得することができるが、画像を手元で管理しておきたいのでこれも選択肢から外れた。</p>
+
+<h2>Automatorでサービスを作る</h2>
+
+<p>結局任意の画像ファイルを特定のフォルダに適当な名前でコピーして、適切なpathをMarkdown形式でクリップボードにコピーできればストレスはかなりは軽減できる。</p>
+
+<p>今回はAutomatorを使った。</p>
+
+<p><img src="/images/2014-01-02-1388636648_1.png" /></p>
+
+<p>これを選択すると、</p>
+
+<p><code>icon.png</code>を<code>TIMESTAMP_1.png</code>のような名前でmiddlemanの<code>images</code>フォルダにコピーし、<br>
+<code>![](/images/TIMESTAMP_1.png)</code>という文字列がクリップボードにコピーされる。</p>
+
+<h3>workflow</h3>
+
+<p>こんな感じになった。<br>
+<img src="/images/2014-01-02-1388636935_1.png" /></p>
+<pre class="highlight ruby"><span class="nb">require</span> <span class="s1">&#39;fileutils&#39;</span>
+
+<span class="no">BLOG_IMAGE_DIR</span> <span class="o">=</span> <span class="s1">&#39;/Users/fukayatsu/github/fukayatsu.github.io/source/images&#39;</span>
+<span class="no">TIME_STR</span>       <span class="o">=</span> <span class="no">Time</span><span class="nf">.now.strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-%d-%s&quot;</span><span class="p">)</span>
+
+<span class="no">ARGV</span><span class="nf">.each.with_index</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="p">,</span> <span class="n">i</span><span class="o">|</span>
+    <span class="n">extname</span> <span class="o">=</span> <span class="no">File</span><span class="nf">.extname</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">new_file</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">TIME_STR</span><span class="si">}</span><span class="s2">_</span><span class="si">#{</span><span class="n">i</span><span class="si">}#{</span><span class="n">extname</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="no">FileUtils</span><span class="nf">.copy</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">BLOG_IMAGE_DIR</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">new_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">&quot;![](/images/</span><span class="si">#{</span><span class="n">new_file</span><span class="si">}</span><span class="s2">)&quot;</span>
+<span class="p">}</span>
+</pre>
+<h2>参考</h2>
+
+<ul>
+<li><a href="http://taiyaki.main.jp/wordpress/2013/03/08/%E3%80%8Cautomator%E3%80%8D%E3%81%A7%E6%96%B0%E3%81%9F%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E5%8F%B3%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AB/">「Automator」で新たなサービスを右クリックメニューに追加する方法 | Mac教信仰中！！</a></li>
+</ul>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a target="_new" href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by
+<a target="_new" href="https://github.com/fukayatsu/fukayatsu.github.io/tree/source">GitHub</a>
+&
+<a target="_new" href="https://travis-ci.org/fukayatsu/fukayatsu.github.io">Travis CI</a>
+&
+<a target="_new" href="http://middlemanapp.com/">Middleman</a>
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

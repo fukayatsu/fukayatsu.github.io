@@ -5,16 +5,69 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-01-01T03:43:00Z</updated>
+  <updated>2014-01-02T04:11:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>ブログに画像貼り付けるのが面倒くさい問題</title>
+    <link rel="alternate" href="http://blog.url.com/2014/01/02/blog-image/"/>
+    <id>http://blog.url.com/2014/01/02/blog-image/</id>
+    <published>2014-01-02T04:11:00Z</published>
+    <updated>2014-01-02T04:33:14+00:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="/2013/12/21/blog/"&gt;LinCastorを使う&lt;/a&gt;ことによってブログを書くのがかなり楽になったが、&lt;br&gt;
+まだスクリーンショット等のデスクトップ上の画像ファイルを記事に埋め込むのが面倒だった。&lt;/p&gt;
+
+&lt;p&gt;当初はこれをsublime text 3のプラグインを開発することによって解決しようと思ったのだけど、&lt;br&gt;
+実験した結果、ST3上に画像ファイルをドラッグ＆ドロップした時のイベントは拾え無かったので、この方法はひとまず諦めた。&lt;/p&gt;
+
+&lt;p&gt;また、Dropboxや類似のサービス(例えばGyazo)のようなものを使えば、スクリーンショットを撮ったと同時にWeb上にアップロードしてURLを取得することができるが、画像を手元で管理しておきたいのでこれも選択肢から外れた。&lt;/p&gt;
+
+&lt;h2&gt;Automatorでサービスを作る&lt;/h2&gt;
+
+&lt;p&gt;結局任意の画像ファイルを特定のフォルダに適当な名前でコピーして、適切なpathをMarkdown形式でクリップボードにコピーできればストレスはかなりは軽減できる。&lt;/p&gt;
+
+&lt;p&gt;今回はAutomatorを使った。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/2014-01-02-1388636648_1.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;これを選択すると、&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;icon.png&lt;/code&gt;を&lt;code&gt;TIMESTAMP_1.png&lt;/code&gt;のような名前でmiddlemanの&lt;code&gt;images&lt;/code&gt;フォルダにコピーし、&lt;br&gt;
+&lt;code&gt;![](/images/TIMESTAMP_1.png)&lt;/code&gt;という文字列がクリップボードにコピーされる。&lt;/p&gt;
+
+&lt;h3&gt;workflow&lt;/h3&gt;
+
+&lt;p&gt;こんな感じになった。&lt;br&gt;
+&lt;img src="/images/2014-01-02-1388636935_1.png" /&gt;&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;fileutils&amp;#39;&lt;/span&gt;
+
+&lt;span class="no"&gt;BLOG_IMAGE_DIR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/Users/fukayatsu/github/fukayatsu.github.io/source/images&amp;#39;&lt;/span&gt;
+&lt;span class="no"&gt;TIME_STR&lt;/span&gt;       &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Time&lt;/span&gt;&lt;span class="nf"&gt;.now.strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%Y-%m-%d-%s&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="no"&gt;ARGV&lt;/span&gt;&lt;span class="nf"&gt;.each.with_index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+    &lt;span class="n"&gt;extname&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;File&lt;/span&gt;&lt;span class="nf"&gt;.extname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;new_file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="no"&gt;TIME_STR&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}#{&lt;/span&gt;&lt;span class="n"&gt;extname&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="no"&gt;FileUtils&lt;/span&gt;&lt;span class="nf"&gt;.copy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="no"&gt;BLOG_IMAGE_DIR&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;/&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;new_file&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;![](/images/&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;new_file&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;)&amp;quot;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+&lt;h2&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://taiyaki.main.jp/wordpress/2013/03/08/%E3%80%8Cautomator%E3%80%8D%E3%81%A7%E6%96%B0%E3%81%9F%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E5%8F%B3%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AB/"&gt;「Automator」で新たなサービスを右クリックメニューに追加する方法 | Mac教信仰中！！&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>goを試す</title>
     <link rel="alternate" href="http://blog.url.com/2014/01/01/hello-go/"/>
     <id>http://blog.url.com/2014/01/01/hello-go/</id>
     <published>2014-01-01T03:43:00Z</published>
-    <updated>2014-01-01T04:02:43+00:00</updated>
+    <updated>2014-01-02T04:33:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -112,7 +165,7 @@ Hello, 世界
     <link rel="alternate" href="http://blog.url.com/2014/01/01/hello-gem-with-extensions/"/>
     <id>http://blog.url.com/2014/01/01/hello-gem-with-extensions/</id>
     <published>2014-01-01T03:01:00Z</published>
-    <updated>2014-01-01T04:02:43+00:00</updated>
+    <updated>2014-01-02T04:33:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -202,7 +255,7 @@ Hello, 世界
     <link rel="alternate" href="http://blog.url.com/2013/12/31/2013-retrospective/"/>
     <id>http://blog.url.com/2013/12/31/2013-retrospective/</id>
     <published>2013-12-31T05:29:00Z</published>
-    <updated>2014-01-01T04:02:43+00:00</updated>
+    <updated>2014-01-02T04:33:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -384,7 +437,7 @@ github中心の生活をして、だんだんそういうのが普通のこと�
     <link rel="alternate" href="http://blog.url.com/2013/12/28/favidenticon/"/>
     <id>http://blog.url.com/2013/12/28/favidenticon/</id>
     <published>2013-12-28T13:27:00Z</published>
-    <updated>2014-01-01T04:02:43+00:00</updated>
+    <updated>2014-01-02T04:33:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -428,7 +481,7 @@ github中心の生活をして、だんだんそういうのが普通のこと�
     <link rel="alternate" href="http://blog.url.com/2013/12/26/deselect/"/>
     <id>http://blog.url.com/2013/12/26/deselect/</id>
     <published>2013-12-26T13:44:00Z</published>
-    <updated>2014-01-01T04:02:43+00:00</updated>
+    <updated>2014-01-02T04:33:14+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -440,60 +493,5 @@ posts.deselect!(:name)
 posts.to_sql
 #=&amp;gt; &amp;quot;SELECT id FROM \&amp;quot;posts\&amp;quot;&amp;quot;
 &lt;/pre&gt;</content>
-  </entry>
-  <entry>
-    <title>年末年始にやること</title>
-    <link rel="alternate" href="http://blog.url.com/2013/12/25/year-end-and-new-year-todos/"/>
-    <id>http://blog.url.com/2013/12/25/year-end-and-new-year-todos/</id>
-    <published>2013-12-25T13:34:00Z</published>
-    <updated>2014-01-01T04:02:43+00:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;1人アドベントカレンダーの振り返り&lt;/li&gt;
-&lt;li&gt;各種AdventCalendar2013を読む&lt;/li&gt;
-&lt;li&gt;2013の振り返りと2014の抱負
-
-&lt;ul&gt;
-&lt;li&gt;振り返り
-
-&lt;ul&gt;
-&lt;li&gt;ruby&lt;/li&gt;
-&lt;li&gt;引っ越し&lt;/li&gt;
-&lt;li&gt;pull request&lt;/li&gt;
-&lt;li&gt;gem&lt;/li&gt;
-&lt;li&gt;chrome extension / app&lt;/li&gt;
-&lt;li&gt;今年のはじめに書いた抱負&lt;/li&gt;
-&lt;li&gt;イベント&lt;/li&gt;
-&lt;li&gt;家電制御&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;抱負
-
-&lt;ul&gt;
-&lt;li&gt;プロダクト
-
-&lt;ul&gt;
-&lt;li&gt;fluentd&lt;/li&gt;
-&lt;li&gt;docker&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;設計&lt;/li&gt;
-&lt;li&gt;テスト&lt;/li&gt;
-&lt;li&gt;方向性&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;普段使っている(小さめの)gemのソースを読んで気付いたことをまとめる&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;memo&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://qiita.com/advent-calendar/2013/tddadventjp"&gt;TDD Advent Calendar 2013 - Qiita [キータ]&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://t-wada.hatenablog.jp/entry/debugging-tests"&gt;不具合にテストを書いて立ち向かう - t-wadaのブログ&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
   </entry>
 </feed>
