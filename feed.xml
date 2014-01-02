@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/2014/01/02/blog-image/"/>
     <id>http://blog.url.com/2014/01/02/blog-image/</id>
     <published>2014-01-02T04:11:00Z</published>
-    <updated>2014-01-02T06:58:52+00:00</updated>
+    <updated>2014-01-02T07:09:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -48,12 +48,12 @@
 &lt;span class="no"&gt;BLOG_IMAGE_DIR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/Users/fukayatsu/github/fukayatsu.github.io/source/images&amp;#39;&lt;/span&gt;
 &lt;span class="no"&gt;TIME_STR&lt;/span&gt;       &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Time&lt;/span&gt;&lt;span class="nf"&gt;.now.strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%Y-%m-%d-%s&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class="no"&gt;ARGV&lt;/span&gt;&lt;span class="nf"&gt;.each.with_index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
-    &lt;span class="n"&gt;extname&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;File&lt;/span&gt;&lt;span class="nf"&gt;.extname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="no"&gt;ARGV&lt;/span&gt;&lt;span class="nf"&gt;.each.with_index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+    &lt;span class="n"&gt;extname&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;File&lt;/span&gt;&lt;span class="nf"&gt;.extname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="n"&gt;new_file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="no"&gt;TIME_STR&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}#{&lt;/span&gt;&lt;span class="n"&gt;extname&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
     &lt;span class="no"&gt;FileUtils&lt;/span&gt;&lt;span class="nf"&gt;.copy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="no"&gt;BLOG_IMAGE_DIR&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;/&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;new_file&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;![](/images/&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;new_file&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;)&amp;quot;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
 &lt;/pre&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
 
@@ -67,7 +67,7 @@
     <link rel="alternate" href="http://blog.url.com/2014/01/01/hello-go/"/>
     <id>http://blog.url.com/2014/01/01/hello-go/</id>
     <published>2014-01-01T03:43:00Z</published>
-    <updated>2014-01-02T06:58:52+00:00</updated>
+    <updated>2014-01-02T07:09:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -165,7 +165,7 @@ Hello, 世界
     <link rel="alternate" href="http://blog.url.com/2014/01/01/hello-gem-with-extensions/"/>
     <id>http://blog.url.com/2014/01/01/hello-gem-with-extensions/</id>
     <published>2014-01-01T03:01:00Z</published>
-    <updated>2014-01-02T06:58:52+00:00</updated>
+    <updated>2014-01-02T07:09:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -255,7 +255,7 @@ Hello, 世界
     <link rel="alternate" href="http://blog.url.com/2013/12/31/2013-retrospective/"/>
     <id>http://blog.url.com/2013/12/31/2013-retrospective/</id>
     <published>2013-12-31T05:29:00Z</published>
-    <updated>2014-01-02T06:58:52+00:00</updated>
+    <updated>2014-01-02T07:09:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -437,7 +437,7 @@ github中心の生活をして、だんだんそういうのが普通のこと�
     <link rel="alternate" href="http://blog.url.com/2013/12/28/favidenticon/"/>
     <id>http://blog.url.com/2013/12/28/favidenticon/</id>
     <published>2013-12-28T13:27:00Z</published>
-    <updated>2014-01-02T06:58:52+00:00</updated>
+    <updated>2014-01-02T07:09:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -481,7 +481,7 @@ github中心の生活をして、だんだんそういうのが普通のこと�
     <link rel="alternate" href="http://blog.url.com/2013/12/26/deselect/"/>
     <id>http://blog.url.com/2013/12/26/deselect/</id>
     <published>2013-12-26T13:44:00Z</published>
-    <updated>2014-01-02T06:58:52+00:00</updated>
+    <updated>2014-01-02T07:09:52+00:00</updated>
     <author>
       <name>Article Author</name>
     </author>

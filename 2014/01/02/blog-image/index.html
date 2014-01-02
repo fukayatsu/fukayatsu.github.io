@@ -83,12 +83,12 @@ under development
 <span class="no">BLOG_IMAGE_DIR</span> <span class="o">=</span> <span class="s1">&#39;/Users/fukayatsu/github/fukayatsu.github.io/source/images&#39;</span>
 <span class="no">TIME_STR</span>       <span class="o">=</span> <span class="no">Time</span><span class="nf">.now.strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-%d-%s&quot;</span><span class="p">)</span>
 
-<span class="no">ARGV</span><span class="nf">.each.with_index</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">file</span><span class="p">,</span> <span class="n">i</span><span class="o">|</span>
-    <span class="n">extname</span> <span class="o">=</span> <span class="no">File</span><span class="nf">.extname</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="no">ARGV</span><span class="nf">.each.with_index</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">file</span><span class="p">,</span> <span class="n">i</span><span class="o">|</span>
+    <span class="n">extname</span>  <span class="o">=</span> <span class="no">File</span><span class="nf">.extname</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
     <span class="n">new_file</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">TIME_STR</span><span class="si">}</span><span class="s2">_</span><span class="si">#{</span><span class="n">i</span><span class="si">}#{</span><span class="n">extname</span><span class="si">}</span><span class="s2">&quot;</span>
     <span class="no">FileUtils</span><span class="nf">.copy</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">BLOG_IMAGE_DIR</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">new_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="nb">puts</span> <span class="s2">&quot;![](/images/</span><span class="si">#{</span><span class="n">new_file</span><span class="si">}</span><span class="s2">)&quot;</span>
-<span class="p">}</span>
+<span class="k">end</span>
 </pre>
 <h2>参考</h2>
 
