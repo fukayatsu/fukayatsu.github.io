@@ -5,16 +5,42 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-01-02T07:15:00Z</updated>
+  <updated>2014-01-03T07:54:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>sublime text 3でgolangを実行(go run)する</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/"/>
+    <id>http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/</id>
+    <published>2014-01-03T07:54:00Z</published>
+    <updated>2014-01-03T08:02:24+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;p&gt;Tools &amp;gt; Build System &amp;gt; New Build System... でこんな感じに設定する。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go.sublime-build&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="highlight javascript"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="c1"&gt;// &amp;quot;cmd&amp;quot;: [&amp;quot;go&amp;quot;, &amp;quot;run&amp;quot;, $file], // for sublime text 2
+&lt;/span&gt;  &lt;span class="s2"&gt;&amp;quot;shell_cmd&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;go run $file&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s2"&gt;&amp;quot;selector&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;source.go&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;もしくは、&lt;a href="https://github.com/DisposaBoy/GoSublime"&gt;DisposaBoy/GoSublime&lt;/a&gt;をインストールする。&lt;/p&gt;
+
+&lt;p&gt;これを入れておくとファイル保存時に&lt;code&gt;go fmt&lt;/code&gt;を自動的に実行してくれたり、&lt;br&gt;
+いい感じに入力補完もしてくれて便利。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>ifttt連携のテスト</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/02/ifttt/"/>
     <id>http://blog.fukayatsu.com/2014/01/02/ifttt/</id>
     <published>2014-01-02T07:15:00Z</published>
-    <updated>2014-01-02T07:29:47+00:00</updated>
+    <updated>2014-01-03T08:02:24+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -26,7 +52,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/02/blog-image/"/>
     <id>http://blog.fukayatsu.com/2014/01/02/blog-image/</id>
     <published>2014-01-02T04:11:00Z</published>
-    <updated>2014-01-02T07:29:47+00:00</updated>
+    <updated>2014-01-03T08:02:24+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -79,7 +105,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/01/hello-go/"/>
     <id>http://blog.fukayatsu.com/2014/01/01/hello-go/</id>
     <published>2014-01-01T03:43:00Z</published>
-    <updated>2014-01-02T07:29:47+00:00</updated>
+    <updated>2014-01-03T08:02:24+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -177,7 +203,7 @@ Hello, 世界
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/01/hello-gem-with-extensions/"/>
     <id>http://blog.fukayatsu.com/2014/01/01/hello-gem-with-extensions/</id>
     <published>2014-01-01T03:01:00Z</published>
-    <updated>2014-01-02T07:29:47+00:00</updated>
+    <updated>2014-01-03T08:02:24+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -267,7 +293,7 @@ Hello, 世界
     <link rel="alternate" href="http://blog.fukayatsu.com/2013/12/31/2013-retrospective/"/>
     <id>http://blog.fukayatsu.com/2013/12/31/2013-retrospective/</id>
     <published>2013-12-31T05:29:00Z</published>
-    <updated>2014-01-02T07:29:47+00:00</updated>
+    <updated>2014-01-03T08:02:24+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -441,50 +467,6 @@ github中心の生活をして、だんだんそういうのが普通のこと�
 &lt;li&gt;今年は小粒なものを作ることが多かったので、「fukayatsuといえばこれ」みたいなプロダクト/プロジェクトを作って長期的に取り組みたい&lt;/li&gt;
 &lt;li&gt;もっとコミュニケーション&lt;/li&gt;
 &lt;li&gt;もっと低レイヤー&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>faviconを生成するgemを作った</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2013/12/28/favidenticon/"/>
-    <id>http://blog.fukayatsu.com/2013/12/28/favidenticon/</id>
-    <published>2013-12-28T13:27:00Z</published>
-    <updated>2014-01-02T07:29:47+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;code&gt;rails new&lt;/code&gt;した後に、ちゃんとしたfaviconが決まるまで適当なfaviconを拾ってくるのが面倒だったので、適当に生成できるようにした。&lt;/p&gt;
-
-&lt;p&gt;多分ImageMagickが入っていれば動く。windowsではどうなんだろう。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/favidenticon#usage"&gt;fukayatsu/favidenticon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="highlight text"&gt;$ favidenticon g
-&lt;/pre&gt;
-&lt;p&gt;とかやると、カレントディレクトリに&lt;code&gt;favicon.ico&lt;/code&gt;が生成(上書き)される。&lt;/p&gt;
-
-&lt;h1&gt;サンプル&lt;/h1&gt;
-
-&lt;p&gt;&lt;img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/1.png" /&gt;&lt;br&gt;
-&lt;img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/2.png" /&gt;&lt;br&gt;
-&lt;img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/3.png" /&gt;&lt;br&gt;
-&lt;img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/4.png" /&gt;&lt;br&gt;
-&lt;img alt="w50" src="https://raw.github.com/fukayatsu/favidenticon/master/screenshots/5.png" /&gt;&lt;/p&gt;
-
-&lt;h1&gt;thanks&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/chrisbranson/ruby_identicon"&gt;chrisbranson/ruby_identicon&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;identicon生成担当&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/naoty/picon"&gt;naoty/picon&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;インスパイアされた&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>

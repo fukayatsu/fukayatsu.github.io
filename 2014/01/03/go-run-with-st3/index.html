@@ -6,7 +6,7 @@
 <link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
 <link href='/images/favicon.ico' rel='icon' type='image/ico'>
 <title>
-fukayatsu.dev
+sublime text 3でgolangを実行(go run)する - fukayatsu.dev
 </title>
 <script src="/javascripts/all.js" type="text/javascript"></script>
 <script>
@@ -42,24 +42,30 @@ under development
 </div>
 </div>
 </header>
+<div class='publish-date'>
+<a href="/2014/01/03/go-run-with-st3/">2014-01-03 16:54:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/golang/">golang</a>
+<a href="/tags/sublime-text-3/">sublime-text-3</a>
+</div>
 <div id='main' role='main'>
-<h1>
-Articles tagged 'sublime-text-3'
-</h1>
+<h1 class='title'>sublime text 3でgolangを実行(go run)する</h1>
+<p>Tools &gt; Build System &gt; New Build System... でこんな感じに設定する。</p>
+
 <ul>
-<li>
-<a href="/2014/01/03/go-run-with-st3/">sublime text 3でgolangを実行(go run)する</a>
-<span>Jan  3</span>
-</li>
-<li>
-<a href="/2013/12/11/sublime-sudden-death-2/">＞Sublime Text 3＜、その後</a>
-<span>Dec 11</span>
-</li>
-<li>
-<a href="/2013/12/07/sublime-sudden-death/">＞Sublime Text 3＜</a>
-<span>Dec  7</span>
-</li>
+<li>Go.sublime-build</li>
 </ul>
+<pre class="highlight javascript"><span class="p">{</span>
+  <span class="c1">// &quot;cmd&quot;: [&quot;go&quot;, &quot;run&quot;, $file], // for sublime text 2
+</span>  <span class="s2">&quot;shell_cmd&quot;</span><span class="err">:</span> <span class="s2">&quot;go run $file&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;selector&quot;</span><span class="err">:</span> <span class="s2">&quot;source.go&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre>
+<p>もしくは、<a href="https://github.com/DisposaBoy/GoSublime">DisposaBoy/GoSublime</a>をインストールする。</p>
+
+<p>これを入れておくとファイル保存時に<code>go fmt</code>を自動的に実行してくれたり、<br>
+いい感じに入力補完もしてくれて便利。</p>
 
 </div>
 <footer>
