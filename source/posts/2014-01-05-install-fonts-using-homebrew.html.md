@@ -4,6 +4,8 @@ date: 2014-01-05 09:45 JST
 tags: font, homebrew, formula
 ---
 
+![](/images/2014-01-05-1388885346_1.png)
+
 [半角:全角==1:2な等幅フォントを作る(2013/11/03)](/2013/11/03/merge-fonts/)で、
 > TODO
   　generator公開
