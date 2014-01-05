@@ -5,16 +5,74 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-01-03T07:54:00Z</updated>
+  <updated>2014-01-05T00:45:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>Homebrewでフォントをインストールする</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/"/>
+    <id>http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/</id>
+    <published>2014-01-05T00:45:00Z</published>
+    <updated>2014-01-05T01:18:04+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="/2013/11/03/merge-fonts/"&gt;半角:全角==1:2な等幅フォントを作る(2013/11/03)&lt;/a&gt;で、&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;TODO&lt;br&gt;
+  　generator公開&lt;br&gt;
+  　　素材用のフォントを自動的にダウンロードしてフォント生成するやつを作りたい&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;と書いたが、これをhomebrewのformulaにした。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/homebrew-font"&gt;fukayatsu/homebrew-font&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Usage&lt;/h1&gt;
+&lt;pre class="highlight text"&gt;$ brew tap fukayatsu/font
+$ brew install scpm
+$ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
+&lt;/pre&gt;
+&lt;h1&gt;感想&lt;/h1&gt;
+
+&lt;p&gt;初めてhomebrewのformulaを書いたが、 &amp;quot;See also&amp;quot; で挙げているところを参考にしてわりと簡単に出来た。先人に感謝。&lt;/p&gt;
+
+&lt;p&gt;fontforgeのスクリプトやhomebrewの作法はまだ深追いしていないので、理解を深めていきたい。&lt;br&gt;
+例えば&amp;quot;Usage&amp;quot;の最後の&lt;code&gt;cp&lt;/code&gt;をformulaに含めていいのかどうかとか迷っている。&lt;/p&gt;
+
+&lt;p&gt;zipやtarballをダウンロードして、解凍して、スクリプトを実行して、生成物を配置するまでがさくっと自動化出来るのは気持ちが良い。今年はいくつかformula書くと思う。&lt;/p&gt;
+
+&lt;h1&gt;See also&lt;/h1&gt;
+
+&lt;p&gt;これは便利！Homebrewに追加されたtapコマンドはリポジトリを追加して簡単にフォーミュラを増やせる | Macとかの雑記帳&lt;br&gt;
+&lt;a href="http://tukaikta.blog135.fc2.com/blog-entry-204.html"&gt;http://tukaikta.blog135.fc2.com/blog-entry-204.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;brew install ricty | 實松アウトプット&lt;br&gt;
+&lt;a href="http://sanematsu.wordpress.com/2013/05/11/brew-install-ricty/"&gt;http://sanematsu.wordpress.com/2013/05/11/brew-install-ricty/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;sanemat/homebrew-font&lt;br&gt;
+&lt;a href="https://github.com/sanemat/homebrew-font"&gt;https://github.com/sanemat/homebrew-font&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;MasayukiFukada/CodeMFont&lt;br&gt;
+&lt;a href="https://github.com/MasayukiFukada/CodeMFont"&gt;https://github.com/MasayukiFukada/CodeMFont&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;fukayatsu/homebrew-font&lt;br&gt;
+&lt;a href="https://github.com/fukayatsu/homebrew-font"&gt;https://github.com/fukayatsu/homebrew-font&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;fukayatsu/scpm&lt;br&gt;
+&lt;a href="https://github.com/fukayatsu/scpm"&gt;https://github.com/fukayatsu/scpm&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>sublime text 3でgolangを実行(go run)する</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/"/>
     <id>http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/</id>
     <published>2014-01-03T07:54:00Z</published>
-    <updated>2014-01-03T08:02:24+00:00</updated>
+    <updated>2014-01-05T01:18:04+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -40,7 +98,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/02/ifttt/"/>
     <id>http://blog.fukayatsu.com/2014/01/02/ifttt/</id>
     <published>2014-01-02T07:15:00Z</published>
-    <updated>2014-01-03T08:02:24+00:00</updated>
+    <updated>2014-01-05T01:18:04+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -52,7 +110,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/02/blog-image/"/>
     <id>http://blog.fukayatsu.com/2014/01/02/blog-image/</id>
     <published>2014-01-02T04:11:00Z</published>
-    <updated>2014-01-03T08:02:24+00:00</updated>
+    <updated>2014-01-05T01:18:04+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -105,7 +163,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/01/hello-go/"/>
     <id>http://blog.fukayatsu.com/2014/01/01/hello-go/</id>
     <published>2014-01-01T03:43:00Z</published>
-    <updated>2014-01-03T08:02:24+00:00</updated>
+    <updated>2014-01-05T01:18:04+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -203,7 +261,7 @@ Hello, 世界
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/01/hello-gem-with-extensions/"/>
     <id>http://blog.fukayatsu.com/2014/01/01/hello-gem-with-extensions/</id>
     <published>2014-01-01T03:01:00Z</published>
-    <updated>2014-01-03T08:02:24+00:00</updated>
+    <updated>2014-01-05T01:18:04+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -286,188 +344,6 @@ Hello, 世界
 
 &lt;p&gt;『Rubyソースコード完全解説』サポートページ&lt;br&gt;
 &lt;a href="http://i.loveruby.net/ja/rhg/"&gt;http://i.loveruby.net/ja/rhg/&lt;/a&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>2013の振り返り</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2013/12/31/2013-retrospective/"/>
-    <id>http://blog.fukayatsu.com/2013/12/31/2013-retrospective/</id>
-    <published>2013-12-31T05:29:00Z</published>
-    <updated>2014-01-03T08:02:24+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;p&gt;個人的にどんな一年だったかを雑に振り返ってみる。&lt;/p&gt;
-
-&lt;p&gt;今年の始めに書いた&lt;a href="http://blog.fukayatsu.com/2013/01/02/guess-my-2013/"&gt;今年はきっとこんな感じの1年になる&lt;/a&gt;は7割ぐらいあたっている感じ。&lt;/p&gt;
-
-&lt;h1&gt;GitHub Contributions&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src="/images/2013-12-31-a.png" /&gt;&lt;br&gt;
-&lt;img src="/images/2013-12-31-b.png" /&gt;&lt;/p&gt;
-
-&lt;p&gt;5月 ~ 9月ごろはシステムの引っ越しやリアルの引っ越しが合った時期で、活動が鈍っている。&lt;/p&gt;
-
-&lt;h1&gt;今年作ったもの&lt;/h1&gt;
-
-&lt;h2&gt;Webサービス&lt;/h2&gt;
-
-&lt;h3&gt;&lt;a href="http://chrome-apps-generator.herokuapp.com/"&gt;Chrome Apps Generator&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;WebサービスをChrome App化するサービス&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="http://mitsuwo.net/"&gt;みつをる&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;手書きっぽい画像を生成するサービス&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="http://git-about.me/"&gt;GitAboutMe&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;gitで更新するabout.me的なサービス[WIP]&lt;br&gt;
-そろそろ閉じる&lt;/p&gt;
-
-&lt;h3&gt;アレからアレをアレしてきてアレするサービス&lt;/h3&gt;
-
-&lt;p&gt;10月ぐらいにオープンして月間PVが6万ぐらい。技術検証を兼ねている。&lt;/p&gt;
-
-&lt;h2&gt;家電制御&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/08/11/iremocon-and-lita/"&gt;RubyとLita(chat bot)で自宅のエアコンを操作する&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/11/25/ruby-and-daily-habit/"&gt;寒くて朝起きるのが辛いのでプログラムでなんとかしたい&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/12/03/frc/"&gt;Fukayatsu Room Controller (FRC)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/12/22/voice-input/"&gt;voice-input&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;引っ越しを期に一度再構築してhipchat中心の構成にした。&lt;br&gt;
-次に作りなおす時はfluentdを使うと思う。&lt;/p&gt;
-
-&lt;h2&gt;Chrome Extension / Apps&lt;/h2&gt;
-
-&lt;p&gt;今年20個弱作って公開制限に達したので、使わなそうなものから非公開にしている。&lt;/p&gt;
-
-&lt;p&gt;※ ある程度ユーザ数が多いものを紹介&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://chrome.google.com/webstore/detail/githubstatus/ibhpkjddiffbbmgagacamppmdkhlijpd?utm_source=chrome-ntp-icon"&gt;github:status&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;githubのステータスをアイコンで表示&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://chrome.google.com/webstore/detail/bootstrap-sample/baifdhffdhpckmfbikekfljcaggninhm?utm_source=chrome-ntp-icon"&gt;Bootstrap Sample&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;chrome appをtwitter bootstrapを使って作るサンプル&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://chrome.google.com/webstore/detail/autoproxy/bjbdlacnaiicmclhlmppiejhmbphcblc"&gt;AutoProxy&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;urlごとにproxyを設定する&lt;/p&gt;
-
-&lt;h2&gt;RubyGems&lt;/h2&gt;
-
-&lt;p&gt;気付いたら増えてた。&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://rubygems.org/gems/favidenticon"&gt;favidenticon&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;faviconをcommand lineで生成&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://rubygems.org/gems/active_record-deselect"&gt;active_record-deselect&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Railsとかでmodelの特定カラム*以外*をselectして取得するためのgem&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://rubygems.org/gems/say-japanese"&gt;say-japanese&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;Macの&lt;code&gt;say&lt;/code&gt;コマンドのwrapper(日本語音声特化)&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://rubygems.org/gems/get_dropbox_access_token"&gt;get_dropbox_access_token&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;名前の通り。&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://rubygems.org/gems/json2yaml"&gt;json2yaml&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;json と yamlを相互変換するコマンド&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://rubygems.org/gems/pebbles-suddenly_death_string"&gt;pebbles-suddenly_death_string&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;gt; 突然の死 &amp;lt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://rubygems.org/gems/sakenote"&gt;sakenote&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href="http://sakenote.com/"&gt;日本酒アプリSakenote&lt;/a&gt;のapi client&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://rubygems.org/gems/lita-schedule"&gt;lita-schedule&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/jimmycuadra/lita"&gt;jimmycuadra/lita&lt;/a&gt;にスケジュール機能を追加&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://rubygems.org/gems/zusaar"&gt;zusaar&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;zusaarのapi client&lt;/p&gt;
-
-&lt;h3&gt;&lt;a href="https://rubygems.org/gems/pebbles-fujoshi"&gt;pebbles-fujoshi&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;いったい何がしたかったのか&lt;/p&gt;
-
-&lt;h2&gt;Alfred workflow&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/alfred-suddenly-death"&gt;fukayatsu/alfred-suddenly-death&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Sublime Text 3 plugin&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/SublimeSuddenDeath"&gt;fukayatsu/SublimeSuddenDeath&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;pull request&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;middleman&lt;/code&gt;とか&lt;code&gt;hipchat-rb&lt;/code&gt;とかにバグ修正pull-requestがマージされた。&lt;br&gt;
-github中心の生活をして、だんだんそういうのが普通のことになってきたので詳しくは書かない。&lt;/p&gt;
-
-&lt;h1&gt;今年変えたもの&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;住む場所
-
-&lt;ul&gt;
-&lt;li&gt;=&amp;gt; 会社から徒歩5分&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Sublime Text 2
-
-&lt;ul&gt;
-&lt;li&gt;=&amp;gt; Sublime Text 3&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;平日の日中に書く言語
-
-&lt;ul&gt;
-&lt;li&gt;PHP =&amp;gt; Ruby&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;今年参加したイベント&lt;/h1&gt;
-
-&lt;p&gt;過去記事から抜粋&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/12/18/shibuya-rb/"&gt;渋谷.rb[:20131218]に行ってきた&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/08/03/10lisp-00/"&gt;#10LISP &amp;#39;00に参加しました&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/05/15/shibuya-rb/"&gt;5月の渋谷.rbに行ってきた&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/04/17/shibuyarb-2013-04-17/"&gt;4月のShibuya.rbの集まりに行ってきた箇条書き&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/03/21/shibuyarb-20130320/"&gt;渋谷.rb&lt;a href="拡大版"&gt;:20130320&lt;/a&gt;に参加してきた&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/03/19/oedo-ruby-kaigi-03/"&gt;大江戸Ruby会議03に参加してきた #odrk03&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/02/10/tkrk10-3rd/"&gt;東京Ruby会議3日目&amp;amp;大和田Ruby会議に参加してました&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/02/15/devsumi2013/"&gt;デブサミ2013に行ってきた&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/01/18/t2-study-3/"&gt;T2-Study#3を開催しました&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/01/16/shibuya-rb/"&gt;新年最初のShibuya.rbに参加してきた&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.fukayatsu.com/2013/01/14/tokyo-ruby-kaigi-10/"&gt;東京Ruby会議10に参加してきた&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;今年前半はイベントに参加することが多くて、後半はイベントにあまり行かずにコード書いてたようだ。&lt;/p&gt;
-
-&lt;h1&gt;来年やること&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/fukayatsu-gem"&gt;fukayatsu/fukayatsu-gem&lt;/a&gt; のテストを通す/テストを追加する&lt;/li&gt;
-&lt;li&gt;今年は小粒なものを作ることが多かったので、「fukayatsuといえばこれ」みたいなプロダクト/プロジェクトを作って長期的に取り組みたい&lt;/li&gt;
-&lt;li&gt;もっとコミュニケーション&lt;/li&gt;
-&lt;li&gt;もっと低レイヤー&lt;/li&gt;
-&lt;/ul&gt;
 </content>
   </entry>
 </feed>
