@@ -14,11 +14,13 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/"/>
     <id>http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/</id>
     <published>2014-01-05T00:45:00Z</published>
-    <updated>2014-01-05T01:18:04+00:00</updated>
+    <updated>2014-01-05T01:30:27+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;a href="/2013/11/03/merge-fonts/"&gt;半角:全角==1:2な等幅フォントを作る(2013/11/03)&lt;/a&gt;で、&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;img src="/images/2014-01-05-1388885346_1.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="/2013/11/03/merge-fonts/"&gt;半角:全角==1:2な等幅フォントを作る(2013/11/03)&lt;/a&gt;で、&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;TODO&lt;br&gt;
@@ -72,7 +74,7 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/"/>
     <id>http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/</id>
     <published>2014-01-03T07:54:00Z</published>
-    <updated>2014-01-05T01:18:04+00:00</updated>
+    <updated>2014-01-05T01:30:27+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -98,7 +100,7 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/02/ifttt/"/>
     <id>http://blog.fukayatsu.com/2014/01/02/ifttt/</id>
     <published>2014-01-02T07:15:00Z</published>
-    <updated>2014-01-05T01:18:04+00:00</updated>
+    <updated>2014-01-05T01:30:27+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -110,7 +112,7 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/02/blog-image/"/>
     <id>http://blog.fukayatsu.com/2014/01/02/blog-image/</id>
     <published>2014-01-02T04:11:00Z</published>
-    <updated>2014-01-05T01:18:04+00:00</updated>
+    <updated>2014-01-05T01:30:27+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -163,7 +165,7 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/01/hello-go/"/>
     <id>http://blog.fukayatsu.com/2014/01/01/hello-go/</id>
     <published>2014-01-01T03:43:00Z</published>
-    <updated>2014-01-05T01:18:04+00:00</updated>
+    <updated>2014-01-05T01:30:27+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -261,7 +263,7 @@ Hello, 世界
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/01/hello-gem-with-extensions/"/>
     <id>http://blog.fukayatsu.com/2014/01/01/hello-gem-with-extensions/</id>
     <published>2014-01-01T03:01:00Z</published>
-    <updated>2014-01-05T01:18:04+00:00</updated>
+    <updated>2014-01-05T01:30:27+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
