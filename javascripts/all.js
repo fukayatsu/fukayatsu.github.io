@@ -403,10 +403,639 @@
   }
 
 })( jQuery );
+(function() {
+  var anchoredLink, assets, assetsChanged, browserCompatibleDocumentParser, browserSupportsPushState, cacheCurrentPage, changePage, constrainPageCacheTo, createDocument, crossOriginLink, currentState, executeScriptTags, extractAssets, extractLink, extractTitleAndBody, fetchHistory, fetchReplacement, handleClick, ignoreClick, initialized, installClickHandlerLast, intersection, noTurbolink, nonHtmlLink, nonStandardClick, pageCache, recallScrollPosition, referer, reflectNewUrl, reflectRedirectedUrl, rememberCurrentAssets, rememberCurrentState, rememberCurrentUrl, rememberInitialPage, resetScrollPosition, samePageLink, triggerEvent, visit,
+    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+
+  initialized = false;
+
+  currentState = null;
+
+  referer = document.location.href;
+
+  assets = [];
+
+  pageCache = [];
+
+  createDocument = null;
+
+  visit = function(url) {
+    if (browserSupportsPushState) {
+      cacheCurrentPage();
+      reflectNewUrl(url);
+      return fetchReplacement(url);
+    } else {
+      return document.location.href = url;
+    }
+  };
+
+  fetchReplacement = function(url) {
+    var xhr,
+      _this = this;
+    triggerEvent('page:fetch');
+    xhr = new XMLHttpRequest;
+    xhr.open('GET', url, true);
+    xhr.setRequestHeader('Accept', 'text/html, application/xhtml+xml, application/xml');
+    xhr.setRequestHeader('X-XHR-Referer', referer);
+    xhr.onload = function() {
+      var doc;
+      doc = createDocument(xhr.responseText);
+      if (assetsChanged(doc)) {
+        return document.location.href = url;
+      } else {
+        changePage.apply(null, extractTitleAndBody(doc));
+        reflectRedirectedUrl(xhr);
+        resetScrollPosition();
+        return triggerEvent('page:load');
+      }
+    };
+    xhr.onabort = function() {
+      return console.log('Aborted turbolink fetch!');
+    };
+    return xhr.send();
+  };
+
+  fetchHistory = function(state) {
+    var page;
+    cacheCurrentPage();
+    if (page = pageCache[state.position]) {
+      changePage(page.title, page.body);
+      recallScrollPosition(page);
+      return triggerEvent('page:restore');
+    } else {
+      return fetchReplacement(document.location.href);
+    }
+  };
+
+  cacheCurrentPage = function() {
+    rememberInitialPage();
+    pageCache[currentState.position] = {
+      url: document.location.href,
+      body: document.body,
+      title: document.title,
+      positionY: window.pageYOffset,
+      positionX: window.pageXOffset
+    };
+    return constrainPageCacheTo(10);
+  };
+
+  constrainPageCacheTo = function(limit) {
+    return delete pageCache[currentState.position - limit];
+  };
+
+  changePage = function(title, body) {
+    document.title = title;
+    document.documentElement.replaceChild(body, document.body);
+    executeScriptTags();
+    currentState = window.history.state;
+    return triggerEvent('page:change');
+  };
+
+  executeScriptTags = function() {
+    var script, _i, _len, _ref, _ref1, _results;
+    _ref = document.body.getElementsByTagName('script');
+    _results = [];
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      script = _ref[_i];
+      if ((_ref1 = script.type) === '' || _ref1 === 'text/javascript') {
+        _results.push(eval(script.innerHTML));
+      }
+    }
+    return _results;
+  };
+
+  reflectNewUrl = function(url) {
+    if (url !== document.location.href) {
+      referer = document.location.href;
+      return window.history.pushState({
+        turbolinks: true,
+        position: currentState.position + 1
+      }, '', url);
+    }
+  };
+
+  reflectRedirectedUrl = function(xhr) {
+    var location;
+    if ((location = xhr.getResponseHeader('X-XHR-Current-Location'))) {
+      return window.history.replaceState(currentState, '', location);
+    }
+  };
+
+  rememberCurrentUrl = function() {
+    return window.history.replaceState({
+      turbolinks: true,
+      position: window.history.length - 1
+    }, '', document.location.href);
+  };
+
+  rememberCurrentState = function() {
+    return currentState = window.history.state;
+  };
+
+  rememberCurrentAssets = function() {
+    return assets = extractAssets(document);
+  };
+
+  rememberInitialPage = function() {
+    if (!initialized) {
+      rememberCurrentUrl();
+      rememberCurrentState();
+      createDocument = browserCompatibleDocumentParser();
+      return initialized = true;
+    }
+  };
+
+  recallScrollPosition = function(page) {
+    return window.scrollTo(page.positionX, page.positionY);
+  };
+
+  resetScrollPosition = function() {
+    return window.scrollTo(0, 0);
+  };
+
+  triggerEvent = function(name) {
+    var event;
+    event = document.createEvent('Events');
+    event.initEvent(name, true, true);
+    return document.dispatchEvent(event);
+  };
+
+  extractAssets = function(doc) {
+    var node, _i, _len, _ref, _results;
+    _ref = doc.head.childNodes;
+    _results = [];
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      node = _ref[_i];
+      if (node.src || node.href) {
+        _results.push(node.src || node.href);
+      }
+    }
+    return _results;
+  };
+
+  assetsChanged = function(doc) {
+    return intersection(extractAssets(doc), assets).length !== assets.length;
+  };
+
+  intersection = function(a, b) {
+    var value, _i, _len, _ref, _results;
+    if (a.length > b.length) {
+      _ref = [b, a], a = _ref[0], b = _ref[1];
+    }
+    _results = [];
+    for (_i = 0, _len = a.length; _i < _len; _i++) {
+      value = a[_i];
+      if (__indexOf.call(b, value) >= 0) {
+        _results.push(value);
+      }
+    }
+    return _results;
+  };
+
+  extractTitleAndBody = function(doc) {
+    var title;
+    title = doc.querySelector('title');
+    return [title != null ? title.textContent : void 0, doc.body];
+  };
+
+  browserCompatibleDocumentParser = function() {
+    var createDocumentUsingParser, createDocumentUsingWrite, testDoc, _ref;
+    createDocumentUsingParser = function(html) {
+      return (new DOMParser).parseFromString(html, 'text/html');
+    };
+    createDocumentUsingWrite = function(html) {
+      var doc;
+      doc = document.implementation.createHTMLDocument('');
+      doc.open('replace');
+      doc.write(html);
+      doc.close;
+      return doc;
+    };
+    if (window.DOMParser) {
+      testDoc = createDocumentUsingParser('<html><body><p>test');
+    }
+    if ((testDoc != null ? (_ref = testDoc.body) != null ? _ref.childNodes.length : void 0 : void 0) === 1) {
+      return createDocumentUsingParser;
+    } else {
+      return createDocumentUsingWrite;
+    }
+  };
+
+  installClickHandlerLast = function(event) {
+    if (!event.defaultPrevented) {
+      document.removeEventListener('click', handleClick);
+      return document.addEventListener('click', handleClick);
+    }
+  };
+
+  handleClick = function(event) {
+    var link;
+    if (!event.defaultPrevented) {
+      link = extractLink(event);
+      if (link.nodeName === 'A' && !ignoreClick(event, link)) {
+        visit(link.href);
+        return event.preventDefault();
+      }
+    }
+  };
+
+  extractLink = function(event) {
+    var link;
+    link = event.target;
+    while (!(link === document || link.nodeName === 'A')) {
+      link = link.parentNode;
+    }
+    return link;
+  };
+
+  samePageLink = function(link) {
+    return link.href === document.location.href;
+  };
+
+  crossOriginLink = function(link) {
+    return location.protocol !== link.protocol || location.host !== link.host;
+  };
+
+  anchoredLink = function(link) {
+    return ((link.hash && link.href.replace(link.hash, '')) === location.href.replace(location.hash, '')) || (link.href === location.href + '#');
+  };
+
+  nonHtmlLink = function(link) {
+    return link.href.match(/\.[a-z]+(\?.*)?$/g) && !link.href.match(/\.html?(\?.*)?$/g);
+  };
+
+  noTurbolink = function(link) {
+    var ignore;
+    while (!(ignore || link === document)) {
+      ignore = link.getAttribute('data-no-turbolink') != null;
+      link = link.parentNode;
+    }
+    return ignore;
+  };
+
+  nonStandardClick = function(event) {
+    return event.which > 1 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey;
+  };
+
+  ignoreClick = function(event, link) {
+    return crossOriginLink(link) || anchoredLink(link) || nonHtmlLink(link) || noTurbolink(link) || nonStandardClick(event);
+  };
+
+  browserSupportsPushState = window.history && window.history.pushState && window.history.replaceState && window.history.state !== void 0;
+
+  if (browserSupportsPushState) {
+    rememberCurrentAssets();
+    document.addEventListener('click', installClickHandlerLast, true);
+    window.addEventListener('popstate', function(event) {
+      var _ref;
+      if ((_ref = event.state) != null ? _ref.turbolinks : void 0) {
+        return fetchHistory(event.state);
+      }
+    });
+  }
+
+  this.Turbolinks = {
+    visit: visit
+  };
+
+}).call(this);
+/*! NProgress (c) 2013, Rico Sta. Cruz
+ *  http://ricostacruz.com/nprogress */
+
+
+;(function(factory) {
+
+  if (typeof module === 'function') {
+    module.exports = factory(this.jQuery || require('jquery'));
+  } else if (typeof define === 'function' && define.amd) {
+    define(['jquery'], function($) {
+      return factory($);
+    });
+  } else {
+    this.NProgress = factory(this.jQuery);
+  }
+
+})(function($) {
+  var NProgress = {};
+
+  NProgress.version = '0.1.2';
+
+  var Settings = NProgress.settings = {
+    minimum: 0.08,
+    easing: 'ease',
+    positionUsing: '',
+    speed: 200,
+    trickle: true,
+    trickleRate: 0.02,
+    trickleSpeed: 800,
+    showSpinner: true,
+    template: '<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
+  };
+
+  /**
+   * Updates configuration.
+   *
+   *     NProgress.configure({
+   *       minimum: 0.1
+   *     });
+   */
+  NProgress.configure = function(options) {
+    $.extend(Settings, options);
+    return this;
+  };
+
+  /**
+   * Last number.
+   */
+
+  NProgress.status = null;
+
+  /**
+   * Sets the progress bar status, where `n` is a number from `0.0` to `1.0`.
+   *
+   *     NProgress.set(0.4);
+   *     NProgress.set(1.0);
+   */
+
+  NProgress.set = function(n) {
+    var started = NProgress.isStarted();
+
+    n = clamp(n, Settings.minimum, 1);
+    NProgress.status = (n === 1 ? null : n);
+
+    var $progress = NProgress.render(!started),
+        $bar      = $progress.find('[role="bar"]'),
+        speed     = Settings.speed,
+        ease      = Settings.easing;
+
+    $progress[0].offsetWidth; /* Repaint */
+
+    $progress.queue(function(next) {
+      // Set positionUsing if it hasn't already been set
+      if (Settings.positionUsing === '') Settings.positionUsing = NProgress.getPositioningCSS();
+
+      // Add transition
+      $bar.css(barPositionCSS(n, speed, ease));
+
+      if (n === 1) {
+        // Fade out
+        $progress.css({ transition: 'none', opacity: 1 });
+        $progress[0].offsetWidth; /* Repaint */
+
+        setTimeout(function() {
+          $progress.css({ transition: 'all '+speed+'ms linear', opacity: 0 });
+          setTimeout(function() {
+            NProgress.remove();
+            next();
+          }, speed);
+        }, speed);
+      } else {
+        setTimeout(next, speed);
+      }
+    });
+
+    return this;
+  };
+
+  NProgress.isStarted = function() {
+    return typeof NProgress.status === 'number';
+  };
+
+  /**
+   * Shows the progress bar.
+   * This is the same as setting the status to 0%, except that it doesn't go backwards.
+   *
+   *     NProgress.start();
+   *
+   */
+  NProgress.start = function() {
+    if (!NProgress.status) NProgress.set(0);
+
+    var work = function() {
+      setTimeout(function() {
+        if (!NProgress.status) return;
+        NProgress.trickle();
+        work();
+      }, Settings.trickleSpeed);
+    };
+
+    if (Settings.trickle) work();
+
+    return this;
+  };
+
+  /**
+   * Hides the progress bar.
+   * This is the *sort of* the same as setting the status to 100%, with the
+   * difference being `done()` makes some placebo effect of some realistic motion.
+   *
+   *     NProgress.done();
+   *
+   * If `true` is passed, it will show the progress bar even if its hidden.
+   *
+   *     NProgress.done(true);
+   */
+
+  NProgress.done = function(force) {
+    if (!force && !NProgress.status) return this;
+
+    return NProgress.inc(0.3 + 0.5 * Math.random()).set(1);
+  };
+
+  /**
+   * Increments by a random amount.
+   */
+
+  NProgress.inc = function(amount) {
+    var n = NProgress.status;
+
+    if (!n) {
+      return NProgress.start();
+    } else {
+      if (typeof amount !== 'number') {
+        amount = (1 - n) * clamp(Math.random() * n, 0.1, 0.95);
+      }
+
+      n = clamp(n + amount, 0, 0.994);
+      return NProgress.set(n);
+    }
+  };
+
+  NProgress.trickle = function() {
+    return NProgress.inc(Math.random() * Settings.trickleRate);
+  };
+
+  /**
+   * Waits for all supplied jQuery promises and
+   * increases the progress as the promises resolve.
+   * 
+   * @param $promise jQUery Promise
+   */
+  (function() {
+    var initial = 0, current = 0;
+    
+    NProgress.promise = function($promise) {
+      if (!$promise || $promise.state() == "resolved") {
+        return this;
+      }
+      
+      if (current == 0) {
+        NProgress.start();
+      }
+      
+      initial++;
+      current++;
+      
+      $promise.always(function() {
+        current--;
+        if (current == 0) {
+            initial = 0;
+            NProgress.done();
+        } else {
+            NProgress.set((initial - current) / initial);
+        }
+      });
+      
+      return this;
+    };
+    
+  })();
+
+  /**
+   * (Internal) renders the progress bar markup based on the `template`
+   * setting.
+   */
+
+  NProgress.render = function(fromStart) {
+    if (NProgress.isRendered()) return $("#nprogress");
+    $('html').addClass('nprogress-busy');
+
+    var $el = $("<div id='nprogress'>")
+      .html(Settings.template);
+
+    var perc = fromStart ? '-100' : toBarPerc(NProgress.status || 0);
+
+    $el.find('[role="bar"]').css({
+      transition: 'all 0 linear',
+      transform: 'translate3d('+perc+'%,0,0)'
+    });
+
+    if (!Settings.showSpinner)
+      $el.find('[role="spinner"]').remove();
+
+    $el.appendTo(document.body);
+
+    return $el;
+  };
+
+  /**
+   * Removes the element. Opposite of render().
+   */
+
+  NProgress.remove = function() {
+    $('html').removeClass('nprogress-busy');
+    $('#nprogress').remove();
+  };
+
+  /**
+   * Checks if the progress bar is rendered.
+   */
+
+  NProgress.isRendered = function() {
+    return ($("#nprogress").length > 0);
+  };
+
+  /**
+   * Determine which positioning CSS rule to use.
+   */
+
+  NProgress.getPositioningCSS = function() {
+    // Sniff on document.body.style
+    var bodyStyle = document.body.style;
+
+    // Sniff prefixes
+    var vendorPrefix = ('WebkitTransform' in bodyStyle) ? 'Webkit' :
+                       ('MozTransform' in bodyStyle) ? 'Moz' :
+                       ('msTransform' in bodyStyle) ? 'ms' :
+                       ('OTransform' in bodyStyle) ? 'O' : '';
+
+    if (vendorPrefix + 'Perspective' in bodyStyle) {
+      // Modern browsers with 3D support, e.g. Webkit, IE10
+      return 'translate3d';
+    } else if (vendorPrefix + 'Transform' in bodyStyle) {
+      // Browsers without 3D support, e.g. IE9
+      return 'translate';
+    } else {
+      // Browsers without translate() support, e.g. IE7-8
+      return 'margin';
+    }
+  };
+
+  /**
+   * Helpers
+   */
+
+  function clamp(n, min, max) {
+    if (n < min) return min;
+    if (n > max) return max;
+    return n;
+  }
+
+  /**
+   * (Internal) converts a percentage (`0..1`) to a bar translateX
+   * percentage (`-100%..0%`).
+   */
+
+  function toBarPerc(n) {
+    return (-1 + n) * 100;
+  }
+
+
+  /**
+   * (Internal) returns the correct CSS for changing the bar's
+   * position given an n percentage, and speed and ease from Settings
+   */
+
+  function barPositionCSS(n, speed, ease) {
+    var barCSS;
+
+    if (Settings.positionUsing === 'translate3d') {
+      barCSS = { transform: 'translate3d('+toBarPerc(n)+'%,0,0)' };
+    } else if (Settings.positionUsing === 'translate') {
+      barCSS = { transform: 'translate('+toBarPerc(n)+'%,0)' };
+    } else {
+      barCSS = { 'margin-left': toBarPerc(n)+'%' };
+    }
+
+    barCSS.transition = 'all '+speed+'ms '+ease;
+
+    return barCSS;
+  }
+
+  return NProgress;
+});
+
+
+
 
 
 
 $(document).on('input', '#new_post_name', function() {
   var name = $('#new_post_name').val();
   $('#new_post_link').attr('href', 'my-blog://new?name=' + name);
+});
+
+$(document).on('page:fetch',   function() {
+  console.log('fetch');
+  NProgress.start();
+});
+
+$(document).on('page:change',  function() {
+  console.log('change');
+  NProgress.done();
+});
+
+$(document).on('page:restore', function() {
+  console.log('restore');
+  NProgress.remove();
 });
