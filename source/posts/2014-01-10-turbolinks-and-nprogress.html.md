@@ -1,7 +1,7 @@
 ---
 title: ブログにturbolinksとnprogressを適用した
 date: 2014-01-10 21:26 JST
-tags:
+tags: blog, turbolinks, nprogress
 ---
 
 - [rails/turbolinks](https://github.com/rails/turbolinks)
