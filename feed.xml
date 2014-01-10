@@ -5,16 +5,57 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-01-07T13:28:00Z</updated>
+  <updated>2014-01-10T12:26:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>ブログにturbolinksとnprogressを適用した</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/"/>
+    <id>http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/</id>
+    <published>2014-01-10T12:26:00Z</published>
+    <updated>2014-01-10T12:53:33+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/rails/turbolinks"&gt;rails/turbolinks&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ざっくり言うとページ遷移をajaxに置き換えて高速化してくれる。&lt;/li&gt;
+&lt;li&gt;rails4からの標準機能。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/rstacruz/nprogress"&gt;rstacruz/nprogress&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://tecuration.com/2013/09/nprogress"&gt;YouTube風のページローダーを実装する「NProgress.js」 - Tecuration .com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;プログレスバーの発動タイミングはnprogressのreadmeの例をそのまま使っている↓&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;page:fetch&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;   &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;NProgress&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;page:change&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;NProgress&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;page:restore&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;NProgress&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/fukayatsu.github.io/compare/9e9a51831195d7c8a03cf2500ffa7e2cd576aaab...e7e124020bf24e98c2cfee15b0c34cbe9bdadf1d"&gt;変更の詳細&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;雑感&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ページ遷移が速く(感じるように)なって、かなり快適になった。&lt;/li&gt;
+&lt;li&gt;turbolinksとnprogressの相性がよい&lt;/li&gt;
+&lt;li&gt;普段からrailsでturbolinksを使っているものの、何故か静的サイトでturbolinksを使うという発想が無かった。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>alfredでメモを書くworkflowを作った</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/07/alfred-memo/"/>
     <id>http://blog.fukayatsu.com/2014/01/07/alfred-memo/</id>
     <published>2014-01-07T13:28:00Z</published>
-    <updated>2014-01-10T11:24:11+00:00</updated>
+    <updated>2014-01-10T12:53:33+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -45,7 +86,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/"/>
     <id>http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/</id>
     <published>2014-01-05T00:45:00Z</published>
-    <updated>2014-01-10T11:24:11+00:00</updated>
+    <updated>2014-01-10T12:53:33+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -105,7 +146,7 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/"/>
     <id>http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/</id>
     <published>2014-01-03T07:54:00Z</published>
-    <updated>2014-01-10T11:24:11+00:00</updated>
+    <updated>2014-01-10T12:53:33+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -131,7 +172,7 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/02/ifttt/"/>
     <id>http://blog.fukayatsu.com/2014/01/02/ifttt/</id>
     <published>2014-01-02T07:15:00Z</published>
-    <updated>2014-01-10T11:24:11+00:00</updated>
+    <updated>2014-01-10T12:53:33+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -143,7 +184,7 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/02/blog-image/"/>
     <id>http://blog.fukayatsu.com/2014/01/02/blog-image/</id>
     <published>2014-01-02T04:11:00Z</published>
-    <updated>2014-01-10T11:24:11+00:00</updated>
+    <updated>2014-01-10T12:53:33+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -188,104 +229,6 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://taiyaki.main.jp/wordpress/2013/03/08/%E3%80%8Cautomator%E3%80%8D%E3%81%A7%E6%96%B0%E3%81%9F%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E5%8F%B3%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AB/"&gt;「Automator」で新たなサービスを右クリックメニューに追加する方法 | Mac教信仰中！！&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>goを試す</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/01/hello-go/"/>
-    <id>http://blog.fukayatsu.com/2014/01/01/hello-go/</id>
-    <published>2014-01-01T03:43:00Z</published>
-    <updated>2014-01-10T11:24:11+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;ふかやつが来年学ぶべき言語は『Go』です。 &lt;a href="http://t.co/pFf1wzHZ5r"&gt;http://t.co/pFf1wzHZ5r&lt;/a&gt;&lt;/p&gt;&amp;mdash; ふかやつ (@fukayatsu) &lt;a href="https://twitter.com/fukayatsu/statuses/418214284892463104"&gt;January 1, 2014&lt;/a&gt;&lt;/blockquote&gt;
-
-&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
-
-&lt;p&gt;はい&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://golang.org/"&gt;The Go Programming Language&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://code.google.com/p/go/downloads/list"&gt;Downloads&lt;/a&gt;:
-go1.2.darwin-amd64-osx10.8.pkg をインストール&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src="/images/2014-01-01-go.png" /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;顔がうざい&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="highlight text"&gt;% go version
-go version go1.2 darwin/amd64
-
-% go -h
-Go is a tool for managing Go source code.
-
-Usage:
-
-    go command [arguments]
-
-The commands are:
-
-    build       compile packages and dependencies
-    clean       remove object files
-    env         print Go environment information
-    fix         run go tool fix on packages
-    fmt         run gofmt on package sources
-    get         download and install packages and dependencies
-    install     compile and install packages and dependencies
-    list        list packages
-    run         compile and run Go program
-    test        test packages
-    tool        run specified go tool
-    version     print Go version
-    vet         run go tool vet on packages
-
-Use &amp;quot;go help [command]&amp;quot; for more information about a command.
-
-Additional help topics:
-
-    c           calling between Go and C
-    gopath      GOPATH environment variable
-    importpath  import path syntax
-    packages    description of package lists
-    testflag    description of testing flags
-    testfunc    description of testing functions
-
-Use &amp;quot;go help [topic]&amp;quot; for more information about that topic.
-&lt;/pre&gt;
-&lt;p&gt;サンプルコード(一応写経)&lt;/p&gt;
-&lt;pre class="highlight go"&gt;&lt;span class="c"&gt;// hello.go&lt;/span&gt;&lt;span class="x"&gt;
-&lt;/span&gt;&lt;span class="k"&gt;package&lt;/span&gt;&lt;span class="x"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="x"&gt;
-
-&lt;/span&gt;&lt;span class="k"&gt;import&lt;/span&gt;&lt;span class="x"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;fmt&amp;quot;&lt;/span&gt;&lt;span class="x"&gt;
-
-&lt;/span&gt;&lt;span class="k"&gt;func&lt;/span&gt;&lt;span class="x"&gt; &lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="x"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="x"&gt;
-  &lt;/span&gt;&lt;span class="n"&gt;fmt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello, 世界&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="x"&gt;
-&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="x"&gt;
-&lt;/span&gt;&lt;/pre&gt;
-&lt;p&gt;実行してみる&lt;/p&gt;
-&lt;pre class="highlight text"&gt;% go run hello.go
-Hello, 世界
-&lt;/pre&gt;
-&lt;p&gt;ビルドして実行してみる&lt;/p&gt;
-&lt;pre class="highlight text"&gt;% go build hello.go
-% chmod +x hello
-% ./hello
-Hello, 世界
-&lt;/pre&gt;
-&lt;p&gt;おー&lt;/p&gt;
-
-&lt;h2&gt;TODO&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;基本の制御構文を学ぶ&lt;/li&gt;
-&lt;li&gt;何か作りたいものをgoで作る&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
