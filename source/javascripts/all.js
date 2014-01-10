@@ -9,16 +9,17 @@ $(document).on('input', '#new_post_name', function() {
 });
 
 $(document).on('page:fetch',   function() {
-  console.log('fetch');
   NProgress.start();
 });
 
 $(document).on('page:change',  function() {
-  console.log('change');
   NProgress.done();
+
+  if (window._gaq) {
+    _gaq.push(['_trackPageview']);
+  }
 });
 
 $(document).on('page:restore', function() {
-  console.log('restore');
   NProgress.remove();
 });
