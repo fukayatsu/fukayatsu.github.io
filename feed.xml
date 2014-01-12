@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/12/rest-room-api/"/>
     <id>http://blog.fukayatsu.com/2014/01/12/rest-room-api/</id>
     <published>2014-01-12T07:20:00Z</published>
-    <updated>2014-01-12T07:23:47+00:00</updated>
+    <updated>2014-01-12T18:05:42+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -72,7 +72,7 @@ raspberry piはひたすらセンサーデータをherokuに送り続け、clien
 &lt;li&gt;&lt;p&gt;その他&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;抵抗(10kΩ, 1kΩ)&lt;/li&gt;
+&lt;li&gt;抵抗(10kΩ, 15kΩ)&lt;/li&gt;
 &lt;li&gt;コンデンサ(1μF)&lt;/li&gt;
 &lt;li&gt;単線&lt;/li&gt;
 &lt;li&gt;ホットボンド&lt;/li&gt;
@@ -97,7 +97,7 @@ raspberry piはひたすらセンサーデータをherokuに送り続け、clien
 
 &lt;h1&gt;配線図&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src="/images/2014-01-12-1389509062_1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/2014-01-13-1389549785_1.png" /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://fritzing.org/"&gt;Fritzing&lt;/a&gt;で図を書くの楽しい。&lt;br&gt;
 コンデンサはなくても多分問題ないので省いた。&lt;/p&gt;
@@ -252,7 +252,7 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/"/>
     <id>http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/</id>
     <published>2014-01-10T12:26:00Z</published>
-    <updated>2014-01-12T07:23:47+00:00</updated>
+    <updated>2014-01-12T18:05:42+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -293,7 +293,7 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/07/alfred-memo/"/>
     <id>http://blog.fukayatsu.com/2014/01/07/alfred-memo/</id>
     <published>2014-01-07T13:28:00Z</published>
-    <updated>2014-01-12T07:23:47+00:00</updated>
+    <updated>2014-01-12T18:05:42+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -324,7 +324,7 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/"/>
     <id>http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/</id>
     <published>2014-01-05T00:45:00Z</published>
-    <updated>2014-01-12T07:23:47+00:00</updated>
+    <updated>2014-01-12T18:05:42+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -384,7 +384,7 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/"/>
     <id>http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/</id>
     <published>2014-01-03T07:54:00Z</published>
-    <updated>2014-01-12T07:23:47+00:00</updated>
+    <updated>2014-01-12T18:05:42+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -410,7 +410,7 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/02/ifttt/"/>
     <id>http://blog.fukayatsu.com/2014/01/02/ifttt/</id>
     <published>2014-01-02T07:15:00Z</published>
-    <updated>2014-01-12T07:23:47+00:00</updated>
+    <updated>2014-01-12T18:05:42+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
