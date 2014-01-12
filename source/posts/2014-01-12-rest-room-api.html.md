@@ -45,7 +45,7 @@ raspberry piはひたすらセンサーデータをherokuに送り続け、clien
     - [パナソニック電工 ＡＭＮ３１１１１ ＮａＰｉＯｎ　ＭＰモーションセンサ（黒）　標準検出タイプ](http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=7AXC-MAGW)
 
 - その他
-    - 抵抗(10kΩ, 1kΩ)
+    - 抵抗(10kΩ, 15kΩ)
     - コンデンサ(1μF)
     - 単線
     - ホットボンド
@@ -58,7 +58,7 @@ raspberry piはひたすらセンサーデータをherokuに送り続け、clien
         - シャットダウンスイッチ用
 
 # 配線図
-![](/images/2014-01-12-1389509062_1.png)
+![](/images/2014-01-13-1389549785_1.png)
 
 [Fritzing](http://fritzing.org/)で図を書くの楽しい。
 コンデンサはなくても多分問題ないので省いた。
