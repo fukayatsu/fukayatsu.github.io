@@ -5,16 +5,254 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-01-10T12:26:00Z</updated>
+  <updated>2014-01-12T07:20:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>Raspberry Piを使ってトイレの空き情報を確認できるようにした</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/12/rest-room-api/"/>
+    <id>http://blog.fukayatsu.com/2014/01/12/rest-room-api/</id>
+    <published>2014-01-12T07:20:00Z</published>
+    <updated>2014-01-12T07:23:47+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src="/images/2014-01-12-1389502288_1.jpg" /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://chrome.google.com/webstore/detail/ucchusma/ofbnhnlaccejlhdfefcgmffilffhnipg"&gt;Chrome ウェブストア - ucchusma&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;アイコンはあまり目立たないようにした。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;使用中&lt;br&gt;
+&lt;img alt="w50" src="/images/2014-01-12-1389500588_1.png" /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;空き&lt;br&gt;
+&lt;img alt="w50" src="/images/2014-01-12-1389500588_2.png" /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;背景&lt;/h1&gt;
+
+&lt;p&gt;オフィスのフロアにトイレがひとつしかなく、何度も空いているかどうか確認しに行くのが面倒だった。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://heavens-door.info/"&gt;ヘブンズ･ドア　〜私が行ったら空いてるトイレ〜&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;先日これを見て自分で作ることにした。&lt;/p&gt;
+
+&lt;p&gt;raspberry piを触りたい欲とか、ハンダ付け欲とかもあった。&lt;/p&gt;
+
+&lt;h1&gt;仕組み&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src="/images/2014-01-12-1389501835_1.jpg" /&gt;&lt;br&gt;
+raspberry piはひたすらセンサーデータをherokuに送り続け、clientがそれをpollingする形にした。&lt;br&gt;
+当初はraspberry pi上にweb serverを置こうかと思ったけど、台数が増えたりlocalのipが変わったりすることを考えてherokuを併用することにした。&lt;/p&gt;
+
+&lt;h1&gt;材料&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;本体: 長期運用を考えてケース付きのを買った&lt;/p&gt;
+
+&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00DGKUHFE" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SDカード: 8GBで十分だったかも&lt;/p&gt;
+
+&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B003VNKNEQ" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;無線LAN子機: 動作報告があったので&lt;/p&gt;
+
+&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B003NSAMW2" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;モーションセンサ: 開発の裏話的なやつが面白かった&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://panasonic.co.jp/ism/eco/napion/"&gt;松下の省エネ技術 | にぎりこぷしのエコの細道 | ナピオン-１ | イズム「ism」 | Panasonic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=7AXC-MAGW"&gt;パナソニック電工 ＡＭＮ３１１１１ ＮａＰｉＯｎ　ＭＰモーションセンサ（黒）　標準検出タイプ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;その他&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;抵抗(10kΩ, 1kΩ)&lt;/li&gt;
+&lt;li&gt;コンデンサ(1μF)&lt;/li&gt;
+&lt;li&gt;単線&lt;/li&gt;
+&lt;li&gt;ホットボンド&lt;/li&gt;
+&lt;li&gt;ユニバーサル基盤の切れ端&lt;/li&gt;
+&lt;li&gt;ジャンパワイヤ(オス-メス)
+
+&lt;ul&gt;
+&lt;li&gt;なくても何とかなったけどあったほうが良い...&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ブレッドボード
+
+&lt;ul&gt;
+&lt;li&gt;回路テスト用&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;プッシュスイッチ
+
+&lt;ul&gt;
+&lt;li&gt;シャットダウンスイッチ用&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;配線図&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src="/images/2014-01-12-1389509062_1.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://fritzing.org/"&gt;Fritzing&lt;/a&gt;で図を書くの楽しい。&lt;br&gt;
+コンデンサはなくても多分問題ないので省いた。&lt;/p&gt;
+
+&lt;h1&gt;code&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/ucchusma-pi"&gt;fukayatsu/ucchusma-pi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/ucchusma-web"&gt;fukayatsu/ucchusma-web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/fukayatsu/ucchusma-crx"&gt;fukayatsu/ucchusma-crx&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;/home/pi/set_gpio_pins.sh&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="c"&gt;#!/bin/sh&lt;/span&gt;
+
+&lt;span class="k"&gt;for &lt;/span&gt;pin &lt;span class="k"&gt;in &lt;/span&gt;4; &lt;span class="k"&gt;do
+   &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$pin&lt;/span&gt; &amp;gt; /sys/class/gpio/export
+   chown -R www-data:pi /sys/class/gpio/gpio&lt;span class="nv"&gt;$pin&lt;/span&gt;
+   chmod -R g+w /sys/class/gpio/gpio&lt;span class="nv"&gt;$pin&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;/home/pi/shutdown-daemon.sh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="c"&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class="nv"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;7      &lt;span class="c"&gt;#使用するGPIOポート&lt;/span&gt;
+&lt;span class="nv"&gt;PUSHTIME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;3  &lt;span class="c"&gt;#押す秒数&lt;/span&gt;
+
+&lt;span class="c"&gt;#初期設定&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$GPIO&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &amp;gt; /sys/class/gpio/export
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;in&amp;quot;&lt;/span&gt; &amp;gt; /sys/class/gpio/gpio&lt;span class="nv"&gt;$GPIO&lt;/span&gt;/direction
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;high&amp;quot;&lt;/span&gt; &amp;gt; /sys/class/gpio/gpio&lt;span class="nv"&gt;$GPIO&lt;/span&gt;/direction
+
+&lt;span class="c"&gt;#5秒間押されるまで待つ&lt;/span&gt;
+&lt;span class="nv"&gt;cnt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;0
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$cnt&lt;/span&gt; -lt &lt;span class="nv"&gt;$PUSHTIME&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; ; &lt;span class="k"&gt;do
+  &lt;/span&gt;&lt;span class="nv"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;cat /sys/class/gpio/gpio&lt;span class="nv"&gt;$GPIO&lt;/span&gt;/value&lt;span class="sb"&gt;`&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$data&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; -eq &lt;span class="s2"&gt;&amp;quot;0&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; ; &lt;span class="k"&gt;then
+    &lt;/span&gt;&lt;span class="nv"&gt;cnt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;expr &lt;span class="nv"&gt;$cnt&lt;/span&gt; + 1&lt;span class="sb"&gt;`&lt;/span&gt;
+  &lt;span class="k"&gt;else
+    &lt;/span&gt;&lt;span class="nv"&gt;cnt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;0
+  &lt;span class="k"&gt;fi
+  &lt;/span&gt;sleep 1
+&lt;span class="k"&gt;done&lt;/span&gt;
+
+&lt;span class="c"&gt;#シャットダウンの実行&lt;/span&gt;
+shutdown -h now
+&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;参考: &lt;a href="http://blog.livedoor.jp/victory7com/archives/32699844.html"&gt;Raspberry Piブログ : [コラム] 第8回『ボタン長押しでシャットダウンする電源ボタンを作ろう』&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;/etc/rc.local&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="highlight shell"&gt;&lt;span class="c"&gt;#!/bin/sh -e&lt;/span&gt;
+
+...
+
+su -c /home/pi/shutdown-daemon.sh &amp;amp;
+su -c /home/pi/set_gpio_pins.sh &amp;amp;
+
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;TOKEN&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;*********&lt;/span&gt;
+su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/shims/bundle exec ruby watcher.rb&amp;quot;&lt;/span&gt;
+
+...
+
+&lt;span class="nb"&gt;exit &lt;/span&gt;0
+&lt;/pre&gt;
+&lt;h1&gt;参考&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;sudoなしでGPIOにアクセスする
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://dissectionbydavid.wordpress.com/2013/10/21/raspberry-pi-using-gpio-wiringpi-without-root-sudo-access/"&gt;Raspberry Pi – using GPIO / WiringPi without root (sudo) access | Dissection by David blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;無線LAN
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://kingyo-bachi.blogspot.jp/2013/07/raspberry-pilan.html"&gt;コチョナナバ: Raspberry Piを無線LAN対応させてみた&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.instantsupportsite.com/self-help/raspberry-pi/raspberry-pi-airlink-101-installation-wpa/"&gt;RASPBERRY PI – Airlink 101 Installation with WPA/WPA2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;image書き込み
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://askubuntu.com/questions/159039/why-is-the-error-dd-dev-rdisk1bs-1m-operation-not-supported-popping-up-whil"&gt;command line - Why is the error, dd: /dev/rdisk1bs=1m: Operation not supported, popping up while trying to instal ubuntu on usb? - Ask Ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;シャットダウンフリー化(したい)
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.e-ark.jp/raspberryjamsession-02/"&gt;「コラム：お手軽シャットダウンフリー化」をHTML化してみました (QR1679) | ε-ARK Project&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;code
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/ucchusma-pi"&gt;fukayatsu/ucchusma-pi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/ucchusma-web"&gt;fukayatsu/ucchusma-web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/ucchusma-crx"&gt;fukayatsu/ucchusma-crx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ucchusmaとは?
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://ja.wikipedia.org/wiki/%E7%83%8F%E6%9E%A2%E6%B2%99%E6%91%A9%E6%98%8E%E7%8E%8B"&gt;烏枢沙摩明王 - Wikipedia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;伝承ひどい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;配線図等を作るツール
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://fritzing.org/"&gt;Fritzing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;雑感&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;raspberry pi
+
+&lt;ul&gt;
+&lt;li&gt;rbenvでruby2.1.0をインストールするのに2時間ちょっとかかった。&lt;/li&gt;
+&lt;li&gt;使ってみて、改めて「小さいlinux pc」なのだなと思った。
+
+&lt;ul&gt;
+&lt;li&gt;GPIOで直接電子回路に接続できるのが良い&lt;/li&gt;
+&lt;li&gt;アナログ入力も付いてたらもっと良いのに&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;imageを焼く時に、MacbookProのSDカードリーダーが反応しなくて困った
+
+&lt;ul&gt;
+&lt;li&gt;結局別のPCから焼いた&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Fritzing
+
+&lt;ul&gt;
+&lt;li&gt;便利&lt;/li&gt;
+&lt;li&gt;自分でnapionのパーツ作ろうかと思ったけど、適当なパーツでお茶を濁した。
+
+&lt;ul&gt;
+&lt;li&gt;パーツエディタが何度かクラッシュした...&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;実戦投入
+
+&lt;ul&gt;
+&lt;li&gt;週明けになる見込み&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>ブログにturbolinksとnprogressを適用した</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/"/>
     <id>http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/</id>
     <published>2014-01-10T12:26:00Z</published>
-    <updated>2014-01-10T13:00:53+00:00</updated>
+    <updated>2014-01-12T07:23:47+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -55,7 +293,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/07/alfred-memo/"/>
     <id>http://blog.fukayatsu.com/2014/01/07/alfred-memo/</id>
     <published>2014-01-07T13:28:00Z</published>
-    <updated>2014-01-10T13:00:53+00:00</updated>
+    <updated>2014-01-12T07:23:47+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -86,7 +324,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/"/>
     <id>http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/</id>
     <published>2014-01-05T00:45:00Z</published>
-    <updated>2014-01-10T13:00:53+00:00</updated>
+    <updated>2014-01-12T07:23:47+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -146,7 +384,7 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/"/>
     <id>http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/</id>
     <published>2014-01-03T07:54:00Z</published>
-    <updated>2014-01-10T13:00:53+00:00</updated>
+    <updated>2014-01-12T07:23:47+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -172,64 +410,11 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/02/ifttt/"/>
     <id>http://blog.fukayatsu.com/2014/01/02/ifttt/</id>
     <published>2014-01-02T07:15:00Z</published>
-    <updated>2014-01-10T13:00:53+00:00</updated>
+    <updated>2014-01-12T07:23:47+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
     <content type="html">&lt;p&gt;&lt;img src="/images/2014-01-02-1388646962_1.png" /&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>ブログに画像貼り付けるのが面倒くさい問題</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/02/blog-image/"/>
-    <id>http://blog.fukayatsu.com/2014/01/02/blog-image/</id>
-    <published>2014-01-02T04:11:00Z</published>
-    <updated>2014-01-10T13:00:53+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="/2013/12/21/blog/"&gt;LinCastorを使う&lt;/a&gt;ことによってブログを書くのがかなり楽になったが、&lt;br&gt;
-まだスクリーンショット等のデスクトップ上の画像ファイルを記事に埋め込むのが面倒だった。&lt;/p&gt;
-
-&lt;p&gt;当初はこれをsublime text 3のプラグインを開発することによって解決しようと思ったのだけど、&lt;br&gt;
-実験した結果、ST3上に画像ファイルをドラッグ＆ドロップした時のイベントは拾え無かったので、この方法はひとまず諦めた。&lt;/p&gt;
-
-&lt;p&gt;また、Dropboxや類似のサービス(例えばGyazo)のようなものを使えば、スクリーンショットを撮ったと同時にWeb上にアップロードしてURLを取得することができるが、画像を手元で管理しておきたいのでこれも選択肢から外れた。&lt;/p&gt;
-
-&lt;h2&gt;Automatorでサービスを作る&lt;/h2&gt;
-
-&lt;p&gt;結局任意の画像ファイルを特定のフォルダに適当な名前でコピーして、適切なpathをMarkdown形式でクリップボードにコピーできればストレスはかなりは軽減できる。&lt;/p&gt;
-
-&lt;p&gt;今回はAutomatorを使った。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/2014-01-02-1388636648_1.png" /&gt;&lt;/p&gt;
-
-&lt;p&gt;これを選択すると、&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;icon.png&lt;/code&gt;を&lt;code&gt;TIMESTAMP_1.png&lt;/code&gt;のような名前でmiddlemanの&lt;code&gt;images&lt;/code&gt;フォルダにコピーし、&lt;br&gt;
-&lt;code&gt;![](/images/TIMESTAMP_1.png)&lt;/code&gt;という文字列がクリップボードにコピーされる。&lt;/p&gt;
-
-&lt;h3&gt;workflow&lt;/h3&gt;
-
-&lt;p&gt;こんな感じになった。&lt;br&gt;
-&lt;img src="/images/2014-01-02-1388636935_1.png" /&gt;&lt;/p&gt;
-&lt;pre class="highlight ruby"&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;fileutils&amp;#39;&lt;/span&gt;
-
-&lt;span class="no"&gt;BLOG_IMAGE_DIR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/Users/fukayatsu/github/fukayatsu.github.io/source/images&amp;#39;&lt;/span&gt;
-&lt;span class="no"&gt;TIME_STR&lt;/span&gt;       &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Time&lt;/span&gt;&lt;span class="nf"&gt;.now.strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%Y-%m-%d-%s&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="no"&gt;ARGV&lt;/span&gt;&lt;span class="nf"&gt;.each.with_index&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
-    &lt;span class="n"&gt;extname&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;File&lt;/span&gt;&lt;span class="nf"&gt;.extname&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;new_file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="no"&gt;TIME_STR&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="si"&gt;}#{&lt;/span&gt;&lt;span class="n"&gt;extname&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
-    &lt;span class="no"&gt;FileUtils&lt;/span&gt;&lt;span class="nf"&gt;.copy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="no"&gt;BLOG_IMAGE_DIR&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;/&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;new_file&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;![](/images/&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;new_file&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;)&amp;quot;&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/pre&gt;
-&lt;h2&gt;参考&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://taiyaki.main.jp/wordpress/2013/03/08/%E3%80%8Cautomator%E3%80%8D%E3%81%A7%E6%96%B0%E3%81%9F%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E5%8F%B3%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AB/"&gt;「Automator」で新たなサービスを右クリックメニューに追加する方法 | Mac教信仰中！！&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </content>
   </entry>
 </feed>
