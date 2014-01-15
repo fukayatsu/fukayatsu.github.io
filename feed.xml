@@ -5,16 +5,38 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-01-12T07:20:00Z</updated>
+  <updated>2014-01-15T14:50:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>渋谷.rb[:20140115]に参加してきた</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/15/shibuyarb-20140115/"/>
+    <id>http://blog.fukayatsu.com/2014/01/15/shibuyarb-20140115/</id>
+    <published>2014-01-15T14:50:00Z</published>
+    <updated>2014-01-15T14:58:13+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a href="http://togetter.com/li/616609"&gt;渋谷.rb[:20140115]のまとめ #shibuyarb - Togetterまとめ&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;AJITO最高&lt;/li&gt;
+&lt;li&gt;Fitbitが欲しくなった&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git clone https://github.com/ruby/www.ruby-lang.org.git&lt;/code&gt;した&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://theta360.com/s/6AF"&gt;全天球画像 | RICOH THETA&lt;/a&gt;すげー&lt;/li&gt;
+&lt;li&gt;LTした&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script async class="speakerdeck-embed" data-id="3e4bb5206002013193892a4592a1f90c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+</content>
+  </entry>
   <entry>
     <title>Raspberry Piを使ってトイレの空き情報を確認できるようにした</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/12/rest-room-api/"/>
     <id>http://blog.fukayatsu.com/2014/01/12/rest-room-api/</id>
     <published>2014-01-12T07:20:00Z</published>
-    <updated>2014-01-12T18:05:42+00:00</updated>
+    <updated>2014-01-15T14:58:13+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -252,7 +274,7 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/"/>
     <id>http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/</id>
     <published>2014-01-10T12:26:00Z</published>
-    <updated>2014-01-12T18:05:42+00:00</updated>
+    <updated>2014-01-15T14:58:13+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -293,7 +315,7 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/07/alfred-memo/"/>
     <id>http://blog.fukayatsu.com/2014/01/07/alfred-memo/</id>
     <published>2014-01-07T13:28:00Z</published>
-    <updated>2014-01-12T18:05:42+00:00</updated>
+    <updated>2014-01-15T14:58:13+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -324,7 +346,7 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/"/>
     <id>http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/</id>
     <published>2014-01-05T00:45:00Z</published>
-    <updated>2014-01-12T18:05:42+00:00</updated>
+    <updated>2014-01-15T14:58:13+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -384,7 +406,7 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/"/>
     <id>http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/</id>
     <published>2014-01-03T07:54:00Z</published>
-    <updated>2014-01-12T18:05:42+00:00</updated>
+    <updated>2014-01-15T14:58:13+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -403,18 +425,6 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
 
 &lt;p&gt;これを入れておくとファイル保存時に&lt;code&gt;go fmt&lt;/code&gt;を自動的に実行してくれたり、&lt;br&gt;
 いい感じに入力補完もしてくれて便利。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>ifttt連携のテスト</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/02/ifttt/"/>
-    <id>http://blog.fukayatsu.com/2014/01/02/ifttt/</id>
-    <published>2014-01-02T07:15:00Z</published>
-    <updated>2014-01-12T18:05:42+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;img src="/images/2014-01-02-1388646962_1.png" /&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
