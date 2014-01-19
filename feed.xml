@@ -5,16 +5,94 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-01-15T14:50:00Z</updated>
+  <updated>2014-01-19T12:47:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>RPiとHipchatでインターホン作った</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/19/intercom-using-raspberry-pi-and-hipchat/"/>
+    <id>http://blog.fukayatsu.com/2014/01/19/intercom-using-raspberry-pi-and-hipchat/</id>
+    <published>2014-01-19T12:47:00Z</published>
+    <updated>2014-01-19T12:49:17+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;p&gt;オフィスにインターホンがないので作った。&lt;/p&gt;
+
+&lt;h2&gt;配線図&lt;/h2&gt;
+
+&lt;p&gt;&lt;img alt="w50" src="/images/2014-01-19-1390133638_1.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;左のスイッチがメインのスイッチで、右のスイッチがシャットダウンスイッチ。あとカメラモジュール。&lt;/p&gt;
+
+&lt;h2&gt;組み立て&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;今回は配線が見えないように白いケースを使った。&lt;br&gt;
+&lt;img alt="w50" src="/images/2014-01-19-1390133850_1.jpg" /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;青いスイッチがメインスイッチ(人を呼ぶやつ)&lt;br&gt;
+&lt;img alt="w50" src="/images/2014-01-19-1390133971_1.jpg" /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;右下の黒いスイッチはシャットダウン用&lt;br&gt;
+&lt;img alt="w50" src="/images/2014-01-19-1390134001_1.jpg" /&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-4FUK"&gt;Ｓｅｅｅｄ Ｓｔｕｄｉｏ ８０００５１００１ Ｒａｓｐｂｅｒｒｙ　Ｐｉ用　短いｍｉｃｒｏＳＤカードアダプタ　【スライドロック式】&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;今回はこれとmicro SDカードを使った。ケースからはみ出なくてよい。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;ソースコード&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/pintercom"&gt;fukayatsu/pintercom&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;あれな話&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/jwhitehorn/pi_piper"&gt;jwhitehorn/pi_piper&lt;/a&gt;でうまく内部のpull-up抵抗が使えてないようだったので、直接コマンドを実行してpull-up状態にしている。
+
+&lt;ul&gt;
+&lt;li&gt;TODO: あとでソースコード追ってみる&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Hipchatに画像ファイルをuploadする公式APIがあってもいい気がする。
+
+&lt;ul&gt;
+&lt;li&gt;内部的にはあるっぽい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;動作テストの様子&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;青いボタンを押すと、こんな感じでhipchatに書き込まれる
+&lt;img alt="w50" src="/images/2014-01-19-1390133726_1.png" /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;@here&lt;/code&gt;を使ってそのroomにいる人にだけ通知するようにしているので、&lt;br&gt;
+対応できる人がそのroomに入ってくれるといいかんじだと思う。&lt;/p&gt;
+
+&lt;h2&gt;雑感&lt;/h2&gt;
+
+&lt;p&gt;もうちょっとテストしてオフィスの玄関付近に置こうと思うけど、&lt;br&gt;
+近くにコンセントがないのでどうやって電源にアクセスするかを考えている。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.jp/iBUFFALO-Arvel-USB%E5%BB%B6%E9%95%B7%E3%82%B9%E3%83%AA%E3%83%A0%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB-%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88-AUSE20WH/dp/B000G2XTW8/ref=cm_lmf_tit_15"&gt;Amazon.co.jp： iBUFFALO Arvel USB延長スリムケーブル 1.5M ホワイト AUSE15WH: パソコン・周辺機器&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;こういうのを使うのもありかもしれない&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>渋谷.rb[:20140115]に参加してきた</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/15/shibuyarb-20140115/"/>
     <id>http://blog.fukayatsu.com/2014/01/15/shibuyarb-20140115/</id>
     <published>2014-01-15T14:50:00Z</published>
-    <updated>2014-01-15T14:58:13+00:00</updated>
+    <updated>2014-01-19T12:49:17+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -36,7 +114,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/12/rest-room-api/"/>
     <id>http://blog.fukayatsu.com/2014/01/12/rest-room-api/</id>
     <published>2014-01-12T07:20:00Z</published>
-    <updated>2014-01-15T14:58:13+00:00</updated>
+    <updated>2014-01-19T12:49:17+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -274,7 +352,7 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/"/>
     <id>http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/</id>
     <published>2014-01-10T12:26:00Z</published>
-    <updated>2014-01-15T14:58:13+00:00</updated>
+    <updated>2014-01-19T12:49:17+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -315,7 +393,7 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/07/alfred-memo/"/>
     <id>http://blog.fukayatsu.com/2014/01/07/alfred-memo/</id>
     <published>2014-01-07T13:28:00Z</published>
-    <updated>2014-01-15T14:58:13+00:00</updated>
+    <updated>2014-01-19T12:49:17+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -346,7 +424,7 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/"/>
     <id>http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/</id>
     <published>2014-01-05T00:45:00Z</published>
-    <updated>2014-01-15T14:58:13+00:00</updated>
+    <updated>2014-01-19T12:49:17+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -399,32 +477,6 @@ $ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
 
 &lt;p&gt;fukayatsu/scpm&lt;br&gt;
 &lt;a href="https://github.com/fukayatsu/scpm"&gt;https://github.com/fukayatsu/scpm&lt;/a&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>sublime text 3でgolangを実行(go run)する</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/"/>
-    <id>http://blog.fukayatsu.com/2014/01/03/go-run-with-st3/</id>
-    <published>2014-01-03T07:54:00Z</published>
-    <updated>2014-01-15T14:58:13+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;p&gt;Tools &amp;gt; Build System &amp;gt; New Build System... でこんな感じに設定する。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Go.sublime-build&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="highlight javascript"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="c1"&gt;// &amp;quot;cmd&amp;quot;: [&amp;quot;go&amp;quot;, &amp;quot;run&amp;quot;, $file], // for sublime text 2
-&lt;/span&gt;  &lt;span class="s2"&gt;&amp;quot;shell_cmd&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;go run $file&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-  &lt;span class="s2"&gt;&amp;quot;selector&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;source.go&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;
-&lt;p&gt;もしくは、&lt;a href="https://github.com/DisposaBoy/GoSublime"&gt;DisposaBoy/GoSublime&lt;/a&gt;をインストールする。&lt;/p&gt;
-
-&lt;p&gt;これを入れておくとファイル保存時に&lt;code&gt;go fmt&lt;/code&gt;を自動的に実行してくれたり、&lt;br&gt;
-いい感じに入力補完もしてくれて便利。&lt;/p&gt;
 </content>
   </entry>
 </feed>
