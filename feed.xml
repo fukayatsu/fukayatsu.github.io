@@ -5,16 +5,68 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-01-19T12:47:00Z</updated>
+  <updated>2014-01-25T08:40:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>ダンボールでRaspberry Piのケースを作った</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/25/raspberry-danbo/"/>
+    <id>http://blog.fukayatsu.com/2014/01/25/raspberry-danbo/</id>
+    <published>2014-01-25T08:40:00Z</published>
+    <updated>2014-01-25T08:42:37+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src="/images/2014-01-25-1390637736_1.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/2014-01-25-1390637736_2.jpg" /&gt;&lt;/p&gt;
+
+&lt;h2&gt;材料&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;amazonのダンボール&lt;/li&gt;
+&lt;li&gt;瞬間接着剤&lt;/li&gt;
+&lt;li&gt;被覆された針金的なもの
+
+&lt;ul&gt;
+&lt;li&gt;頭と胴体とかをつなぐため&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;サイズ[cm]&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;頭: w10 x h7 x d7
+
+&lt;ul&gt;
+&lt;li&gt;wifiのusbドングルを使うことを考えると、w11の方がよかった。&lt;/li&gt;
+&lt;li&gt;SDカードもはみ出さないやつを使う必要がある&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;胴体: w5 x h5.5 x d5&lt;/li&gt;
+&lt;li&gt;手: w2 x h7.5 x d2&lt;/li&gt;
+&lt;li&gt;足: w2 x h4 x d4.5&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;顔がでかい気がするので、他のパーツをもう少し大きくしてもいいかもしれない&lt;/p&gt;
+
+&lt;h2&gt;TODO&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;目が光るようにする
+
+&lt;ul&gt;
+&lt;li&gt;穴を空けて黒っぽいフィルムを貼って裏にLEDを設置する&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>RPiとHipchatでインターホン作った</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/19/intercom-using-raspberry-pi-and-hipchat/"/>
     <id>http://blog.fukayatsu.com/2014/01/19/intercom-using-raspberry-pi-and-hipchat/</id>
     <published>2014-01-19T12:47:00Z</published>
-    <updated>2014-01-19T12:49:17+00:00</updated>
+    <updated>2014-01-25T08:42:37+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -92,7 +144,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/15/shibuyarb-20140115/"/>
     <id>http://blog.fukayatsu.com/2014/01/15/shibuyarb-20140115/</id>
     <published>2014-01-15T14:50:00Z</published>
-    <updated>2014-01-19T12:49:17+00:00</updated>
+    <updated>2014-01-25T08:42:37+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -114,7 +166,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/12/rest-room-api/"/>
     <id>http://blog.fukayatsu.com/2014/01/12/rest-room-api/</id>
     <published>2014-01-12T07:20:00Z</published>
-    <updated>2014-01-19T12:49:17+00:00</updated>
+    <updated>2014-01-25T08:42:37+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -352,7 +404,7 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/"/>
     <id>http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/</id>
     <published>2014-01-10T12:26:00Z</published>
-    <updated>2014-01-19T12:49:17+00:00</updated>
+    <updated>2014-01-25T08:42:37+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -393,7 +445,7 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/07/alfred-memo/"/>
     <id>http://blog.fukayatsu.com/2014/01/07/alfred-memo/</id>
     <published>2014-01-07T13:28:00Z</published>
-    <updated>2014-01-19T12:49:17+00:00</updated>
+    <updated>2014-01-25T08:42:37+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -417,66 +469,6 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
 &lt;h1&gt;雑感&lt;/h1&gt;
 
 &lt;p&gt;自分の環境に最適化されている(Dropbox pathとかSublime Text 3とか)ので、他の人が使う場合はworkflowの編集が必要。気が向いたら汎用化するかもしれない。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Homebrewでフォントをインストールする</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/"/>
-    <id>http://blog.fukayatsu.com/2014/01/05/install-fonts-using-homebrew/</id>
-    <published>2014-01-05T00:45:00Z</published>
-    <updated>2014-01-19T12:49:17+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;img src="/images/2014-01-05-1388885346_1.png" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="/2013/11/03/merge-fonts/"&gt;半角:全角==1:2な等幅フォントを作る(2013/11/03)&lt;/a&gt;で、&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;TODO&lt;br&gt;
-  　generator公開&lt;br&gt;
-  　　素材用のフォントを自動的にダウンロードしてフォント生成するやつを作りたい&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;と書いたが、これをhomebrewのformulaにした。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/homebrew-font"&gt;fukayatsu/homebrew-font&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;Usage&lt;/h1&gt;
-&lt;pre class="highlight text"&gt;$ brew tap fukayatsu/font
-$ brew install scpm
-$ cp -f /usr/local/Cellar/scpm/[VERSION]/share/fonts/SCPM*.ttf ~/Library/Fonts/
-&lt;/pre&gt;
-&lt;h1&gt;感想&lt;/h1&gt;
-
-&lt;p&gt;初めてhomebrewのformulaを書いたが、 &amp;quot;See also&amp;quot; で挙げているところを参考にしてわりと簡単に出来た。先人に感謝。&lt;/p&gt;
-
-&lt;p&gt;fontforgeのスクリプトやhomebrewの作法はまだ深追いしていないので、理解を深めていきたい。&lt;br&gt;
-例えば&amp;quot;Usage&amp;quot;の最後の&lt;code&gt;cp&lt;/code&gt;をformulaに含めていいのかどうかとか迷っている。&lt;/p&gt;
-
-&lt;p&gt;zipやtarballをダウンロードして、解凍して、スクリプトを実行して、生成物を配置するまでがさくっと自動化出来るのは気持ちが良い。今年はいくつかformula書くと思う。&lt;/p&gt;
-
-&lt;h1&gt;See also&lt;/h1&gt;
-
-&lt;p&gt;これは便利！Homebrewに追加されたtapコマンドはリポジトリを追加して簡単にフォーミュラを増やせる | Macとかの雑記帳&lt;br&gt;
-&lt;a href="http://tukaikta.blog135.fc2.com/blog-entry-204.html"&gt;http://tukaikta.blog135.fc2.com/blog-entry-204.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;brew install ricty | 實松アウトプット&lt;br&gt;
-&lt;a href="http://sanematsu.wordpress.com/2013/05/11/brew-install-ricty/"&gt;http://sanematsu.wordpress.com/2013/05/11/brew-install-ricty/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;sanemat/homebrew-font&lt;br&gt;
-&lt;a href="https://github.com/sanemat/homebrew-font"&gt;https://github.com/sanemat/homebrew-font&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;MasayukiFukada/CodeMFont&lt;br&gt;
-&lt;a href="https://github.com/MasayukiFukada/CodeMFont"&gt;https://github.com/MasayukiFukada/CodeMFont&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;fukayatsu/homebrew-font&lt;br&gt;
-&lt;a href="https://github.com/fukayatsu/homebrew-font"&gt;https://github.com/fukayatsu/homebrew-font&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;fukayatsu/scpm&lt;br&gt;
-&lt;a href="https://github.com/fukayatsu/scpm"&gt;https://github.com/fukayatsu/scpm&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
