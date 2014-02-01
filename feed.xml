@@ -5,16 +5,46 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-01-25T08:40:00Z</updated>
+  <updated>2014-02-01T14:00:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>Raspberry Piとスピーカーの置き場所</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/02/01/raspbery-pi-and-speaker/"/>
+    <id>http://blog.fukayatsu.com/2014/02/01/raspbery-pi-and-speaker/</id>
+    <published>2014-02-01T14:00:00Z</published>
+    <updated>2014-02-01T14:13:13+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;p&gt;エアコンの脇に収めてみた。主に&lt;a href="http://www.shoutcast.com/"&gt;SHOUTcast Radio&lt;/a&gt;用。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/2014-02-01-1391261937_1.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;これはbluetoothスピーカーだけど、ゼロ距離なのでRPiとはステレオミニプラグケーブルで接続している。そもそもRPiと手持ちのbluetoothスピーカーを安定してA2DPで接続するのがまだうまくいっていない。&lt;/p&gt;
+
+&lt;p&gt;この場所に置くのは、邪魔にならないとか電源が近いとか結構利点がある。ただ地震とかあった場合落下の危険があるので一応ヒモ的なもので固定はしてある。&lt;/p&gt;
+
+&lt;h2&gt;&lt;/h2&gt;
+
+&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00A9Q2076" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;このスピーカー、当初思ってたより結構小さかった。最初はこれを分解して、RPiを内蔵させるつもりだったけどケースを壊さずにやるのは難しそうだったのでやめた。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.amazon.co.jp/dp/B0051649KK"&gt;Creative D80&lt;/a&gt;の方はこれより二回りぐらい大きく、わりと余裕を持ってRPiが入る。&lt;/p&gt;
+
+&lt;p&gt;　&lt;/p&gt;
+
+&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00B8ODP8G" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;
+</content>
+  </entry>
   <entry>
     <title>ダンボールでRaspberry Piのケースを作った</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/25/raspberry-danbo/"/>
     <id>http://blog.fukayatsu.com/2014/01/25/raspberry-danbo/</id>
     <published>2014-01-25T08:40:00Z</published>
-    <updated>2014-01-25T08:42:37+00:00</updated>
+    <updated>2014-02-01T14:13:13+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -66,7 +96,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/19/intercom-using-raspberry-pi-and-hipchat/"/>
     <id>http://blog.fukayatsu.com/2014/01/19/intercom-using-raspberry-pi-and-hipchat/</id>
     <published>2014-01-19T12:47:00Z</published>
-    <updated>2014-01-25T08:42:37+00:00</updated>
+    <updated>2014-02-01T14:13:13+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -144,7 +174,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/15/shibuyarb-20140115/"/>
     <id>http://blog.fukayatsu.com/2014/01/15/shibuyarb-20140115/</id>
     <published>2014-01-15T14:50:00Z</published>
-    <updated>2014-01-25T08:42:37+00:00</updated>
+    <updated>2014-02-01T14:13:13+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -166,7 +196,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/12/rest-room-api/"/>
     <id>http://blog.fukayatsu.com/2014/01/12/rest-room-api/</id>
     <published>2014-01-12T07:20:00Z</published>
-    <updated>2014-01-25T08:42:37+00:00</updated>
+    <updated>2014-02-01T14:13:13+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -404,7 +434,7 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/"/>
     <id>http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/</id>
     <published>2014-01-10T12:26:00Z</published>
-    <updated>2014-01-25T08:42:37+00:00</updated>
+    <updated>2014-02-01T14:13:13+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -438,37 +468,6 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
 &lt;li&gt;turbolinksとnprogressの相性がよい&lt;/li&gt;
 &lt;li&gt;普段からrailsでturbolinksを使っているものの、何故か静的サイトでturbolinksを使うという発想が無かった。&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>alfredでメモを書くworkflowを作った</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/07/alfred-memo/"/>
-    <id>http://blog.fukayatsu.com/2014/01/07/alfred-memo/</id>
-    <published>2014-01-07T13:28:00Z</published>
-    <updated>2014-01-25T08:42:37+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/alfred-memo"&gt;fukayatsu/alfred-memo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;利用イメージ&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;m &amp;lt;memo&amp;gt; + Enter&lt;/code&gt;でメモを追加&lt;br&gt;
-&lt;img alt="w50" src="https://f.cloud.github.com/assets/1041857/1859184/69411356-779e-11e3-9d0e-6dacd546a9a4.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;追加されると通知される&lt;br&gt;
-&lt;img alt="w50" src="https://f.cloud.github.com/assets/1041857/1859186/6942237c-779e-11e3-9a88-ba2f62aaa48b.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;その日のメモを一覧する時は引数なしで&lt;code&gt;m + Enter&lt;/code&gt;&lt;br&gt;
-&lt;img alt="w50" src="https://f.cloud.github.com/assets/1041857/1859190/845798e0-779e-11e3-8a93-6593e8a8413d.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;エディタが立ち上がる&lt;br&gt;
-&lt;img alt="ss 2014-01-07 at 22 19 30" src="https://f.cloud.github.com/assets/1041857/1859185/69412ef4-779e-11e3-8577-39bd44d76444.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;雑感&lt;/h1&gt;
-
-&lt;p&gt;自分の環境に最適化されている(Dropbox pathとかSublime Text 3とか)ので、他の人が使う場合はworkflowの編集が必要。気が向いたら汎用化するかもしれない。&lt;/p&gt;
 </content>
   </entry>
 </feed>
