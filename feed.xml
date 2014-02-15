@@ -5,16 +5,60 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-02-01T14:00:00Z</updated>
+  <updated>2014-02-15T12:15:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>GoogleCalendarで家電を制御するようにした</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/02/15/home-automation-with-google-calendar/"/>
+    <id>http://blog.fukayatsu.com/2014/02/15/home-automation-with-google-calendar/</id>
+    <published>2014-02-15T12:15:00Z</published>
+    <updated>2014-02-15T12:18:38+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;p&gt;以前からhipchatやcommand line, 音声認識で家電を制御していたものの、結局おおよその生活パターンで前もってスケジューリングしておくのが多少効率は悪いが一番楽という結論に至った。&lt;/p&gt;
+
+&lt;p&gt;特に朝に暖房を入れたり照明をつけるのは、気持よく起きることが出来てよい。&lt;/p&gt;
+
+&lt;p&gt;以前の実装では家電の動作スケジュールを変えるにはコードで反映するしか無かったので、今回は柔軟にスケジュールを記述できるようにgoogle calendarを使った。繰り返し設定や平日のみの指定ができ、状況が可視化されるので便利だった。&lt;/p&gt;
+
+&lt;p&gt;あと今までmacbook airを自宅サーバにしていていろいろもったいなかったので、Raspberry Piに切り替えた。&lt;/p&gt;
+
+&lt;h2&gt;構成図&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="/images/2014-02-15-1392464792_1.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;chrome appとweb appは今まで使っていたものをほとんどそのまま流用した&lt;/p&gt;
+
+&lt;h2&gt;家電用カレンダー&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src="/images/2014-02-15-1392465592_1.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;イベント名のところに&lt;code&gt;[device]:[command]&lt;/code&gt;の形式で書いておくと、イベントの開始時にそのコマンドを実行するようにした。また、イベントの終了時間には&lt;code&gt;[device]:off&lt;/code&gt;コマンドが自動的に実行される。&lt;/p&gt;
+
+&lt;p&gt;(スクリーンショットではデバッグの為に&lt;code&gt;[device]:off&lt;/code&gt;イベントが設定されてあるが、本来は必要ない)&lt;/p&gt;
+
+&lt;h2&gt;リポジトリ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/fukayatsu/he"&gt;fukayatsu/he&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;雑感&lt;/h2&gt;
+
+&lt;p&gt;コマンドをすべてSQS経由にすることで、かなり実装がシンプルになった。&lt;/p&gt;
+
+&lt;p&gt;herokuを介すとボタンを押してから家電が反応するまでに約1秒ぐらい掛かるので、chrome appは直接SQSにキューイングするのもいいかもしれない。HerokuにTokyoリージョンあったらなー&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Raspberry Piとスピーカーの置き場所</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/02/01/raspbery-pi-and-speaker/"/>
     <id>http://blog.fukayatsu.com/2014/02/01/raspbery-pi-and-speaker/</id>
     <published>2014-02-01T14:00:00Z</published>
-    <updated>2014-02-01T14:13:13+00:00</updated>
+    <updated>2014-02-15T12:18:38+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -44,7 +88,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/25/raspberry-danbo/"/>
     <id>http://blog.fukayatsu.com/2014/01/25/raspberry-danbo/</id>
     <published>2014-01-25T08:40:00Z</published>
-    <updated>2014-02-01T14:13:13+00:00</updated>
+    <updated>2014-02-15T12:18:38+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -96,7 +140,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/19/intercom-using-raspberry-pi-and-hipchat/"/>
     <id>http://blog.fukayatsu.com/2014/01/19/intercom-using-raspberry-pi-and-hipchat/</id>
     <published>2014-01-19T12:47:00Z</published>
-    <updated>2014-02-01T14:13:13+00:00</updated>
+    <updated>2014-02-15T12:18:38+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -174,7 +218,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/15/shibuyarb-20140115/"/>
     <id>http://blog.fukayatsu.com/2014/01/15/shibuyarb-20140115/</id>
     <published>2014-01-15T14:50:00Z</published>
-    <updated>2014-02-01T14:13:13+00:00</updated>
+    <updated>2014-02-15T12:18:38+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -196,7 +240,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/12/rest-room-api/"/>
     <id>http://blog.fukayatsu.com/2014/01/12/rest-room-api/</id>
     <published>2014-01-12T07:20:00Z</published>
-    <updated>2014-02-01T14:13:13+00:00</updated>
+    <updated>2014-02-15T12:18:38+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -426,47 +470,6 @@ su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/
 &lt;ul&gt;
 &lt;li&gt;週明けになる見込み&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>ブログにturbolinksとnprogressを適用した</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/"/>
-    <id>http://blog.fukayatsu.com/2014/01/10/turbolinks-and-nprogress/</id>
-    <published>2014-01-10T12:26:00Z</published>
-    <updated>2014-02-01T14:13:13+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/rails/turbolinks"&gt;rails/turbolinks&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ざっくり言うとページ遷移をajaxに置き換えて高速化してくれる。&lt;/li&gt;
-&lt;li&gt;rails4からの標準機能。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/rstacruz/nprogress"&gt;rstacruz/nprogress&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://tecuration.com/2013/09/nprogress"&gt;YouTube風のページローダーを実装する「NProgress.js」 - Tecuration .com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;プログレスバーの発動タイミングはnprogressのreadmeの例をそのまま使っている↓&lt;/p&gt;
-&lt;pre class="highlight javascript"&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;page:fetch&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;   &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;NProgress&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
-&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;page:change&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;NProgress&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;done&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
-&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;page:restore&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;NProgress&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
-&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/fukayatsu.github.io/compare/9e9a51831195d7c8a03cf2500ffa7e2cd576aaab...e7e124020bf24e98c2cfee15b0c34cbe9bdadf1d"&gt;変更の詳細&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;雑感&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ページ遷移が速く(感じるように)なって、かなり快適になった。&lt;/li&gt;
-&lt;li&gt;turbolinksとnprogressの相性がよい&lt;/li&gt;
-&lt;li&gt;普段からrailsでturbolinksを使っているものの、何故か静的サイトでturbolinksを使うという発想が無かった。&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>

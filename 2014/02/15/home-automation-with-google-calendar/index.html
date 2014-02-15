@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+<link href='/stylesheets/all.css?1384954982' media='all' rel='stylesheet' type='text/css'>
+<link href='/images/favicon.ico' rel='icon' type='image/ico'>
+<title>
+GoogleCalendarで家電を制御するようにした - fukayatsu.dev
+</title>
+<script src="/javascripts/all.js" type="text/javascript"></script>
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36253613-1']);
+  _gaq.push(['_setDomainName', 'blog.fukayatsu.com']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+<div class='content'>
+<header>
+<div class='header-inner'>
+<div class='header-image'>
+<a href="/"><img src='/images/fukayatsu.jpg'>
+</a>
+</div>
+<div class='header-text'>
+<a href="/"><h1 class='header-title'>
+fukayatsu.dev
+</h1>
+</a>
+<a target="_new" href="http://blog.fukayatsu.com/"><p class='header-description'>
+under development
+</p>
+</a>
+</div>
+</div>
+</header>
+<div class='publish-date'>
+<a href="/2014/02/15/home-automation-with-google-calendar/">2014-02-15 21:15:00 +0900</a>
+</div>
+<div class='tags'>
+<a href="/tags/raspberry-pi/">raspberry-pi</a>
+<a href="/tags/google-calendar/">google-calendar</a>
+<a href="/tags/sqs/">sqs</a>
+<a href="/tags/iremocon/">iremocon</a>
+<a href="/tags/heroku/">heroku</a>
+</div>
+<div id='main' role='main'>
+<h1 class='title'>GoogleCalendarで家電を制御するようにした</h1>
+<p>以前からhipchatやcommand line, 音声認識で家電を制御していたものの、結局おおよその生活パターンで前もってスケジューリングしておくのが多少効率は悪いが一番楽という結論に至った。</p>
+
+<p>特に朝に暖房を入れたり照明をつけるのは、気持よく起きることが出来てよい。</p>
+
+<p>以前の実装では家電の動作スケジュールを変えるにはコードで反映するしか無かったので、今回は柔軟にスケジュールを記述できるようにgoogle calendarを使った。繰り返し設定や平日のみの指定ができ、状況が可視化されるので便利だった。</p>
+
+<p>あと今までmacbook airを自宅サーバにしていていろいろもったいなかったので、Raspberry Piに切り替えた。</p>
+
+<h2>構成図</h2>
+
+<p><img src="/images/2014-02-15-1392464792_1.jpg" /></p>
+
+<p>chrome appとweb appは今まで使っていたものをほとんどそのまま流用した</p>
+
+<h2>家電用カレンダー</h2>
+
+<p><img src="/images/2014-02-15-1392465592_1.png" /></p>
+
+<p>イベント名のところに<code>[device]:[command]</code>の形式で書いておくと、イベントの開始時にそのコマンドを実行するようにした。また、イベントの終了時間には<code>[device]:off</code>コマンドが自動的に実行される。</p>
+
+<p>(スクリーンショットではデバッグの為に<code>[device]:off</code>イベントが設定されてあるが、本来は必要ない)</p>
+
+<h2>リポジトリ</h2>
+
+<ul>
+<li><a href="https://github.com/fukayatsu/he">fukayatsu/he</a></li>
+</ul>
+
+<h2>雑感</h2>
+
+<p>コマンドをすべてSQS経由にすることで、かなり実装がシンプルになった。</p>
+
+<p>herokuを介すとボタンを押してから家電が反応するまでに約1秒ぐらい掛かるので、chrome appは直接SQSにキューイングするのもいいかもしれない。HerokuにTokyoリージョンあったらなー</p>
+
+</div>
+<footer>
+<div class='footer-inner'>
+<p class='copyright'>
+<a target="_new" href="https:/twitter.com/fukayatsu">© fukayatsu</a>
+</p>
+<p class='powerd'>
+Powered by
+<a target="_new" href="https://github.com/fukayatsu/fukayatsu.github.io/tree/source">GitHub</a>
+&
+<a target="_new" href="https://travis-ci.org/fukayatsu/fukayatsu.github.io">Travis CI</a>
+&
+<a target="_new" href="http://middlemanapp.com/">Middleman</a>
+</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
