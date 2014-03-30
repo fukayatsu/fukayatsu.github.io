@@ -1,7 +1,7 @@
 # If you have OpenSSL installed, we recommend updating
 # the following line to use "https"
 source 'http://rubygems.org'
-ruby '2.1.0'
+ruby '2.1.1'
 
 gem "middleman"      #github: 'fukayatsu/middleman',      branch: 'utf-8-mac'
 gem "middleman-blog" #github: 'fukayatsu/middleman-blog', branch: 'non-ascii-tag'
