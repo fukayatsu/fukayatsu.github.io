@@ -5,16 +5,105 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-02-15T12:15:00Z</updated>
+  <updated>2014-04-15T00:30:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>NUboard用ホワイトボードマーカーを自作した</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/04/15/custom-whiteboard-marker/"/>
+    <id>http://blog.fukayatsu.com/2014/04/15/custom-whiteboard-marker/</id>
+    <published>2014-04-15T00:30:00Z</published>
+    <updated>2014-04-15T00:35:17+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;p&gt;超細いマーカーを(使って|作って)みたかった&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;ホワイトボードマーカを自作してる &lt;a href="http://t.co/x7BEDw1xMg"&gt;pic.twitter.com/x7BEDw1xMg&lt;/a&gt;&lt;/p&gt;&amp;mdash; ふかなんとか (@fukayatsu) &lt;a href="https://twitter.com/fukayatsu/statuses/455182585593741313"&gt;April 13, 2014&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;進捗です &lt;a href="http://t.co/a1yQLJ2oGi"&gt;pic.twitter.com/a1yQLJ2oGi&lt;/a&gt;&lt;/p&gt;&amp;mdash; ふかなんとか (@fukayatsu) &lt;a href="https://twitter.com/fukayatsu/statuses/455187646315114497"&gt;April 13, 2014&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;&lt;a href="http://t.co/EYoZ3JqdPw"&gt;pic.twitter.com/EYoZ3JqdPw&lt;/a&gt;&lt;/p&gt;&amp;mdash; ふかなんとか (@fukayatsu) &lt;a href="https://twitter.com/fukayatsu/statuses/455505237000744960"&gt;April 14, 2014&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;h2&gt;先人の教え&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://staff.live2d.com/archives/54589084.html"&gt;「NUboard」使い必見！ホワイトボード好きのための超極細ホワイトボードマーカー作成講座（本編） : Live2Dスタッフブログ♪&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;必要なことはだいたいここに書いてある&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;材料&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.jp/%E3%82%B5%E3%82%AF%E3%83%A9%E3%82%AF%E3%83%AC%E3%83%91%E3%82%B9-%E3%83%94%E3%82%B0%E3%83%9E-01-ESDK01%EF%BC%8349-%E9%BB%92/dp/B001GR4C6E/ref=sr_1_2?ie=UTF8&amp;amp;amp;qid=1397521023&amp;amp;amp;sr=8-2&amp;amp;amp;keywords=pigma+0.1"&gt;Amazon.co.jp： サクラクレパス ピグマ 01 ESDK01＃49 黒: 文房具・オフィス用品&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.jp/%E4%B8%89%E8%8F%B1%E9%89%9B%E7%AD%86-%E6%B0%B4%E6%80%A7%E3%82%B5%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%B3-0-1mm-PIN-PIN%EF%BC%8D101/dp/B006CQWFR2/ref=sr_1_3?ie=UTF8&amp;amp;amp;qid=1397521445&amp;amp;amp;sr=8-3&amp;amp;amp;keywords=uni+pin"&gt;Amazon.co.jp： 三菱鉛筆 水性サインペン 0.1mm PIN PIN-101 黒: おもちゃ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.jp/%E6%97%A5%E6%9C%AC%E7%90%86%E5%8C%96%E5%AD%A6-DMS-RG-%E3%83%80%E3%82%B9%E3%83%88%E3%83%AC%E3%82%B9%E9%BB%92%E6%9D%BF%E6%8B%AD%E3%81%8D%E3%82%B9%E3%83%88%E3%83%A9%E3%83%83%E3%83%97-%E6%A9%99-DMD-RG/dp/B004ZON53Q/ref=sr_1_2?ie=UTF8&amp;amp;amp;qid=1397520990&amp;amp;amp;sr=8-2&amp;amp;amp;keywords=%E3%82%B9%E3%83%88%E3%83%A9%E3%83%83%E3%83%97%E3%80%80%E9%BB%92%E6%9D%BF%E6%B6%88%E3%81%97"&gt;Amazon.co.jp： 日本理化学 ダストレス黒板拭きストラップ 橙 DMD-RG: 文房具・オフィス用品&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.jp/%E3%82%B3%E3%82%AF%E3%83%A8-%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%E7%94%A8%E3%83%9E%E3%83%BC%E3%82%AB%E3%83%BC-%E8%A3%9C%E5%85%85%E7%94%A8%E3%82%A4%E3%83%B3%E3%82%AF-%E9%BB%92-PMR-B10D/dp/B0012R11JO/ref=sr_1_2?ie=UTF8&amp;amp;amp;qid=1397521058&amp;amp;amp;sr=8-2&amp;amp;amp;keywords=%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%E3%83%9E%E3%83%BC%E3%82%AB%E3%83%BC%E3%80%80%E3%82%A4%E3%83%B3%E3%82%AF"&gt;Amazon.co.jp： コクヨ ホワイトボード用マーカー 補充用インク 黒 PMR-B10D: 文房具・オフィス用品&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.jp/%E6%AC%A7%E6%96%87%E5%8D%B0%E5%88%B7-NGSH11FN08-CANSAY-NUboard-%E6%96%B0%E6%9B%B8%E5%88%A4/dp/B009LB49WE/ref=sr_1_1?ie=UTF8&amp;amp;amp;qid=1397521424&amp;amp;amp;sr=8-1&amp;amp;amp;keywords=nuboard+%E6%96%B0%E6%9B%B8"&gt;Amazon.co.jp： CANSAY NUboard 新書判: 文房具・オフィス用品&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;得られた知見&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;最初インクが出ないからと言ってキャップを外したままペンを振ると大変なことになる
+
+&lt;ul&gt;
+&lt;li&gt;ティッシュをペン先に当てれば毛細管現象で水分が移動するのでおとなしくそうする&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Uni PINより、PIGMAの方が改造向き
+
+&lt;ul&gt;
+&lt;li&gt;インクの出が良い&lt;/li&gt;
+&lt;li&gt;分解しやすい&lt;/li&gt;
+&lt;li&gt;芯を外しやすい&lt;/li&gt;
+&lt;li&gt;芯が乾きやすい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;わりと大雑把に作ってもちゃんと書けるものができる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;ちゃんと使えるものができてよかった&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>TokyuRuby会議07で酔っ払ったりLTしたりした</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/03/30/tqrk07/"/>
+    <id>http://blog.fukayatsu.com/2014/03/30/tqrk07/</id>
+    <published>2014-03-30T14:55:00Z</published>
+    <updated>2014-04-15T00:35:17+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src="/images/2014-03-30-1396190949_1.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;プレモルが無限に出てくるからしょうが無い&lt;/p&gt;
+
+&lt;p&gt;まとめはこちらを御覧ください(飯テロ注意)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://togetter.com/li/648499"&gt;TokyuRubyKaigi07 #tqrk07 - Togetterまとめ&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;酔っ払ってLTした資料はこちらです&lt;/p&gt;
+
+&lt;script async class="speakerdeck-embed" data-id="8f955110993f01313e54426a9381af41" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;現場からは以上です。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>GoogleCalendarで家電を制御するようにした</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/02/15/home-automation-with-google-calendar/"/>
     <id>http://blog.fukayatsu.com/2014/02/15/home-automation-with-google-calendar/</id>
     <published>2014-02-15T12:15:00Z</published>
-    <updated>2014-02-15T12:18:38+00:00</updated>
+    <updated>2014-04-15T00:35:17+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -58,7 +147,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/02/01/raspbery-pi-and-speaker/"/>
     <id>http://blog.fukayatsu.com/2014/02/01/raspbery-pi-and-speaker/</id>
     <published>2014-02-01T14:00:00Z</published>
-    <updated>2014-02-15T12:18:38+00:00</updated>
+    <updated>2014-04-15T00:35:17+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -88,7 +177,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/25/raspberry-danbo/"/>
     <id>http://blog.fukayatsu.com/2014/01/25/raspberry-danbo/</id>
     <published>2014-01-25T08:40:00Z</published>
-    <updated>2014-02-15T12:18:38+00:00</updated>
+    <updated>2014-04-15T00:35:17+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -140,7 +229,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/19/intercom-using-raspberry-pi-and-hipchat/"/>
     <id>http://blog.fukayatsu.com/2014/01/19/intercom-using-raspberry-pi-and-hipchat/</id>
     <published>2014-01-19T12:47:00Z</published>
-    <updated>2014-02-15T12:18:38+00:00</updated>
+    <updated>2014-04-15T00:35:17+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -209,266 +298,6 @@
 
 &lt;ul&gt;
 &lt;li&gt;こういうのを使うのもありかもしれない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>渋谷.rb[:20140115]に参加してきた</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/15/shibuyarb-20140115/"/>
-    <id>http://blog.fukayatsu.com/2014/01/15/shibuyarb-20140115/</id>
-    <published>2014-01-15T14:50:00Z</published>
-    <updated>2014-02-15T12:18:38+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a href="http://togetter.com/li/616609"&gt;渋谷.rb[:20140115]のまとめ #shibuyarb - Togetterまとめ&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;AJITO最高&lt;/li&gt;
-&lt;li&gt;Fitbitが欲しくなった&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git clone https://github.com/ruby/www.ruby-lang.org.git&lt;/code&gt;した&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://theta360.com/s/6AF"&gt;全天球画像 | RICOH THETA&lt;/a&gt;すげー&lt;/li&gt;
-&lt;li&gt;LTした&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script async class="speakerdeck-embed" data-id="3e4bb5206002013193892a4592a1f90c" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Raspberry Piを使ってトイレの空き情報を確認できるようにした</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/12/rest-room-api/"/>
-    <id>http://blog.fukayatsu.com/2014/01/12/rest-room-api/</id>
-    <published>2014-01-12T07:20:00Z</published>
-    <updated>2014-02-15T12:18:38+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;img src="/images/2014-01-12-1389502288_1.jpg" /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="https://chrome.google.com/webstore/detail/ucchusma/ofbnhnlaccejlhdfefcgmffilffhnipg"&gt;Chrome ウェブストア - ucchusma&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;アイコンはあまり目立たないようにした。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;使用中&lt;br&gt;
-&lt;img alt="w50" src="/images/2014-01-12-1389500588_1.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;空き&lt;br&gt;
-&lt;img alt="w50" src="/images/2014-01-12-1389500588_2.png" /&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;背景&lt;/h1&gt;
-
-&lt;p&gt;オフィスのフロアにトイレがひとつしかなく、何度も空いているかどうか確認しに行くのが面倒だった。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="http://heavens-door.info/"&gt;ヘブンズ･ドア　〜私が行ったら空いてるトイレ〜&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;先日これを見て自分で作ることにした。&lt;/p&gt;
-
-&lt;p&gt;raspberry piを触りたい欲とか、ハンダ付け欲とかもあった。&lt;/p&gt;
-
-&lt;h1&gt;仕組み&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src="/images/2014-01-12-1389501835_1.jpg" /&gt;&lt;br&gt;
-raspberry piはひたすらセンサーデータをherokuに送り続け、clientがそれをpollingする形にした。&lt;br&gt;
-当初はraspberry pi上にweb serverを置こうかと思ったけど、台数が増えたりlocalのipが変わったりすることを考えてherokuを併用することにした。&lt;/p&gt;
-
-&lt;h1&gt;材料&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;本体: 長期運用を考えてケース付きのを買った&lt;/p&gt;
-
-&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00DGKUHFE" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;SDカード: 8GBで十分だったかも&lt;/p&gt;
-
-&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B003VNKNEQ" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;無線LAN子機: 動作報告があったので&lt;/p&gt;
-
-&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B003NSAMW2" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;モーションセンサ: 開発の裏話的なやつが面白かった&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://panasonic.co.jp/ism/eco/napion/"&gt;松下の省エネ技術 | にぎりこぷしのエコの細道 | ナピオン-１ | イズム「ism」 | Panasonic&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=7AXC-MAGW"&gt;パナソニック電工 ＡＭＮ３１１１１ ＮａＰｉＯｎ　ＭＰモーションセンサ（黒）　標準検出タイプ&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;その他&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;抵抗(10kΩ, 15kΩ)&lt;/li&gt;
-&lt;li&gt;コンデンサ(1μF)&lt;/li&gt;
-&lt;li&gt;単線&lt;/li&gt;
-&lt;li&gt;ホットボンド&lt;/li&gt;
-&lt;li&gt;ユニバーサル基盤の切れ端&lt;/li&gt;
-&lt;li&gt;ジャンパワイヤ(オス-メス)
-
-&lt;ul&gt;
-&lt;li&gt;なくても何とかなったけどあったほうが良い...&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ブレッドボード
-
-&lt;ul&gt;
-&lt;li&gt;回路テスト用&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;プッシュスイッチ
-
-&lt;ul&gt;
-&lt;li&gt;シャットダウンスイッチ用&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;配線図&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src="/images/2014-01-13-1389549785_1.png" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://fritzing.org/"&gt;Fritzing&lt;/a&gt;で図を書くの楽しい。&lt;br&gt;
-コンデンサはなくても多分問題ないので省いた。&lt;/p&gt;
-
-&lt;h1&gt;code&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/ucchusma-pi"&gt;fukayatsu/ucchusma-pi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/ucchusma-web"&gt;fukayatsu/ucchusma-web&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/fukayatsu/ucchusma-crx"&gt;fukayatsu/ucchusma-crx&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;/home/pi/set_gpio_pins.sh&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="highlight shell"&gt;&lt;span class="c"&gt;#!/bin/sh&lt;/span&gt;
-
-&lt;span class="k"&gt;for &lt;/span&gt;pin &lt;span class="k"&gt;in &lt;/span&gt;4; &lt;span class="k"&gt;do
-   &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$pin&lt;/span&gt; &amp;gt; /sys/class/gpio/export
-   chown -R www-data:pi /sys/class/gpio/gpio&lt;span class="nv"&gt;$pin&lt;/span&gt;
-   chmod -R g+w /sys/class/gpio/gpio&lt;span class="nv"&gt;$pin&lt;/span&gt;
-&lt;span class="k"&gt;done&lt;/span&gt;
-&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;/home/pi/shutdown-daemon.sh&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="highlight shell"&gt;&lt;span class="c"&gt;#!/bin/sh&lt;/span&gt;
-&lt;span class="nv"&gt;GPIO&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;7      &lt;span class="c"&gt;#使用するGPIOポート&lt;/span&gt;
-&lt;span class="nv"&gt;PUSHTIME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;3  &lt;span class="c"&gt;#押す秒数&lt;/span&gt;
-
-&lt;span class="c"&gt;#初期設定&lt;/span&gt;
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$GPIO&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &amp;gt; /sys/class/gpio/export
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;in&amp;quot;&lt;/span&gt; &amp;gt; /sys/class/gpio/gpio&lt;span class="nv"&gt;$GPIO&lt;/span&gt;/direction
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;high&amp;quot;&lt;/span&gt; &amp;gt; /sys/class/gpio/gpio&lt;span class="nv"&gt;$GPIO&lt;/span&gt;/direction
-
-&lt;span class="c"&gt;#5秒間押されるまで待つ&lt;/span&gt;
-&lt;span class="nv"&gt;cnt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;0
-&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$cnt&lt;/span&gt; -lt &lt;span class="nv"&gt;$PUSHTIME&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; ; &lt;span class="k"&gt;do
-  &lt;/span&gt;&lt;span class="nv"&gt;data&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;cat /sys/class/gpio/gpio&lt;span class="nv"&gt;$GPIO&lt;/span&gt;/value&lt;span class="sb"&gt;`&lt;/span&gt;
-  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$data&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; -eq &lt;span class="s2"&gt;&amp;quot;0&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; ; &lt;span class="k"&gt;then
-    &lt;/span&gt;&lt;span class="nv"&gt;cnt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;expr &lt;span class="nv"&gt;$cnt&lt;/span&gt; + 1&lt;span class="sb"&gt;`&lt;/span&gt;
-  &lt;span class="k"&gt;else
-    &lt;/span&gt;&lt;span class="nv"&gt;cnt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;0
-  &lt;span class="k"&gt;fi
-  &lt;/span&gt;sleep 1
-&lt;span class="k"&gt;done&lt;/span&gt;
-
-&lt;span class="c"&gt;#シャットダウンの実行&lt;/span&gt;
-shutdown -h now
-&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;参考: &lt;a href="http://blog.livedoor.jp/victory7com/archives/32699844.html"&gt;Raspberry Piブログ : [コラム] 第8回『ボタン長押しでシャットダウンする電源ボタンを作ろう』&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;/etc/rc.local&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="highlight shell"&gt;&lt;span class="c"&gt;#!/bin/sh -e&lt;/span&gt;
-
-...
-
-su -c /home/pi/shutdown-daemon.sh &amp;amp;
-su -c /home/pi/set_gpio_pins.sh &amp;amp;
-
-&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;TOKEN&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;*********&lt;/span&gt;
-su -c &lt;span class="s2"&gt;&amp;quot;cd /home/pi/ucchusma-pi; /home/pi/.rbenv/shims/bundle exec ruby watcher.rb&amp;quot;&lt;/span&gt;
-
-...
-
-&lt;span class="nb"&gt;exit &lt;/span&gt;0
-&lt;/pre&gt;
-&lt;h1&gt;参考&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;sudoなしでGPIOにアクセスする
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://dissectionbydavid.wordpress.com/2013/10/21/raspberry-pi-using-gpio-wiringpi-without-root-sudo-access/"&gt;Raspberry Pi – using GPIO / WiringPi without root (sudo) access | Dissection by David blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;無線LAN
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://kingyo-bachi.blogspot.jp/2013/07/raspberry-pilan.html"&gt;コチョナナバ: Raspberry Piを無線LAN対応させてみた&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.instantsupportsite.com/self-help/raspberry-pi/raspberry-pi-airlink-101-installation-wpa/"&gt;RASPBERRY PI – Airlink 101 Installation with WPA/WPA2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;image書き込み
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://askubuntu.com/questions/159039/why-is-the-error-dd-dev-rdisk1bs-1m-operation-not-supported-popping-up-whil"&gt;command line - Why is the error, dd: /dev/rdisk1bs=1m: Operation not supported, popping up while trying to instal ubuntu on usb? - Ask Ubuntu&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;シャットダウンフリー化(したい)
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.e-ark.jp/raspberryjamsession-02/"&gt;「コラム：お手軽シャットダウンフリー化」をHTML化してみました (QR1679) | ε-ARK Project&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;code
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/ucchusma-pi"&gt;fukayatsu/ucchusma-pi&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/ucchusma-web"&gt;fukayatsu/ucchusma-web&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/ucchusma-crx"&gt;fukayatsu/ucchusma-crx&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ucchusmaとは?
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://ja.wikipedia.org/wiki/%E7%83%8F%E6%9E%A2%E6%B2%99%E6%91%A9%E6%98%8E%E7%8E%8B"&gt;烏枢沙摩明王 - Wikipedia&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;伝承ひどい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;配線図等を作るツール
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://fritzing.org/"&gt;Fritzing&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;雑感&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;raspberry pi
-
-&lt;ul&gt;
-&lt;li&gt;rbenvでruby2.1.0をインストールするのに2時間ちょっとかかった。&lt;/li&gt;
-&lt;li&gt;使ってみて、改めて「小さいlinux pc」なのだなと思った。
-
-&lt;ul&gt;
-&lt;li&gt;GPIOで直接電子回路に接続できるのが良い&lt;/li&gt;
-&lt;li&gt;アナログ入力も付いてたらもっと良いのに&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;imageを焼く時に、MacbookProのSDカードリーダーが反応しなくて困った
-
-&lt;ul&gt;
-&lt;li&gt;結局別のPCから焼いた&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Fritzing
-
-&lt;ul&gt;
-&lt;li&gt;便利&lt;/li&gt;
-&lt;li&gt;自分でnapionのパーツ作ろうかと思ったけど、適当なパーツでお茶を濁した。
-
-&lt;ul&gt;
-&lt;li&gt;パーツエディタが何度かクラッシュした...&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;実戦投入
-
-&lt;ul&gt;
-&lt;li&gt;週明けになる見込み&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
