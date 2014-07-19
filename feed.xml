@@ -5,16 +5,95 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-07-07T14:38:00Z</updated>
+  <updated>2014-07-19T14:55:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>nuhackに参加してきた</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/07/19/nuhack/"/>
+    <id>http://blog.fukayatsu.com/2014/07/19/nuhack/</id>
+    <published>2014-07-19T14:55:00Z</published>
+    <updated>2014-07-19T14:57:08+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://github.com/satococoa/p4d-hackathon-3rd"&gt;https://github.com/satococoa/p4d-hackathon-3rd&lt;/a&gt;&lt;br&gt;
+p4d と NUBoard の欧文印刷株式会社さんとの共同開催でエンジニア x デザイナハッカソン in pixiv さん&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ﾄﾉｺﾄ&lt;/p&gt;
+
+&lt;h1&gt;作ったもの1&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://pictalk.herokuapp.com/"&gt;pictalk&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;with: &lt;a href="https://github.com/ookawara"&gt;ookawara&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;アイコンをいくつか選ぶと便利な英会話フレーズが出てくるWebアプリ
+
+&lt;ul&gt;
+&lt;li&gt;英文読み上げも可能&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ネイティブで実装する前のプロトタイプ的な位置づけ&lt;/li&gt;
+&lt;li&gt;source: &lt;a href="https://github.com/fukayatsu/transicon"&gt;fukayatsu/transicon&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;途中で名前変えたのだった&lt;/li&gt;
+&lt;li&gt;Rails + Vue.js&lt;/li&gt;
+&lt;li&gt;google APIのproxyとかをプレゼンの直前に入れたりした&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Herokuへのデプロイは &lt;a href="https://www.codeship.io/projects"&gt;Codeship&lt;/a&gt; を使った
+
+&lt;ul&gt;
+&lt;li&gt;circleci みたいに yamlを書かなくてよいので、今回みたいに雑にデプロイしたい時に楽&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;作ったもの2&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src="/images/2014-07-19-1405780537_1.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;絵馬(?)、初めて書いた。そして入り口近くにはめ込んだ。 #ｴｻって何&lt;/p&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;様子です &lt;a href="http://t.co/hJoCSthdQr"&gt;pic.twitter.com/hJoCSthdQr&lt;/a&gt;&lt;/p&gt;&amp;mdash; Atsuo Fukaya (@fukayatsu) &lt;a href="https://twitter.com/fukayatsu/statuses/490465635483549696"&gt;2014, 7月 19&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;h1&gt;頂いたもの&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;美味しいお弁当&lt;/li&gt;
+&lt;li&gt;NUboard関連のいろいろ
+
+&lt;ul&gt;
+&lt;li&gt;特にsteadtlerのペンをじゃんけんによる争奪戦を勝ち残ってGetしたのでホクホクしている。&lt;/li&gt;
+&lt;li&gt;ありがとうございます！！！&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="/images/2014-07-19-1405781115_1.jpg" /&gt;&lt;/p&gt;
+
+&lt;h1&gt;所感&lt;/h1&gt;
+
+&lt;p&gt;前日・前々日にちょっと素振りをして、当日にデザイナさんとデザイン調整をしながら作っていった。&lt;br&gt;
+とりあえずプロトタイプとしては形になったのでよかった。楽しい。&lt;/p&gt;
+
+&lt;p&gt;参加するハッカソンの性質によるけれど、何を作るかを決めて周辺技術の不安要素を潰しておくと充実した感じでイベントを終えることが出来そうだと思った。&lt;/p&gt;
+
+&lt;p&gt;あとpixivさんのオフィス広くて面白いものがたくさんあって良かった。&lt;br&gt;
+冷蔵庫にポエムとか貼ってあったし。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>新卒3年目ぐらいまでに自己投資してQOLが上がったモノ</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/07/07/qol/"/>
     <id>http://blog.fukayatsu.com/2014/07/07/qol/</id>
     <published>2014-07-07T14:38:00Z</published>
-    <updated>2014-07-07T14:45:04+00:00</updated>
+    <updated>2014-07-19T14:57:08+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -127,7 +206,7 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/04/15/custom-whiteboard-marker/"/>
     <id>http://blog.fukayatsu.com/2014/04/15/custom-whiteboard-marker/</id>
     <published>2014-04-15T00:30:00Z</published>
-    <updated>2014-07-07T14:45:04+00:00</updated>
+    <updated>2014-07-19T14:57:08+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -190,7 +269,7 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/03/30/tqrk07/"/>
     <id>http://blog.fukayatsu.com/2014/03/30/tqrk07/</id>
     <published>2014-03-30T14:55:00Z</published>
-    <updated>2014-07-07T14:45:04+00:00</updated>
+    <updated>2014-07-19T14:57:08+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -216,7 +295,7 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/02/15/home-automation-with-google-calendar/"/>
     <id>http://blog.fukayatsu.com/2014/02/15/home-automation-with-google-calendar/</id>
     <published>2014-02-15T12:15:00Z</published>
-    <updated>2014-07-07T14:45:04+00:00</updated>
+    <updated>2014-07-19T14:57:08+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -260,7 +339,7 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/02/01/raspbery-pi-and-speaker/"/>
     <id>http://blog.fukayatsu.com/2014/02/01/raspbery-pi-and-speaker/</id>
     <published>2014-02-01T14:00:00Z</published>
-    <updated>2014-07-07T14:45:04+00:00</updated>
+    <updated>2014-07-19T14:57:08+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -283,58 +362,6 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
 &lt;p&gt;　&lt;/p&gt;
 
 &lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00B8ODP8G" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;
-</content>
-  </entry>
-  <entry>
-    <title>ダンボールでRaspberry Piのケースを作った</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2014/01/25/raspberry-danbo/"/>
-    <id>http://blog.fukayatsu.com/2014/01/25/raspberry-danbo/</id>
-    <published>2014-01-25T08:40:00Z</published>
-    <updated>2014-07-07T14:45:04+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;img src="/images/2014-01-25-1390637736_1.jpg" /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/2014-01-25-1390637736_2.jpg" /&gt;&lt;/p&gt;
-
-&lt;h2&gt;材料&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;amazonのダンボール&lt;/li&gt;
-&lt;li&gt;瞬間接着剤&lt;/li&gt;
-&lt;li&gt;被覆された針金的なもの
-
-&lt;ul&gt;
-&lt;li&gt;頭と胴体とかをつなぐため&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;サイズ[cm]&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;頭: w10 x h7 x d7
-
-&lt;ul&gt;
-&lt;li&gt;wifiのusbドングルを使うことを考えると、w11の方がよかった。&lt;/li&gt;
-&lt;li&gt;SDカードもはみ出さないやつを使う必要がある&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;胴体: w5 x h5.5 x d5&lt;/li&gt;
-&lt;li&gt;手: w2 x h7.5 x d2&lt;/li&gt;
-&lt;li&gt;足: w2 x h4 x d4.5&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;顔がでかい気がするので、他のパーツをもう少し大きくしてもいいかもしれない&lt;/p&gt;
-
-&lt;h2&gt;TODO&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;目が光るようにする
-
-&lt;ul&gt;
-&lt;li&gt;穴を空けて黒っぽいフィルムを貼って裏にLEDを設置する&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </content>
   </entry>
 </feed>
