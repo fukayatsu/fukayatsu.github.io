@@ -5,16 +5,81 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-07-19T14:55:00Z</updated>
+  <updated>2014-08-01T14:37:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>ほげゆき for Androidができるまで</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/08/01/hogeyuki-for-android/"/>
+    <id>http://blog.fukayatsu.com/2014/08/01/hogeyuki-for-android/</id>
+    <published>2014-08-01T14:37:00Z</published>
+    <updated>2014-08-01T14:38:23+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img alt="w50" src="/images/2014-08-01-1406902992_1.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;帰宅後の時間を使って、数日で&lt;a href="https://play.google.com/store/apps/details?id=com.fukayatsu.hogeyuki&amp;amp;amp;hl=ja"&gt;ほげゆき for Android&lt;/a&gt;というAndroidアプリをリリースするまでの記録です&lt;/p&gt;
+
+&lt;p&gt;ほげゆきってなんだよ！　という方は、 &lt;a href="https://twitter.com/hashtag/%E3%81%BB%E3%81%92%E3%82%86%E3%81%8D?f=realtime&amp;amp;amp;src=hash"&gt;Twitter / 検索 - #ほげゆき&lt;/a&gt; を見て頂けるとなんとなく分かるかと思います。&lt;/p&gt;
+
+&lt;h2&gt;土曜日、日曜日&lt;/h2&gt;
+
+&lt;p&gt;pplog界隈の人達で大阪に遊びに行った。&lt;br&gt;
+pplog界隈の人たちはiPhone使いが多いので、&lt;a href="https://itunes.apple.com/jp/app/hogeyuki/id899920089"&gt;ほげゆき for iOS&lt;/a&gt;を楽しそうに使っている。&lt;/p&gt;
+
+&lt;p&gt;いいなーと思っておもむろにnuboardで設計を始める。&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="w50" src="/images/2014-08-01-1406902188_1.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;その後ハトの人(&lt;a href="https://twitter.com/awayuki"&gt;@awayuki&lt;/a&gt;)に会って、ほげゆきのAndroid版作りたいのでほげゆきの素材を頂けませんか？と聞いたら、よいよー ﾄﾉｺﾄ&lt;br&gt;
+後日 &amp;quot;かお.ai&amp;quot; を頂いた。&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="w50" src="/images/2014-08-01-1406902459_1.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;あとは大阪京都を楽しんだ。&lt;/p&gt;
+
+&lt;h2&gt;月曜日&lt;/h2&gt;
+
+&lt;p&gt;数カ月ぶりにAndroid Studioを起動した。アップデートで時間が掛かったので、放置して寝た&lt;/p&gt;
+
+&lt;h2&gt;火曜日&lt;/h2&gt;
+
+&lt;p&gt;&lt;img alt="w50" src="/images/2014-08-01-1406902658_1.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;画像をカメラまたはギャラリーから読み込んで、ドロイド君をドラッグしたり拡大縮小したりできるようになった&lt;/p&gt;
+
+&lt;h2&gt;水曜日&lt;/h2&gt;
+
+&lt;p&gt;ドロイド君をおすしに差し替えた。あと、イラレでアイコンを書いた。あと画像の書き出しを追加&lt;br&gt;
+&lt;img alt="w50" src="/images/2014-08-01-1406902778_1.jpg" /&gt;&lt;/p&gt;
+
+&lt;h2&gt;木曜日&lt;/h2&gt;
+
+&lt;p&gt;他のアプリへのインテント、ライセンス表記を追加してGoogle Playにアップロードした&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="w50" src="/images/2014-08-01-1406903331_1.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;実装中は意図してなかったけれど、かおを一旦保存してまた読みこめば重ねられることに気付いた。&lt;br&gt;
+すしの顔の表現力高い...&lt;/p&gt;
+
+&lt;h2&gt;雑感&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Intent、べんり&lt;/li&gt;
+&lt;li&gt;顔の位置合わせ、地味に難しかった&lt;/li&gt;
+&lt;li&gt;アプリを作って自分の問題を解決するの、よい。たのしい。&lt;/li&gt;
+&lt;li&gt;iPhone版とは、かなり毛色が違う感じになったけど、それはそれで良いのではと思う。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>nuhackに参加してきた</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/07/19/nuhack/"/>
     <id>http://blog.fukayatsu.com/2014/07/19/nuhack/</id>
     <published>2014-07-19T14:55:00Z</published>
-    <updated>2014-07-19T14:57:08+00:00</updated>
+    <updated>2014-08-01T14:38:23+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -93,7 +158,7 @@ p4d と NUBoard の欧文印刷株式会社さんとの共同開催でエンジ�
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/07/07/qol/"/>
     <id>http://blog.fukayatsu.com/2014/07/07/qol/</id>
     <published>2014-07-07T14:38:00Z</published>
-    <updated>2014-07-19T14:57:08+00:00</updated>
+    <updated>2014-08-01T14:38:23+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -206,7 +271,7 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/04/15/custom-whiteboard-marker/"/>
     <id>http://blog.fukayatsu.com/2014/04/15/custom-whiteboard-marker/</id>
     <published>2014-04-15T00:30:00Z</published>
-    <updated>2014-07-19T14:57:08+00:00</updated>
+    <updated>2014-08-01T14:38:23+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -269,7 +334,7 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/03/30/tqrk07/"/>
     <id>http://blog.fukayatsu.com/2014/03/30/tqrk07/</id>
     <published>2014-03-30T14:55:00Z</published>
-    <updated>2014-07-19T14:57:08+00:00</updated>
+    <updated>2014-08-01T14:38:23+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -295,7 +360,7 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/02/15/home-automation-with-google-calendar/"/>
     <id>http://blog.fukayatsu.com/2014/02/15/home-automation-with-google-calendar/</id>
     <published>2014-02-15T12:15:00Z</published>
-    <updated>2014-07-19T14:57:08+00:00</updated>
+    <updated>2014-08-01T14:38:23+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -332,36 +397,6 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
 &lt;p&gt;コマンドをすべてSQS経由にすることで、かなり実装がシンプルになった。&lt;/p&gt;
 
 &lt;p&gt;herokuを介すとボタンを押してから家電が反応するまでに約1秒ぐらい掛かるので、chrome appは直接SQSにキューイングするのもいいかもしれない。HerokuにTokyoリージョンあったらなー&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Raspberry Piとスピーカーの置き場所</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2014/02/01/raspbery-pi-and-speaker/"/>
-    <id>http://blog.fukayatsu.com/2014/02/01/raspbery-pi-and-speaker/</id>
-    <published>2014-02-01T14:00:00Z</published>
-    <updated>2014-07-19T14:57:08+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;p&gt;エアコンの脇に収めてみた。主に&lt;a href="http://www.shoutcast.com/"&gt;SHOUTcast Radio&lt;/a&gt;用。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/2014-02-01-1391261937_1.jpg" /&gt;&lt;/p&gt;
-
-&lt;p&gt;これはbluetoothスピーカーだけど、ゼロ距離なのでRPiとはステレオミニプラグケーブルで接続している。そもそもRPiと手持ちのbluetoothスピーカーを安定してA2DPで接続するのがまだうまくいっていない。&lt;/p&gt;
-
-&lt;p&gt;この場所に置くのは、邪魔にならないとか電源が近いとか結構利点がある。ただ地震とかあった場合落下の危険があるので一応ヒモ的なもので固定はしてある。&lt;/p&gt;
-
-&lt;h2&gt;&lt;/h2&gt;
-
-&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00A9Q2076" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;
-
-&lt;p&gt;このスピーカー、当初思ってたより結構小さかった。最初はこれを分解して、RPiを内蔵させるつもりだったけどケースを壊さずにやるのは難しそうだったのでやめた。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://www.amazon.co.jp/dp/B0051649KK"&gt;Creative D80&lt;/a&gt;の方はこれより二回りぐらい大きく、わりと余裕を持ってRPiが入る。&lt;/p&gt;
-
-&lt;p&gt;　&lt;/p&gt;
-
-&lt;iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=atsfky-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00B8ODP8G" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"&gt;&lt;/iframe&gt;
 </content>
   </entry>
 </feed>
