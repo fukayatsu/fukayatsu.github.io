@@ -60,3 +60,7 @@ pplog界隈の人たちはiPhone使いが多いので、[ほげゆき for iOS](h
 - 顔の位置合わせ、地味に難しかった
 - アプリを作って自分の問題を解決するの、よい。たのしい。
 - iPhone版とは、かなり毛色が違う感じになったけど、それはそれで良いのではと思う。
+
+### 追記: iOS版について
+
+[ほげゆき - pblog](http://ppworks.hatenablog.jp/entry/hogeyuki)を見るといいよ！
