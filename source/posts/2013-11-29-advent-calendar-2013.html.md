@@ -16,7 +16,7 @@ tags: advent-calendar-2013, list
 1. [Fukayatsu Room Controller (FRC)](/2013/12/03/frc/)
 1. [おかゆ](/2013/12/04/rice-gruel/)
 1. [wriper](/2013/12/06/wriper)
-1. [ChromeAppsGenerator](2013/12/06/chrome-apps-generator/)
+1. [ChromeAppsGenerator](/2013/12/06/chrome-apps-generator/)
 1. [＞Sublime Text 3＜](/2013/12/07/sublime-sudden-death/)
 1. [Rubyで分かち書き](/2013/12/08/separating-words-in-japanese-with-ruby/)
 1. [かにさん(twitter bot)](/2013/12/09/twitter-bot/)
