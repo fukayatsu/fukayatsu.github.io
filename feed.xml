@@ -5,16 +5,68 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-08-01T14:37:00Z</updated>
+  <updated>2014-09-01T14:30:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>KAIZEN platform Inc.に入社しました</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/09/01/join-to-kaizen-platform-inc/"/>
+    <id>http://blog.fukayatsu.com/2014/09/01/join-to-kaizen-platform-inc/</id>
+    <published>2014-09-01T14:30:00Z</published>
+    <updated>2014-09-01T14:34:27+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src="/images/2014-09-01-1409581872_1.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;8月末で前職を退職して、9/1の今日が初出社でした。&lt;br&gt;
+今日は開発環境のsetupと、小さいpull-requestを2つ出して帰宅しました。&lt;/p&gt;
+
+&lt;p&gt;※ 慣れるまでは会社に行きますが、いずれは主にリモートで開発すると思われます。&lt;/p&gt;
+
+&lt;h2&gt;なぜKAIZENなのか&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://kaizenplatform.in/hiring/engineer.html"&gt;KAIZEN platform Inc. #hiring&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;OSSのように作る&lt;/li&gt;
+&lt;li&gt;オープンなコミュニケーション&lt;/li&gt;
+&lt;li&gt;リモートワーク&lt;/li&gt;
+&lt;li&gt;自動化&lt;/li&gt;
+&lt;li&gt;コードとしてのインフラ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;一言で言えば、↑のような組織・文化に非常に共感したからですね。&lt;/p&gt;
+
+&lt;p&gt;あとは、&lt;a href="http://kaizenplatform.in/hiring/engineer.html#developer_productivity"&gt;Developer Productivity&lt;/a&gt;という職種で募集を掛けているのも面白いなーと思いました。&lt;/p&gt;
+
+&lt;p&gt;自分はドックフーディングが好きなのもあり、生産性を上げるためにchatbotを作ったり、staging環境の自動生成の仕組みを作ったりしてきたので、本筋のプロダクトを作りつつその辺も楽しめたらと思います。&lt;/p&gt;
+
+&lt;h2&gt;KAIZENとはどんな会社なのか&lt;/h2&gt;
+
+&lt;p&gt;先月入社された&lt;a href="https://twitter.com/glidenote"&gt;@glidenote&lt;/a&gt;さんが詳細にまとめられていますので、今回はそちらを紹介したいと思います。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://blog.glidenote.com/blog/2014/08/01/join-to-kaizen-platform-inc/"&gt;KAIZEN platform Inc.に入社した - Glide Note - グライドノート&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;そのかわり、1ヶ月後に入社してどう感じているかをまた記事にしたいと思います :)&lt;/p&gt;
+
+&lt;h2&gt;最後に&lt;/h2&gt;
+
+&lt;p&gt;自分は未熟なところもたくさんありますが、その分伸びしろも多いとポジティブに考えています。&lt;br&gt;
+周りが優秀な人達ばかりなので、いろいろなことを吸収してよいエンジニアになろうと思います。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>ほげゆき for Androidができるまで</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/08/01/hogeyuki-for-android/"/>
     <id>http://blog.fukayatsu.com/2014/08/01/hogeyuki-for-android/</id>
     <published>2014-08-01T14:37:00Z</published>
-    <updated>2014-08-28T01:23:41+00:00</updated>
+    <updated>2014-09-01T14:34:27+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -83,7 +135,7 @@ pplog界隈の人たちはiPhone使いが多いので、&lt;a href="https://itun
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/07/19/nuhack/"/>
     <id>http://blog.fukayatsu.com/2014/07/19/nuhack/</id>
     <published>2014-07-19T14:55:00Z</published>
-    <updated>2014-08-28T01:23:41+00:00</updated>
+    <updated>2014-09-01T14:34:27+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -162,7 +214,7 @@ p4d と NUBoard の欧文印刷株式会社さんとの共同開催でエンジ�
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/07/07/qol/"/>
     <id>http://blog.fukayatsu.com/2014/07/07/qol/</id>
     <published>2014-07-07T14:38:00Z</published>
-    <updated>2014-08-28T01:23:41+00:00</updated>
+    <updated>2014-09-01T14:34:27+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -275,7 +327,7 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/04/15/custom-whiteboard-marker/"/>
     <id>http://blog.fukayatsu.com/2014/04/15/custom-whiteboard-marker/</id>
     <published>2014-04-15T00:30:00Z</published>
-    <updated>2014-08-28T01:23:41+00:00</updated>
+    <updated>2014-09-01T14:34:27+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -338,7 +390,7 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/03/30/tqrk07/"/>
     <id>http://blog.fukayatsu.com/2014/03/30/tqrk07/</id>
     <published>2014-03-30T14:55:00Z</published>
-    <updated>2014-08-28T01:23:41+00:00</updated>
+    <updated>2014-09-01T14:34:27+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -357,50 +409,6 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
 &lt;script async class="speakerdeck-embed" data-id="8f955110993f01313e54426a9381af41" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
 
 &lt;p&gt;現場からは以上です。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>GoogleCalendarで家電を制御するようにした</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2014/02/15/home-automation-with-google-calendar/"/>
-    <id>http://blog.fukayatsu.com/2014/02/15/home-automation-with-google-calendar/</id>
-    <published>2014-02-15T12:15:00Z</published>
-    <updated>2014-08-28T01:23:41+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;p&gt;以前からhipchatやcommand line, 音声認識で家電を制御していたものの、結局おおよその生活パターンで前もってスケジューリングしておくのが多少効率は悪いが一番楽という結論に至った。&lt;/p&gt;
-
-&lt;p&gt;特に朝に暖房を入れたり照明をつけるのは、気持よく起きることが出来てよい。&lt;/p&gt;
-
-&lt;p&gt;以前の実装では家電の動作スケジュールを変えるにはコードで反映するしか無かったので、今回は柔軟にスケジュールを記述できるようにgoogle calendarを使った。繰り返し設定や平日のみの指定ができ、状況が可視化されるので便利だった。&lt;/p&gt;
-
-&lt;p&gt;あと今までmacbook airを自宅サーバにしていていろいろもったいなかったので、Raspberry Piに切り替えた。&lt;/p&gt;
-
-&lt;h2&gt;構成図&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/2014-02-15-1392464792_1.jpg" /&gt;&lt;/p&gt;
-
-&lt;p&gt;chrome appとweb appは今まで使っていたものをほとんどそのまま流用した&lt;/p&gt;
-
-&lt;h2&gt;家電用カレンダー&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src="/images/2014-02-15-1392465592_1.png" /&gt;&lt;/p&gt;
-
-&lt;p&gt;イベント名のところに&lt;code&gt;[device]:[command]&lt;/code&gt;の形式で書いておくと、イベントの開始時にそのコマンドを実行するようにした。また、イベントの終了時間には&lt;code&gt;[device]:off&lt;/code&gt;コマンドが自動的に実行される。&lt;/p&gt;
-
-&lt;p&gt;(スクリーンショットではデバッグの為に&lt;code&gt;[device]:off&lt;/code&gt;イベントが設定されてあるが、本来は必要ない)&lt;/p&gt;
-
-&lt;h2&gt;リポジトリ&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://github.com/fukayatsu/he"&gt;fukayatsu/he&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;雑感&lt;/h2&gt;
-
-&lt;p&gt;コマンドをすべてSQS経由にすることで、かなり実装がシンプルになった。&lt;/p&gt;
-
-&lt;p&gt;herokuを介すとボタンを押してから家電が反応するまでに約1秒ぐらい掛かるので、chrome appは直接SQSにキューイングするのもいいかもしれない。HerokuにTokyoリージョンあったらなー&lt;/p&gt;
 </content>
   </entry>
 </feed>
