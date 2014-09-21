@@ -5,16 +5,294 @@
   <id>http://blog.fukayatsu.com/</id>
   <link href="http://blog.fukayatsu.com/"/>
   <link href="http://blog.fukayatsu.com/feed.xml" rel="self"/>
-  <updated>2014-09-01T14:30:00Z</updated>
+  <updated>2014-09-21T08:20:00Z</updated>
   <author>
     <name>fukayatsu</name>
   </author>
+  <entry>
+    <title>RubyKaigi 2014に参加してきた</title>
+    <link rel="alternate" href="http://blog.fukayatsu.com/2014/09/21/rubykaigi/"/>
+    <id>http://blog.fukayatsu.com/2014/09/21/rubykaigi/</id>
+    <published>2014-09-21T08:20:00Z</published>
+    <updated>2014-09-21T08:21:26+00:00</updated>
+    <author>
+      <name>fukayatsu</name>
+    </author>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://rubykaigi.org/2014"&gt;RubyKaigi 2014, 18-20 september&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote class="twitter-tweet" lang="ja"&gt;&lt;p&gt;&lt;a href="https://twitter.com/hashtag/rubykaigi?src=hash"&gt;#rubykaigi&lt;/a&gt; へ。話しかけるとesaステッカーをdropします &lt;a href="http://t.co/ngE3qb8BIz"&gt;pic.twitter.com/ngE3qb8BIz&lt;/a&gt;&lt;/p&gt;&amp;mdash; fukayatsu (@fukayatsu) &lt;a href="https://twitter.com/fukayatsu/status/512750227619450880"&gt;2014, 9月 18&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;入社してまだ1ヶ月経ってないのですが、&lt;a href="http://kaizenplatform.in/hiring/engineer.html"&gt;会社の方&lt;/a&gt;にRubyKaigi行ってきていいか聞いたら、速攻でおｋと言われたので3日間楽しんできました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="/images/2014-09-21-1411282813_1.png" /&gt;&lt;/p&gt;
+
+&lt;h1&gt;今回の戦略&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;できるだけtweetして後からまとめる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;聞いてきたセッションの雑感&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://rubykaigi.org/2014/schedule"&gt;RubyKaigi 2014 | Schedule&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;1日目&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-TomoyukiChikanaga"&gt;CRuby Committers Who&amp;#39;s Who in 2014&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;今回speakerをするCRuby Committerの一言紹介&lt;/li&gt;
+&lt;li&gt;今回どういう話をするかもあったので、どれを聞くか参考になった
+
+&lt;ul&gt;
+&lt;li&gt;smalrubyとかreishとかはこの時知った&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-KoichiSasada"&gt;Building the Ruby interpreter -- What is easy and what is difficult?&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rubyを実装する上で何が大変かという話&lt;/li&gt;
+&lt;li&gt;&amp;quot;Procが難しかった&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;プログラマが幸せなまま並列実行処理を書けるようにするのが難しい&amp;quot;&lt;/li&gt;
+&lt;li&gt;&amp;quot;パフォーマンスと開発しやすさのトレードオフに打ち勝つ&amp;quot;というのが印象的&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-NarihiroNakamura"&gt;Symbol GC&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ある意味一番興味があったセッション&lt;/li&gt;
+&lt;li&gt;RubyでString#to_symとかで作られるsymbolがRuby2.2からはGC対象になる
+
+&lt;ul&gt;
+&lt;li&gt;define_methodしたときのsymbolとかはGCされない&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Symbol.all_symbols.sizeをチェックして、GCされているか調べる&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-RobertSanheim"&gt;Continuous Delivery at GitHub&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Githubのテストコードとアプリのコードの量はほぼ1:1&lt;/li&gt;
+&lt;li&gt;素早く細かく頻繁にデプロイすることが重要&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-KeikoOda"&gt;What&amp;#39;s wrong with your app?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-SatoshiEgi"&gt;Non-Linear Pattern Matching against Unfree Data Types in Ruby (Egison Pattern Matching in Ruby)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-LaurentSansonetti"&gt;Inside RubyMotion for Android&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;NDKが古いとか言われる時は、 Rakefileに&lt;code&gt;app.api_version = &amp;#39;19&amp;#39;&lt;/code&gt;と書けばおｋ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;諸事情により後半のセッションはあまり聞けず &amp;amp; パーティは参加できず。残念(´・ω・｀)&lt;/p&gt;
+
+&lt;h3&gt;2日目&lt;/h3&gt;
+
+&lt;p&gt;esaのTシャツを着てステッカーを配ったりしてた&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-YukihiroMatzMatsumoto"&gt;Coming soon...&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ruby 3.0でやりたい3つのこと(みんなが飽きないように燃料投下)&lt;/li&gt;
+&lt;li&gt;Concurrency&lt;/li&gt;
+&lt;li&gt;JIT&lt;/li&gt;
+&lt;li&gt;Static typing
+
+&lt;ul&gt;
+&lt;li&gt;メソッドの集合を型で表して推論する感じ&lt;/li&gt;
+&lt;li&gt;一般的にイメージするような型推論とはちょっと違う&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-AndreArko"&gt;Extreme Makeover: Rubygems Edition&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rubygems.orgがどういうトラブルをどうやって乗り越えてきたか&lt;/li&gt;
+&lt;li&gt;これからbundlerをどうやって高速化するか
+
+&lt;ul&gt;
+&lt;li&gt;indexをplain textにしてCDNに置くようにする&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-KazuhiroNISHIYAMA"&gt;Archeology of Ruby: Removed Features (Ruby 考古学 機能編)&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rubyにかつて存在したけど取り除かれた機能について&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-KensukeNagae"&gt;&amp;lt;%= link_to &amp;quot;bundle&amp;quot;, &amp;quot;update&amp;quot; %&amp;gt; - Make &amp;quot;bundle update&amp;quot; more fun to review&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;蔑ろにされがちな&lt;code&gt;bundle update&lt;/code&gt;をどうやって自動化するか&lt;/li&gt;
+&lt;li&gt;tachikoma.io の話も&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-ThiagoScalone-DanielRodriguez"&gt;MRuby as Development Platform for Payments&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;mrubyを決済プラットフォームで使う話&lt;/li&gt;
+&lt;li&gt;web IDEで開発するらしい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-HiroshiSHIBATA"&gt;The Twelve-factor Ruby 「Ruby を良くするための12のポイント」&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;rubyにどうやって貢献するか、どうやればよりうまく貢献できるか&lt;/li&gt;
+&lt;li&gt;issueにクラッシュログを載せたり、trunkのRubyで試したり、期待する挙動と現実の挙動を併記したり等&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-ShotaFukumori"&gt;Scalable deployments - How we deploy Rails app to 100+ hosts in a minute&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;serfを使ってデプロイする仕組みを構築&lt;/li&gt;
+&lt;li&gt;assetsはCI時にビルド、bundle-gemsはmasterにマージされたタイミングで各appサーバ上で実行され、あとはstagingで確認が終わった段階でsymlinkを切り替えてサーバをreloadするだけ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-MATSUMOTORyosuke"&gt;Resource Control Architecture scripting with mruby for a Web Server Separating Computer Resources Virtually at Each HTTP Request&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ngx_mruby, mod-mrubyの話。両者とも大体同じ感じで書けるらしい&lt;/li&gt;
+&lt;li&gt;最近ngx_luaを触っていたので発表聞くのが楽しかった&lt;/li&gt;
+&lt;li&gt;OpenRestyのmruby版が欲しい。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-MasahiroNakagawa"&gt;ServerEngine: a framework for multiprocess servers in Ruby&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fluentd v11で使われているマルチプロセスサーバについて&lt;/li&gt;
+&lt;li&gt;よさそう&lt;/li&gt;
+&lt;li&gt;sidekiqみたいなやつも作れそうと思った&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-KoujiTakao-NobuyukiHonda"&gt;Kids, Ruby, Fun!: Introduction of the Smalruby and the Ruby Programming Shounendan&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;プログラミング教育向けにSmalrubyというビジュアルプログラミング環境を作った話&lt;/li&gt;
+&lt;li&gt;ビジュアル &amp;lt;=&amp;gt; Rubyコードが相互に変更可能なのがすごい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/LT"&gt;Lightning Talks&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;アイデアの期待値の話が一番お気に入り&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;3日目&lt;/h3&gt;
+
+&lt;p&gt;pplogのTシャツを着てステッカーを配ったりしてた&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/ohayo"&gt;Ohayō Rails (おはよう Rails)&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;おっさんたちがRails最高！でもアレとかつらいよねという話&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-AaronPatterson"&gt;Speeding up Rails 4.2&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;どうやってviewのレンダリング速度を上げるかという話&lt;/li&gt;
+&lt;li&gt;計測、計測、計測！&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-KyosukeMOROHASHI"&gt;Practical meta-programming in Application&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rubyらしいメタプログラミングの使いかた&lt;/li&gt;
+&lt;li&gt;デザインパターンとか、メタプログラミングとかは、手段ではなく目的になってしまうとつらい&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-KeijuIshitsuka"&gt;Reish, an unix shell for rubyist.&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rubyで動くshell&lt;/li&gt;
+&lt;li&gt;irbみたいな感じだった。irbの作者なので当然かも。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-NaotoshiSeo"&gt;Fluentd Hacking Guide (Fluentd ソースコード完全解説)&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;vimでソースコードを読む感じが参考になった
+
+&lt;ul&gt;
+&lt;li&gt;自分はctagsあまり使えてない&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;このへんから眠さに耐えられなくなりつつあった&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-MatthewWerner"&gt;The role of ruby in the single page app.&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;zendeskでどうやってSPAをrailsで作っているか&lt;/li&gt;
+&lt;li&gt;場合によってはRailsを使った方がSPAよりユーザ体験がよいこともある&lt;/li&gt;
+&lt;li&gt;最初に返すviewにユーザ情報のjson入れたりするのヨサソウ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-YUKITORII"&gt;Walking around ruby forest more deeply&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;どうやってCRubyのコードを読んでいくか&lt;/li&gt;
+&lt;li&gt;その場でgithub.com/ruby/rubyをcloneして一緒に読んだ(st.cのあたり)&lt;/li&gt;
+&lt;li&gt;Ruby Under the microscope(秋に日本語版がでるらしい)とRHGを読もう&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-zzak"&gt;tending the ruby ecosystem&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;我々はRubygemsの恩恵を受けているのだから、Rubygemsを救おうという話&lt;/li&gt;
+&lt;li&gt;そうすればきっと自分に返ってくる&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-KouheiSutou"&gt;Three Ruby usages - High-level interface, Glue and Embedding - Inside Droonga&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rubykaigi.org/2014/presentation/S-AmanGupta"&gt;Ruby 2.1 in Production&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Githubの開発で使われている便利ツールが五月雨式にでてきた&lt;/li&gt;
+&lt;li&gt;どれも便利そうだし、地道に計測して改善しているのだなということが分かった&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;これからチェック&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hypermedia API界隈
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/tkawa/hypermicrodata"&gt;tkawa/hypermicrodata&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.slideshare.net/tkawa1/rubykaigi2014-hypermedia-the-missing-element"&gt;Hypermedia: The Missing Element to Building Adaptable Web APIs in Rai…&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/cookpad/garage"&gt;cookpad/garage&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ngx_mruby&lt;/li&gt;
+&lt;li&gt;CRubyのコード&lt;/li&gt;
+&lt;li&gt;RubyMotion for Android&lt;/li&gt;
+&lt;li&gt;視聴していないセッションのチェック&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;今回良かったこと&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;3日間最初のセッションから参加できた&lt;/li&gt;
+&lt;li&gt;知り合いの知り合いとたくさん話すことが出来た&lt;/li&gt;
+&lt;li&gt;ngx_mrubyのモチベーションの高まり&lt;/li&gt;
+&lt;li&gt;github.com/ruby/rubyのコードをちょっと読んだ。読み進めるモチベーションが出来た&lt;/li&gt;
+&lt;li&gt;HerokuのappをRuby 2.1.3にしたらメモリ使用量が減ったっぽい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;次回のTry&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;会社のステッカーを配ったりする&lt;/li&gt;
+&lt;li&gt;なんか発表する&lt;/li&gt;
+&lt;li&gt;英語をもっと聞き取れるようになる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;See also&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://togetter.com/li/720658"&gt;#rubykaigi - Togetterまとめ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://sue445.hatenablog.com/entry/2014/09/18/223445"&gt;RubyKaigi 1日目まとめ #RubyKaigi - くりにっき&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>KAIZEN platform Inc.に入社しました</title>
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/09/01/join-to-kaizen-platform-inc/"/>
     <id>http://blog.fukayatsu.com/2014/09/01/join-to-kaizen-platform-inc/</id>
     <published>2014-09-01T14:30:00Z</published>
-    <updated>2014-09-01T14:34:27+00:00</updated>
+    <updated>2014-09-21T08:21:26+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -66,7 +344,7 @@
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/08/01/hogeyuki-for-android/"/>
     <id>http://blog.fukayatsu.com/2014/08/01/hogeyuki-for-android/</id>
     <published>2014-08-01T14:37:00Z</published>
-    <updated>2014-09-01T14:34:27+00:00</updated>
+    <updated>2014-09-21T08:21:26+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -135,7 +413,7 @@ pplog界隈の人たちはiPhone使いが多いので、&lt;a href="https://itun
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/07/19/nuhack/"/>
     <id>http://blog.fukayatsu.com/2014/07/19/nuhack/</id>
     <published>2014-07-19T14:55:00Z</published>
-    <updated>2014-09-01T14:34:27+00:00</updated>
+    <updated>2014-09-21T08:21:26+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -214,7 +492,7 @@ p4d と NUBoard の欧文印刷株式会社さんとの共同開催でエンジ�
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/07/07/qol/"/>
     <id>http://blog.fukayatsu.com/2014/07/07/qol/</id>
     <published>2014-07-07T14:38:00Z</published>
-    <updated>2014-09-01T14:34:27+00:00</updated>
+    <updated>2014-09-21T08:21:26+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -327,7 +605,7 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
     <link rel="alternate" href="http://blog.fukayatsu.com/2014/04/15/custom-whiteboard-marker/"/>
     <id>http://blog.fukayatsu.com/2014/04/15/custom-whiteboard-marker/</id>
     <published>2014-04-15T00:30:00Z</published>
-    <updated>2014-09-01T14:34:27+00:00</updated>
+    <updated>2014-09-21T08:21:26+00:00</updated>
     <author>
       <name>fukayatsu</name>
     </author>
@@ -383,32 +661,6 @@ IFTTTと連携して自動tweetとかしている。&lt;/p&gt;
 &lt;hr&gt;
 
 &lt;p&gt;ちゃんと使えるものができてよかった&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>TokyuRuby会議07で酔っ払ったりLTしたりした</title>
-    <link rel="alternate" href="http://blog.fukayatsu.com/2014/03/30/tqrk07/"/>
-    <id>http://blog.fukayatsu.com/2014/03/30/tqrk07/</id>
-    <published>2014-03-30T14:55:00Z</published>
-    <updated>2014-09-01T14:34:27+00:00</updated>
-    <author>
-      <name>fukayatsu</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;img src="/images/2014-03-30-1396190949_1.jpg" /&gt;&lt;/p&gt;
-
-&lt;p&gt;プレモルが無限に出てくるからしょうが無い&lt;/p&gt;
-
-&lt;p&gt;まとめはこちらを御覧ください(飯テロ注意)&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="http://togetter.com/li/648499"&gt;TokyuRubyKaigi07 #tqrk07 - Togetterまとめ&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;酔っ払ってLTした資料はこちらです&lt;/p&gt;
-
-&lt;script async class="speakerdeck-embed" data-id="8f955110993f01313e54426a9381af41" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"&gt;&lt;/script&gt;
-
-&lt;p&gt;現場からは以上です。&lt;/p&gt;
 </content>
   </entry>
 </feed>
