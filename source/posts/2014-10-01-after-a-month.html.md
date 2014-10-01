@@ -1,6 +1,6 @@
 ---
 title: 入社後1ヶ月の振り返り
-date: 2014-10-02 00:20 JST
+date: 2014-10-01 23:59 JST
 tags: kaizen
 ---
 

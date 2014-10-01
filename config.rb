@@ -8,7 +8,7 @@ I18n.enforce_available_locales = false
 require 'haml'
 set :haml, { ugly: true }
 
-Time.zone = "Tokyo"
+Time.zone = "Asia/Tokyo"
 activate :livereload
 
 activate :blog do |blog|
